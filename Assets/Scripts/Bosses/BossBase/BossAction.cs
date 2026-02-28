@@ -21,6 +21,8 @@ public abstract class BossAction
         this.phase = phase;
     }
 
+    public virtual void Deinitialize() { }
+
     /// <summary>
     /// Setup the state routine.
     /// </summary>

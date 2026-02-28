@@ -25,6 +25,14 @@ public class BossPhase
         }
     }
 
+    public void Deinitialize()
+    {
+        foreach (var state in actions)
+        {
+            state.Deinitialize();
+        }
+    }
+
     public void OnPhaseEnter()
     {
         SetActionInternal(actions[0]);

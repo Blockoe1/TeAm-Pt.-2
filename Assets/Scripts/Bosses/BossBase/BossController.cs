@@ -27,6 +27,13 @@ public class BossController : MonoBehaviour
             phase.Initialize(this);
         }
     }
+    private void OnDestroy()
+    {
+        foreach (var phase in phases)
+        {
+            phase.Deinitialize();
+        }
+    }
 
     private void Start()
     {
