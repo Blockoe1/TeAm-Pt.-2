@@ -3,16 +3,13 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
+    [field: SerializeField] public Transform playerTransform { get; private set; }
     [SerializeReference, ClassDropdown(typeof(BossState))] private BossState[] states;
 
     private BossState currentState;
 
     // Component References
-    private BossMovement movement;
-
-    #region Properties
-    public BossMovement Movement => movement;
-    #endregion
+    public BossMovement movement { get; private set; }
 
     /// <summary>
     /// Initialize all states.

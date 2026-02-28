@@ -10,6 +10,7 @@ public abstract class BossState
 
     #region Properties
     protected BossController Boss => boss;
+
     #endregion
 
     public virtual void Initialize(BossController boss)
