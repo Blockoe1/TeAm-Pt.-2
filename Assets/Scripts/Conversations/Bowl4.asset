@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Conversation
   _theWords:
   - OneMeaslyLine: Another egg!?
+    Speaker: 1
     PauseTime: 0.2
     EnterVertically: 1
     Direction: 1
@@ -25,6 +26,7 @@ MonoBehaviour:
     SwishWaitInterval: 0
     SwishAmplitude: 0
   - OneMeaslyLine: This won't be as easy as I thought...
+    Speaker: 1
     PauseTime: 0.2
     EnterVertically: 1
     Direction: 1

@@ -1,5 +1,7 @@
+using System;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using static Conversation;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -7,11 +9,29 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject _dialoguePrefab;
 
+    [SerializeField] private List<Speaker> _speakers;
+    private Dictionary<SpeakerName, Speaker> nameToSpeaker;
+
+    public enum SpeakerName { Undefined, Eggy, MixingBowl, FryingPan }
+
+    [Serializable]
+    public class Speaker
+    {
+        public SpeakerName Name;
+        public TMP_FontAsset Font;
+    }
+
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+
+            nameToSpeaker = new Dictionary<SpeakerName, Speaker>();
+            foreach (Speaker s in _speakers)
+            {
+                nameToSpeaker.Add(s.Name, s);
+            }
         }
         else
         {
@@ -23,6 +43,12 @@ public class DialogueManager : MonoBehaviour
     {
         var epic = Instantiate(_dialoguePrefab, Camera.main.transform).GetComponent<DialogueEpic>();
         epic.StartCoroutine(epic.SayWords(c));
+    }
+
+    public Speaker GetSpeaker(SpeakerName name)
+    {
+        nameToSpeaker.TryGetValue(name, out var speaker);
+        return speaker;
     }
 
     public string Eggify(string s)
