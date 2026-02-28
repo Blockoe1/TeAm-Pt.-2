@@ -720,25 +720,28 @@ MonoBehaviour:
   - <healthThreshold>k__BackingField: 0
     <transitionInstant>k__BackingField: 0
     actions:
-    - rid: 6611997959651730
+    - rid: 6612011821564000
   - <healthThreshold>k__BackingField: 80
     <transitionInstant>k__BackingField: 0
     actions:
-    - rid: 6611997959651741
+    - rid: 6612011821564001
   references:
     version: 2
     RefIds:
-    - rid: 6611997959651730
-      type: {class: DebugAttackAction, ns: , asm: Assembly-CSharp}
+    - rid: 6612011821564000
+      type: {class: MB_CarrotShot, ns: , asm: Assembly-CSharp}
       data:
-        shooter: {fileID: 1574997439}
-        moveTargets:
-        - {fileID: 2056408164}
-        - {fileID: 862235971}
-        - {fileID: 1809709366}
-    - rid: 6611997959651741
-      type: {class: DebugAction, ns: , asm: Assembly-CSharp}
-      data: 
+        shooter: {fileID: 0}
+        shotPower: 0
+        shotCount: 0
+        shotDelay: 0
+    - rid: 6612011821564001
+      type: {class: MB_CarrotShot, ns: , asm: Assembly-CSharp}
+      data:
+        shooter: {fileID: 0}
+        shotPower: 0
+        shotCount: 0
+        shotDelay: 0
 --- !u!50 &1574997436
 Rigidbody2D:
   serializedVersion: 5

@@ -11,14 +11,16 @@ public class BossPhase
     private BossAction currentAction;
 
     private BossController boss;
+    public int phaseIndex { get; private set; }
 
     #region Properties
     public float HealthThreshold => healthThreshold;
     #endregion
 
-    public void Initialize(BossController boss)
+    public void Initialize(BossController boss, int index)
     {
         this.boss = boss;
+        this.phaseIndex = index;
         foreach (var state in actions)
         {
             state.Initialize(boss, this);

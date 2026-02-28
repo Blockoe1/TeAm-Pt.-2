@@ -14,6 +14,10 @@ public class BossController : MonoBehaviour
     // Component References
     public BossMovement movement { get; private set; }
 
+    #region Properties
+    public Vector2 ToPlayer => (playerTransform.position - transform.position).normalized;
+    #endregion
+
     /// <summary>
     /// Initialize all states.
     /// </summary>
@@ -22,9 +26,9 @@ public class BossController : MonoBehaviour
         // Get Components
         movement = GetComponent<BossMovement>();
 
-        foreach(var phase in phases)
+        for(int i = 0; i < phases.Length; i++)
         {
-            phase.Initialize(this);
+            phases[i].Initialize(this, i);
         }
     }
     private void OnDestroy()
