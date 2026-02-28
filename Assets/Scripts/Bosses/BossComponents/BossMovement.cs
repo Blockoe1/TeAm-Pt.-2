@@ -60,4 +60,10 @@ public class BossMovement : MonoBehaviour
 
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration);
     }
+    public void Charge()
+    {
+        Debug.Log("Charge");
+        transform.LookAt(transform.position);
+        rb.AddForce(transform.right * 1000);
+    }
 }
