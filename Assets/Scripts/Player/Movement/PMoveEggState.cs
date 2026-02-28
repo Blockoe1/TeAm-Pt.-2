@@ -15,6 +15,8 @@ public class PMoveEggState : PMoveBaseSt
     public override void EnterState()
     {
         m.Dash.performed += Dash_performed;
+
+        m.Anim.runtimeAnimatorController = m.EggAnimOC;
     }
 
     public override void ExitState()
@@ -40,7 +42,7 @@ public class PMoveEggState : PMoveBaseSt
 
     private void Move()
     {
-        //Movement
+        //Move
         Vector2 targetSpeed = m.MoveDirection * m.EggMoveSpeed;
         targetSpeed = new Vector2(Mathf.Lerp(m.Rb2d.linearVelocity.x, targetSpeed.x, 1), Mathf.Lerp(m.Rb2d.linearVelocity.y, targetSpeed.y, 1));
 
@@ -52,11 +54,15 @@ public class PMoveEggState : PMoveBaseSt
         m.Rb2d.AddForce(movement, ForceMode2D.Force);
 
         //Animimation
-        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.5 && Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.5) ? true : false);
+        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.25f) ? true : false);
     }
 
     private void Dash_performed(InputAction.CallbackContext obj)
     {
+        //Move
         m.Rb2d.AddForce(m.EggDashSpeed * m.transform.up, ForceMode2D.Impulse);
+
+        //Animation
+        m.Anim.SetTrigger("DASH");
     }
 }
