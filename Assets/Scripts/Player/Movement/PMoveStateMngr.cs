@@ -87,4 +87,10 @@ public class PMoveStateMngr : MonoBehaviour
         currentSt = state;
         currentSt.EnterState();
     }
+
+    public void Buttered()
+    {
+        AccelerationSpeed *= .5f;
+        DeccelerationSpeed *= .5f;
+    }
 }
