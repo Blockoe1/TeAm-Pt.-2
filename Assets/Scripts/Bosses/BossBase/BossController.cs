@@ -49,7 +49,6 @@ public class BossController : MonoBehaviour
     /// </summary>
     public void QueryPhase(int currentHealth)
     {
-        Debug.Log(currentHealth < phases[currentPhase + 1].healthThreshold);
         if (currentPhase + 1 < phases.Length && currentHealth < phases[currentPhase + 1].healthThreshold)
         {
             if (phases[currentPhase + 1].transitionInstant)
