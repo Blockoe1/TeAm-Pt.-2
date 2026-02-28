@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class TransitionManager : MonoBehaviour
 {
     [SerializeField] private ShatterTransition shatterTransitionPrefab;
+    [SerializeField] private float baseShatterDelay = 2;
     [SerializeField] private float shaterLifetime;
     [SerializeField] private RectTransform zoomImage;
     [SerializeField] private GameObject fillImage;
@@ -26,6 +27,7 @@ public class TransitionManager : MonoBehaviour
         if (instance != null)
         {
             Debug.Log("Duplicate transition manager.");
+            Destroy(gameObject);
             return;
         }
         else
@@ -79,6 +81,7 @@ public class TransitionManager : MonoBehaviour
 
         AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneName);
         yield return new WaitUntil(() => loadOp.isDone);
+        yield return new WaitForSecondsRealtime(baseShatterDelay);
 
         Debug.Log("SHattering");
         // Shatter the screen.
