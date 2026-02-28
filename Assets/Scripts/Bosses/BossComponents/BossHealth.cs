@@ -6,6 +6,7 @@ public class BossHealth : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private UnityEvent<int> OnDamage;
+    [SerializeField] private UnityEvent OnDeath;
 
     private int health;
 
@@ -22,6 +23,7 @@ public class BossHealth : MonoBehaviour
         if (health <= 0)
         {
             // Death
+            OnDeath?.Invoke();
         }
     }
 

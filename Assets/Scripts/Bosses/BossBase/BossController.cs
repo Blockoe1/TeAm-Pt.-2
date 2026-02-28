@@ -83,10 +83,11 @@ public class BossController : MonoBehaviour
     /// Sets a phase as the active phase.
     /// </summary>
     /// <param name="phase"></param>
-    private void SetPhase(int phase)
+    public void SetPhase(int phase)
     {
+        BossAction action = phases[currentPhase].CurrentAction;
         phases[currentPhase]?.OnPhaseExit();
         currentPhase = phase;
-        phases[currentPhase]?.OnPhaseEnter();    
+        phases[currentPhase]?.OnPhaseEnter(action);    
     }
 }

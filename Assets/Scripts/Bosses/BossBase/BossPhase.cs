@@ -16,6 +16,7 @@ public class BossPhase
 
     #region Properties
     public float HealthThreshold => healthThreshold;
+    public BossAction CurrentAction => currentAction;
     #endregion
 
     public void Initialize(BossController boss, int index)
@@ -36,9 +37,15 @@ public class BossPhase
         }
     }
 
-    public void OnPhaseEnter()
+    public void OnPhaseEnter(BossAction previousAction)
     {
+        if(!actions[0].CheckFirstAction(previousAction))
+        {
+            return;
+        }
+
         SetActionInternal(actions[0]);
+        
     }
 
     public void OnPhaseExit()
@@ -56,12 +63,11 @@ public class BossPhase
     {
         SetAction(actions[(currentActionIndex + 1) % actions.Length]);
     }
-    public T GetAction<T>(int index = 0) where T : BossAction
+    public T GetAction<T>() where T : BossAction
     {
         T state = (T)Array.Find(actions, item => item.GetType() == typeof(T));
         return state;
     }
-
 
     public void SetAction(BossAction action)
     {

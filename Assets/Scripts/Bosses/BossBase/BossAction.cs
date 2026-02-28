@@ -24,6 +24,15 @@ public abstract class BossAction
     public virtual void Deinitialize() { }
 
     /// <summary>
+    /// Controls transitions betweenn phases.
+    /// </summary>
+    /// <param name="previousAction"></param>
+    public virtual bool CheckFirstAction(BossAction previousAction)
+    {
+        return true;
+    }
+
+    /// <summary>
     /// Setup the state routine.
     /// </summary>
     public virtual void OnActionBegin()

@@ -16,6 +16,24 @@ public class MB_Move : BossAction
         bowlMovement = boss.GetComponent<MixingBowlMovement>();
     }
 
+    /// <summary>
+    /// If we came from a movement state, instantly transition.
+    /// </summary>
+    /// <param name="previousAction"></param>
+    /// <returns></returns>
+    public override bool CheckFirstAction(BossAction previousAction)
+    {
+        if (previousAction is MB_Move)
+        {
+            Phase.NextAction();
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
     public override void OnActionBegin()
     {
         base.OnActionBegin();
