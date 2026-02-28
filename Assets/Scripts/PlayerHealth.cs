@@ -53,6 +53,8 @@ public class PlayerHealth : MonoBehaviour
                 form = eggform.yolk;
                 PMoveStateMngr.Inst.SwitchState(PMoveStateMngr.Inst.YolkState);
                 break;
+            case 0:
+                break;
         }
         yield return new WaitForSeconds(iFramesTime);
         iFrames = false;
