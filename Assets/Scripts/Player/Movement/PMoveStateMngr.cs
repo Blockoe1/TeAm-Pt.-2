@@ -13,16 +13,18 @@ public class PMoveStateMngr : MonoBehaviour
 
     private InputAction dash;
 
-    [Header("Roll State")]
+    [Header("Egg State")]
     [SerializeField][MinValue(0)] private float _eggMoveSpeed;
     [SerializeField][MinValue(0)] private float _accelerationSpeed;
     [SerializeField][MinValue(0)] private float _deccelerationSpeed;
     [SerializeField][MinValue(0)] private float _eggDashSpeed;
+    [SerializeField] private AnimatorOverrideController _eggAnimOC;
 
     [Header("Yolk State")]
     [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashDuration;
+    [SerializeField] private AnimatorOverrideController _yolkAnimOC;
 
     private Rigidbody2D rb2d;
     private Animator anim;
@@ -48,6 +50,8 @@ public class PMoveStateMngr : MonoBehaviour
     public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
     public Animator Anim { get => anim; set => anim = value; }
     public InputAction Move { get => move; set => move = value; }
+    public AnimatorOverrideController YolkAnimOC { get => _yolkAnimOC; set => _yolkAnimOC = value; }
+    public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
     #endregion
 
     private void Awake()

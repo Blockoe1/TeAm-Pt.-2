@@ -174,9 +174,11 @@ MonoBehaviour:
   _accelerationSpeed: 0.1
   _deccelerationSpeed: 0.1
   _eggDashSpeed: 10
+  _eggAnimOC: {fileID: 22100000, guid: 5060fccd7dc76914eab1d77ac3af2094, type: 2}
   _yolkMoveSpeed: 7
   _yolkDashSpeed: 15
   _yolkDashDuration: 0.2
+  _yolkAnimOC: {fileID: 22100000, guid: 9547aa0fce2ebb54a9a3c517fa4dd174, type: 2}
 --- !u!212 &3908358512389764485
 SpriteRenderer:
   serializedVersion: 2
@@ -226,7 +228,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -297,7 +299,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
 --- !u!95 &2440716973497631222
 Animator:
