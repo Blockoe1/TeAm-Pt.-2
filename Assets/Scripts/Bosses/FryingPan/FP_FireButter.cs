@@ -8,6 +8,7 @@ public class FP_FireButter : BossAction
 {
     [SerializeField] protected ProjectileShooter shooter;
     [SerializeField] protected float shotPower;
+    [SerializeField] private int shotAmount;
     [SerializeField] private int shotCount;
     [SerializeField] protected int spread;
     [SerializeField, ShowIf("ShowShotDelay"), AllowNesting] private float shotDelay;
@@ -18,7 +19,7 @@ public class FP_FireButter : BossAction
     {
         for (int i = 0; i < shotCount; i++)
         {
-            shooter.Shoot(Boss.ToPlayer, shotPower, shotCount, spread);
+            shooter.Shoot(Boss.ToPlayer, shotPower, shotAmount, spread);
             yield return new WaitForSeconds(shotDelay);
         }
 

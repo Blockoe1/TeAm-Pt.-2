@@ -80,16 +80,17 @@ public class PMoveStateMngr : MonoBehaviour
         currentSt.FixedUpdateState();
     }
 
-    private void Update()
-    {
-        currentSt.UpdateState();
-    }
-
     [HideInInspector]
     public void SwitchState(PMoveBaseSt state)
     {
         state.ExitState();
         currentSt = state;
         currentSt.EnterState();
+    }
+
+    public void Buttered()
+    {
+        AccelerationSpeed *= .5f;
+        DeccelerationSpeed *= .5f;
     }
 }
