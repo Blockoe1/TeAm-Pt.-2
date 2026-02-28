@@ -195,9 +195,10 @@ GameObject:
   - component: {fileID: 8230836704689550638}
   - component: {fileID: 1382617211641721633}
   - component: {fileID: 7802913306586669549}
+  - component: {fileID: 5842265146995275768}
   m_Layer: 7
   m_Name: Pan
-  m_TagString: Untagged
+  m_TagString: PlayerDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,6 +314,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &5842265146995275768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6228718544372240375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253700dd76daf1447bbe991e4ff1b7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PDamage
+  _damage: 2
 --- !u!1 &6250251091182340963
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,9 +342,11 @@ GameObject:
   - component: {fileID: 5830723455567844490}
   - component: {fileID: 8967634857840509938}
   - component: {fileID: 2440716973497631222}
+  - component: {fileID: 2287594765719401596}
+  - component: {fileID: 1798331360701621538}
   m_Layer: 0
   m_Name: GO
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,6 +546,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2287594765719401596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250251091182340963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257900eea590ef042a77a4ff347ccdc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PSwingNShoot
+  animator: {fileID: 2440716973497631222}
+  _bufferInputTime: 10
+  _projectileShooter: {fileID: 1798331360701621538}
+  _panPivotTransform: {fileID: 1842842761341056977}
+  _shootPower: 5
+--- !u!114 &1798331360701621538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250251091182340963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
+  projectilePrefab: {fileID: 6700021229520693851, guid: f0bea1c946ffc5c41980e8755e1279f0, type: 3}
+  projectileParent: {fileID: 5679352953428768708}
 --- !u!1 &6953619985486832773
 GameObject:
   m_ObjectHideFlags: 0
