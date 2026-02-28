@@ -1,6 +1,8 @@
 using GraffitiGala;
 using NaughtyAttributes;
+using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +10,11 @@ public class TransitionManager : MonoBehaviour
 {
     [SerializeField] private ShatterTransition shatterTransitionPrefab;
     [SerializeField] private float shaterLifetime;
+    [SerializeField] private RectTransform zoomImage;
+    [SerializeField] private GameObject fillImage;
+    [SerializeField] private float zoomTime;
+    [SerializeField] private float zoomMaxScale;
+    [SerializeField] private float zoomMinScale;
 
     private static TransitionManager instance;
     private CameraScreenshot screenshot;
@@ -32,15 +39,15 @@ public class TransitionManager : MonoBehaviour
     [Button]
     private void DebugTransition()
     {
-        TransitionToScene(SceneManager.GetActiveScene().name);
+        ShatterTransition(SceneManager.GetActiveScene().name);
     }
 
-    public static void TransitionToScene(string sceneName)
+    public static void ZoomTransition(string sceneName)
     {
         if (instance != null)
         {
-            if(instance.isTransitioning) { return; }
-            instance.StartCoroutine(instance.TransitionRoutine(sceneName));
+            if (instance.isTransitioning) { return; }
+            instance.StartCoroutine(instance.ZoomRoutine(sceneName));
         }
         else
         {
@@ -48,7 +55,20 @@ public class TransitionManager : MonoBehaviour
         }
     }
 
-    private IEnumerator TransitionRoutine(string sceneName)
+    public static void ShatterTransition(string sceneName)
+    {
+        if (instance != null)
+        {
+            if(instance.isTransitioning) { return; }
+            instance.StartCoroutine(instance.ShatterRoutine(sceneName));
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+    }
+
+    private IEnumerator ShatterRoutine(string sceneName)
     {
         isTransitioning = true;
 
@@ -69,5 +89,42 @@ public class TransitionManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(shaterLifetime);
 
         Destroy(transition.gameObject);
+    }
+
+    private IEnumerator ZoomRoutine(string sceneName)
+    {
+        isTransitioning = true;
+
+        zoomImage.gameObject.SetActive(true);
+        SetZoom(zoomMaxScale);
+        yield return StartCoroutine(ZoomRoutine(zoomMinScale));
+
+        fillImage.SetActive(true);
+        AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneName);
+        yield return new WaitUntil(() => loadOp.isDone);
+        fillImage.SetActive(false);
+
+        yield return StartCoroutine(ZoomRoutine(zoomMaxScale));
+        zoomImage.gameObject.SetActive(false);
+
+        isTransitioning = false;
+    }
+
+    private IEnumerator ZoomRoutine(float targetScale)
+    {
+        float step = Mathf.Abs((targetScale - zoomImage.localScale.x) / zoomTime * Time.unscaledDeltaTime);
+        //Debug.Log(step);
+
+        while (Mathf.Abs(zoomImage.localScale.x - targetScale) > 0.1f)
+        {
+            SetZoom(Mathf.MoveTowards(zoomImage.localScale.x, targetScale, step));
+            yield return null;
+        }
+        SetZoom(targetScale);
+    }
+
+    private void SetZoom(float zoom)
+    {
+        zoomImage.localScale = Vector3.one * zoom;
     }
 }
