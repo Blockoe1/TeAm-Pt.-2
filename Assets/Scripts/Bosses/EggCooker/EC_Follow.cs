@@ -21,4 +21,10 @@ public class EC_Follow : BossAction
 
         Phase.NextAction();
     }
+
+    public override void OnActionExit()
+    {
+        base.OnActionExit();
+        Boss.Movement.TargetVelocity = Vector2.zero;
+    }
 }

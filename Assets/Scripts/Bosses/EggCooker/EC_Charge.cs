@@ -18,7 +18,6 @@ public class EC_Charge : BossAction
     {
         for(int i = 0; i < chargeNumber; i++)
         {
-            Debug.Log("Charging");
             Boss.Movement.SnapToTarget();
             Boss.Movement.Rb.AddForce(Boss.ToPlayer * dashPower, ForceMode2D.Impulse);
             yield return new WaitForSeconds(chargeDelay);

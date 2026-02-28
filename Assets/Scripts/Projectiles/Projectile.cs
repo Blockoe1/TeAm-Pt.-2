@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private bool despawnOnCollision;
+    [SerializeField] protected bool despawnOnCollision;
     #region CONST
     private const float DESPAWN_TIME = 10f;
     #endregion
-    protected Rigidbody2D rb { get; private set; }
+    [field: SerializeField] protected Rigidbody2D rb { get; private set; }
 
     private Coroutine lifetimeRoutine;
 
     public Action<Projectile> despawnAction;
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
     public void SetDespawnAction(Action<Projectile> despawnAction)
     {
@@ -36,7 +31,7 @@ public class Projectile : MonoBehaviour
         Despawn();
     }
 
-    protected void Despawn()
+    public void Despawn()
     {
         despawnAction?.Invoke(this);
         if (lifetimeRoutine != null)
