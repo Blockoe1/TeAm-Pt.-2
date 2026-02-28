@@ -14,6 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Conversation
   _theWords:
   - OneMeaslyLine: Evan Daly hates Angry Birds!
+    PauseTime: 0.2
+    EnterVertically: 0
     Direction: 0
+    VerticalTime: 0.3
+    Spin: 0
     SpinCount: 0
     SpinTime: 0.1
+    Swish: 0
+    SwishWaitInterval: 0.005
+    SwishAmplitude: 3
+  - OneMeaslyLine: Lucas Fehlberg is doing a silly dance!
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 0
+    SpinCount: 1
+    SpinTime: 0.25
+    Swish: 1
+    SwishWaitInterval: 0.05
+    SwishAmplitude: 3
+  - OneMeaslyLine: Cade Naylor got the egg pocket
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 2
+    SpinTime: 0.25
+    Swish: 1
+    SwishWaitInterval: 0.05
+    SwishAmplitude: 3
