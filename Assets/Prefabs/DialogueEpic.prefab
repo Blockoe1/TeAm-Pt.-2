@@ -281,10 +281,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abf03666c71e0b4ea5a29884acaf13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEpic
-  conversation: {fileID: 11400000, guid: c0c14df7d36efa147a967484e55b03b9, type: 2}
+  _conversation: {fileID: 11400000, guid: 41a0fb9a8e12771419932d989512bcd2, type: 2}
   _mask: {fileID: 3264837922816713570}
   _text: {fileID: 4284957632325037146}
   _continue: {fileID: 2246517700920086095}
+  _runOnStart: 1
 --- !u!1 &2291482458940085627
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +612,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 307.8}
+  m_SizeDelta: {x: 0, y: 489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3294983396280283059
 CanvasRenderer:
