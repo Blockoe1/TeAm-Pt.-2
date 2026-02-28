@@ -426,13 +426,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PMoveStateMngr
   _pointGO: {fileID: 5095589332358649766}
-  _eggMoveSpeed: 5
-  _accelerationSpeed: 0.1
-  _deccelerationSpeed: 0.1
-  _eggDashSpeed: 10
+  _eggMoveSpeed: 8
+  _accelerationSpeed: 2
+  _deccelerationSpeed: 0.5
+  _eggDashSpeed: 12
   _eggAnimOC: {fileID: 22100000, guid: 5060fccd7dc76914eab1d77ac3af2094, type: 2}
-  _yolkMoveSpeed: 7
-  _yolkDashSpeed: 15
+  _yolkMoveSpeed: 10
+  _yolkDashSpeed: 20
   _yolkDashDuration: 0.2
   _yolkAnimOC: {fileID: 22100000, guid: 9547aa0fce2ebb54a9a3c517fa4dd174, type: 2}
 --- !u!212 &3908358512389764485
