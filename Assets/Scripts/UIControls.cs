@@ -13,6 +13,9 @@ public class UIControls : MonoBehaviour
     [SerializeField] private GameObject _options;
 
 
+    /// <summary>
+    /// Sets initial canvas states
+    /// </summary>
     private void Start()
     {
         _mainCanvas.SetActive(true);
