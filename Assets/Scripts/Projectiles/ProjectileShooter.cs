@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+public class ProjectileShooter : MonoBehaviour
+{
+    [SerializeField] private Projectile projectilePrefab;
+    [SerializeField] private Transform projectileParent;
+
+    private readonly Queue<Projectile> projectilePool = new();
+
+    public void Launch(Vector2 direction, float power, int shotAmount = 1, float spreadAngle = 0)
+    {
+        Launch(direction, power, transform.position, shotAmount, spreadAngle);
+    }
+
+    public void Launch(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
+    {
+        float stepAngle = spreadAngle / shotAmount;
+        float startingAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        for(int i = 0; i < shotAmount; i++)
+        {
+            Debug.Log(shotAmount);
+            float angle = startingAngle - (spreadAngle / 2) + (stepAngle * i);
+            Vector2 launchVector = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
+
+            Projectile projectile = GetProjectile();
+            projectile.transform.position = spawnLocation;
+            projectile.transform.eulerAngles = new Vector3(0, 0, angle);
+            projectile.gameObject.SetActive(true);
+
+            projectile.SetDespawnAction(ReturnProjectile);
+            projectile.Launch(launchVector.normalized * power);
+        } 
+    }
+
+    #region Object Pooling
+    private Projectile GetProjectile()
+    {
+        Projectile toReturn = projectilePool.Count > 0 ? projectilePool.Dequeue() : 
+            Instantiate(projectilePrefab, projectileParent);
+        return toReturn;
+    }
+    private void ReturnProjectile(Projectile toReturn)
+    {
+        projectilePool.Enqueue(toReturn);
+        toReturn.gameObject.SetActive(false);
+    }
+    #endregion
+}
