@@ -10,12 +10,12 @@ public class ProjectileShooter : MonoBehaviour
 
     private readonly Queue<Projectile> projectilePool = new();
 
-    public void Launch(Vector2 direction, float power, int shotAmount = 1, float spreadAngle = 0)
+    public void Shoot(Vector2 direction, float power, int shotAmount = 1, float spreadAngle = 0)
     {
-        Launch(direction, power, transform.position, shotAmount, spreadAngle);
+        Shoot(direction, power, transform.position, shotAmount, spreadAngle);
     }
 
-    public void Launch(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
+    public void Shoot(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
     {
         float stepAngle = spreadAngle / shotAmount;
         float startingAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

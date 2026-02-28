@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,7 +25,7 @@ public class BossHealth : MonoBehaviour
         }
     }
 
-    [ContextMenu("Debug Damage")]
+    [Button]
     private void DebugDamage()
     {
         Damage(10);

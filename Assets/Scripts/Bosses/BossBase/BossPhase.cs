@@ -9,19 +9,30 @@ public class BossPhase
     [SerializeReference, ClassDropdown(typeof(BossAction))] private BossAction[] actions;
 
     private BossAction currentAction;
+    private int currentActionIndex;
 
     private BossController boss;
+    public int phaseIndex { get; private set; }
 
     #region Properties
     public float HealthThreshold => healthThreshold;
     #endregion
 
-    public void Initialize(BossController boss)
+    public void Initialize(BossController boss, int index)
     {
         this.boss = boss;
+        this.phaseIndex = index;
         foreach (var state in actions)
         {
             state.Initialize(boss, this);
+        }
+    }
+
+    public void Deinitialize()
+    {
+        foreach (var state in actions)
+        {
+            state.Deinitialize();
         }
     }
 
@@ -38,7 +49,12 @@ public class BossPhase
     #region State Management
     public void SetRandomAction()
     {
-        SetAction(actions[UnityEngine.Random.Range(0, actions.Length)]);
+        currentActionIndex = UnityEngine.Random.Range(0, actions.Length);
+        SetAction(actions[currentActionIndex]);
+    }
+    public void NextAction()
+    {
+        SetAction(actions[(currentActionIndex + 1) % actions.Length]);
     }
     public T GetAction<T>(int index = 0) where T : BossAction
     {
@@ -59,6 +75,7 @@ public class BossPhase
     private void SetActionInternal(BossAction action)
     {
         currentAction?.OnActionExit();
+        currentActionIndex = Array.IndexOf(actions, action);
         currentAction = action;
         currentAction?.OnActionBegin();
     }
