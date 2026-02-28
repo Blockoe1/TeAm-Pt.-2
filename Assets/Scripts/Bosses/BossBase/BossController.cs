@@ -36,9 +36,10 @@ public class BossController : MonoBehaviour
     /// <summary>
     /// Checks if the next phase should be transitioned to.
     /// </summary>
-    private void QueryPhase()
+    public void QueryPhase(int currentHealth)
     {
-        if (currentPhase + 1 < phases.Length) // Add check for current health.
+        Debug.Log(currentHealth < phases[currentPhase + 1].healthThreshold);
+        if (currentPhase + 1 < phases.Length && currentHealth < phases[currentPhase + 1].healthThreshold)
         {
             if (phases[currentPhase + 1].transitionInstant)
             {
@@ -54,8 +55,10 @@ public class BossController : MonoBehaviour
 
     public bool QueuedPhaseTransition()
     {
+        Debug.Log("Transitioning Phase.");
         if (queuedPhase)
         {
+            
             queuedPhase = false;
             SetPhase(queuedPhaseIndex);
             return true;

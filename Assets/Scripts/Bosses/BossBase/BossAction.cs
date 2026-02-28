@@ -11,6 +11,7 @@ public abstract class BossAction
 
     #region Properties
     protected BossController Boss => boss;
+    protected BossPhase Phase => phase;
 
     #endregion
 
