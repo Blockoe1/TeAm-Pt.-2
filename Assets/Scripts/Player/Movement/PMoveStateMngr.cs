@@ -14,6 +14,7 @@ public class PMoveStateMngr : MonoBehaviour
     private Vector2 moveDirection;
 
     private InputAction dash;
+    private bool isDashing;
 
     [Header("Egg State")]
     [SerializeField][MinValue(0)] private float _eggMoveSpeed;
@@ -54,6 +55,7 @@ public class PMoveStateMngr : MonoBehaviour
     public AnimatorOverrideController YolkAnimOC { get => _yolkAnimOC; set => _yolkAnimOC = value; }
     public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
     public Transform PointGO { get => _pointGO; set => _pointGO = value; }
+    public bool IsDashing { get => isDashing; set => isDashing = value; }
     #endregion
 
     private void Awake()
@@ -94,8 +96,12 @@ public class PMoveStateMngr : MonoBehaviour
 
     private void UpdatePointDirection()
     {
+        if (isDashing) return;
+
         Vector2 pointDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        _pointGO.up = pointDirection - new Vector2(_pointGO.position.x, _pointGO.position.y);  
+        _pointGO.up = pointDirection - new Vector2(_pointGO.position.x, _pointGO.position.y);
+    }
+
     public void Buttered()
     {
         AccelerationSpeed *= .5f;
