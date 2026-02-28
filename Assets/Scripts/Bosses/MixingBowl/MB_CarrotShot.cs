@@ -8,7 +8,7 @@ public class MB_CarrotShot : BossAction
 {
     [SerializeField] protected ProjectileShooter shooter;
     [SerializeField] protected float shotPower;
-    [SerializeField] private float shotCount;
+    [SerializeField] private int shotCount;
     [SerializeField, ShowIf("ShowShotDelay"), AllowNesting] private float shotDelay;
     [SerializeField] private float postShotWait;
 
@@ -17,7 +17,7 @@ public class MB_CarrotShot : BossAction
     {
         for(int i = 0; i < shotCount; i++)
         {
-            shooter.Shoot(Boss.ToPlayer, shotPower);
+            shooter.Shoot(Boss.ToPlayer, shotPower, 3, 60);
             yield return new WaitForSeconds(shotDelay);
         }
 
