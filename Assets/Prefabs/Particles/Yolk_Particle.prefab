@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1737902248053623038}
   - component: {fileID: 8867956387078851135}
   m_Layer: 0
-  m_Name: YolkParticle
+  m_Name: Yolk_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
