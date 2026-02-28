@@ -4,11 +4,11 @@ using UnityEngine.Events;
 
 public class BossHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
+    [SerializeField] public int maxHealth;
     [SerializeField] private UnityEvent<int> OnDamage;
     [SerializeField] private UnityEvent OnDeath;
 
-    private int health;
+    public int health;
 
     private void Awake()
     {
