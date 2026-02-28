@@ -31,6 +31,6 @@ public class DebugMoveState : BossState
     private void Shoot(Vector2 reachedPoint)
     {
         Vector2 shootVector = Boss.playerTransform.position - Boss.transform.position;
-        shooter.Launch(shootVector, 5, 3, 15f);
+        shooter.Launch(shootVector, 5, 8, 360);
     }
 }
