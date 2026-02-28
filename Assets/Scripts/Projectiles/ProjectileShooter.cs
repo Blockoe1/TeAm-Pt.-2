@@ -30,7 +30,7 @@ public class ProjectileShooter : MonoBehaviour
     {
         float stepAngle = shotAmount > 1 ? spreadAngle / (shotAmount - 1) : 0;
         
-        Debug.Log(startingAngle);
+        //Debug.Log(startingAngle);
 
         for (int i = 0; i < shotAmount; i++)
         {
