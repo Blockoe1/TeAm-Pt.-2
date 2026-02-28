@@ -6,8 +6,6 @@ public class PMoveYolkState : PMoveBaseSt
 {
     private PMoveStateMngr m;
 
-    private bool isDashing;
-
     public PMoveYolkState(PMoveStateMngr m)
     {
         this.m = m;
@@ -26,7 +24,7 @@ public class PMoveYolkState : PMoveBaseSt
 
     public override void FixedUpdateState()
     {
-        if (!isDashing)
+        if (!m.IsDashing)
             Move();
         else
             Dash();
@@ -44,19 +42,17 @@ public class PMoveYolkState : PMoveBaseSt
     private void Dash_performed(InputAction.CallbackContext obj)
     {
         m.StartCoroutine(DashCooldown());
+        m.Anim.SetTrigger("DASH");
     }
     private void Dash()
     {
         //Move
-        m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.transform.up);
-
-        //Animation
-        m.Anim.SetTrigger("DASH");
+        m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.PointGO.up);//m.transform.up);
     }
     private IEnumerator DashCooldown()
     {
-        isDashing = true;
+        m.IsDashing = true;
         yield return new WaitForSeconds(m.YolkDashDuration);
-        isDashing = false;
+        m.IsDashing = false;
     }
 }

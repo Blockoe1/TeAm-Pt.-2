@@ -13,6 +13,11 @@ public class UIControls : MonoBehaviour
     [SerializeField] private GameObject _options;
 
 
+    public void TransitionToScene(string scene)
+    {
+        TransitionManager.ZoomTransition(scene);
+    }
+
     private void Start()
     {
         _mainCanvas.SetActive(true);
