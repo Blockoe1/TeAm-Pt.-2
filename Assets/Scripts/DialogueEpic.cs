@@ -19,6 +19,8 @@ public class DialogueEpic : MonoBehaviour
     //private float[] textOffsets = { -1, -0.75f, -0.5f, -0.25f, 0, 0.25f, 0.5f, 0.75f, 1, 0.75f, 0.5f, 0.25f, 0, -0.25f, -0.5f, -0.75f };
     //private float[] textOffsets = { 0, 0.25f, 0.5f, 0.75f, 1 };
 
+    public Conversation.Line ShowLine;
+
     void Start()
     {
         StartCoroutine(SayWords());
@@ -40,6 +42,7 @@ public class DialogueEpic : MonoBehaviour
         _continue.gameObject.SetActive(false);
 
         _text.text = line.OneMeaslyLine;
+        ShowLine = line;
 
         if (line.EnterVertically)
         {
@@ -129,6 +132,11 @@ public class DialogueEpic : MonoBehaviour
             yield return new WaitForSeconds(line.SwishWaitInterval);
         }
 
+    }
+
+    private void Update()
+    {
+        print(Time.deltaTime);
     }
 
     public void Continue()
