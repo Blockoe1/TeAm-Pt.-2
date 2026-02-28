@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class PMoveRollSt : PMoveBaseSt
 {
     PMoveStateMngr m;
@@ -14,12 +14,12 @@ public class PMoveRollSt : PMoveBaseSt
     }
     public override void EnterState()
     {
-
+        m.Dash.performed += Dash_performed;
     }
 
     public override void ExitState()
     {
-
+        m.Dash.performed -= Dash_performed;
     }
 
     public override void FixedUpdateState()
@@ -37,8 +37,12 @@ public class PMoveRollSt : PMoveBaseSt
 
         Vector2 speedDifference = new Vector2(targetSpeed.x - m.Rb2d.linearVelocity.x, targetSpeed.y - m.Rb2d.linearVelocity.y);
         Vector2 movement = speedDifference * new Vector2(accelRateX, accelRateY);
-        Debug.Log(movement);
         m.Rb2d.AddForce(movement, ForceMode2D.Force);
-        //m.Rb2d.linearVelocity = m.MoveDirection * m.RollSpeed;
+    }
+
+    private void Dash_performed(InputAction.CallbackContext obj)
+    {
+        m.Rb2d.AddForce(m.RollDashSpeed * m.transform.up, ForceMode2D.Impulse);
+        //m.Rb2d.linearVelocity = m.RollDashSpeed * m.MoveDirection;
     }
 }

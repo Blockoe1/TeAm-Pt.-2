@@ -8,10 +8,16 @@ public class PMoveStateMngr : MonoBehaviour
     private InputAction move;
     private Vector2 moveDirection;
 
+    private InputAction dash;
+    private Vector2 faceDirection = Vector2.one;
+
     [Header("Roll State")]
     [SerializeField][MinValue(0)] private float _rollSpeed;
     [SerializeField][MinValue(0)] private float _accelerationSpeed;
     [SerializeField][MinValue(0)] private float _deccelerationSpeed;
+
+    [Header("Dash")]
+    [SerializeField][MinValue(0)] private float _rollDashSpeed;
 
 
     private Rigidbody2D rb2d;
@@ -27,6 +33,9 @@ public class PMoveStateMngr : MonoBehaviour
     public float AccelerationSpeed { get => _accelerationSpeed; set => _accelerationSpeed = value; }
     public float AccelerationSpeed1 { get => _accelerationSpeed; set => _accelerationSpeed = value; }
     public float DeccelerationSpeed { get => _deccelerationSpeed; set => _deccelerationSpeed = value; }
+    public InputAction Dash { get => dash; set => dash = value; }
+    public float RollDashSpeed { get => _rollDashSpeed; set => _rollDashSpeed = value; }
+    public Vector2 FaceDirection { get => faceDirection; set => faceDirection = value; }
     #endregion
 
     private void Start()
@@ -34,15 +43,20 @@ public class PMoveStateMngr : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
 
         move = InputSystem.actions.FindAction("MOVE");
+        dash = InputSystem.actions.FindAction("DASH");
 
         rollSt = new PMoveRollSt(this);
 
         currentSt = rollSt;
+        currentSt.EnterState();
     }
 
     private void FixedUpdate()
     {
         moveDirection = move.ReadValue<Vector2>();
+
+        if (moveDirection.x != 0 && moveDirection.y != 0)
+            faceDirection = moveDirection;
 
         currentSt.FixedUpdateState();
     }
@@ -50,6 +64,14 @@ public class PMoveStateMngr : MonoBehaviour
     private void Update()
     {
         Rotate();
+    }
+
+    [HideInInspector]
+    public void SwitchState(PMoveBaseSt state)
+    {
+        state.ExitState();
+        currentSt = state;
+        currentSt.EnterState();
     }
 
     private void Rotate()
