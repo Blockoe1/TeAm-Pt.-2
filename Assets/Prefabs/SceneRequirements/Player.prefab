@@ -413,6 +413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   form: 0
   iFramesTime: 1
+  _deathDelay: 0.75
 --- !u!114 &1394503505484859528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cefb94f4770ee4ebcc8353502a79b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PMoveStateMngr
-  _pointGO: {fileID: 5095589332358649766}
   _eggMoveSpeed: 8
   _accelerationSpeed: 2
   _deccelerationSpeed: 0.5

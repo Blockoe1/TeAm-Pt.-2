@@ -1,7 +1,6 @@
-using NaughtyAttributes;
-using NUnit.Framework;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
@@ -10,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public eggform form = eggform.whole;
     private bool iFrames = false;
     public float iFramesTime;
+
+    [SerializeField] private float _deathDelay;
 
 
     public enum eggform
@@ -58,11 +59,19 @@ public class PlayerHealth : MonoBehaviour
                 break;
             case 0:
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerBecomesYolk);
-                SceneManager.LoadScene("DeathScene");
+                StartCoroutine(DeathDelay());
                 break;
         }
         yield return new WaitForSeconds(iFramesTime);
         iFrames = false;
        
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        InputSystem.DisableAllEnabledActions();
+        ParticleMngr.Inst.Play("P_DIE", transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(_deathDelay);
+        SceneManager.LoadScene("DeathScene");
     }
 }
