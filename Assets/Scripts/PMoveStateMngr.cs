@@ -10,6 +10,9 @@ public class PMoveStateMngr : MonoBehaviour
 
     [Header("Roll State")]
     [SerializeField][MinValue(0)] private float _rollSpeed;
+    [SerializeField][MinValue(0)] private float _accelerationSpeed;
+    [SerializeField][MinValue(0)] private float _deccelerationSpeed;
+
 
     private Rigidbody2D rb2d;
 
@@ -21,6 +24,9 @@ public class PMoveStateMngr : MonoBehaviour
     public Rigidbody2D Rb2d { get => rb2d; set => rb2d = value; }
     public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
     public float RollSpeed { get => _rollSpeed; set => _rollSpeed = value; }
+    public float AccelerationSpeed { get => _accelerationSpeed; set => _accelerationSpeed = value; }
+    public float AccelerationSpeed1 { get => _accelerationSpeed; set => _accelerationSpeed = value; }
+    public float DeccelerationSpeed { get => _deccelerationSpeed; set => _deccelerationSpeed = value; }
     #endregion
 
     private void Start()
