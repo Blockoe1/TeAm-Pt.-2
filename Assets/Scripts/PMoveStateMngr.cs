@@ -1,0 +1,60 @@
+using NaughtyAttributes;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(Rigidbody2D))]
+public class PMoveStateMngr : MonoBehaviour
+{
+    private InputAction move;
+    private Vector2 moveDirection;
+
+    [Header("Roll State")]
+    [SerializeField][MinValue(0)] private float _rollSpeed;
+    [SerializeField][MinValue(0)] private float _accelerationSpeed;
+    [SerializeField][MinValue(0)] private float _deccelerationSpeed;
+
+
+    private Rigidbody2D rb2d;
+
+    private PMoveRollSt rollSt;
+
+    private PMoveBaseSt currentSt;
+
+    #region GS
+    public Rigidbody2D Rb2d { get => rb2d; set => rb2d = value; }
+    public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
+    public float RollSpeed { get => _rollSpeed; set => _rollSpeed = value; }
+    public float AccelerationSpeed { get => _accelerationSpeed; set => _accelerationSpeed = value; }
+    public float AccelerationSpeed1 { get => _accelerationSpeed; set => _accelerationSpeed = value; }
+    public float DeccelerationSpeed { get => _deccelerationSpeed; set => _deccelerationSpeed = value; }
+    #endregion
+
+    private void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+
+        move = InputSystem.actions.FindAction("MOVE");
+
+        rollSt = new PMoveRollSt(this);
+
+        currentSt = rollSt;
+    }
+
+    private void FixedUpdate()
+    {
+        moveDirection = move.ReadValue<Vector2>();
+
+        currentSt.FixedUpdateState();
+    }
+
+    private void Update()
+    {
+        Rotate();
+    }
+
+    private void Rotate()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        transform.up = mousePos - new Vector2(transform.position.x, transform.position.y);
+    }
+}
