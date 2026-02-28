@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PMoveEggState : PMoveBaseSt
 {
     PMoveStateMngr m;
@@ -41,6 +40,7 @@ public class PMoveEggState : PMoveBaseSt
 
     private void Move()
     {
+        //Movement
         Vector2 targetSpeed = m.MoveDirection * m.EggMoveSpeed;
         targetSpeed = new Vector2(Mathf.Lerp(m.Rb2d.linearVelocity.x, targetSpeed.x, 1), Mathf.Lerp(m.Rb2d.linearVelocity.y, targetSpeed.y, 1));
 
@@ -50,6 +50,9 @@ public class PMoveEggState : PMoveBaseSt
         Vector2 speedDifference = new Vector2(targetSpeed.x - m.Rb2d.linearVelocity.x, targetSpeed.y - m.Rb2d.linearVelocity.y);
         Vector2 movement = speedDifference * new Vector2(accelRateX, accelRateY);
         m.Rb2d.AddForce(movement, ForceMode2D.Force);
+
+        //Animimation
+        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.5 && Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.5) ? true : false);
     }
 
     private void Dash_performed(InputAction.CallbackContext obj)

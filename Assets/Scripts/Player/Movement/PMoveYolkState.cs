@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PMoveYolkState : PMoveBaseSt
 {
@@ -44,10 +43,14 @@ public class PMoveYolkState : PMoveBaseSt
 
     private void Move()
     {
+        //Movement
         m.Rb2d.linearVelocity = (m.MoveDirection * m.YolkMoveSpeed);
+
+        //Animimation
+        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.5 && Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.5) ? true : false);
     }
 
-    private void Dash_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    private void Dash_performed(InputAction.CallbackContext obj)
     {
         m.StartCoroutine(DashCooldown());
     }

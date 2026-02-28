@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class PMoveStateMngr : MonoBehaviour
 {
     private static PMoveStateMngr inst;
@@ -24,6 +25,7 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _yolkDashDuration;
 
     private Rigidbody2D rb2d;
+    private Animator anim;
 
     private PMoveEggState eggState;
     private PMoveYolkState yolkState;
@@ -44,6 +46,8 @@ public class PMoveStateMngr : MonoBehaviour
     public float YolkDashDuration { get => _yolkDashDuration; set => _yolkDashDuration = value; }
     public static PMoveStateMngr Inst { get => inst; set => inst = value; }
     public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
+    public Animator Anim { get => anim; set => anim = value; }
+    public InputAction Move { get => move; set => move = value; }
     #endregion
 
     private void Awake()
@@ -53,6 +57,7 @@ public class PMoveStateMngr : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         move = InputSystem.actions.FindAction("MOVE");
         dash = InputSystem.actions.FindAction("DASH");
@@ -83,6 +88,4 @@ public class PMoveStateMngr : MonoBehaviour
         currentSt = state;
         currentSt.EnterState();
     }
-
-
 }
