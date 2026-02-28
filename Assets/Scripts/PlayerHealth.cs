@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
@@ -65,6 +66,7 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator DeathDelay()
     {
+        InputSystem.DisableAllEnabledActions();
         ParticleMngr.Inst.Play("P_DIE", transform.position, Quaternion.identity);
         yield return new WaitForSeconds(_deathDelay);
         SceneManager.LoadScene("DeathScene");
