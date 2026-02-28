@@ -49,16 +49,26 @@ public class PlayerHealth : MonoBehaviour
         switch(health)
         {
             case 2:
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerCrack);
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerCrack);
+                }
                 form = eggform.cracked; 
                 break;
             case 1:
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerBecomesYolk);
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerBecomesYolk);
+                }
+                
                 form = eggform.yolk;
                 PMoveStateMngr.Inst.SwitchState(PMoveStateMngr.Inst.YolkState);
                 break;
             case 0:
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerBecomesYolk);
+                if (AudioManager.instance != null)
+                {
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerBecomesYolk);
+                }
                 StartCoroutine(DeathDelay());
                 break;
         }
