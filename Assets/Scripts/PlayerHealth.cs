@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(Damaged());
 
             //Debug.Log(collision.ClosestPoint(transform.position));
-            ParticleMngr.Inst.Play("YOLK", transform.position, transform.rotation);
+            ParticleMngr.Inst.Play("P_HIT", transform.position, transform.rotation);
         }
     }
 

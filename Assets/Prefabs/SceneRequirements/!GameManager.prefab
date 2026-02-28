@@ -49,3 +49,5 @@ MonoBehaviour:
     _particle: {fileID: 902521241345931749, guid: b6c594ea54b14bd4e9a382f32cc1d68f, type: 3}
   - _name: P_DIE
     _particle: {fileID: 635916613037525268, guid: 5367d1b6250c726438e0ba4d337cb8c7, type: 3}
+  - _name: FIRE
+    _particle: {fileID: 5655210198092218170, guid: 93eca58edb4851944b0fdacd33cac998, type: 3}
