@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 public class PMoveEggState : PMoveBaseSt
 {
     PMoveStateMngr m;
+    private bool butter;
 
     private float accelAmount, deccelAmount;
 

@@ -8,6 +8,7 @@ public class ButterSpread : MonoBehaviour
     {
         if (FindAnyObjectByType<BossHealth>().health < FindAnyObjectByType<BossHealth>().maxHealth * 2 / 3)
         {
+            FindAnyObjectByType<PMoveStateMngr>().Buttered();
             butter.SetActive(true);
         }
     }
