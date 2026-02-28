@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abf03666c71e0b4ea5a29884acaf13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEpic
-  _conversation: {fileID: 11400000, guid: 41a0fb9a8e12771419932d989512bcd2, type: 2}
+  _conversation: {fileID: 11400000, guid: 1e18ce6adf6b387449c212fad72be160, type: 2}
   _mask: {fileID: 3264837922816713570}
   _text: {fileID: 4284957632325037146}
   _continue: {fileID: 2246517700920086095}
