@@ -715,19 +715,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   <playerTransform>k__BackingField: {fileID: 72402237}
-  states:
-  - rid: 6611997959651601
+  phases:
+  - <healthThreshold>k__BackingField: 0
+    <transitionInstant>k__BackingField: 0
+    actions: []
   references:
     version: 2
-    RefIds:
-    - rid: 6611997959651601
-      type: {class: DebugMoveState, ns: , asm: Assembly-CSharp}
-      data:
-        shooter: {fileID: 1574997439}
-        moveTargets:
-        - {fileID: 2056408164}
-        - {fileID: 862235971}
-        - {fileID: 1809709366}
+    RefIds: []
 --- !u!50 &1574997436
 Rigidbody2D:
   serializedVersion: 5

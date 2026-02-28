@@ -1,12 +1,15 @@
 using System;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
     [field: SerializeField] public Transform playerTransform { get; private set; }
-    [SerializeReference, ClassDropdown(typeof(BossState))] private BossState[] states;
+    [SerializeField] private BossPhase[] phases;
 
-    private BossState currentState;
+    private bool queuedPhase;
+    private int queuedPhaseIndex;
+    private int currentPhase;
 
     // Component References
     public BossMovement movement { get; private set; }
@@ -19,34 +22,58 @@ public class BossController : MonoBehaviour
         // Get Components
         movement = GetComponent<BossMovement>();
 
-        foreach(var state in states)
+        foreach(var phase in phases)
         {
-            state.Initialize(this);
+            phase.Initialize(this);
         }
     }
 
     private void Start()
     {
-        SetState(states[0]);
+        SetPhase(0);
     }
 
-    public T GetState<T>(int index = 0) where T : BossState
+    /// <summary>
+    /// Checks if the next phase should be transitioned to.
+    /// </summary>
+    private void QueryPhase()
     {
-        T state = (T)Array.Find(states, item => item.GetType() == typeof(T));
-        return state;
+        if (currentPhase + 1 < phases.Length) // Add check for current health.
+        {
+            if (phases[currentPhase + 1].transitionInstant)
+            {
+                SetPhase(currentPhase + 1);
+            }
+            else
+            {
+                queuedPhase = true;
+                queuedPhaseIndex = currentPhase + 1;
+            }
+        }
     }
 
-    public void SetState(BossState state)
+    public bool QueuedPhaseTransition()
     {
-        currentState?.OnStateExit();
-        currentState = state;
-        currentState?.OnStateEnter();
+        if (queuedPhase)
+        {
+            queuedPhase = false;
+            SetPhase(queuedPhaseIndex);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    public T SetState<T>(int index = 0) where T: BossState
+    /// <summary>
+    /// Sets a phase as the active phase.
+    /// </summary>
+    /// <param name="phase"></param>
+    private void SetPhase(int phase)
     {
-        T state = GetState<T>();
-        SetState(state);
-        return state;
+        phases[currentPhase]?.OnPhaseExit();
+        currentPhase = phase;
+        phases[currentPhase]?.OnPhaseEnter();    
     }
 }

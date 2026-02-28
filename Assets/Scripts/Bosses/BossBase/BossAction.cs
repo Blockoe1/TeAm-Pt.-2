@@ -2,9 +2,10 @@ using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
-public abstract class BossState
+public abstract class BossAction
 {
     private BossController boss;
+    private BossPhase phase;
 
     private Coroutine stateRoutine;
 
@@ -13,20 +14,21 @@ public abstract class BossState
 
     #endregion
 
-    public virtual void Initialize(BossController boss)
+    public virtual void Initialize(BossController boss, BossPhase phase)
     {
         this.boss = boss;
+        this.phase = phase;
     }
 
     /// <summary>
     /// Setup the state routine.
     /// </summary>
-    public virtual void OnStateEnter()
+    public virtual void OnActionBegin()
     {
-        stateRoutine = boss.StartCoroutine(StateRoutine());
+        stateRoutine = boss.StartCoroutine(ActionRoutine());
     }
 
-    public virtual void OnStateExit()
+    public virtual void OnActionExit()
     {
         if (stateRoutine != null)
         {
@@ -35,7 +37,7 @@ public abstract class BossState
         }
     }
 
-    public virtual IEnumerator StateRoutine()
+    public virtual IEnumerator ActionRoutine()
     {
         stateRoutine = null;
         yield break;

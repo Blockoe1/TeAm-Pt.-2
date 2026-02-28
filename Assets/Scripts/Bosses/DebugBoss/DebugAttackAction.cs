@@ -2,23 +2,23 @@ using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
-public class DebugMoveState : BossState
+public class DebugAttackAction : BossAction
 {
     [SerializeField] private ProjectileShooter shooter;
     [SerializeField] private Transform[] moveTargets;
 
-    public override void OnStateEnter()
+    public override void OnActionBegin()
     {
-        base.OnStateEnter();
+        base.OnActionBegin();
         Boss.movement.OnReachPoint += Shoot;
     }
-    public override void OnStateExit()
+    public override void OnActionExit()
     {
-        base.OnStateExit();
+        base.OnActionExit();
         Boss.movement.OnReachPoint -= Shoot;
     }
 
-    public override IEnumerator StateRoutine()
+    public override IEnumerator ActionRoutine()
     {
         while (true)
         {
