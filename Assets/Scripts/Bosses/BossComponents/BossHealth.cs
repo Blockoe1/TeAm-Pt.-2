@@ -18,7 +18,6 @@ public class BossHealth : MonoBehaviour
     public void Damage(int damage)
     {
         health -= damage;
-        Debug.Log(health);
         OnDamage?.Invoke(health);
         if (health <= 0)
         {
@@ -31,5 +30,6 @@ public class BossHealth : MonoBehaviour
     private void DebugDamage()
     {
         Damage(10);
+        Debug.Log(health);
     }
 }

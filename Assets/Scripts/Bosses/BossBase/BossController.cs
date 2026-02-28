@@ -85,9 +85,16 @@ public class BossController : MonoBehaviour
     /// <param name="phase"></param>
     public void SetPhase(int phase)
     {
-        BossAction action = phases[currentPhase].CurrentAction;
-        phases[currentPhase]?.OnPhaseExit();
+        BossAction action = null;
+        if (currentPhase >= 0 && currentPhase < phases.Length)
+        {
+            action = phases[currentPhase].CurrentAction;
+            phases[currentPhase]?.OnPhaseExit();
+        }
         currentPhase = phase;
-        phases[currentPhase]?.OnPhaseEnter(action);    
+        if (currentPhase >= 0 && currentPhase < phases.Length)
+        {
+            phases[currentPhase]?.OnPhaseEnter(action);
+        }  
     }
 }
