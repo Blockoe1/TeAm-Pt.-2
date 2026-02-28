@@ -37,12 +37,12 @@ public class MB_Move : BossAction
     public override void OnActionBegin()
     {
         base.OnActionBegin();
-        Boss.movement.OnReachPoint += OnReachPoint;
+        Boss.Movement.OnReachPoint += OnReachPoint;
     }
     public override void OnActionExit()
     {
         base.OnActionExit();
-        Boss.movement.OnReachPoint -= OnReachPoint;
+        Boss.Movement.OnReachPoint -= OnReachPoint;
     }
 
     private void OnReachPoint(Vector2 reachedPos)
