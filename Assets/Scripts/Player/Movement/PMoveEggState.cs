@@ -48,7 +48,7 @@ public class PMoveEggState : PMoveBaseSt
     private void Dash_performed(InputAction.CallbackContext obj)
     {
         //Move
-        m.Rb2d.AddForce(m.EggDashSpeed * m.transform.up, ForceMode2D.Impulse);
+        m.Rb2d.AddForce(m.EggDashSpeed * m.PointGO.up, ForceMode2D.Impulse);//m.transform.up, ForceMode2D.Impulse);
 
         //Animation
         m.Anim.SetTrigger("DASH");

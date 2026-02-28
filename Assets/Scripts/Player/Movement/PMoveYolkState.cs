@@ -48,7 +48,7 @@ public class PMoveYolkState : PMoveBaseSt
     private void Dash()
     {
         //Move
-        m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.transform.up);
+        m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.PointGO.up);//m.transform.up);
 
         //Animation
         m.Anim.SetTrigger("DASH");
