@@ -10,8 +10,10 @@ public class DebugMoveState : BossState
     {
         while (true)
         {
-            Boss.Movement.SetMoveTarget(moveTargets[Random.Range(0, moveTargets.Length)].position);
-            yield return new WaitForSeconds(5f);
+            Boss.Movement.TargetVelocity = Vector2.right;
+            yield return new WaitForFixedUpdate();
+            //Boss.Movement.SetMoveTarget(moveTargets[Random.Range(0, moveTargets.Length)].position);
+            //yield return new WaitForSeconds(5f);
         }
     }
 }

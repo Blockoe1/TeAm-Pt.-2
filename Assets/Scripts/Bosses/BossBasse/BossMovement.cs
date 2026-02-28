@@ -6,6 +6,7 @@ public class BossMovement : MonoBehaviour
     private const float MOVE_LEEWAY = 0.5f;
     #endregion
 
+    [SerializeField] private Transform trackingTarget;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
 
@@ -28,10 +29,18 @@ public class BossMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (trackingTarget != null)
+        {
+            Vector2 trackTargetTo = (Vector2)trackingTarget.position - rb.position;
+            // Make the boss point towards the tracked target.
+            rb.rotation = Mathf.Atan2(trackTargetTo.y, trackTargetTo.x) * Mathf.Rad2Deg + -90;
+        }
+
+        Vector2 targetVelocity;
         if (isMovingToPos)
         {
             Vector2 direction = moveTarget - rb.position;
-            TargetVelocity = direction.normalized * maxSpeed;
+            targetVelocity = direction.normalized * maxSpeed;
 
             if (direction.magnitude < MOVE_LEEWAY)
             {
@@ -39,7 +48,12 @@ public class BossMovement : MonoBehaviour
                 isMovingToPos = false;
             }
         }
+        else
+        {
 
-        rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, TargetVelocity, acceleration);
+            targetVelocity = Quaternion.Euler(0, 0, rb.rotation) * TargetVelocity;
+        }
+
+        rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration);
     }
 }
