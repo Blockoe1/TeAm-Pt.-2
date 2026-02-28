@@ -31,17 +31,6 @@ public class PMoveYolkState : PMoveBaseSt
         else
             Dash();
     }
-    public override void UpdateState()
-    {
-        if (!isDashing)
-            Rotate();
-    }
-
-    private void Rotate()
-    {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        m.transform.up = mousePos - new Vector2(m.transform.position.x, m.transform.position.y);
-    }
 
     private void Move()
     {

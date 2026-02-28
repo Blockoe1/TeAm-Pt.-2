@@ -80,11 +80,6 @@ public class PMoveStateMngr : MonoBehaviour
         currentSt.FixedUpdateState();
     }
 
-    private void Update()
-    {
-        currentSt.UpdateState();
-    }
-
     [HideInInspector]
     public void SwitchState(PMoveBaseSt state)
     {
