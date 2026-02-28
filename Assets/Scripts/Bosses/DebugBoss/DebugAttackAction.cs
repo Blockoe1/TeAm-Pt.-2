@@ -13,7 +13,6 @@ public class DebugAttackAction : BossAction
     {
         base.OnActionBegin();
         Boss.movement.OnReachPoint += Shoot;
-        reachedPos = false;
     }
     public override void OnActionExit()
     {
@@ -23,6 +22,7 @@ public class DebugAttackAction : BossAction
 
     public override IEnumerator ActionRoutine()
     {
+        reachedPos = false;
         //yield return new WaitForFixedUpdate();
         Boss.movement.SetMoveTarget(moveTargets[Random.Range(0, moveTargets.Length)].position);
         yield return new WaitUntil(() => reachedPos);
