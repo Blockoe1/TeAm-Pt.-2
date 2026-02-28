@@ -96,5 +96,9 @@ public class PMoveStateMngr : MonoBehaviour
     {
         Vector2 pointDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         _pointGO.up = pointDirection - new Vector2(_pointGO.position.x, _pointGO.position.y);  
+    public void Buttered()
+    {
+        AccelerationSpeed *= .5f;
+        DeccelerationSpeed *= .5f;
     }
 }
