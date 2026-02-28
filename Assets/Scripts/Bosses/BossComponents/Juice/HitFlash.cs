@@ -18,6 +18,7 @@ public class HitFlash : MonoBehaviour
 
     public void Flash(float flashTime)
     {
+        if (!gameObject.activeInHierarchy) { return;  }
         if (flashRoutine != null)
         {
             StopCoroutine(flashRoutine);

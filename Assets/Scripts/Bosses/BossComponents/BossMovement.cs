@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using FMODUnity;
+using System.Collections;
 [RequireComponent (typeof(Rigidbody2D))]
 public class BossMovement : MonoBehaviour
 {
@@ -8,16 +10,32 @@ public class BossMovement : MonoBehaviour
     #endregion
 
     [SerializeField] private Transform trackingTarget;
-    [SerializeField] private float maxSpeed;
+    [SerializeField] private float toTargetSpeed;
     [SerializeField] private float acceleration;
+    [SerializeField] private float angleSmoothTime;
+    [SerializeField] private float angleMaxSpeed;
+
+    private Coroutine sillySolution;
+
+    [SerializeField] public EventReference MovementSound;
 
     private Vector2 moveTarget;
     public Vector2 TargetVelocity { get; set; }
     private bool isMovingToPos;
+    private float angleVelocity;
 
     private Rigidbody2D rb;
 
     public event Action<Vector2> OnReachPoint;
+
+    #region Properties
+    public Rigidbody2D Rb => rb;
+    public Transform TrackingTarget
+    {
+        get { return trackingTarget; }
+        set { trackingTarget = value; }
+    }
+    #endregion
 
     private void Awake()
     {
@@ -36,34 +54,65 @@ public class BossMovement : MonoBehaviour
         {
             Vector2 trackTargetTo = (Vector2)trackingTarget.position - rb.position;
             // Make the boss point towards the tracked target.
-            rb.rotation = Mathf.Atan2(trackTargetTo.y, trackTargetTo.x) * Mathf.Rad2Deg;
+            float targetAngle = Mathf.Atan2(trackTargetTo.y, trackTargetTo.x) * Mathf.Rad2Deg;
+            rb.rotation = Mathf.SmoothDampAngle(rb.rotation, targetAngle, ref angleVelocity, angleSmoothTime, angleMaxSpeed);
         }
 
         Vector2 targetVelocity;
         if (isMovingToPos)
         {
             Vector2 direction = moveTarget - rb.position;
-            targetVelocity = direction.normalized * maxSpeed;
+            targetVelocity = direction.normalized * toTargetSpeed;
 
             if (direction.magnitude < MOVE_LEEWAY)
             {
                 TargetVelocity = Vector2.zero;
                 OnReachPoint?.Invoke(moveTarget);
                 isMovingToPos = false;
+                
+            }
+
+            if (sillySolution != null)
+            {
+                StopCoroutine(sillySolution);
+                sillySolution = null;
             }
         }
         else
         {
 
             targetVelocity = Quaternion.Euler(0, 0, rb.rotation) * TargetVelocity;
+
+            if (sillySolution == null)
+            {
+                sillySolution = StartCoroutine(PlaySound());
+            }
+        }
+        rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+    }
+
+    public void SnapToTarget()
+    {
+        if (trackingTarget != null)
+        {
+            Vector2 trackTargetTo = (Vector2)trackingTarget.position - rb.position;
+            rb.rotation = Mathf.Atan2(trackTargetTo.y, trackTargetTo.x) * Mathf.Rad2Deg;
+        }
+    }
+
+    /// <summary>
+    /// This is so scuffed but it works
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator PlaySound()
+    {
+        AudioManager.instance.PlayOneShot(MovementSound);
+
+        while(true)
+        {
+            yield return null;
         }
 
-        rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration);
-    }
-    public void Charge()
-    {
-        Debug.Log("Charge");
-        transform.LookAt(transform.position);
-        rb.AddForce(transform.right * 1000);
+
     }
 }

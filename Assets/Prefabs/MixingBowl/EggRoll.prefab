@@ -142,3 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   despawnOnCollision: 0
+  <rb>k__BackingField: {fileID: 3463708393730240702}
+--- !u!50 &3463708393730240702 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2727987739293412352, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+  m_PrefabInstance: {fileID: 1570157629536214206}
+  m_PrefabAsset: {fileID: 0}
