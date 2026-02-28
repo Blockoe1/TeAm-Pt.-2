@@ -5,45 +5,47 @@ using UnityEngine;
 
 public class ProjectileShooter : MonoBehaviour
 {
-    [SerializeField] private ProjectileBase projectilePrefab;
+    [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform projectileParent;
 
-    private readonly Queue<ProjectileBase> projectilePool = new();
+    private readonly Queue<Projectile> projectilePool = new();
 
-    public void Launch(Vector2 mainLaunchVector)
+    public void Launch(Vector2 direction, float power, int shotAmount = 1, float spreadAngle = 0)
     {
-        Launch(mainLaunchVector, transform.position);
+        Launch(direction, power, transform.position, shotAmount, spreadAngle);
     }
 
-    public void Launch(Vector2 mainLaunchVector, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
+    public void Launch(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
     {
         float stepAngle = spreadAngle / shotAmount;
-        float startingAngle = Mathf.Atan2(mainLaunchVector.y, mainLaunchVector.x);
+        float startingAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         for(int i = 0; i < shotAmount; i++)
         {
+            Debug.Log(shotAmount);
             float angle = startingAngle - (spreadAngle / 2) + (stepAngle * i);
-            Vector2 launchVector = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+            Vector2 launchVector = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
 
-            ProjectileBase projectile = GetProjectile();
+            Projectile projectile = GetProjectile();
             projectile.transform.position = spawnLocation;
+            projectile.transform.eulerAngles = new Vector3(0, 0, angle);
             projectile.gameObject.SetActive(true);
 
             projectile.SetDespawnAction(ReturnProjectile);
-            projectile.Launch(launchVector.normalized * mainLaunchVector.magnitude);
+            projectile.Launch(launchVector.normalized * power);
         } 
     }
 
     #region Object Pooling
-    private ProjectileBase GetProjectile()
+    private Projectile GetProjectile()
     {
-        ProjectileBase toReturn = projectilePool.Count > 0 ? projectilePool.Dequeue() : 
+        Projectile toReturn = projectilePool.Count > 0 ? projectilePool.Dequeue() : 
             Instantiate(projectilePrefab, projectileParent);
         return toReturn;
     }
-    private void ReturnProjectile(ProjectileBase toReturn)
+    private void ReturnProjectile(Projectile toReturn)
     {
-        projectilePool.Enqueue(GetProjectile());
+        projectilePool.Enqueue(toReturn);
         toReturn.gameObject.SetActive(false);
     }
     #endregion

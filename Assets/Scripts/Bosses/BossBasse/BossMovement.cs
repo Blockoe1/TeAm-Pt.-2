@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 [RequireComponent (typeof(Rigidbody2D))]
 public class BossMovement : MonoBehaviour
@@ -16,6 +17,8 @@ public class BossMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public event Action<Vector2> OnReachPoint;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,7 +36,7 @@ public class BossMovement : MonoBehaviour
         {
             Vector2 trackTargetTo = (Vector2)trackingTarget.position - rb.position;
             // Make the boss point towards the tracked target.
-            rb.rotation = Mathf.Atan2(trackTargetTo.y, trackTargetTo.x) * Mathf.Rad2Deg + -90;
+            rb.rotation = Mathf.Atan2(trackTargetTo.y, trackTargetTo.x) * Mathf.Rad2Deg;
         }
 
         Vector2 targetVelocity;
@@ -45,6 +48,7 @@ public class BossMovement : MonoBehaviour
             if (direction.magnitude < MOVE_LEEWAY)
             {
                 TargetVelocity = Vector2.zero;
+                OnReachPoint?.Invoke(moveTarget);
                 isMovingToPos = false;
             }
         }
