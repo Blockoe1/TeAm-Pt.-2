@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PMoveYolkState : PMoveBaseSt
 {
@@ -16,6 +15,8 @@ public class PMoveYolkState : PMoveBaseSt
     public override void EnterState()
     {
         m.Dash.performed += Dash_performed;
+
+        m.Anim.runtimeAnimatorController = m.YolkAnimOC;
     }
 
     public override void ExitState()
@@ -44,16 +45,24 @@ public class PMoveYolkState : PMoveBaseSt
 
     private void Move()
     {
+        //Move
         m.Rb2d.linearVelocity = (m.MoveDirection * m.YolkMoveSpeed);
+
+        //Animimation
+        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.25f) ? true : false);
     }
 
-    private void Dash_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    private void Dash_performed(InputAction.CallbackContext obj)
     {
         m.StartCoroutine(DashCooldown());
     }
     private void Dash()
     {
+        //Move
         m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.transform.up);
+
+        //Animation
+        m.Anim.SetTrigger("DASH");
     }
     private IEnumerator DashCooldown()
     {

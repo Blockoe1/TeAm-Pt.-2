@@ -1,3 +1,5 @@
+using NaughtyAttributes;
+using NUnit.Framework;
 using System.Collections;
 using UnityEngine;
 
@@ -19,6 +21,9 @@ public class PlayerHealth : MonoBehaviour
         if (iFrames == false && collision.CompareTag("Damage"))
         {
             StartCoroutine(Damaged());
+
+            Debug.Log(collision.ClosestPoint(transform.position));
+            ParticleMngr.Inst.Play("YOLK", transform.position, transform.rotation);
         }
     }
 
@@ -26,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
         iFrames = true;
         health -= 1;
+
         switch(health)
         {
             case 2:
