@@ -8,6 +8,8 @@ public class PMoveStateMngr : MonoBehaviour
 {
     private static PMoveStateMngr inst;
 
+    [SerializeField] private Transform _pointGO;
+
     private InputAction move;
     private Vector2 moveDirection;
 
@@ -39,7 +41,6 @@ public class PMoveStateMngr : MonoBehaviour
     public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
     public float EggMoveSpeed { get => _eggMoveSpeed; set => _eggMoveSpeed = value; }
     public float AccelerationSpeed { get => _accelerationSpeed; set => _accelerationSpeed = value; }
-    public float AccelerationSpeed1 { get => _accelerationSpeed; set => _accelerationSpeed = value; }
     public float DeccelerationSpeed { get => _deccelerationSpeed; set => _deccelerationSpeed = value; }
     public InputAction Dash { get => dash; set => dash = value; }
     public float EggDashSpeed { get => _eggDashSpeed; set => _eggDashSpeed = value; }
@@ -52,6 +53,7 @@ public class PMoveStateMngr : MonoBehaviour
     public InputAction Move { get => move; set => move = value; }
     public AnimatorOverrideController YolkAnimOC { get => _yolkAnimOC; set => _yolkAnimOC = value; }
     public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
+    public Transform PointGO { get => _pointGO; set => _pointGO = value; }
     #endregion
 
     private void Awake()
@@ -75,6 +77,8 @@ public class PMoveStateMngr : MonoBehaviour
 
     private void FixedUpdate()
     {
+        UpdatePointDirection();
+
         moveDirection = move.ReadValue<Vector2>();
 
         currentSt.FixedUpdateState();
@@ -88,6 +92,10 @@ public class PMoveStateMngr : MonoBehaviour
         currentSt.EnterState();
     }
 
+    private void UpdatePointDirection()
+    {
+        Vector2 pointDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        _pointGO.up = pointDirection - new Vector2(_pointGO.position.x, _pointGO.position.y);  
     public void Buttered()
     {
         AccelerationSpeed *= .5f;
