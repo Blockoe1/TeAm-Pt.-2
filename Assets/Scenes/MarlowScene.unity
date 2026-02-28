@@ -659,7 +659,7 @@ MonoBehaviour:
   _eggDashSpeed: 10
   _yolkMoveSpeed: 7
   _yolkDashSpeed: 15
-  _yolkDashDuration: 0.5
+  _yolkDashDuration: 0.2
 --- !u!61 &1248587641
 BoxCollider2D:
   m_ObjectHideFlags: 0

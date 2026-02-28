@@ -67,7 +67,7 @@ public class PMoveStateMngr : MonoBehaviour
 
     private void Update()
     {
-        Rotate();
+        currentSt.UpdateState();
     }
 
     [HideInInspector]
@@ -78,9 +78,5 @@ public class PMoveStateMngr : MonoBehaviour
         currentSt.EnterState();
     }
 
-    private void Rotate()
-    {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        transform.up = mousePos - new Vector2(transform.position.x, transform.position.y);
-    }
+
 }
