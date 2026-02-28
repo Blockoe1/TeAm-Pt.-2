@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void UpdateVolume()
     {
-        masterBus.setVolume(masterVolume);
+        masterBus.setVolume(MasterVolume);
         //sfxBus.setVolume(sfxVolume);
         //musicBus.setVolume(musicVolume);
     }
