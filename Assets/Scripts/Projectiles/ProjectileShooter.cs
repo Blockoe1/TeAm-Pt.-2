@@ -48,6 +48,13 @@ public class ProjectileShooter : MonoBehaviour
         } 
     }
 
+    public void RainingDown(Vector2 minValues, Vector2 maxValues)
+    {
+        Projectile projectile = GetProjectile();
+        projectile.transform.position = new Vector2(UnityEngine.Random.Range(minValues.x,maxValues.x),UnityEngine.Random.Range(minValues.y,maxValues.y));
+        projectile.gameObject.SetActive(true);
+    }
+
     #region Object Pooling
     private Projectile GetProjectile()
     {
