@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private bool despawnOnCollision;
+    [SerializeField] protected bool despawnOnCollision;
     protected enum ProjectileType
     {
         FlamingButter, Other
@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
-        if(projectileType == ProjectileType.FlamingButter)
+        if(projectileType == ProjectileType.FlamingButter && AudioManager.instance != null)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.IgniteOnFire);
         }

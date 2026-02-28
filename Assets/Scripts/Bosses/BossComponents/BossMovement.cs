@@ -106,7 +106,10 @@ public class BossMovement : MonoBehaviour
     /// <returns></returns>
     private IEnumerator PlaySound()
     {
-        AudioManager.instance.PlayOneShot(MovementSound);
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayOneShot(MovementSound);
+        }
 
         while(true)
         {
