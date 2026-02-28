@@ -6,10 +6,10 @@ using UnityEngine;
 [DropdownGroup("Egg Cooker")]
 public class EC_Charge : BossAction
 {
-    [SerializeField] private float dashPower;
+    [SerializeField] private float chargeSpeed;
     [SerializeField] private int chargeNumber = 1;
-    [SerializeField] private float chargeDelay = 0;
-    [SerializeField] private float postChargeWait = 0.5f;
+    [SerializeField] private float chargeTime = 1;
+    [SerializeField] private float chargeDelay = 1;
 
     private bool showChargeDelay => chargeNumber > 1;
 
@@ -17,14 +17,23 @@ public class EC_Charge : BossAction
     {
         for(int i = 0; i < chargeNumber; i++)
         {
-            Boss.Movement.SnapToTarget();
-            Boss.Movement.Rb.AddForce(Boss.ToPlayer * dashPower, ForceMode2D.Impulse);
-            Transform trackTarget = Boss.Movement.TrackingTarget;
-            yield return new WaitForSeconds(chargeDelay);
-            Boss.Movement.TrackingTarget = trackTarget;
+            Boss.Movement.SnapRotation();
+            //Boss.Movement.Rb.AddForce(Boss.ToPlayer * dashPower, ForceMode2D.Impulse);
+            float timer = chargeTime;
 
+            Transform trackTarget = Boss.Movement.TrackingTarget;
+            Boss.Movement.TrackingTarget = null;
+            while (timer > 0)
+            {
+                Boss.Movement.TargetVelocity = Vector2.right * chargeSpeed;
+                timer -= Time.fixedDeltaTime;
+                yield return new WaitForFixedUpdate();
+            }
+            Boss.Movement.TrackingTarget = trackTarget;
+            Boss.Movement.TargetVelocity = Vector2.zero;
+
+            yield return new WaitForSeconds(chargeDelay);
         }
-        yield return new WaitForSeconds(postChargeWait);
 
         Phase.NextAction();
     }

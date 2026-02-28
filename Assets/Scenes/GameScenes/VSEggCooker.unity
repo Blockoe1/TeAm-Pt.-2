@@ -615,10 +615,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612016458891422].dashPower
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735120].dashPower
       value: 0
       objectReference: {fileID: 0}
@@ -629,10 +625,6 @@ PrefabInstance:
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735141].dashPower
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187212].dashPower
-      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735142].followTime
@@ -696,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: acceleration
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: trackingTarget
