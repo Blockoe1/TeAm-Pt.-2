@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PMoveStateMngr : MonoBehaviour
 {
+    private static PMoveStateMngr inst;
+
     private InputAction move;
     private Vector2 moveDirection;
 
@@ -20,8 +22,6 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashDuration;
-
-
 
     private Rigidbody2D rb2d;
 
@@ -42,8 +42,14 @@ public class PMoveStateMngr : MonoBehaviour
     public float YolkMoveSpeed { get => _yolkMoveSpeed; set => _yolkMoveSpeed = value; }
     public float YolkDashSpeed { get => _yolkDashSpeed; set => _yolkDashSpeed = value; }
     public float YolkDashDuration { get => _yolkDashDuration; set => _yolkDashDuration = value; }
+    public static PMoveStateMngr Inst { get => inst; set => inst = value; }
+    public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
     #endregion
 
+    private void Awake()
+    {
+        inst = this;
+    }
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -54,7 +60,7 @@ public class PMoveStateMngr : MonoBehaviour
         eggState = new PMoveEggState(this);
         yolkState = new PMoveYolkState(this);
 
-        currentSt = yolkState;
+        currentSt = eggState;
         currentSt.EnterState();
     }
 
