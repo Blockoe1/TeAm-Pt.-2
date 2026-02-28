@@ -13,6 +13,11 @@ public class UIControls : MonoBehaviour
     [SerializeField] private GameObject _options;
 
 
+    private void Awake()
+    {
+        GetComponent<Canvas>().worldCamera = Camera.main;
+    }
+
     /// <summary>
     /// Sets initial canvas states
     /// </summary>

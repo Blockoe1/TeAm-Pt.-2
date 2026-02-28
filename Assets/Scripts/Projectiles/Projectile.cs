@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private bool despawnOnCollision;
+    [SerializeField] protected bool despawnOnCollision;
     protected enum ProjectileType
     {
         FlamingButter, Other
@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
     #region CONST
     private const float DESPAWN_TIME = 10f;
     #endregion
-    protected Rigidbody2D rb { get; private set; }
+    [field: SerializeField] protected Rigidbody2D rb { get; private set; }
 
     private Coroutine lifetimeRoutine;
 
@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
-        if(projectileType == ProjectileType.FlamingButter)
+        if(projectileType == ProjectileType.FlamingButter && AudioManager.instance != null)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.IgniteOnFire);
         }
@@ -46,7 +46,7 @@ public class Projectile : MonoBehaviour
         Despawn();
     }
 
-    protected void Despawn()
+    public void Despawn()
     {
         despawnAction?.Invoke(this);
         if (lifetimeRoutine != null)

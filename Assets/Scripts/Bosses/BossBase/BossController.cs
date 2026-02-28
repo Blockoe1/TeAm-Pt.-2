@@ -12,7 +12,7 @@ public class BossController : MonoBehaviour
     private int currentPhase;
 
     // Component References
-    public BossMovement movement { get; private set; }
+    public BossMovement Movement { get; private set; }
 
     #region Properties
     public Vector2 ToPlayer => (playerTransform.position - transform.position).normalized;
@@ -24,7 +24,7 @@ public class BossController : MonoBehaviour
     private void Awake()
     {
         // Get Components
-        movement = GetComponent<BossMovement>();
+        Movement = GetComponent<BossMovement>();
 
         for(int i = 0; i < phases.Length; i++)
         {
