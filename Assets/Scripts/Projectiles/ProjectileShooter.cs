@@ -10,19 +10,30 @@ public class ProjectileShooter : MonoBehaviour
 
     private readonly Queue<Projectile> projectilePool = new();
 
-    public void Launch(Vector2 direction, float power, int shotAmount = 1, float spreadAngle = 0)
+    public void Shoot(Vector2 direction, float power, int shotAmount = 1, float spreadAngle = 0)
     {
-        Launch(direction, power, transform.position, shotAmount, spreadAngle);
+        Shoot(direction, power, transform.position, shotAmount, spreadAngle);
     }
 
-    public void Launch(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
+    public void Shoot(float startingAngle, float power, int shotAmount = 1, float spreadAngle = 0)
     {
-        float stepAngle = spreadAngle / shotAmount;
-        float startingAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Shoot(startingAngle, power, transform.position, shotAmount, spreadAngle);
+    }
 
-        for(int i = 0; i < shotAmount; i++)
+    public void Shoot(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
+    {
+        float startingAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Shoot(startingAngle, power, transform.position, shotAmount, spreadAngle);
+    }
+
+    public void Shoot(float startingAngle, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
+    {
+        float stepAngle = shotAmount > 1 ? spreadAngle / (shotAmount - 1) : 0;
+        
+        //Debug.Log(startingAngle);
+
+        for (int i = 0; i < shotAmount; i++)
         {
-            Debug.Log(shotAmount);
             float angle = startingAngle - (spreadAngle / 2) + (stepAngle * i);
             Vector2 launchVector = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
 
@@ -34,6 +45,13 @@ public class ProjectileShooter : MonoBehaviour
             projectile.SetDespawnAction(ReturnProjectile);
             projectile.Launch(launchVector.normalized * power);
         } 
+    }
+
+    public void RainingDown(Vector2 minValues, Vector2 maxValues)
+    {
+        Projectile projectile = GetProjectile();
+        projectile.transform.position = new Vector2(UnityEngine.Random.Range(minValues.x,maxValues.x),UnityEngine.Random.Range(minValues.y,maxValues.y));
+        projectile.gameObject.SetActive(true);
     }
 
     #region Object Pooling

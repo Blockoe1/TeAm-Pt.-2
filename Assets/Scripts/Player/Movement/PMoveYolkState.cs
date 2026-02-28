@@ -1,13 +1,10 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PMoveYolkState : PMoveBaseSt
 {
     private PMoveStateMngr m;
-
-    private bool isDashing;
 
     public PMoveYolkState(PMoveStateMngr m)
     {
@@ -16,6 +13,8 @@ public class PMoveYolkState : PMoveBaseSt
     public override void EnterState()
     {
         m.Dash.performed += Dash_performed;
+
+        m.Anim.runtimeAnimatorController = m.YolkAnimOC;
     }
 
     public override void ExitState()
@@ -25,40 +24,35 @@ public class PMoveYolkState : PMoveBaseSt
 
     public override void FixedUpdateState()
     {
-        if (!isDashing)
+        if (!m.IsDashing)
             Move();
         else
             Dash();
     }
-    public override void UpdateState()
-    {
-        if (!isDashing)
-            Rotate();
-    }
-
-    private void Rotate()
-    {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        m.transform.up = mousePos - new Vector2(m.transform.position.x, m.transform.position.y);
-    }
 
     private void Move()
     {
+        //Move
         m.Rb2d.linearVelocity = (m.MoveDirection * m.YolkMoveSpeed);
+
+        //Animimation
+        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.25f) ? true : false);
     }
 
-    private void Dash_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    private void Dash_performed(InputAction.CallbackContext obj)
     {
         m.StartCoroutine(DashCooldown());
+        m.Anim.SetTrigger("DASH");
     }
     private void Dash()
     {
-        m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.transform.up);
+        //Move
+        m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.FaceDirection);
     }
     private IEnumerator DashCooldown()
     {
-        isDashing = true;
+        m.IsDashing = true;
         yield return new WaitForSeconds(m.YolkDashDuration);
-        isDashing = false;
+        m.IsDashing = false;
     }
 }

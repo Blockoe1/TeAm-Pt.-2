@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private bool despawnOnCollision;
     #region CONST
     private const float DESPAWN_TIME = 10f;
     #endregion
@@ -46,9 +47,12 @@ public class Projectile : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         // On collision with anything, destroy the projectile.
-        Despawn();
+        if (despawnOnCollision)
+        {
+            Despawn();
+        }
     }
 }

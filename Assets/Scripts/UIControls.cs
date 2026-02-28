@@ -16,6 +16,13 @@ public class UIControls : MonoBehaviour
     /// <summary>
     /// Sets initial canvas states
     /// </summary>
+
+    public void TransitionToScene(string scene)
+    {
+        TransitionManager.ZoomTransition(scene);
+    }
+
+
     private void Start()
     {
         _mainCanvas.SetActive(true);

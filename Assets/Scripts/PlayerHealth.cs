@@ -1,3 +1,5 @@
+using NaughtyAttributes;
+using NUnit.Framework;
 using System.Collections;
 using UnityEngine;
 
@@ -14,11 +16,26 @@ public class PlayerHealth : MonoBehaviour
         whole, cracked, yolk
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    //We should be calling this on the enemy's projectile and body...
+    //public void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (iFrames == false && collision.CompareTag("Damage"))
+    //    {
+    //        StartCoroutine(Damaged());
+
+    //        Debug.Log(collision.ClosestPoint(transform.position));
+    //        ParticleMngr.Inst.Play("YOLK", transform.position, transform.rotation);
+    //    }
+    //}
+
+    public void DealDamage()
     {
-        if (iFrames == false && collision.CompareTag("Damage"))
+        if (iFrames == false)
         {
             StartCoroutine(Damaged());
+
+            //Debug.Log(collision.ClosestPoint(transform.position));
+            ParticleMngr.Inst.Play("P_HIT", transform.position, transform.rotation);
         }
     }
 
@@ -26,6 +43,7 @@ public class PlayerHealth : MonoBehaviour
     {
         iFrames = true;
         health -= 1;
+
         switch(health)
         {
             case 2:
@@ -34,6 +52,8 @@ public class PlayerHealth : MonoBehaviour
             case 1:
                 form = eggform.yolk;
                 PMoveStateMngr.Inst.SwitchState(PMoveStateMngr.Inst.YolkState);
+                break;
+            case 0:
                 break;
         }
         yield return new WaitForSeconds(iFramesTime);
