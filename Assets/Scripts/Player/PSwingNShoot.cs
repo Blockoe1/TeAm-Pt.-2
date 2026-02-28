@@ -10,13 +10,18 @@ public class PSwingNShoot : MonoBehaviour
     private bool swinging = false;
     private bool swingLeft = false;
 
-    //[SerializeField] private Animator animator;
+    [SerializeField] private Animator animator;
 
     [SerializeField] private int _bufferInputTime;
+    [SerializeField] private ProjectileShooter _projectileShooter;
+
+    [SerializeField] private Transform _panPivotTransform;
+
+    [SerializeField] private float _shootPower = 5;
 
     private void Start()
     {
-        swingAction = InputSystem.actions.FindAction("Click");
+        swingAction = InputSystem.actions.FindAction("CLICK");
 
         swingAction.started += SwingAction_started;
         swingAction.canceled += SwingAction_canceled;
@@ -45,7 +50,8 @@ public class PSwingNShoot : MonoBehaviour
     {
         swingLeft = !swingLeft;
         swinging = true;
-        //animator.Play(swingLeft ? "Swing" : "SwingBack", 1);
+        animator.SetTrigger("ATTACK");
+        animator.SetBool("ATTACK_LEFT", !animator.GetBool("ATTACK_LEFT"));
         yield return null;
     }
 
@@ -75,6 +81,13 @@ public class PSwingNShoot : MonoBehaviour
 
     public void SwingStop()
     {
+        animator.ResetTrigger("ATTACK");
         swinging = false;
+    }
+
+    public void ShootEgg()
+    {
+        Vector2 direction = _panPivotTransform.transform.up;
+        _projectileShooter.Shoot(direction, _shootPower);
     }
 }
