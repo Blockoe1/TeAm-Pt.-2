@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using UnityEngine;
 
@@ -5,42 +6,33 @@ using UnityEngine;
 [DropdownGroup("Egg Cooker")]
 public class EC_Charge : BossAction
 {
-    [SerializeField] private float postMoveWait;
-    private EggCookerMovement eggCookerMovement;
+    [SerializeField] private float dashPower;
+    [SerializeField] private int chargeNumber = 1;
+    [SerializeField] private float chargeDelay = 0;
+    [SerializeField] private float postChargeWait = 0.5f;
 
-    private bool reachedPoint;
-
-    public override void Initialize(BossController boss, BossPhase phase)
-    {
-        base.Initialize(boss, phase);
-        eggCookerMovement = boss.GetComponent<EggCookerMovement>();
-    }
-
-    /// <summary>
-    /// If we came from a movement state, instantly transition.
-    /// </summary>
-    /// <param name="previousAction"></param>
-    /// <returns></returns>
-    public override bool CheckFirstAction(BossAction previousAction)
-    {
-        if (previousAction is EC_Charge)
-        {
-            Phase.NextAction();
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
+    private bool showChargeDelay => chargeNumber > 1;
 
     public override IEnumerator ActionRoutine()
     {
-        reachedPoint = false;
-        eggCookerMovement.Charge();
-        yield return new WaitUntil(() => reachedPoint);
-        yield return new WaitForSeconds(postMoveWait);
+        for(int i = 0; i < chargeNumber; i++)
+        {
+            Boss.Movement.SnapToTarget();
+            Boss.Movement.Rb.AddForce(Boss.ToPlayer * dashPower, ForceMode2D.Impulse);
+            Transform trackTarget = Boss.Movement.TrackingTarget;
+            yield return new WaitForSeconds(chargeDelay);
+            Boss.Movement.TrackingTarget = trackTarget;
+
+        }
+        yield return new WaitForSeconds(postChargeWait);
 
         Phase.NextAction();
     }
+
+    //public void Charge()
+    //{
+    //    Debug.Log("Charge");
+    //    transform.LookAt(transform.position);
+    //    rb.AddForce(transform.right * 1000);
+    //}
 }

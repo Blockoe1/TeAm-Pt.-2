@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
     #region CONST
     private const float DESPAWN_TIME = 10f;
     #endregion
-    protected Rigidbody2D rb { get; private set; }
+    [field: SerializeField] protected Rigidbody2D rb { get; private set; }
 
     private Coroutine lifetimeRoutine;
 
@@ -46,7 +46,7 @@ public class Projectile : MonoBehaviour
         Despawn();
     }
 
-    protected void Despawn()
+    public void Despawn()
     {
         despawnAction?.Invoke(this);
         if (lifetimeRoutine != null)
