@@ -599,28 +599,12 @@ PrefabInstance:
       value: Assembly-CSharp EC_Charge
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612018635735140]'
-      value: Assembly-CSharp EC_Charge
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: 'managedReferences[6612018635735141]'
       value: Assembly-CSharp EC_Charge
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: 'managedReferences[6612018635735142]'
       value: Assembly-CSharp EC_Follow
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[1].actions.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'phases.Array.data[1].actions.Array.data[0]'
-      value: 6612018635735142
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'phases.Array.data[1].actions.Array.data[1]'
-      value: 6612018635735140
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: 'phases.Array.data[1].actions.Array.data[2]'
@@ -631,6 +615,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612016458891422].dashPower
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735120].dashPower
       value: 0
       objectReference: {fileID: 0}
@@ -639,12 +627,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735140].dashPower
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735141].dashPower
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612019444187212].dashPower
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735142].followTime
@@ -663,10 +651,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735140].chargeDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735141].chargeDelay
       value: 0
       objectReference: {fileID: 0}
@@ -679,19 +663,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612016458891422].chargeNumber
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735120].chargeNumber
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735139].chargeNumber
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735140].chargeNumber
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
@@ -708,10 +684,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612018635735139].postChargeWait
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735140].postChargeWait
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}

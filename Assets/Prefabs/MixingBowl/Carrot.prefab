@@ -196,3 +196,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &8775054012940183322 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2727987739293412352, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+  m_PrefabInstance: {fileID: 6637324282510576410}
+  m_PrefabAsset: {fileID: 0}

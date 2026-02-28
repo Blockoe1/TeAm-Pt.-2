@@ -1,7 +1,6 @@
 using NaughtyAttributes;
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 [System.Serializable]
 [DropdownGroup("Egg Cooker")]
@@ -9,7 +8,7 @@ public class EC_Charge : BossAction
 {
     [SerializeField] private float dashPower;
     [SerializeField] private int chargeNumber = 1;
-    [SerializeField, ShowIf("showChargeDelay"), AllowNesting] private float chargeDelay = 0;
+    [SerializeField] private float chargeDelay = 0;
     [SerializeField] private float postChargeWait = 0.5f;
 
     private bool showChargeDelay => chargeNumber > 1;
@@ -20,7 +19,10 @@ public class EC_Charge : BossAction
         {
             Boss.Movement.SnapToTarget();
             Boss.Movement.Rb.AddForce(Boss.ToPlayer * dashPower, ForceMode2D.Impulse);
+            Transform trackTarget = Boss.Movement.TrackingTarget;
             yield return new WaitForSeconds(chargeDelay);
+            Boss.Movement.TrackingTarget = trackTarget;
+
         }
         yield return new WaitForSeconds(postChargeWait);
 

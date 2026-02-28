@@ -24,6 +24,11 @@ public class BossMovement : MonoBehaviour
 
     #region Properties
     public Rigidbody2D Rb => rb;
+    public Transform TrackingTarget
+    {
+        get { return trackingTarget; }
+        set { trackingTarget = value; }
+    }
     #endregion
 
     private void Awake()

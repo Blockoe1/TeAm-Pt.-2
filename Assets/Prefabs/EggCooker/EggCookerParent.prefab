@@ -103,27 +103,55 @@ PrefabInstance:
       value: Assembly-CSharp EC_Shoot
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'managedReferences[6612019444187212]'
+      value: Assembly-CSharp EC_Charge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'managedReferences[6612019444187213]'
+      value: Assembly-CSharp EC_Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[0].actions.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: phases.Array.data[1].actions.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[0].actions.Array.data[0]'
-      value: 6612016458891421
+      value: 6612016458891422
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[0].actions.Array.data[1]'
-      value: 6612016458891422
+      value: 6612018635735128
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[0].actions.Array.data[2]'
       value: 6612018635735128
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'phases.Array.data[1].actions.Array.data[0]'
+      value: 6612019444187212
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'phases.Array.data[1].actions.Array.data[1]'
+      value: 6612019444187213
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].shooter
       value: 
       objectReference: {fileID: 5698471095320717580}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187213].shooter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].dashPower
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187212].dashPower
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
@@ -139,6 +167,14 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187213].shootDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187213].shootPower
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891421].followSpeed
       value: 4
       objectReference: {fileID: 0}
@@ -147,11 +183,23 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187212].chargeDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].chargeNumber
-      value: 5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187212].chargeNumber
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].postChargeWait
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187212].postChargeWait
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
