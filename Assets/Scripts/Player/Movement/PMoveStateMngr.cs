@@ -9,33 +9,39 @@ public class PMoveStateMngr : MonoBehaviour
     private Vector2 moveDirection;
 
     private InputAction dash;
-    private Vector2 faceDirection = Vector2.one;
 
     [Header("Roll State")]
-    [SerializeField][MinValue(0)] private float _rollSpeed;
+    [SerializeField][MinValue(0)] private float _eggMoveSpeed;
     [SerializeField][MinValue(0)] private float _accelerationSpeed;
     [SerializeField][MinValue(0)] private float _deccelerationSpeed;
+    [SerializeField][MinValue(0)] private float _eggDashSpeed;
 
-    [Header("Dash")]
-    [SerializeField][MinValue(0)] private float _rollDashSpeed;
+    [Header("Yolk State")]
+    [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
+    [SerializeField][MinValue(0)] private float _yolkDashSpeed;
+    [SerializeField][MinValue(0)] private float _yolkDashDuration;
+
 
 
     private Rigidbody2D rb2d;
 
-    private PMoveRollSt rollSt;
+    private PMoveEggState eggState;
+    private PMoveYolkState yolkState;
 
     private PMoveBaseSt currentSt;
 
     #region GS
     public Rigidbody2D Rb2d { get => rb2d; set => rb2d = value; }
     public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
-    public float RollSpeed { get => _rollSpeed; set => _rollSpeed = value; }
+    public float EggMoveSpeed { get => _eggMoveSpeed; set => _eggMoveSpeed = value; }
     public float AccelerationSpeed { get => _accelerationSpeed; set => _accelerationSpeed = value; }
     public float AccelerationSpeed1 { get => _accelerationSpeed; set => _accelerationSpeed = value; }
     public float DeccelerationSpeed { get => _deccelerationSpeed; set => _deccelerationSpeed = value; }
     public InputAction Dash { get => dash; set => dash = value; }
-    public float RollDashSpeed { get => _rollDashSpeed; set => _rollDashSpeed = value; }
-    public Vector2 FaceDirection { get => faceDirection; set => faceDirection = value; }
+    public float EggDashSpeed { get => _eggDashSpeed; set => _eggDashSpeed = value; }
+    public float YolkMoveSpeed { get => _yolkMoveSpeed; set => _yolkMoveSpeed = value; }
+    public float YolkDashSpeed { get => _yolkDashSpeed; set => _yolkDashSpeed = value; }
+    public float YolkDashDuration { get => _yolkDashDuration; set => _yolkDashDuration = value; }
     #endregion
 
     private void Start()
@@ -45,18 +51,16 @@ public class PMoveStateMngr : MonoBehaviour
         move = InputSystem.actions.FindAction("MOVE");
         dash = InputSystem.actions.FindAction("DASH");
 
-        rollSt = new PMoveRollSt(this);
+        eggState = new PMoveEggState(this);
+        yolkState = new PMoveYolkState(this);
 
-        currentSt = rollSt;
+        currentSt = yolkState;
         currentSt.EnterState();
     }
 
     private void FixedUpdate()
     {
         moveDirection = move.ReadValue<Vector2>();
-
-        if (moveDirection.x != 0 && moveDirection.y != 0)
-            faceDirection = moveDirection;
 
         currentSt.FixedUpdateState();
     }

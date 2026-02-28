@@ -653,10 +653,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cefb94f4770ee4ebcc8353502a79b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PMoveStateMngr
-  _rollSpeed: 10
+  _eggMoveSpeed: 5
   _accelerationSpeed: 0.1
   _deccelerationSpeed: 0.1
-  _rollDashSpeed: 7
+  _eggDashSpeed: 10
+  _yolkMoveSpeed: 7
+  _yolkDashSpeed: 15
+  _yolkDashDuration: 0.5
 --- !u!61 &1248587641
 BoxCollider2D:
   m_ObjectHideFlags: 0
