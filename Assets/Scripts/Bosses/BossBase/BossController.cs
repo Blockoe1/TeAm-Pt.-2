@@ -14,6 +14,10 @@ public class BossController : MonoBehaviour
     // Component References
     public BossMovement movement { get; private set; }
 
+    #region Properties
+    public Vector2 ToPlayer => (playerTransform.position - transform.position).normalized;
+    #endregion
+
     /// <summary>
     /// Initialize all states.
     /// </summary>
@@ -22,9 +26,16 @@ public class BossController : MonoBehaviour
         // Get Components
         movement = GetComponent<BossMovement>();
 
-        foreach(var phase in phases)
+        for(int i = 0; i < phases.Length; i++)
         {
-            phase.Initialize(this);
+            phases[i].Initialize(this, i);
+        }
+    }
+    private void OnDestroy()
+    {
+        foreach (var phase in phases)
+        {
+            phase.Deinitialize();
         }
     }
 
@@ -38,7 +49,6 @@ public class BossController : MonoBehaviour
     /// </summary>
     public void QueryPhase(int currentHealth)
     {
-        Debug.Log(currentHealth < phases[currentPhase + 1].healthThreshold);
         if (currentPhase + 1 < phases.Length && currentHealth < phases[currentPhase + 1].healthThreshold)
         {
             if (phases[currentPhase + 1].transitionInstant)
@@ -55,7 +65,7 @@ public class BossController : MonoBehaviour
 
     public bool QueuedPhaseTransition()
     {
-        Debug.Log("Transitioning Phase.");
+        //Debug.Log("Transitioning Phase.");
         if (queuedPhase)
         {
             
@@ -73,10 +83,18 @@ public class BossController : MonoBehaviour
     /// Sets a phase as the active phase.
     /// </summary>
     /// <param name="phase"></param>
-    private void SetPhase(int phase)
+    public void SetPhase(int phase)
     {
-        phases[currentPhase]?.OnPhaseExit();
+        BossAction action = null;
+        if (currentPhase >= 0 && currentPhase < phases.Length)
+        {
+            action = phases[currentPhase].CurrentAction;
+            phases[currentPhase]?.OnPhaseExit();
+        }
         currentPhase = phase;
-        phases[currentPhase]?.OnPhaseEnter();    
+        if (currentPhase >= 0 && currentPhase < phases.Length)
+        {
+            phases[currentPhase]?.OnPhaseEnter(action);
+        }  
     }
 }

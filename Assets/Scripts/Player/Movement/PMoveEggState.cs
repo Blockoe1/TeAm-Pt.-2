@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PMoveEggState : PMoveBaseSt
 {
     PMoveStateMngr m;
@@ -16,6 +15,8 @@ public class PMoveEggState : PMoveBaseSt
     public override void EnterState()
     {
         m.Dash.performed += Dash_performed;
+
+        m.Anim.runtimeAnimatorController = m.EggAnimOC;
     }
 
     public override void ExitState()
@@ -27,20 +28,9 @@ public class PMoveEggState : PMoveBaseSt
     {
         Move();
     }
-
-    public override void UpdateState()
-    {
-        Rotate();
-    }
-
-    private void Rotate()
-    {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        m.transform.up = mousePos - new Vector2(m.transform.position.x, m.transform.position.y);
-    }
-
     private void Move()
     {
+        //Move
         Vector2 targetSpeed = m.MoveDirection * m.EggMoveSpeed;
         targetSpeed = new Vector2(Mathf.Lerp(m.Rb2d.linearVelocity.x, targetSpeed.x, 1), Mathf.Lerp(m.Rb2d.linearVelocity.y, targetSpeed.y, 1));
 
@@ -50,10 +40,17 @@ public class PMoveEggState : PMoveBaseSt
         Vector2 speedDifference = new Vector2(targetSpeed.x - m.Rb2d.linearVelocity.x, targetSpeed.y - m.Rb2d.linearVelocity.y);
         Vector2 movement = speedDifference * new Vector2(accelRateX, accelRateY);
         m.Rb2d.AddForce(movement, ForceMode2D.Force);
+
+        //Animimation
+        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.25f) ? true : false);
     }
 
     private void Dash_performed(InputAction.CallbackContext obj)
     {
+        //Move
         m.Rb2d.AddForce(m.EggDashSpeed * m.transform.up, ForceMode2D.Impulse);
+
+        //Animation
+        m.Anim.SetTrigger("DASH");
     }
 }
