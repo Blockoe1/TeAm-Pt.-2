@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     private bool iFrames = false;
     public float iFramesTime;
 
+    [SerializeField] private float _deathDelay;
+
 
     public enum eggform
     {
@@ -55,11 +57,18 @@ public class PlayerHealth : MonoBehaviour
                 PMoveStateMngr.Inst.SwitchState(PMoveStateMngr.Inst.YolkState);
                 break;
             case 0:
-                SceneManager.LoadScene("DeathScene");
+                StartCoroutine(DeathDelay());
                 break;
         }
         yield return new WaitForSeconds(iFramesTime);
         iFrames = false;
        
+    }
+
+    private IEnumerator DeathDelay()
+    {
+        ParticleMngr.Inst.Play("P_DIE", transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(_deathDelay);
+        SceneManager.LoadScene("DeathScene");
     }
 }
