@@ -49,8 +49,8 @@ public class AudioManager : MonoBehaviour
        // musicBus = RuntimeManager.GetBus("bus:/BGM");
 
         UpdateVolume();
-        backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
-        backgroundMusic.start();
+        //backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
+        //backgroundMusic.start();
     }
 
     /// <summary>
@@ -59,6 +59,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="sound"></param>
     public void PlayOneShot(EventReference sound)
     {
+        Debug.Log("Called");
         RuntimeManager.PlayOneShot(sound);
     }
 

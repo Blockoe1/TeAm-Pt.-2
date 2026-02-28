@@ -5,6 +5,12 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private bool despawnOnCollision;
+    protected enum ProjectileType
+    {
+        FlamingButter, Other
+    }
+
+    [SerializeField] private ProjectileType projectileType;
     #region CONST
     private const float DESPAWN_TIME = 10f;
     #endregion
@@ -16,6 +22,10 @@ public class Projectile : MonoBehaviour
 
     private void Awake()
     {
+        if(projectileType == ProjectileType.FlamingButter)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.IgniteOnFire);
+        }
         rb = GetComponent<Rigidbody2D>();
     }
 

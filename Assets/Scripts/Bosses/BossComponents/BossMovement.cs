@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using FMODUnity;
+using System.Collections;
 [RequireComponent (typeof(Rigidbody2D))]
 public class BossMovement : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private Transform trackingTarget;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
+
+    private Coroutine sillySolution;
+
+    [SerializeField] public EventReference MovementSound;
 
     private Vector2 moveTarget;
     public Vector2 TargetVelocity { get; set; }
@@ -50,12 +56,24 @@ public class BossMovement : MonoBehaviour
                 TargetVelocity = Vector2.zero;
                 OnReachPoint?.Invoke(moveTarget);
                 isMovingToPos = false;
+                
+            }
+
+            if (sillySolution != null)
+            {
+                StopCoroutine(sillySolution);
+                sillySolution = null;
             }
         }
         else
         {
 
             targetVelocity = Quaternion.Euler(0, 0, rb.rotation) * TargetVelocity;
+
+            if (sillySolution == null)
+            {
+                sillySolution = StartCoroutine(PlaySound());
+            }
         }
 
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration);
@@ -65,5 +83,21 @@ public class BossMovement : MonoBehaviour
         Debug.Log("Charge");
         transform.LookAt(transform.position);
         rb.AddForce(transform.right * 1000);
+    }
+
+    /// <summary>
+    /// This is so scuffed but it works
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator PlaySound()
+    {
+        AudioManager.instance.PlayOneShot(MovementSound);
+
+        while(true)
+        {
+            yield return null;
+        }
+
+
     }
 }
