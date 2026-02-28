@@ -16,11 +16,11 @@ public class AudioManager : MonoBehaviour
     private Bus musicBus;
 
     [Range(0, 1)]
-    public float masterVolume;
+    public float MasterVolume;
     [Range(0, 1)]
-    public float sfxVolume;
+    public float SfxVolume;
     [Range(0, 1)]
-    public float musicVolume;
+    public float MusicVolume;
 
     private EventInstance backgroundMusic;
 
@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void UpdateVolume()
     {
-        masterBus.setVolume(masterVolume);
+        masterBus.setVolume(MasterVolume);
         //sfxBus.setVolume(sfxVolume);
         //musicBus.setVolume(musicVolume);
     }

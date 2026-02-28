@@ -2,6 +2,7 @@ using NaughtyAttributes;
 using NUnit.Framework;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -54,6 +55,7 @@ public class PlayerHealth : MonoBehaviour
                 PMoveStateMngr.Inst.SwitchState(PMoveStateMngr.Inst.YolkState);
                 break;
             case 0:
+                SceneManager.LoadScene("DeathScene");
                 break;
         }
         yield return new WaitForSeconds(iFramesTime);
