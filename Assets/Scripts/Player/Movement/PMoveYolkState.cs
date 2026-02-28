@@ -1,0 +1,64 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.RuleTile.TilingRuleOutput;
+
+public class PMoveYolkState : PMoveBaseSt
+{
+    private PMoveStateMngr m;
+
+    private bool isDashing;
+
+    public PMoveYolkState(PMoveStateMngr m)
+    {
+        this.m = m;
+    }
+    public override void EnterState()
+    {
+        m.Dash.performed += Dash_performed;
+    }
+
+    public override void ExitState()
+    {
+        m.Dash.performed -= Dash_performed;
+    }
+
+    public override void FixedUpdateState()
+    {
+        if (!isDashing)
+            Move();
+        else
+            Dash();
+    }
+    public override void UpdateState()
+    {
+        if (!isDashing)
+            Rotate();
+    }
+
+    private void Rotate()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        m.transform.up = mousePos - new Vector2(m.transform.position.x, m.transform.position.y);
+    }
+
+    private void Move()
+    {
+        m.Rb2d.linearVelocity = (m.MoveDirection * m.YolkMoveSpeed);
+    }
+
+    private void Dash_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        m.StartCoroutine(DashCooldown());
+    }
+    private void Dash()
+    {
+        m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.transform.up);
+    }
+    private IEnumerator DashCooldown()
+    {
+        isDashing = true;
+        yield return new WaitForSeconds(m.YolkDashDuration);
+        isDashing = false;
+    }
+}
