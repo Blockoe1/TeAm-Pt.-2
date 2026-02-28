@@ -7,11 +7,21 @@ public class BossController : MonoBehaviour
 
     private BossState currentState;
 
+    // Component References
+    private BossMovement movement;
+
+    #region Properties
+    public BossMovement Movement => movement;
+    #endregion
+
     /// <summary>
     /// Initialize all states.
     /// </summary>
     private void Awake()
     {
+        // Get Components
+        movement = GetComponent<BossMovement>();
+
         foreach(var state in states)
         {
             state.Initialize(this);
