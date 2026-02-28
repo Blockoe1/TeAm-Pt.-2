@@ -45,10 +45,11 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         masterBus = RuntimeManager.GetBus("bus:/");
-        sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        musicBus = RuntimeManager.GetBus("bus:/BGM");
+        //sfxBus = RuntimeManager.GetBus("bus:/SFX");
+       // musicBus = RuntimeManager.GetBus("bus:/BGM");
 
         UpdateVolume();
+        backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
         backgroundMusic.start();
     }
 
@@ -89,8 +90,8 @@ public class AudioManager : MonoBehaviour
     public void UpdateVolume()
     {
         masterBus.setVolume(masterVolume);
-        sfxBus.setVolume(sfxVolume);
-        musicBus.setVolume(musicVolume);
+        //sfxBus.setVolume(sfxVolume);
+        //musicBus.setVolume(musicVolume);
     }
 
     /// <summary>
