@@ -25,7 +25,6 @@ public class PMoveRollSt : PMoveBaseSt
 
     private void Move()
     {
-        m.MoveDirection = m.Move.ReadValue<Vector2>();
 
         m.Rb2d.linearVelocity = m.MoveDirection * m.RollSpeed;
     }

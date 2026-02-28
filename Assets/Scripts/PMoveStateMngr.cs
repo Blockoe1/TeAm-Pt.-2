@@ -20,7 +20,6 @@ public class PMoveStateMngr : MonoBehaviour
     #region GS
     public Rigidbody2D Rb2d { get => rb2d; set => rb2d = value; }
     public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
-    public InputAction Move { get => move; set => move = value; }
     public float RollSpeed { get => _rollSpeed; set => _rollSpeed = value; }
     #endregion
 
@@ -37,6 +36,19 @@ public class PMoveStateMngr : MonoBehaviour
 
     private void FixedUpdate()
     {
+        moveDirection = move.ReadValue<Vector2>();
+
         currentSt.FixedUpdateState();
+    }
+
+    private void Update()
+    {
+        Rotate();
+    }
+
+    private void Rotate()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        transform.up = mousePos - new Vector2(transform.position.x, transform.position.y);
     }
 }
