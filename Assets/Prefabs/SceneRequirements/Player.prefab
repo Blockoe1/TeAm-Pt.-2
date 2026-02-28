@@ -45,6 +45,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb156247e0f37548bd9089f2d43a4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PPanPivot
+--- !u!1 &4565877892902629265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5095589332358649766}
+  m_Layer: 0
+  m_Name: PointDirection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5095589332358649766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4565877892902629265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6283126229716240909}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4906243459440052386
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,9 +226,10 @@ GameObject:
   - component: {fileID: 8230836704689550638}
   - component: {fileID: 1382617211641721633}
   - component: {fileID: 7802913306586669549}
+  - component: {fileID: 5842265146995275768}
   m_Layer: 7
   m_Name: Pan
-  m_TagString: Untagged
+  m_TagString: PlayerDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,6 +345,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &5842265146995275768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6228718544372240375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253700dd76daf1447bbe991e4ff1b7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PDamage
+  _damage: 2
 --- !u!1 &6250251091182340963
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,9 +373,11 @@ GameObject:
   - component: {fileID: 5830723455567844490}
   - component: {fileID: 8967634857840509938}
   - component: {fileID: 2440716973497631222}
+  - component: {fileID: 2287594765719401596}
+  - component: {fileID: 1798331360701621538}
   m_Layer: 0
   m_Name: GO
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,6 +395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5095589332358649766}
   - {fileID: 1842842761341056977}
   m_Father: {fileID: 5679352953428768708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -377,13 +425,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cefb94f4770ee4ebcc8353502a79b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PMoveStateMngr
-  _eggMoveSpeed: 5
-  _accelerationSpeed: 0.1
-  _deccelerationSpeed: 0.1
-  _eggDashSpeed: 10
+  _pointGO: {fileID: 5095589332358649766}
+  _eggMoveSpeed: 8
+  _accelerationSpeed: 2
+  _deccelerationSpeed: 0.5
+  _eggDashSpeed: 12
   _eggAnimOC: {fileID: 22100000, guid: 5060fccd7dc76914eab1d77ac3af2094, type: 2}
-  _yolkMoveSpeed: 7
-  _yolkDashSpeed: 15
+  _yolkMoveSpeed: 10
+  _yolkDashSpeed: 20
   _yolkDashDuration: 0.2
   _yolkAnimOC: {fileID: 22100000, guid: 9547aa0fce2ebb54a9a3c517fa4dd174, type: 2}
 --- !u!212 &3908358512389764485
@@ -530,6 +579,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2287594765719401596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250251091182340963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 257900eea590ef042a77a4ff347ccdc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PSwingNShoot
+  animator: {fileID: 2440716973497631222}
+  _bufferInputTime: 10
+  _projectileShooter: {fileID: 1798331360701621538}
+  _panPivotTransform: {fileID: 1842842761341056977}
+  _shootPower: 5
+--- !u!114 &1798331360701621538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250251091182340963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
+  projectilePrefab: {fileID: 6700021229520693851, guid: f0bea1c946ffc5c41980e8755e1279f0, type: 3}
+  projectileParent: {fileID: 5679352953428768708}
 --- !u!1 &6953619985486832773
 GameObject:
   m_ObjectHideFlags: 0

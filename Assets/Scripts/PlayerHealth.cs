@@ -16,13 +16,25 @@ public class PlayerHealth : MonoBehaviour
         whole, cracked, yolk
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    //We should be calling this on the enemy's projectile and body...
+    //public void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (iFrames == false && collision.CompareTag("Damage"))
+    //    {
+    //        StartCoroutine(Damaged());
+
+    //        Debug.Log(collision.ClosestPoint(transform.position));
+    //        ParticleMngr.Inst.Play("YOLK", transform.position, transform.rotation);
+    //    }
+    //}
+
+    public void DealDamage()
     {
-        if (iFrames == false && collision.CompareTag("Damage"))
+        if (iFrames == false)
         {
             StartCoroutine(Damaged());
 
-            Debug.Log(collision.ClosestPoint(transform.position));
+            //Debug.Log(collision.ClosestPoint(transform.position));
             ParticleMngr.Inst.Play("YOLK", transform.position, transform.rotation);
         }
     }

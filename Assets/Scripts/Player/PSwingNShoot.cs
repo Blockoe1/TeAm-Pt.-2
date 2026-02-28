@@ -50,6 +50,7 @@ public class PSwingNShoot : MonoBehaviour
     {
         swingLeft = !swingLeft;
         swinging = true;
+        _panPivotTransform.gameObject.SetActive(true);
         animator.SetTrigger("ATTACK");
         animator.SetBool("ATTACK_LEFT", !animator.GetBool("ATTACK_LEFT"));
         yield return null;
@@ -81,6 +82,7 @@ public class PSwingNShoot : MonoBehaviour
 
     public void SwingStop()
     {
+        _panPivotTransform.gameObject.SetActive(false);
         animator.ResetTrigger("ATTACK");
         swinging = false;
     }

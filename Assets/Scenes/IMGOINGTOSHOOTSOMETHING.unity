@@ -312,10 +312,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 442398866493600187, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5679352953428768708, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -363,65 +359,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6250251091182340963, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 688609799}
-    - targetCorrespondingSourceObject: {fileID: 6250251091182340963, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 688609800}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
---- !u!1 &688609792 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6250251091182340963, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-  m_PrefabInstance: {fileID: 487864805}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &688609793 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2440716973497631222, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-  m_PrefabInstance: {fileID: 487864805}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &688609799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688609792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257900eea590ef042a77a4ff347ccdc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PSwingNShoot
-  animator: {fileID: 688609793}
-  _bufferInputTime: 10
-  _projectileShooter: {fileID: 688609800}
-  _panTransform: {fileID: 1551907330}
-  _shootPower: 5
---- !u!114 &688609800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688609792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
-  projectilePrefab: {fileID: 6700021229520693851, guid: f0bea1c946ffc5c41980e8755e1279f0, type: 3}
-  projectileParent: {fileID: 1996629080}
---- !u!4 &1551907330 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8230836704689550638, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-  m_PrefabInstance: {fileID: 487864805}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1996629080 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5679352953428768708, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-  m_PrefabInstance: {fileID: 487864805}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,15 +1,18 @@
 using System.Collections;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogueEpic : MonoBehaviour
 {
-    [SerializeField] private Conversation conversation;
+    [SerializeField, ShowIf("_runOnStart")] private Conversation _conversation;
 
     [SerializeField] private Image _mask;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private Button _continue;
+
+    [SerializeField] private bool _runOnStart;
 
     private bool continueTime;
 
@@ -21,12 +24,15 @@ public class DialogueEpic : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(SayWords());
+        if (_runOnStart)
+        {
+            StartCoroutine(SayWords(_conversation));
+        }
     }
 
-    private IEnumerator SayWords()
+    public IEnumerator SayWords(Conversation c)
     {
-        foreach (var word in conversation.TheWords)
+        foreach (var word in c.TheWords)
         {
             yield return SayWord(word);
         }
@@ -129,6 +135,11 @@ public class DialogueEpic : MonoBehaviour
             yield return new WaitForSeconds(line.SwishWaitInterval);
         }
 
+    }
+
+    private void Update()
+    {
+        print(Time.deltaTime);
     }
 
     public void Continue()
