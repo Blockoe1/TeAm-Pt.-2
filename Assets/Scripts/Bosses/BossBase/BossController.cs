@@ -65,7 +65,7 @@ public class BossController : MonoBehaviour
 
     public bool QueuedPhaseTransition()
     {
-        Debug.Log("Transitioning Phase.");
+        //Debug.Log("Transitioning Phase.");
         if (queuedPhase)
         {
             

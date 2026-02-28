@@ -17,12 +17,15 @@ public class ProjectileShooter : MonoBehaviour
 
     public void Shoot(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
     {
-        float stepAngle = spreadAngle / shotAmount;
+        float stepAngle = shotAmount > 1 ? spreadAngle / (shotAmount - 1) : 0;
+        
         float startingAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Debug.Log(startingAngle);
 
-        for(int i = 0; i < shotAmount; i++)
+        for (int i = 0; i < shotAmount; i++)
         {
             float angle = startingAngle - (spreadAngle / 2) + (stepAngle * i);
+            Debug.Log(angle);
             Vector2 launchVector = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
 
             Projectile projectile = GetProjectile();
