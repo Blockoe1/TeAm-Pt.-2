@@ -718,10 +718,19 @@ MonoBehaviour:
   phases:
   - <healthThreshold>k__BackingField: 0
     <transitionInstant>k__BackingField: 0
-    actions: []
+    actions:
+    - rid: 6611997959651730
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6611997959651730
+      type: {class: DebugAttackAction, ns: , asm: Assembly-CSharp}
+      data:
+        shooter: {fileID: 1574997439}
+        moveTargets:
+        - {fileID: 2056408164}
+        - {fileID: 862235971}
+        - {fileID: 1809709366}
 --- !u!50 &1574997436
 Rigidbody2D:
   serializedVersion: 5
