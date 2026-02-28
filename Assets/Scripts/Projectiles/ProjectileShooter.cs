@@ -35,7 +35,6 @@ public class ProjectileShooter : MonoBehaviour
         for (int i = 0; i < shotAmount; i++)
         {
             float angle = startingAngle - (spreadAngle / 2) + (stepAngle * i);
-            Debug.Log(angle);
             Vector2 launchVector = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
 
             Projectile projectile = GetProjectile();
