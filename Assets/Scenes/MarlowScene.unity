@@ -656,6 +656,7 @@ MonoBehaviour:
   _rollSpeed: 10
   _accelerationSpeed: 0.1
   _deccelerationSpeed: 0.1
+  _rollDashSpeed: 7
 --- !u!61 &1248587641
 BoxCollider2D:
   m_ObjectHideFlags: 0
