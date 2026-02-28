@@ -8,10 +8,9 @@ public class PMoveStateMngr : MonoBehaviour
 {
     private static PMoveStateMngr inst;
 
-    [SerializeField] private Transform _pointGO;
-
     private InputAction move;
     private Vector2 moveDirection;
+    private Vector2 faceDirection = Vector2.right;
 
     private InputAction dash;
     private bool isDashing;
@@ -54,8 +53,8 @@ public class PMoveStateMngr : MonoBehaviour
     public InputAction Move { get => move; set => move = value; }
     public AnimatorOverrideController YolkAnimOC { get => _yolkAnimOC; set => _yolkAnimOC = value; }
     public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
-    public Transform PointGO { get => _pointGO; set => _pointGO = value; }
     public bool IsDashing { get => isDashing; set => isDashing = value; }
+    public Vector2 FaceDirection { get => faceDirection; set => faceDirection = value; }
     #endregion
 
     private void Awake()
@@ -79,9 +78,9 @@ public class PMoveStateMngr : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdatePointDirection();
-
         moveDirection = move.ReadValue<Vector2>();
+        if (Mathf.Abs(moveDirection.x) > 0.5f || Mathf.Abs(moveDirection.y) > 0.5f)
+            faceDirection = moveDirection;  
 
         currentSt.FixedUpdateState();
     }
@@ -92,14 +91,6 @@ public class PMoveStateMngr : MonoBehaviour
         state.ExitState();
         currentSt = state;
         currentSt.EnterState();
-    }
-
-    private void UpdatePointDirection()
-    {
-        if (isDashing) return;
-
-        Vector2 pointDirection = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        _pointGO.up = pointDirection - new Vector2(_pointGO.position.x, _pointGO.position.y);
     }
 
     public void Buttered()
