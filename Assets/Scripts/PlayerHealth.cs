@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
         switch(health)
         {
             case 2:
+                PMoveStateMngr.Inst.CurOC = PMoveStateMngr.Inst.CrackedAnimOCs;
                 if (AudioManager.instance != null)
                 {
                     AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerCrack);

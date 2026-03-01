@@ -1,5 +1,8 @@
+using FMOD.Studio;
+using FMODUnity;
 using System;
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.ProBuilder;
 
@@ -9,7 +12,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected float despawnTime = 10f;
     protected enum ProjectileType
     {
-        FlamingButter, Other
+        FlamingButter, EggRoll, Other
     }
 
     [SerializeField] private ProjectileType projectileType;
@@ -18,14 +21,25 @@ public class Projectile : MonoBehaviour
     protected Coroutine lifetimeRoutine;
 
     public event Action<Projectile> OnDespawn;
+    private EventInstance lifetimeSound;
 
-    private void Awake()
+    private async void Awake()
     {
-        if(projectileType == ProjectileType.FlamingButter && AudioManager.instance != null)
+
+        rb = GetComponent<Rigidbody2D>();
+        if (projectileType == ProjectileType.FlamingButter && AudioManager.instance != null)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.IgniteOnFire);
+            await Task.Delay(1500);
+            lifetimeSound = RuntimeManager.CreateInstance(FMODEvents.instance.ContinuallyBurn);
         }
-        rb = GetComponent<Rigidbody2D>();
+
+        if(projectileType == ProjectileType.EggRoll && AudioManager.instance != null)
+        {
+            lifetimeSound = RuntimeManager.CreateInstance(FMODEvents.instance.EggRoll);
+            lifetimeSound.start();
+        }
+
     }
 
     public virtual void Launch(Vector2 launchVector)
@@ -43,6 +57,7 @@ public class Projectile : MonoBehaviour
 
     public void Despawn()
     {
+        lifetimeSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         OnDespawn?.Invoke(this);
         if (lifetimeRoutine != null)
         {
