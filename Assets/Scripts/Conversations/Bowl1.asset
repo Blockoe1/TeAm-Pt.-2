@@ -108,4 +108,4 @@ MonoBehaviour:
     SpinTime: 0.25
     Swish: 1
     SwishWaitInterval: 0
-    SwishAmplitude: 2
+    SwishAmplitude: 1
