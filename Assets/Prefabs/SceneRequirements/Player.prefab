@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 2287594765719401596}
   - component: {fileID: 1798331360701621538}
   - component: {fileID: 6983069433932899291}
+  - component: {fileID: 7198918022153016408}
   m_Layer: 3
   m_Name: GO
   m_TagString: Player
@@ -633,6 +634,21 @@ MonoBehaviour:
   form: 0
   iFramesTime: 1
   _deathDelay: 1
+  OnTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7198918022153016408}
+        m_TargetAssemblyTypeName: HitFlash, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.25
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1394503505484859528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,6 +862,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.018115766, y: 0.5860297}
   m_Size: {x: 0.5123919, y: 1.6154345}
   m_Direction: 0
+--- !u!114 &7198918022153016408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250251091182340963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b700261f40597a4897562fbaba0a0f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitFlash
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &6953619985486832773
 GameObject:
   m_ObjectHideFlags: 0

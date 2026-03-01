@@ -124,7 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   despawnOnCollision: 1
-  projectileType: 0
+  despawnTime: 10
+  projectileType: 2
   <rb>k__BackingField: {fileID: 8775054012940183322}
 --- !u!70 &8630078103017210329
 CapsuleCollider2D:

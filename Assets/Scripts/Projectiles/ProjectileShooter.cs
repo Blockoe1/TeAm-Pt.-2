@@ -28,6 +28,11 @@ public class ProjectileShooter : MonoBehaviour
 
     public void Shoot(float startingAngle, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
     {
+        if(FindFirstObjectByType<AudioManager>()!=null)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.EggExplodes);
+        }
+
         float stepAngle = shotAmount > 1 ? spreadAngle / (shotAmount - 1) : 0;
         
         //Debug.Log(startingAngle);

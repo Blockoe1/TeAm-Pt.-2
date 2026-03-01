@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float iFramesTime;
 
     [SerializeField] private float _deathDelay;
+    [SerializeField] private UnityEvent OnTakeDamage;
 
 
     public enum eggform
@@ -72,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
                 StartCoroutine(DeathDelay());
                 break;
         }
+        OnTakeDamage?.Invoke();
         IFrames(iFramesTime);
     }
 
