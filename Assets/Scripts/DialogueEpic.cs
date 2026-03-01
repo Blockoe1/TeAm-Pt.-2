@@ -2,6 +2,7 @@ using System.Collections;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueEpic : MonoBehaviour
@@ -9,6 +10,7 @@ public class DialogueEpic : MonoBehaviour
     [SerializeField, ShowIf("_runOnStart")] private Conversation _conversation;
 
     [SerializeField] private Image _mask;
+    [SerializeField] private TMP_Text _speakerText;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private Button _continue;
 
@@ -49,8 +51,12 @@ public class DialogueEpic : MonoBehaviour
         _continue.gameObject.SetActive(false);
 
         _text.text = DialogueManager.Instance.Eggify(line.OneMeaslyLine);
+        _speakerText.text = DialogueManager.Instance.GetSpeaker(line.Speaker).Title;
         _text.font = DialogueManager.Instance.GetSpeaker(line.Speaker).Font;
+        _speakerText.font = _text.font;
         if (DialogueManager.Instance.GetSpeaker(line.Speaker).Bold) _text.text = "<b>" + _text.text;
+        _speakerText.text = "<b><u>" + _speakerText.text;
+        _speakerText.gameObject.SetActive(false);
 
         if (line.EnterVertically)
         {
@@ -99,6 +105,7 @@ public class DialogueEpic : MonoBehaviour
         }
 
         _text.transform.eulerAngles = Vector3.zero;
+        _speakerText.gameObject.SetActive(true);
 
         Coroutine swish = null;
         if (line.Swish == true)
@@ -168,6 +175,10 @@ public class DialogueEpic : MonoBehaviour
         if (AudioManager.instance != null)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+        }
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            TransitionManager.ZoomTransition(FindAnyObjectByType<ScenarioManager>().NextScene);
         }
         Destroy(gameObject);
     }
