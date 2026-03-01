@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00714e4d0b3152f419351528370758fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  rotateInShootDirection: 1
   despawnOnCollision: 1
   despawnTime: 10
   projectileType: 0

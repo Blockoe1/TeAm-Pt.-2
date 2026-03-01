@@ -13,6 +13,14 @@ public class ButtonBehavior : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void OnRetry()
+    {
+        if (AudioManager.instance != null)
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+
+        SceneManager.LoadScene(GameMngr.prevScene);
+    }
+
     public void OnQuit()
     {
         if (AudioManager.instance != null)

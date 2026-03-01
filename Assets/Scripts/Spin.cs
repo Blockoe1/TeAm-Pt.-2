@@ -6,11 +6,27 @@ using System.Collections;
 public class Spin : MonoBehaviour
 {
     public int spinAmount;
+    [SerializeField] private Animator anim;
     [SerializeField] private bool isBoss;
     [ShowIf(nameof(isBoss)), SerializeField] public EventReference MovementSound;
 
     private Coroutine MoveSound;
     private EventInstance move;
+    private void OnEnable()
+    {
+        if (anim != null)
+        {
+            anim.SetBool("IsSpinning", true);
+        }
+    }
+    private void OnDisable()
+    {
+        if (anim != null)
+        {
+            anim.SetBool("IsSpinning", false);
+        }
+    }
+
     private void Update()
     {
         if(isBoss && MoveSound == null)
@@ -32,8 +48,9 @@ public class Spin : MonoBehaviour
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.PlayOneShot(MovementSound);
-                yield return new WaitForSeconds(.3f);
             }
+
+            yield return new WaitForSeconds(.3f);
         }
 
 

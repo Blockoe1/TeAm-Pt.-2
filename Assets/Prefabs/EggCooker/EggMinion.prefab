@@ -177,7 +177,7 @@ MonoBehaviour:
   <rb>k__BackingField: {fileID: 3043816155583901497}
   acceleration: 35
   angleSmoothTime: 0.15
-  angleMaxSpeed: 220
+  angleMaxSpeed: 180
 --- !u!114 &334014979689327212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ef57dcad4865245a13b66489a778a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
-  maxHealth: 5
+  maxHealth: 3
   hitIFrames: 0.25
   OnDamage:
     m_PersistentCalls:

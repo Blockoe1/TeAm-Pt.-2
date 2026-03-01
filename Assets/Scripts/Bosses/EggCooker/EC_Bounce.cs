@@ -14,6 +14,7 @@ public class EC_Bounce : BossAction
     private Transform target;
     private bool isState;
     private Vector2 rotation;
+    private Vector2 direction;
 
     public override void OnActionBegin()
     {
@@ -21,6 +22,7 @@ public class EC_Bounce : BossAction
         Boss.Movement.OnCollide += Bounce;
         target = Boss.Movement.TrackingTarget;
         Boss.Movement.TrackingTarget = null;
+        direction = Boss.ToPlayerN;
     }
 
     public override IEnumerator ActionRoutine()
@@ -28,7 +30,7 @@ public class EC_Bounce : BossAction
         isState = true;
         while (isState)
         {
-            Boss.Movement.TargetVelocity = Vector2.right * bounceSpeed;
+            Boss.Movement.TargetVelocity = direction * bounceSpeed;
 
             yield return new WaitForFixedUpdate();
         }
@@ -48,14 +50,17 @@ public class EC_Bounce : BossAction
     {
         if (obj.gameObject.CompareTag("Player"))
         {
-            Boss.Movement.Rb.rotation = Boss.Movement.Rb.rotation + 180;
+            //Boss.Movement.Rb.rotation = Boss.Movement.Rb.rotation + 180;
+            direction = -direction;
         }
         else
         {
             Vector2 spawnPos = (Vector2)Boss.playerTransform.position + 
                 new Vector2(Random.Range(-meteorOffset, meteorOffset), Random.Range(-meteorOffset, meteorOffset));
 
-            Boss.Movement.Rb.rotation = Mathf.Atan2(Boss.ToPlayerN.y, Boss.ToPlayerN.x) * Mathf.Rad2Deg;
+            //Boss.Movement.Rb.rotation = Mathf.Atan2(Boss.ToPlayerN.y, Boss.ToPlayerN.x) * Mathf.Rad2Deg;
+            direction = Boss.ToPlayerN;
+
             shooter.Shoot(Vector2.down * meteorHeight, meteorHeight,
                 spawnPos + Vector2.up * meteorHeight);
         } 

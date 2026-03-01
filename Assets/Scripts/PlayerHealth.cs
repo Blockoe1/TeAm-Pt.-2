@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float _deathDelay;
     [SerializeField] private UnityEvent OnTakeDamage;
 
+    private Rigidbody2D rb;
+
 
     public enum eggform
     {
@@ -31,6 +33,11 @@ public class PlayerHealth : MonoBehaviour
     //        ParticleMngr.Inst.Play("YOLK", transform.position, transform.rotation);
     //    }
     //}
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     public void DealDamage()
     {
@@ -87,7 +94,9 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator IFramesRoutine(float time)
     {
         iFrames = true;
+        rb.excludeLayers = rb.excludeLayers | LayerMask.GetMask("Boss");
         yield return new WaitForSeconds(time);
+        rb.excludeLayers = rb.excludeLayers & ~LayerMask.GetMask("Boss");
         iFrames = false;
     }
 

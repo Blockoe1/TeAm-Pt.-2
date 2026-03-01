@@ -122,8 +122,9 @@ public class BossMovement : MonoBehaviour
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.PlayOneShot(MovementSound);
-                yield return new WaitForSeconds(.1f);
             }
+
+            yield return new WaitForSeconds(.1f);
         }
 
 
@@ -146,6 +147,7 @@ public class BossMovement : MonoBehaviour
     private IEnumerator BossNoise()
     {
         ambience = RuntimeManager.CreateInstance(Ambience);
+        yield return new WaitForSeconds(10f);
         while(true)
         {
             ambience.start();

@@ -8,11 +8,12 @@ using UnityEngine.ProBuilder;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private bool rotateInShootDirection;
     [SerializeField] protected bool despawnOnCollision;
     [SerializeField] protected float despawnTime = 10f;
     protected enum ProjectileType
     {
-        FlamingButter, EggRoll, Other
+        FlamingButter, EggRoll, Carrot, Egg
     }
 
     [SerializeField] private ProjectileType projectileType;
@@ -46,7 +47,10 @@ public class Projectile : MonoBehaviour
     public virtual void Launch(Vector2 launchVector)
     {
         rb.AddForce(launchVector, ForceMode2D.Impulse);
-        transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(launchVector.y, launchVector.x) * Mathf.Rad2Deg);
+        if (rotateInShootDirection)
+        {
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(launchVector.y, launchVector.x) * Mathf.Rad2Deg);
+        }
         lifetimeRoutine = StartCoroutine(Lifetime());
     }
 
@@ -76,10 +80,18 @@ public class Projectile : MonoBehaviour
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         // On collision with anything, destroy the projectile.
-        if (FindFirstObjectByType<AudioManager>() != null && projectileType != ProjectileType.EggRoll)
+        if (FindFirstObjectByType<AudioManager>() != null && projectileType == ProjectileType.Carrot)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.CarrotHits);
         }
+
+        if (FindFirstObjectByType<AudioManager>() != null && (projectileType == ProjectileType.Egg || projectileType == ProjectileType.FlamingButter))
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ButterLands);
+        }
+
+
+
         if (despawnOnCollision)
         {
             Despawn();

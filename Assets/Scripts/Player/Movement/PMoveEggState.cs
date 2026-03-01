@@ -86,6 +86,7 @@ public class PMoveEggState : PMoveBaseSt
         {
             return;
         }
+        m.rs.PlayerIsRolling = true;
         //Move
         m.Rb2d.AddForce(m.EggDashSpeed * m.FaceDirection, ForceMode2D.Impulse);
 
@@ -98,7 +99,9 @@ public class PMoveEggState : PMoveBaseSt
     private IEnumerator DashCooldown(float time)
     {
         dashCooldown = true;
+
         yield return new WaitForSeconds(time);
         dashCooldown = false;
+        m.rs.PlayerIsRolling = false;
     }
 }
