@@ -19,7 +19,10 @@ public class FallingProjectile : Projectile
 
     public override void Launch(Vector2 launchVector)
     {
-        rb.transform.position = transform.position;
+        if (rb != null)
+        {
+            rb.transform.position = transform.position;
+        }
         telegraphSpot.transform.localPosition = launchVector;
 
         lifetimeRoutine = StartCoroutine(LaunchTime(launchVector));
