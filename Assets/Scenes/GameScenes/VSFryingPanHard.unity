@@ -6768,7 +6768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5115f8a1b7b35d48a833bf1f3a8889f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Nips
-  spinAmount: -50
+  spinAmount: -75
 --- !u!120 &881155841 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 8463306685238939994, guid: 3057e50146246014dbdad8327e77e404, type: 3}
