@@ -47,6 +47,7 @@ public class DialogueEpic : MonoBehaviour
 
         _text.text = DialogueManager.Instance.Eggify(line.OneMeaslyLine);
         _text.font = DialogueManager.Instance.GetSpeaker(line.Speaker).Font;
+        if (DialogueManager.Instance.GetSpeaker(line.Speaker).Bold) _text.text = "<b>" + _text.text;
 
         if (line.EnterVertically)
         {
