@@ -3,6 +3,7 @@ using UnityEngine;
 public class BossDamage : MonoBehaviour
 {
     [SerializeField] private bool _isProjectile = false;
+    [SerializeField] private bool isSolidButter;
     /// <summary>
     /// If player touches the boss. For physical objects
     /// </summary>
@@ -13,6 +14,13 @@ public class BossDamage : MonoBehaviour
         {
             return;
         }
+
+        if (isSolidButter && FindFirstObjectByType<ROllStorage>().PlayerIsRolling)
+        {
+            Destroy(gameObject);
+        }
+
+
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealth>().DealDamage();
@@ -25,6 +33,11 @@ public class BossDamage : MonoBehaviour
     /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isSolidButter && FindFirstObjectByType<ROllStorage>().PlayerIsRolling)
+        {
+            Destroy(gameObject);
+        }
+
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealth>().DealDamage();
