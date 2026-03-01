@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089742].shotDelay
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089737].shotAmount
@@ -634,7 +634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089740].shotAmount
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089741].shotAmount
@@ -642,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089742].shotAmount
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089736].postShotWait
@@ -670,7 +670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089742].postShotWait
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[1].<healthThreshold>k__BackingField
@@ -778,23 +778,23 @@ PrefabInstance:
       objectReference: {fileID: 1503580704847801186}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Path
-      value: event:/BowlMove
+      value: event:/PanMove
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data1
-      value: -921176296
+      value: -355662775
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data2
-      value: 1270219458
+      value: 1255877371
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data3
-      value: -553070431
+      value: 17195666
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data4
-      value: -1103600680
+      value: 269390623
       objectReference: {fileID: 0}
     - target: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: m_Name

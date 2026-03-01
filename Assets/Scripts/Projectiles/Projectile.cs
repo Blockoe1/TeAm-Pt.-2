@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (projectileType == ProjectileType.FlamingButter && AudioManager.instance != null)
         {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.IgniteOnFire);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.SpawnButter);
             await Task.Delay(1500);
             lifetimeSound = RuntimeManager.CreateInstance(FMODEvents.instance.ContinuallyBurn);
         }
