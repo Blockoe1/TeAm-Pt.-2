@@ -518,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564004].postShotWait
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564006].postShotWait
@@ -526,11 +526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564008].postShotWait
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564009].postShotWait
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564034].postShotWait

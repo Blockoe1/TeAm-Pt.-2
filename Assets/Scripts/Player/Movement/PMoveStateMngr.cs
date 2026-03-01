@@ -127,4 +127,9 @@ public class PMoveStateMngr : MonoBehaviour
             return 1;
         }
     }
+
+    private void OnDestroy()
+    {
+        currentSt.ExitState();
+    }
 }

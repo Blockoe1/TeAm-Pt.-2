@@ -17,6 +17,7 @@ public class PSwingNShoot : MonoBehaviour
 
     [SerializeField] private Transform _panPivotTransform;
 
+    [SerializeField] private float _attackDelay;
     [SerializeField] private float _shootPower = 5;
     [SerializeField] private int _shotCount = 1;
     [SerializeField] private float _shotAngle = 0;
@@ -86,6 +87,12 @@ public class PSwingNShoot : MonoBehaviour
     {
         _panPivotTransform.gameObject.SetActive(false);
         animator.ResetTrigger("ATTACK");
+        StartCoroutine(AttackDelayRoutine());
+    }
+
+    private IEnumerator AttackDelayRoutine()
+    {
+        yield return new WaitForSeconds(_attackDelay);
         swinging = false;
     }
 

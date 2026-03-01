@@ -394,14 +394,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cefb94f4770ee4ebcc8353502a79b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PMoveStateMngr
-  _eggMoveSpeed: 8
-  _accelerationSpeed: 2
+  _eggMoveSpeed: 7
+  _accelerationSpeed: 1.5
   _deccelerationSpeed: 0.5
-  _eggDashSpeed: 25
+  _eggDashSpeed: 40
   _eggDashFrames: 0.2
   _eggAnimOC: {fileID: 22100000, guid: 5060fccd7dc76914eab1d77ac3af2094, type: 2}
   _yolkMoveSpeed: 10
-  _yolkDashSpeed: 20
+  _yolkDashSpeed: 50
   _yolkDashDuration: 0.2
   _yolkAnimOCs:
   - {fileID: 22100000, guid: 61625cab7e93e0e469842b48ad91d80f, type: 2}
@@ -567,6 +567,7 @@ MonoBehaviour:
   _bufferInputTime: 10
   _projectileShooter: {fileID: 1798331360701621538}
   _panPivotTransform: {fileID: 1842842761341056977}
+  _attackDelay: 0.2
   _shootPower: 20
   _shotCount: 3
   _shotAngle: 15
