@@ -365,6 +365,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8450870279433645435, guid: e80b6393780e90746b6f4bc35347f16b, type: 3}
+      propertyPath: _bossDeathTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450870279433645435, guid: e80b6393780e90746b6f4bc35347f16b, type: 3}
       propertyPath: _bossDeathFlash
       value: 
       objectReference: {fileID: 4325028715689553979}

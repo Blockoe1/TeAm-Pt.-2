@@ -204,6 +204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneEvents
       objectReference: {fileID: 0}
+    - target: {fileID: 4892752353743931466, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+      propertyPath: _dialoguePrefab
+      value: 
+      objectReference: {fileID: 6299377349687276041, guid: 72f21a8d859044e4a8cfd0ba0c1a4dc3, type: 3}
     - target: {fileID: 7432490224033983753, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -304,6 +308,10 @@ PrefabInstance:
     - target: {fileID: 750547945122653629, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_Offset.x
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
+      propertyPath: maxHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
