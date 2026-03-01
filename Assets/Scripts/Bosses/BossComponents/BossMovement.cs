@@ -28,6 +28,8 @@ public class BossMovement : MonoBehaviour
 
     public event Action<Vector2> OnReachPoint;
 
+    public event Action<Collision2D> OnCollide;
+
     #region Properties
     public Rigidbody2D Rb => rb;
     public Transform TrackingTarget
@@ -117,5 +119,10 @@ public class BossMovement : MonoBehaviour
         }
 
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        OnCollide?.Invoke(collision);
     }
 }

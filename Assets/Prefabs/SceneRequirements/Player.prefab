@@ -45,37 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb156247e0f37548bd9089f2d43a4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PPanPivot
---- !u!1 &4565877892902629265
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5095589332358649766}
-  m_Layer: 0
-  m_Name: PointDirection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5095589332358649766
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4565877892902629265}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6283126229716240909}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4906243459440052386
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +364,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5095589332358649766}
   - {fileID: 1842842761341056977}
   m_Father: {fileID: 5679352953428768708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -413,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   form: 0
   iFramesTime: 1
-  _deathDelay: 0.75
+  _deathDelay: 3
 --- !u!114 &1394503505484859528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,7 +402,10 @@ MonoBehaviour:
   _yolkMoveSpeed: 10
   _yolkDashSpeed: 20
   _yolkDashDuration: 0.2
-  _yolkAnimOC: {fileID: 22100000, guid: 9547aa0fce2ebb54a9a3c517fa4dd174, type: 2}
+  _yolkAnimOCs:
+  - {fileID: 22100000, guid: 61625cab7e93e0e469842b48ad91d80f, type: 2}
+  - {fileID: 22100000, guid: 9547aa0fce2ebb54a9a3c517fa4dd174, type: 2}
+  - {fileID: 22100000, guid: 942685f4240a041449d6c0e8f8e21003, type: 2}
 --- !u!212 &3908358512389764485
 SpriteRenderer:
   serializedVersion: 2

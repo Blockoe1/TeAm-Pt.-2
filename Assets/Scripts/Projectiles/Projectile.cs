@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] protected bool despawnOnCollision;
-    [SerializeField] private float despawnTime = 10f;
+    [SerializeField] protected float despawnTime = 10f;
     protected enum ProjectileType
     {
         FlamingButter, Other
@@ -14,7 +15,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private ProjectileType projectileType;
     [field: SerializeField] protected Rigidbody2D rb { get; private set; }
 
-    private Coroutine lifetimeRoutine;
+    protected Coroutine lifetimeRoutine;
 
     public event Action<Projectile> OnDespawn;
 
@@ -30,10 +31,11 @@ public class Projectile : MonoBehaviour
     public virtual void Launch(Vector2 launchVector)
     {
         rb.AddForce(launchVector, ForceMode2D.Impulse);
+        transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(launchVector.y, launchVector.x) * Mathf.Rad2Deg);
         lifetimeRoutine = StartCoroutine(Lifetime());
     }
 
-    private IEnumerator Lifetime()
+    protected virtual IEnumerator Lifetime()
     {
         yield return new WaitForSeconds(despawnTime);
         Despawn();

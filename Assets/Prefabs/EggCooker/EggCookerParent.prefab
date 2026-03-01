@@ -32,6 +32,52 @@ Transform:
   - {fileID: 1434579719520147409}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1007715343588983732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8937816061368894119}
+  - component: {fileID: 55084337362786790}
+  m_Layer: 6
+  m_Name: EggMinionMeteor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8937816061368894119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007715343588983732}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1434579719520147409}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &55084337362786790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007715343588983732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
+  projectilePrefab: {fileID: 794075386202029038, guid: 6f813e1de79a33143add1af7b6826e2d, type: 3}
+  projectileParent: {fileID: 1316662386211845387}
 --- !u!1 &1990715207100686874
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +207,14 @@ PrefabInstance:
       value: Assembly-CSharp EC_Shoot
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'managedReferences[6612019444187321]'
+      value: Assembly-CSharp EC_Charge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'managedReferences[6612019444187379]'
+      value: Assembly-CSharp EC_Bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[0].actions.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -194,7 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[0]'
-      value: 6612019444187318
+      value: 6612019444187379
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'phases.Array.data[2].actions.Array.data[1]'
+      value: 6612019444187321
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].shooter
@@ -208,6 +266,10 @@ PrefabInstance:
       propertyPath: managedReferences[6612019444187318].shooter
       value: 
       objectReference: {fileID: 5698471095320717580}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].shooter
+      value: 
+      objectReference: {fileID: 55084337362786790}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].preDelay
       value: 0.5
@@ -262,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].shootPower
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187212].chargeTime
@@ -294,7 +356,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187318].shootPower
-      value: 10
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187321].chargeTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891421].followSpeed
@@ -317,12 +383,36 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187321].chargeDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187321].chargeSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].bounceSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].chargeNumber
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187212].chargeNumber
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187321].chargeNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].meteorHeight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].meteorOffset
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].postChargeWait
@@ -339,6 +429,14 @@ PrefabInstance:
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[2].<healthThreshold>k__BackingField
       value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].bounceAngleRange.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].bounceAngleRange.y
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[2].<transitionInstant>k__BackingField
@@ -401,6 +499,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6719417143345809731, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7271753594395958498}
+    - targetCorrespondingSourceObject: {fileID: 6719417143345809731, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8937816061368894119}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
 --- !u!4 &1434579719520147409 stripped

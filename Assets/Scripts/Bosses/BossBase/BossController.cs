@@ -18,7 +18,8 @@ public class BossController : MonoBehaviour
     public BossMovement Movement { get; private set; }
 
     #region Properties
-    public Vector2 ToPlayer => (playerTransform.position - transform.position).normalized;
+    public Vector2 ToPlayerN => (playerTransform.position - transform.position).normalized;
+    public Vector2 ToPlayer => playerTransform.position - transform.position;
     #endregion
 
     /// <summary>
