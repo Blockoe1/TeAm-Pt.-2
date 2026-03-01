@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Animator))]
 public class PMoveStateMngr : MonoBehaviour
 {
@@ -26,9 +27,11 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashDuration;
-    [SerializeField] private AnimatorOverrideController _yolkAnimOC;
+    [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
+    [SerializeField] private AnimatorOverrideController[] _yolkAnimOCs;
 
     private Rigidbody2D rb2d;
+    private SpriteRenderer spriteRen;
     private Animator anim;
 
     private PMoveEggState eggState;
@@ -51,10 +54,11 @@ public class PMoveStateMngr : MonoBehaviour
     public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
     public Animator Anim { get => anim; set => anim = value; }
     public InputAction Move { get => move; set => move = value; }
-    public AnimatorOverrideController YolkAnimOC { get => _yolkAnimOC; set => _yolkAnimOC = value; }
     public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
     public bool IsDashing { get => isDashing; set => isDashing = value; }
     public Vector2 FaceDirection { get => faceDirection; set => faceDirection = value; }
+    public AnimatorOverrideController[] YolkAnimOCs { get => _yolkAnimOCs; set => _yolkAnimOCs = value; }
+    public SpriteRenderer SpriteRen { get => spriteRen; set => spriteRen = value; }
     #endregion
 
     private void Awake()
@@ -64,6 +68,7 @@ public class PMoveStateMngr : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        spriteRen = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
 
         move = InputSystem.actions.FindAction("MOVE");
@@ -82,8 +87,6 @@ public class PMoveStateMngr : MonoBehaviour
         if (Mathf.Abs(moveDirection.x) > 0.5f || Mathf.Abs(moveDirection.y) > 0.5f)
             faceDirection = moveDirection;
 
-        DetermineAnimation();
-
         currentSt.FixedUpdateState();
     }
 
@@ -95,14 +98,28 @@ public class PMoveStateMngr : MonoBehaviour
         currentSt.EnterState();
     }
 
+    [HideInInspector]
+    public bool IsMoving()
+    {
+        return (Mathf.Abs(rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(rb2d.linearVelocity.y) > 0.25f) ? true : false;
+    }
+
+    [HideInInspector]
     public void Buttered()
     {
         AccelerationSpeed *= .5f;
         DeccelerationSpeed *= .5f;
     }
 
-    private void DetermineAnimation()
+    [HideInInspector]
+    public int DetermineAnimationDirection()
     {
-
+        if (Mathf.Abs(moveDirection.x) < Mathf.Abs(moveDirection.y)) //Front/Back
+            return (moveDirection.y > 0) ? 2 : 0;
+        else //Side
+        {
+            spriteRen.flipX = (moveDirection.x > 0) ? true : false;
+            return 1;
+        }
     }
 }
