@@ -57,7 +57,7 @@ public class GameMngr : MonoBehaviour
     [HideInInspector]
     public void SetPhaseBG(int phase)
     {
-        if (phase < 0) return;
+        if (phase < 0 || phase == 4) return;
         _bgObject.sprite = _bgPhaseSprites[phase];
     }
 }
