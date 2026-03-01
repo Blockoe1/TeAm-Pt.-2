@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private float _deathDelay;
     [SerializeField] private UnityEvent OnTakeDamage;
+    [SerializeField] private UnityEvent OnDie;
 
     private Rigidbody2D rb;
 
@@ -104,6 +105,7 @@ public class PlayerHealth : MonoBehaviour
     {
         InputSystem.actions.Disable();
         ParticleMngr.Inst.Play("P_DIE", transform.position, Quaternion.identity);
+        OnDie?.Invoke();
         yield return new WaitForSeconds(_deathDelay);
         InputSystem.actions.Enable();
         SceneManager.LoadScene("DeathScene");
