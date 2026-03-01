@@ -119,12 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &914515621 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6283126229716240909, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-  m_PrefabInstance: {fileID: 1550205260}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1203843949
+--- !u!1001 &68594453
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1386,7 +1381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873811712842765669, guid: 66656ea10d799a245a80e9c48ca543e1, type: 3}
       propertyPath: m_Name
-      value: Grid(DontApplySceneChanges)
+      value: Grid(DontApplySceneChanges) (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7208599394558353277, guid: 66656ea10d799a245a80e9c48ca543e1, type: 3}
       propertyPath: m_LocalScale.x
@@ -5021,6 +5016,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66656ea10d799a245a80e9c48ca543e1, type: 3}
+--- !u!4 &914515621 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6283126229716240909, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+  m_PrefabInstance: {fileID: 1550205260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1550205260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5031,6 +5031,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1064354264675246784, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622253685752270193, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+      propertyPath: Priority.Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5679352953428768708, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
@@ -5304,23 +5308,11 @@ PrefabInstance:
       value: Assembly-CSharp EC_Charge
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612019444187319]'
-      value: Assembly-CSharp EC_Charge
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[2].actions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[1]'
-      value: 6612019444187319
+      value: 6612019444187213
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187314].chargeTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187319].chargeTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
@@ -5332,19 +5324,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187319].chargeDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187319].chargeSpeed
-      value: 0
+      propertyPath: managedReferences[6612019444187321].chargeSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187314].chargeNumber
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187319].chargeNumber
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
@@ -5396,4 +5380,4 @@ SceneRoots:
   - {fileID: 1550205260}
   - {fileID: 3546848235373694001}
   - {fileID: 1866967849}
-  - {fileID: 1203843949}
+  - {fileID: 68594453}

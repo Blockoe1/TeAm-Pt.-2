@@ -123,7 +123,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.882353, g: 0.89019614, b: 0.8313726, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionManager
   shatterTransitionPrefab: {fileID: 3548027247104779621, guid: 321f08afffd737e4786ff4275496991a, type: 3}
+  baseShatterDelay: 2
   shaterLifetime: 5
   zoomImage: {fileID: 2663697981354327444}
   fillImage: {fileID: 1586448658597699188}

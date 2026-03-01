@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2727987739293412352, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3809801675559233191, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_Name
       value: EggMinion
@@ -153,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EggMinion
   despawnOnCollision: 1
+  despawnTime: 10
   projectileType: 0
   <rb>k__BackingField: {fileID: 3043816155583901497}
   acceleration: 35
@@ -170,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ef57dcad4865245a13b66489a778a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
-  maxHealth: 10
+  maxHealth: 5
   OnDamage:
     m_PersistentCalls:
       m_Calls:

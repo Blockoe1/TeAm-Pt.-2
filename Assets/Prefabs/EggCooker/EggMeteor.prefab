@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1797598003445658744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1040669653891027868, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_Name
+      value: EggMeteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438696153400446870, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: despawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438696153400446870, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: hitCollider
+      value: 
+      objectReference: {fileID: 3579605281682911833}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1040669653891027868, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3303332449153685696}
+    - targetCorrespondingSourceObject: {fileID: 1040669653891027868, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5919509576859279947}
+    - targetCorrespondingSourceObject: {fileID: 878190790189815552, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3579605281682911833}
+  m_SourcePrefab: {fileID: 100100000, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+--- !u!114 &794075386202029038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1438696153400446870, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+  m_PrefabInstance: {fileID: 1797598003445658744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622257206049138660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95bd4544c0b85454bbd070073d9c422a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallingProjectile
+--- !u!1 &1503546978458198904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 878190790189815552, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+  m_PrefabInstance: {fileID: 1797598003445658744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &3579605281682911833
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503546978458198904}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
+--- !u!1 &1622257206049138660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1040669653891027868, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+  m_PrefabInstance: {fileID: 1797598003445658744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3303332449153685696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622257206049138660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce8c1faa7ac9f434aab8fd9c57400115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EggMeteor
+  projectilePoint: {fileID: 8966293725241142617}
+  proj: {fileID: 794075386202029038}
+  shooter: {fileID: 5919509576859279947}
+  shotForce: 6
+  shotCount: 1
+  shotAngle: 0
+--- !u!114 &5919509576859279947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622257206049138660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
+  projectilePrefab: {fileID: 6386142875249015884, guid: 7470136bcbadbaf41b5b4055487607ca, type: 3}
+  projectileParent: {fileID: 0}
+--- !u!4 &8966293725241142617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7249939426247940385, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+  m_PrefabInstance: {fileID: 1797598003445658744}
+  m_PrefabAsset: {fileID: 0}
