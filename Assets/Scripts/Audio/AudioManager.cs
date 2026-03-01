@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
             Debug.Log("h");
             Debug.Log("There is more than one AudioManager in the scene");
             Destroy(gameObject);
+            return;
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
