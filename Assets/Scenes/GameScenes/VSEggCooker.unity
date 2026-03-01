@@ -1089,44 +1089,8 @@ PrefabInstance:
       value: Assembly-CSharp EC_Charge
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612019444187324]'
-      value: Assembly-CSharp EC_Bounce
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[0].actions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[2].actions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'phases.Array.data[0].actions.Array.data[0]'
-      value: 6612019444187324
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'phases.Array.data[1].actions.Array.data[0]'
-      value: 6612016458891422
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'phases.Array.data[1].actions.Array.data[1]'
-      value: 6612018635735128
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'phases.Array.data[2].actions.Array.data[0]'
-      value: 6612019444187212
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[1]'
       value: 6612019444187213
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187324].shooter
-      value: 
-      objectReference: {fileID: 3546848235373694002}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735128].shootPower
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187314].chargeTime
@@ -1145,48 +1109,8 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187324].bounceSpeed
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187314].chargeNumber
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187324].meteorHeight
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187324].meteorOffset
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[0].<healthThreshold>k__BackingField
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[1].<healthThreshold>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[2].<healthThreshold>k__BackingField
-      value: 68
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187324].bounceAngleRange.x
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187324].bounceAngleRange.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[0].<transitionInstant>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: phases.Array.data[2].<transitionInstant>k__BackingField
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: trackingTarget
@@ -1229,17 +1153,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
---- !u!114 &3546848235373694002 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 55084337362786790, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-  m_PrefabInstance: {fileID: 3546848235373694001}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

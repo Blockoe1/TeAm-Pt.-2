@@ -211,6 +211,10 @@ PrefabInstance:
       value: Assembly-CSharp EC_Charge
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'managedReferences[6612019444187379]'
+      value: Assembly-CSharp EC_Bounce
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[0].actions.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -220,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[2].actions.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[0].actions.Array.data[0]'
@@ -244,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[0]'
-      value: 6612019444187318
+      value: 6612019444187379
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[1]'
@@ -262,6 +266,10 @@ PrefabInstance:
       propertyPath: managedReferences[6612019444187318].shooter
       value: 
       objectReference: {fileID: 5698471095320717580}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].shooter
+      value: 
+      objectReference: {fileID: 55084337362786790}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].preDelay
       value: 0.5
@@ -316,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].shootPower
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187212].chargeTime
@@ -383,6 +391,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].bounceSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].chargeNumber
       value: 3
       objectReference: {fileID: 0}
@@ -393,6 +405,14 @@ PrefabInstance:
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187321].chargeNumber
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].meteorHeight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].meteorOffset
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].postChargeWait
@@ -409,6 +429,14 @@ PrefabInstance:
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[2].<healthThreshold>k__BackingField
       value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].bounceAngleRange.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187379].bounceAngleRange.y
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[2].<transitionInstant>k__BackingField
