@@ -80,6 +80,8 @@ public class PMoveStateMngr : MonoBehaviour
     public AnimatorOverrideController[] WholeAnimOCs { get => _wholeAnimOCs; set => _wholeAnimOCs = value; }
     public AnimatorOverrideController[] CrackedAnimOCs { get => _crackedAnimOCs; set => _crackedAnimOCs = value; }
     public AnimatorOverrideController[] CurOC { get => curOC; set => curOC = value; }
+
+    private GameMngr gm;
     public PMoveEggState EggState { get => eggState; set => eggState = value; }
     #endregion
 
@@ -94,6 +96,7 @@ public class PMoveStateMngr : MonoBehaviour
         anim = GetComponent<Animator>();
         health = GetComponent<PlayerHealth>();
         rs = FindFirstObjectByType<ROllStorage>();
+        gm = FindFirstObjectByType<GameMngr>();
 
         move = InputSystem.actions.FindAction("MOVE");
         dash = InputSystem.actions.FindAction("DASH");
@@ -107,6 +110,12 @@ public class PMoveStateMngr : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!gm.GamePaused)
+        {
+            moveDirection = move.ReadValue<Vector2>();
+            if (Mathf.Abs(moveDirection.x) > 0.5f || Mathf.Abs(moveDirection.y) > 0.5f)
+                faceDirection = moveDirection;
+
         moveDirection = move.ReadValue<Vector2>();
         if (Mathf.Abs(moveDirection.x) > 0.5f || Mathf.Abs(moveDirection.y) > 0.5f)
         {
@@ -114,9 +123,11 @@ public class PMoveStateMngr : MonoBehaviour
             //PlayerHasMoved = true;
         }
 
-        currentSt.FixedUpdateState();
 
-        anim.runtimeAnimatorController = curOC[DetermineAnimationDirection()];
+            currentSt.FixedUpdateState();
+
+            anim.runtimeAnimatorController = curOC[DetermineAnimationDirection()];
+        }
     }
 
     [HideInInspector]
