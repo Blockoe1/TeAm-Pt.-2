@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance;
 
     [SerializeField] private GameObject _dialoguePrefab;
+    [SerializeField] private GameObject _dialogueCamera;
 
     [SerializeField] private List<Speaker> _speakers;
     private Dictionary<SpeakerName, Speaker> nameToSpeaker;
@@ -23,8 +25,8 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
+        /*if (Instance == null)
+        {*/
             Instance = this;
 
             nameToSpeaker = new Dictionary<SpeakerName, Speaker>();
@@ -32,17 +34,28 @@ public class DialogueManager : MonoBehaviour
             {
                 nameToSpeaker.Add(s.Name, s);
             }
-        }
+        /*}
         else
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
-    public void RunDialogue(Conversation c)
+    public void EnableDialogueCamera()
     {
-        var epic = Instantiate(_dialoguePrefab, Camera.main.transform).GetComponent<DialogueEpic>();
+        _dialogueCamera.SetActive(true);
+    }
+
+    public void DisableDialogueCamera()
+    {
+        _dialogueCamera.SetActive(false);
+    }
+
+    public IEnumerator RunDialogue(Conversation c)
+    {
+        var epic = Instantiate(_dialoguePrefab, new Vector3(0, 0, 0), Quaternion.identity, Camera.main.transform).GetComponent<DialogueEpic>();
         epic.StartCoroutine(epic.SayWords(c));
+        yield return new WaitUntil(() => epic == null);
     }
 
     public Speaker GetSpeaker(SpeakerName name)
@@ -64,11 +77,11 @@ public class DialogueManager : MonoBehaviour
         return s;
     }
 
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         if (Instance == this)
         {
             Instance = null;
         }
-    }
+    }*/
 }
