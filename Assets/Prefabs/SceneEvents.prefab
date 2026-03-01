@@ -398,8 +398,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7851497436784278000}
     - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
       propertyPath: _speakers.Array.data[1].Bold
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[7].Bold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[7].Font
+      value: 
+      objectReference: {fileID: 11400000, guid: 313033e5b6f7ee749b16950239538a50, type: 2}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[7].Name
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6634654748674774351, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
       propertyPath: m_LocalPosition.x

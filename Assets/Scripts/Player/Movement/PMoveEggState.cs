@@ -17,6 +17,9 @@ public class PMoveEggState : PMoveBaseSt
     private bool started = false;
     bool referenceGrabbed = false;
 
+    //public bool PlayerHasMoved;
+    [HideInInspector] public bool PlayerHasDashed;
+
     public PMoveEggState(PMoveStateMngr m)
     {
         this.m = m;
@@ -54,7 +57,7 @@ public class PMoveEggState : PMoveBaseSt
             started = true;
         }
 
-
+        //PlayerHasMoved = true;
 
         //Move
         Vector2 targetSpeed = m.MoveDirection * m.EggMoveSpeed;
@@ -78,6 +81,7 @@ public class PMoveEggState : PMoveBaseSt
 
     private void Dash_performed(InputAction.CallbackContext obj)
     {
+        PlayerHasDashed = true;
         if (dashCooldown)
         {
             return;

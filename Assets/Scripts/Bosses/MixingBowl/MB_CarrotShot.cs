@@ -11,11 +11,17 @@ public class MB_CarrotShot : BossAction
     [SerializeField] private int shotCount;
     [SerializeField, ShowIf("ShowShotDelay"), AllowNesting] private float shotDelay;
     [SerializeField] private float postShotWait;
+    [SerializeField] private float telegraphTime;
 
     private bool ShowShotDelay => shotCount > 1;
     public override IEnumerator ActionRoutine()
     {
-        for(int i = 0; i < shotCount; i++)
+        Boss.Telegraph.ToggleLine(true);
+        Boss.Telegraph.TrackingTarget = Boss.playerTransform;
+        yield return new WaitForSeconds(telegraphTime);
+        Boss.Telegraph.ToggleLine(false);
+        Boss.Telegraph.TrackingTarget = null;
+        for (int i = 0; i < shotCount; i++)
         {
             shooter.Shoot(Boss.ToPlayerN, shotPower);
             yield return new WaitForSeconds(shotDelay);

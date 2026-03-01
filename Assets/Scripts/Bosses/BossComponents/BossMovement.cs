@@ -33,6 +33,7 @@ public class BossMovement : MonoBehaviour
 
     public event Action<Collision2D> OnCollide;
 
+    private GameMngr gm;
     private Coroutine sounds;
 
     #region Properties
@@ -53,6 +54,11 @@ public class BossMovement : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        gm = FindFirstObjectByType<GameMngr>();
+    }
+
     public void SetMoveTarget(Vector2 pos)
     {
         moveTarget = pos;
@@ -61,6 +67,10 @@ public class BossMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(gm.GamePaused)
+        {
+            return;
+        }
         if (trackingTarget != null)
         {
             Vector2 trackTargetTo = (Vector2)trackingTarget.position - rb.position;
@@ -119,7 +129,7 @@ public class BossMovement : MonoBehaviour
     {
         while (true)
         {
-            if (AudioManager.instance != null)
+            if (AudioManager.instance != null && !gm.GamePaused)
             {
                 AudioManager.instance.PlayOneShot(MovementSound);
             }

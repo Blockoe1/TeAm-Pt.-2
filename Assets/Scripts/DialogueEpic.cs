@@ -19,6 +19,9 @@ public class DialogueEpic : MonoBehaviour
     private float[] textOffsets = { -1, -.9f, -.8f, -.7f, -.6f, -.5f, -.4f, -.3f, -.2f, -.1f, 0,
         .1f, .2f, .3f, .4f, .5f, .6f, .7f, .8f, .9f, 1, .9f, .8f, .7f, .6f, .5f, .4f, .3f, .2f, .1f, 0,
         -.1f, -.2f, -.3f, -.4f, -.5f, -.6f, -.7f, -.8f, -.9f };
+
+    public Button Continue1 { get => _continue; set => _continue = value; }
+
     //private float[] textOffsets = { -1, -0.75f, -0.5f, -0.25f, 0, 0.25f, 0.5f, 0.75f, 1, 0.75f, 0.5f, 0.25f, 0, -0.25f, -0.5f, -0.75f };
     //private float[] textOffsets = { 0, 0.25f, 0.5f, 0.75f, 1 };
 
@@ -53,7 +56,7 @@ public class DialogueEpic : MonoBehaviour
         {
             _mask.GetComponent<Mask>().enabled = true;
             _mask.enabled = true;
-            _text.transform.eulerAngles = new Vector3(0, 0, 90);
+            if (line.Spin) _text.transform.eulerAngles = new Vector3(0, 0, 90);
             _text.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 1000);
 
             yield return null;
