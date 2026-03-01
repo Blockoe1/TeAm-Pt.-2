@@ -115,7 +115,7 @@ public class BossController : MonoBehaviour
         if (currentPhase >= 0 && currentPhase < phases.Length)
         {
             phases[currentPhase]?.OnPhaseEnter(action);
-            if (currentPhase > 0)
+            if (currentPhase > 0 || currentPhase == -1)
             {
                 OnPhaseTransition?.Invoke(currentPhase);
             }
