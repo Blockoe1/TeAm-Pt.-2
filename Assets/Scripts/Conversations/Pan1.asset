@@ -48,7 +48,7 @@ MonoBehaviour:
     SpinTime: 1
     Swish: 1
     SwishWaitInterval: 0
-    SwishAmplitude: 3
+    SwishAmplitude: 5
   - OneMeaslyLine: I'M SO HOT!! I'M BURNING!!
     Speaker: 3
     PauseTime: 0.2

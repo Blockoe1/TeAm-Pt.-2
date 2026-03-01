@@ -5242,6 +5242,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+      propertyPath: _oddsOutOf100
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _afterBossDies
       value: 
       objectReference: {fileID: 11400000, guid: d8789371a3cc47c43b3b263218471040, type: 2}
@@ -5269,6 +5273,10 @@ PrefabInstance:
       propertyPath: _eggyDialoguePos.y
       value: -5.11
       objectReference: {fileID: 0}
+    - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+      propertyPath: _alternateBossDialogue
+      value: 
+      objectReference: {fileID: 11400000, guid: f6b6d433eea04e64e8cb1fbb85ab50b6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
