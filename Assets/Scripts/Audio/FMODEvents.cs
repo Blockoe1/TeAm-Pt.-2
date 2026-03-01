@@ -17,9 +17,14 @@ public class FMODEvents : MonoBehaviour
     [SerializeField] public EventReference PlayerMeleeAttack;
     [SerializeField] public EventReference PlayerRollsAsEgg;
     [SerializeField] public EventReference PlayerMovesAsYolk;
+    [SerializeField] public EventReference UIClick;
+    [SerializeField] public EventReference BossLaunchProjectile;
+    [SerializeField] public EventReference CarrotHits;
+    [SerializeField] public EventReference ButterLands;
+    [SerializeField] public EventReference SpawnEggMinions;
     [SerializeField] public EventReference EggRoll;
     [SerializeField] public EventReference EggExplodes;
-    [SerializeField] public EventReference IgniteOnFire;
+    [SerializeField] public EventReference SpawnButter;
     [SerializeField] public EventReference ContinuallyBurn;
     [SerializeField] public EventReference EvansRequest;
     

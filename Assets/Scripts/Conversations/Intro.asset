@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882c9a45eada8184b9b454ae40600a45, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  _theWords:
+  - OneMeaslyLine: My name is Eggy.
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 0
+    SwishWaitInterval: 0
+    SwishAmplitude: 0
+  - OneMeaslyLine: I've spent my entire life inside this egg.
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 0
+    SwishWaitInterval: 0
+    SwishAmplitude: 0
+  - OneMeaslyLine: But this is not the eggxistance I want!
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1.5
+  - OneMeaslyLine: I want freedom!
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 1
+    SpinTime: 0.25
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 2.5
+  - OneMeaslyLine: I will fire eggs from my trusty frying pan!
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1
+  - OneMeaslyLine: I will fight the one that controls these lands!
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1
+  - OneMeaslyLine: I will shatter the egg and become free!
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1
