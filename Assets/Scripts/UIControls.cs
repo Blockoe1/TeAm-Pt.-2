@@ -50,6 +50,12 @@ public class UIControls : MonoBehaviour
             tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
         }
 
+        if (hardBoiled != null)
+        {
+            if (!PlayerPrefs.HasKey("hardBoiled")) PlayerPrefs.SetString("hardBoiled", "F");
+            hardBoiled.isOn = PlayerPrefs.GetString("hardBoiled") == "T";
+        }
+
         masterSlider.value = AudioManager.instance.MasterVolume;
         sfxSlider.value = AudioManager.instance.SfxVolume;
         musicSlider.value = AudioManager.instance.MusicVolume;
