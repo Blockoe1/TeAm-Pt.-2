@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1928708311844991241}
   - component: {fileID: 4308058021611987510}
   - component: {fileID: 3036629256851582732}
-  - component: {fileID: -3434212331792669445}
   m_Layer: 0
   m_Name: Death_Particle
   m_TagString: Untagged
@@ -44,7 +43,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 0.25
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4895,15 +4894,3 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!114 &-3434212331792669445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635916613037525268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c47398590955db499ac9531592c43d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestructParticle

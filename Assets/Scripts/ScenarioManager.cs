@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class ScenarioManager : MonoBehaviour
 {
-    public enum Scenario { Undefined, MixingBowl }
+    public enum Scenario { Undefined, MixingBowl = 1}
 
     [SerializeField] private Scenario _scenario;
     [SerializeField] private Vector2 _eggyDialoguePos;
@@ -76,6 +76,7 @@ public class ScenarioManager : MonoBehaviour
         yield return DialogueManager.Instance.RunDialogue(_afterFightEnds);
 
         // Boss dies
+        ParticleMngr.Inst.Play("BOSS" + (int)_scenario + "_DIE", bossObject.transform.position, Quaternion.identity);
         bossObject.SetActive(false);
         yield return DialogueManager.Instance.RunDialogue(_afterBossDies);
 
