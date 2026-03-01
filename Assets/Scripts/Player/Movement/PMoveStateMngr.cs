@@ -103,6 +103,10 @@ public class PMoveStateMngr : MonoBehaviour
 
     private void DetermineAnimation()
     {
+        anim.SetInteger("MOVE_DIRECTION_ID", 0); //Side
 
+        Debug.Log(moveDirection);
+        if (Mathf.Abs(moveDirection.x) < Mathf.Abs(moveDirection.y)) //Front/Back
+            anim.SetInteger("MOVE_DIRECTION_ID", (moveDirection.y > 0)? -1 : 1);
     }
 }
