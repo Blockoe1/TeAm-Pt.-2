@@ -1,11 +1,14 @@
 using System;
+using System.Collections;
 using UnityEditor.Search;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
     [field: SerializeField] public Transform playerTransform { get; private set; }
+    [SerializeField] private float startupDelay;
     [SerializeField] private BossPhase[] phases;
+
 
     private bool queuedPhase;
     private int queuedPhaseIndex;
@@ -41,6 +44,17 @@ public class BossController : MonoBehaviour
 
     private void Start()
     {
+        Startup();
+    }
+
+    public void Startup()
+    {
+        StartCoroutine(StartupRoutine());
+    }
+
+    private IEnumerator StartupRoutine()
+    {
+        yield return new WaitForSeconds(startupDelay);
         SetPhase(0);
     }
 
