@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8337502680747429343, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: isSolidButter
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

@@ -35,6 +35,7 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _yolkDashCooldown;
     [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
     [SerializeField] private AnimatorOverrideController[] _yolkAnimOCs;
+    [HideInInspector] public ROllStorage rs;
 
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRen;
@@ -89,6 +90,7 @@ public class PMoveStateMngr : MonoBehaviour
         spriteRen = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         health = GetComponent<PlayerHealth>();
+        rs = FindFirstObjectByType<ROllStorage>();
 
         move = InputSystem.actions.FindAction("MOVE");
         dash = InputSystem.actions.FindAction("DASH");

@@ -67,6 +67,7 @@ public class PMoveYolkState : PMoveBaseSt
     private void Dash_performed(InputAction.CallbackContext obj)
     {
         if (dashCooldown) { return; }
+        m.rs.PlayerIsRolling = true;
         m.StartCoroutine(DashRoutine());
         m.Anim.SetTrigger("DASH");
         m.Health.IFrames(m.YolkDashDuration);
@@ -89,5 +90,6 @@ public class PMoveYolkState : PMoveBaseSt
         dashCooldown = true;
         yield return new WaitForSeconds(time);
         dashCooldown = false;
+        m.rs.PlayerIsRolling = false;
     }
 }
