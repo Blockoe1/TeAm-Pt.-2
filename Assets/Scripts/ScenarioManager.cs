@@ -186,7 +186,7 @@ public class ScenarioManager : MonoBehaviour
             yield return null;
         }
         _bossDeathFlash.gameObject.SetActive(false);
-        FindFirstObjectByType<BossMovement>().StopSounds();
+        FindFirstObjectByType<BossMovement>()?.StopSounds();
 
         yield return new WaitForSeconds(0.5f);
 
