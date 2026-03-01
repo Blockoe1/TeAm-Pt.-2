@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected float despawnTime = 10f;
     protected enum ProjectileType
     {
-        FlamingButter, EggRoll, Other
+        FlamingButter, EggRoll, Carrot, Egg
     }
 
     [SerializeField] private ProjectileType projectileType;
@@ -76,9 +76,14 @@ public class Projectile : MonoBehaviour
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         // On collision with anything, destroy the projectile.
-        if (FindFirstObjectByType<AudioManager>() != null && projectileType != ProjectileType.EggRoll)
+        if (FindFirstObjectByType<AudioManager>() != null && projectileType == ProjectileType.Carrot)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.CarrotHits);
+        }
+
+        if (FindFirstObjectByType<AudioManager>() != null && (projectileType == ProjectileType.Egg || projectileType == ProjectileType.FlamingButter))
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ButterLands);
         }
         if (despawnOnCollision)
         {
