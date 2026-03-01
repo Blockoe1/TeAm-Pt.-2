@@ -16,6 +16,7 @@ public class BossController : MonoBehaviour
 
     // Component References
     public BossMovement Movement { get; private set; }
+    public BossTelegrapher Telegraph { get; private set; }
 
     #region Properties
     public Vector2 ToPlayerN => (playerTransform.position - transform.position).normalized;
@@ -29,6 +30,7 @@ public class BossController : MonoBehaviour
     {
         // Get Components
         Movement = GetComponent<BossMovement>();
+        Telegraph = GetComponent<BossTelegrapher>();
 
         for(int i = 0; i < phases.Length; i++)
         {

@@ -17,6 +17,12 @@ public class EC_Charge : BossAction
     {
         for(int i = 0; i < chargeNumber; i++)
         {
+            Boss.Telegraph.ToggleLine(true);
+            Boss.Telegraph.TrackingTarget = Boss.playerTransform;
+            yield return new WaitForSeconds(chargeDelay);
+            Boss.Telegraph.ToggleLine(false);
+            Boss.Telegraph.TrackingTarget = null;
+
             Boss.Movement.SnapRotation();
             //Boss.Movement.Rb.AddForce(Boss.ToPlayer * dashPower, ForceMode2D.Impulse);
             float timer = chargeTime;
@@ -32,8 +38,6 @@ public class EC_Charge : BossAction
             }
             Boss.Movement.TrackingTarget = trackTarget;
             Boss.Movement.TargetVelocity = Vector2.zero;
-
-            yield return new WaitForSeconds(chargeDelay);
         }
 
         Phase.NextAction();
