@@ -41,8 +41,7 @@ public class FMODEvents : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("There is more than one FMODEvents in the scene");
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         instance = this;
         DontDestroyOnLoad(gameObject);

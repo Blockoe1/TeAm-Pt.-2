@@ -184,6 +184,8 @@ public class ScenarioManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        FindAnyObjectByType<PMoveStateMngr>().ForceEndMovement();
+
         DialogueManager.Instance.EnableDialogueCamera();
         FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
 
