@@ -16,8 +16,6 @@ public class PMoveEggState : PMoveBaseSt
     public override void EnterState()
     {
         m.Dash.performed += Dash_performed;
-
-        m.Anim.runtimeAnimatorController = m.EggAnimOC;
     }
 
     public override void ExitState()
@@ -28,6 +26,8 @@ public class PMoveEggState : PMoveBaseSt
     public override void FixedUpdateState()
     {
         Move();
+
+        m.Anim.runtimeAnimatorController = m.WholeAnimOCs[m.DetermineAnimationDirection()];
     }
     private void Move()
     {

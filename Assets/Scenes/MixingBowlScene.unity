@@ -2760,6 +2760,26 @@ PrefabInstance:
       propertyPath: _eggDashSpeed
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1394503505484859528, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+      propertyPath: _wholeAnimOCs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394503505484859528, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+      propertyPath: '_wholeAnimOCs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 22100000, guid: 5770410581b0aa54ca5fa846318b8f1b, type: 2}
+    - target: {fileID: 1394503505484859528, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+      propertyPath: '_wholeAnimOCs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 22100000, guid: b84003210c036854c87dabc5bd5d5144, type: 2}
+    - target: {fileID: 1394503505484859528, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+      propertyPath: '_wholeAnimOCs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 22100000, guid: 5770410581b0aa54ca5fa846318b8f1b, type: 2}
+    - target: {fileID: 2440716973497631222, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 5770410581b0aa54ca5fa846318b8f1b, type: 2}
     - target: {fileID: 5679352953428768708, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -21,7 +21,8 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _accelerationSpeed;
     [SerializeField][MinValue(0)] private float _deccelerationSpeed;
     [SerializeField][MinValue(0)] private float _eggDashSpeed;
-    [SerializeField] private AnimatorOverrideController _eggAnimOC;
+    [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
+    [SerializeField] private AnimatorOverrideController[] _wholeAnimOCs;
 
     [Header("Yolk State")]
     [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
@@ -54,11 +55,11 @@ public class PMoveStateMngr : MonoBehaviour
     public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
     public Animator Anim { get => anim; set => anim = value; }
     public InputAction Move { get => move; set => move = value; }
-    public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
     public bool IsDashing { get => isDashing; set => isDashing = value; }
     public Vector2 FaceDirection { get => faceDirection; set => faceDirection = value; }
     public AnimatorOverrideController[] YolkAnimOCs { get => _yolkAnimOCs; set => _yolkAnimOCs = value; }
     public SpriteRenderer SpriteRen { get => spriteRen; set => spriteRen = value; }
+    public AnimatorOverrideController[] WholeAnimOCs { get => _wholeAnimOCs; set => _wholeAnimOCs = value; }
     #endregion
 
     private void Awake()

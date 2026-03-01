@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 3b96df9fa0f3a0841a2efa706bef3013
+guid: fdd8346055c2c1e4885c1d5dd8b72c09
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 527780760164683990
-    second: PlayerYolk_RunForward_0
+      213: 5252372569631786026
+    second: PlayerShellWhole_RunBack_0
   - first:
-      213: 3688936018362329057
-    second: PlayerYolk_RunForward_1
+      213: -1595565966160908608
+    second: PlayerShellWhole_RunBack_1
   - first:
-      213: -850913203310444615
-    second: PlayerYolk_RunForward_2
+      213: 3365377124414321985
+    second: PlayerShellWhole_RunBack_2
   - first:
-      213: 949571555220649719
-    second: PlayerYolk_RunForward_3
+      213: 5913455979372411714
+    second: PlayerShellWhole_RunBack_3
   - first:
-      213: 2309811092741036179
-    second: PlayerYolk_RunForward_4
+      213: 7658077067152011171
+    second: PlayerShellWhole_RunBack_4
   - first:
-      213: -5951291305893940728
-    second: PlayerYolk_RunForward_5
+      213: -7606987379758015524
+    second: PlayerShellWhole_RunBack_5
   - first:
-      213: 4140990820093394895
-    second: PlayerYolk_RunForward_6
+      213: 8232485269881127694
+    second: PlayerShellWhole_RunBack_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerYolk_RunForward_0
+      name: PlayerShellWhole_RunBack_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2000
+        y: 2020
         width: 400
-        height: 400
+        height: 380
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d0d6e81ecd035700800000000000000
-      internalID: 527780760164683990
+      spriteID: a2488e8160d24e840800000000000000
+      internalID: 5252372569631786026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerYolk_RunForward_1
+      name: PlayerShellWhole_RunBack_1
       rect:
         serializedVersion: 2
         x: 400
-        y: 2000
+        y: 2020
         width: 400
-        height: 400
+        height: 380
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e761ad83cbb13330800000000000000
-      internalID: 3688936018362329057
+      spriteID: 0cea64b15396bd9e0800000000000000
+      internalID: -1595565966160908608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerYolk_RunForward_2
+      name: PlayerShellWhole_RunBack_2
       rect:
         serializedVersion: 2
         x: 800
-        y: 2000
+        y: 2020
         width: 400
-        height: 400
+        height: 380
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bfbdfd23f2f034f0800000000000000
-      internalID: -850913203310444615
+      spriteID: 145f0f30aa834be20800000000000000
+      internalID: 3365377124414321985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerYolk_RunForward_3
+      name: PlayerShellWhole_RunBack_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 1600
+        y: 1640
         width: 400
-        height: 400
+        height: 380
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f6fdb56c4e8d2d00800000000000000
-      internalID: 949571555220649719
+      spriteID: 24bf665e1e0d01250800000000000000
+      internalID: 5913455979372411714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerYolk_RunForward_4
+      name: PlayerShellWhole_RunBack_4
       rect:
         serializedVersion: 2
         x: 400
-        y: 1600
+        y: 1640
         width: 400
-        height: 400
+        height: 380
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 398161173f81e0020800000000000000
-      internalID: 2309811092741036179
+      spriteID: 3af2922b484f64a60800000000000000
+      internalID: 7658077067152011171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerYolk_RunForward_5
+      name: PlayerShellWhole_RunBack_5
       rect:
         serializedVersion: 2
         x: 800
-        y: 1600
+        y: 1640
         width: 400
-        height: 400
+        height: 380
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,8 +243,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 802325da614c86da0800000000000000
-      internalID: -5951291305893940728
+      spriteID: cdbd4aa184d8e6690800000000000000
+      internalID: -7606987379758015524
       vertices: []
       indices: 
       edges: []
@@ -253,7 +253,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f62b7a0b59b690740a777b1603e46f6e
+    spriteID: 60631067b90a2ed4e98cc4a6264b062d
     internalID: 0
     vertices: []
     indices: 
@@ -263,14 +263,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":7.0},"gridSpriteSize":{"x":400.0,"y":400.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":7.0},"gridSpriteSize":{"x":400.0,"y":380.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      PlayerYolk_RunForward_0: 527780760164683990
-      PlayerYolk_RunForward_1: 3688936018362329057
-      PlayerYolk_RunForward_2: -850913203310444615
-      PlayerYolk_RunForward_3: 949571555220649719
-      PlayerYolk_RunForward_4: 2309811092741036179
-      PlayerYolk_RunForward_5: -5951291305893940728
+      PlayerShellWhole_RunBack_0: 5252372569631786026
+      PlayerShellWhole_RunBack_1: -1595565966160908608
+      PlayerShellWhole_RunBack_2: 3365377124414321985
+      PlayerShellWhole_RunBack_3: 5913455979372411714
+      PlayerShellWhole_RunBack_4: 7658077067152011171
+      PlayerShellWhole_RunBack_5: -7606987379758015524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
