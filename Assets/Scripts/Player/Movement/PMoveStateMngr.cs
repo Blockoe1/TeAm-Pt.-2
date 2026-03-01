@@ -36,6 +36,7 @@ public class PMoveStateMngr : MonoBehaviour
 
     private PMoveEggState eggState;
     private PMoveYolkState yolkState;
+    protected
 
     private PMoveBaseSt currentSt;
 

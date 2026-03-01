@@ -1,6 +1,10 @@
 using FMOD.Studio;
+using FMODUnity;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 public class PMoveEggState : PMoveBaseSt
 {
     PMoveStateMngr m;
@@ -9,7 +13,8 @@ public class PMoveEggState : PMoveBaseSt
     private float accelAmount, deccelAmount;
 
     private EventInstance moveEggRoll;
-    private bool playingSound;
+    private bool started = false;
+    bool referenceGrabbed = false;
 
     public PMoveEggState(PMoveStateMngr m)
     {
@@ -33,8 +38,22 @@ public class PMoveEggState : PMoveBaseSt
     {
         Move();
     }
+
     private void Move()
     {
+        if(!referenceGrabbed)
+        {
+            moveEggRoll = RuntimeManager.CreateInstance(FMODEvents.instance.PlayerRollsAsEgg);
+            referenceGrabbed = true;
+        }
+
+        if(!started && m.IsMoving())
+        {
+            moveEggRoll.start();
+            started = true;
+        }
+
+
 
         //Move
         Vector2 targetSpeed = m.MoveDirection * m.EggMoveSpeed;
@@ -49,6 +68,11 @@ public class PMoveEggState : PMoveBaseSt
 
         //Animimation
         m.Anim.SetBool("IS_MOVING", m.IsMoving());
+        if(!m.IsMoving())
+        {
+            moveEggRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            started = false;
+        }
     }
 
     private void Dash_performed(InputAction.CallbackContext obj)
@@ -59,4 +83,6 @@ public class PMoveEggState : PMoveBaseSt
         //Animation
         m.Anim.SetTrigger("DASH");
     }
+
+
 }
