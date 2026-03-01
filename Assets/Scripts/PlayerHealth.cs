@@ -81,8 +81,8 @@ public class PlayerHealth : MonoBehaviour
     {
         InputSystem.actions.Disable();
         ParticleMngr.Inst.Play("P_DIE", transform.position, Quaternion.identity);
-        InputSystem.actions.Enable();
         yield return new WaitForSeconds(_deathDelay);
+        InputSystem.actions.Enable();
         SceneManager.LoadScene("DeathScene");
     }
 }
