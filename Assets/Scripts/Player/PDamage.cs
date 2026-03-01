@@ -8,7 +8,15 @@ public class PDamage : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BossHealth boss))
         {
-            boss.Damage(_damage);
+            print("Form: " + FindAnyObjectByType<PlayerHealth>().form);
+            if (FindAnyObjectByType<PlayerHealth>().form == PlayerHealth.eggform.yolk)
+            {
+                boss.Damage(_damage * 2);
+            }
+            else
+            {
+                boss.Damage(_damage);
+            }
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerMeleeAttack);

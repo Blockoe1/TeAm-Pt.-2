@@ -462,6 +462,26 @@ PrefabInstance:
       propertyPath: <playerTransform>k__BackingField
       value: 
       objectReference: {fileID: 914515621}
+    - target: {fileID: 7715834978549272013, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
+      propertyPath: managedReferences[6612011821564004].shotPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715834978549272013, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
+      propertyPath: managedReferences[6612011821564006].shotDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715834978549272013, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
+      propertyPath: managedReferences[6612011821564006].shotPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715834978549272013, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
+      propertyPath: managedReferences[6612011821564008].shotPower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715834978549272013, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
+      propertyPath: managedReferences[6612011821564009].shotPower
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
