@@ -177,7 +177,7 @@ MonoBehaviour:
   <rb>k__BackingField: {fileID: 3043816155583901497}
   acceleration: 35
   angleSmoothTime: 0.15
-  angleMaxSpeed: 220
+  angleMaxSpeed: 180
 --- !u!114 &334014979689327212
 MonoBehaviour:
   m_ObjectHideFlags: 0
