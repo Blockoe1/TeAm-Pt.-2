@@ -23,9 +23,10 @@ public class EC_Charge : BossAction
 
             Transform trackTarget = Boss.Movement.TrackingTarget;
             Boss.Movement.TrackingTarget = null;
+            Vector2 chargeDir = Boss.ToPlayerN;
             while (timer > 0)
             {
-                Boss.Movement.TargetVelocity = Vector2.right * chargeSpeed;
+                Boss.Movement.TargetVelocity = chargeDir * chargeSpeed;
                 timer -= Time.fixedDeltaTime;
                 yield return new WaitForFixedUpdate();
             }
