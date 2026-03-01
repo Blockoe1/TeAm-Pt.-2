@@ -21,9 +21,12 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private int _oddsOutOf100;
     [SerializeField] private SpriteRenderer _bossDeathFlash;
     [SerializeField] private float _bossDeathTime;
+    [SerializeField] private GameObject _poof;
     [SerializeField, Scene] private string _nextScene;
 
     private bool bossIsDead;
+
+    public string NextScene { get => _nextScene; set => _nextScene = value; }
 
     void Start()
     {
@@ -113,6 +116,8 @@ public class ScenarioManager : MonoBehaviour
             boss.gameObject.SetActive(false);
             yield return new WaitForSeconds(1);
             yield return DialogueManager.Instance.RunDialogue(_beforeBossAppears);
+            var p = Instantiate(_poof, boss.transform.position, Quaternion.identity);
+            yield return new WaitUntil(() => p == null);
             boss.gameObject.SetActive(true);
         }
         else

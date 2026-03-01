@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     public class Speaker
     {
         public SpeakerName Name;
+        public string Title;
         public TMP_FontAsset Font;
         public bool Bold;
     }
