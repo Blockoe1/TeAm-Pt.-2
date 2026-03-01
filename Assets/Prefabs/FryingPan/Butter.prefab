@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 9025536368665167311}
   - component: {fileID: 215365710842050273}
   - component: {fileID: 4992074102973843181}
-  m_Layer: 0
+  - component: {fileID: 1383911146683547108}
+  m_Layer: 6
   m_Name: Butter
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 1578336254390027715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.17529, y: -0.87146, z: 0}
-  m_LocalScale: {x: -0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5748277173021305338}
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2489582101730092845, guid: ee5184210207d5a45927611a2c44c106, type: 3}
   m_Color: {r: 1, g: 0.96973646, b: 0, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -117,7 +118,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00714e4d0b3152f419351528370758fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  despawnOnCollision: 0
+  despawnOnCollision: 1
   despawnTime: 10
   projectileType: 0
   <rb>k__BackingField: {fileID: 9025536368665167311}
@@ -184,6 +185,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1383911146683547108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578336254390027715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d45368ec80c32947a3f959c4b565856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossDamage
+  _isProjectile: 1
 --- !u!1001 &2458856630132923475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,6 +209,10 @@ PrefabInstance:
     - target: {fileID: 490383637466563433, guid: 413e109b56e6d4e4487d3af930637efc, type: 3}
       propertyPath: m_Name
       value: ButterTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 490383637466563433, guid: 413e109b56e6d4e4487d3af930637efc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4032921074606509381, guid: 413e109b56e6d4e4487d3af930637efc, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time

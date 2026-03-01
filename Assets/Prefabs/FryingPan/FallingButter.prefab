@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 9025536368665167311}
   - component: {fileID: 215365710842050273}
   - component: {fileID: 4992074102973843181}
-  m_Layer: 0
+  - component: {fileID: 8044321963305323727}
+  m_Layer: 6
   m_Name: FallingButter
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +118,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00714e4d0b3152f419351528370758fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  despawnOnCollision: 0
+  despawnOnCollision: 1
   despawnTime: 10
   projectileType: 0
   <rb>k__BackingField: {fileID: 9025536368665167311}
@@ -184,6 +185,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8044321963305323727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578336254390027715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d45368ec80c32947a3f959c4b565856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossDamage
+  _isProjectile: 1
 --- !u!1001 &7616674880063602378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,6 +209,10 @@ PrefabInstance:
     - target: {fileID: 5655210198092218170, guid: 93eca58edb4851944b0fdacd33cac998, type: 3}
       propertyPath: m_Name
       value: FireParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655210198092218170, guid: 93eca58edb4851944b0fdacd33cac998, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7080515714244514027, guid: 93eca58edb4851944b0fdacd33cac998, type: 3}
       propertyPath: m_LocalScale.x

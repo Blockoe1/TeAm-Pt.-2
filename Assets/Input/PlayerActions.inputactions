@@ -158,6 +158,17 @@
                 },
                 {
                     "name": "",
+                    "id": "55890245-1e5e-4536-b879-109a97fe4edf",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DASH",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8d334fcb-27eb-4405-b590-66c2c98c6cf5",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",

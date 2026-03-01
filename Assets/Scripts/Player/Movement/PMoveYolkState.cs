@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class PMoveYolkState : PMoveBaseSt
     private PMoveStateMngr m;
 
     private bool waitingForSound;
+    private bool dashCooldown;
 
     public PMoveYolkState(PMoveStateMngr m)
     {
@@ -64,19 +66,28 @@ public class PMoveYolkState : PMoveBaseSt
 
     private void Dash_performed(InputAction.CallbackContext obj)
     {
-        m.StartCoroutine(DashCooldown());
+        if (dashCooldown) { return; }
+        m.StartCoroutine(DashRoutine());
         m.Anim.SetTrigger("DASH");
         m.Health.IFrames(m.YolkDashDuration);
+        m.StartCoroutine(DashCooldown(m.YolkDashCooldown));
     }
     private void Dash()
     {
         //Move
         m.Rb2d.linearVelocity = (m.YolkDashSpeed * m.FaceDirection);
     }
-    private IEnumerator DashCooldown()
+    private IEnumerator DashRoutine()
     {
         m.IsDashing = true;
         yield return new WaitForSeconds(m.YolkDashDuration);
         m.IsDashing = false;
+    }
+
+    private IEnumerator DashCooldown(float time)
+    {
+        dashCooldown = true;
+        yield return new WaitForSeconds(time);
+        dashCooldown = false;
     }
 }

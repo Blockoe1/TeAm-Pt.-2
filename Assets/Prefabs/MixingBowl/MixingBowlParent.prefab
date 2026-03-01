@@ -454,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564006].shotDelay
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564006].shotPower
@@ -474,11 +474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564008].shotPower
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564009].shotPower
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564034].shotCount
