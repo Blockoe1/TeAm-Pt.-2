@@ -53,7 +53,9 @@ MonoBehaviour:
     _particle: {fileID: 635916613037525268, guid: 5367d1b6250c726438e0ba4d337cb8c7, type: 3}
   - _name: PAN_HIT
     _particle: {fileID: 3586338557240626430, guid: c9cd3442f7b925344ba4b0b90067a85c, type: 3}
-  - _name: EGG_EXPLODE
+  - _name: EGG_EXPLODE_FLAT
+    _particle: {fileID: 635916613037525268, guid: 59efe3f1787495944af05d97cbcffd26, type: 3}
+  - _name: EGG_EXPLODE_UP
     _particle: {fileID: 6645376069818878384, guid: cbdea48d6d4a874459310cc8b96c8755, type: 3}
   - _name: BOSS1_DIE
     _particle: {fileID: 6878484023343483553, guid: 56bc09703bb931648a09bdd5a6371638, type: 3}
@@ -130,6 +132,41 @@ MonoBehaviour:
       Data3: 1965494711
       Data4: -132204900
     Path: event:/PlayerYolkMove
+  UIClick:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  BossLaunchProjectile:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  CarrotHits:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  ButterLands:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  SpawnEggMinions:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   EggRoll:
     Guid:
       Data1: -1043075513
@@ -144,13 +181,13 @@ MonoBehaviour:
       Data3: 761350290
       Data4: 2138178402
     Path: event:/Eggsplosion
-  IgniteOnFire:
+  SpawnButter:
     Guid:
-      Data1: -486236501
-      Data2: 1321888086
-      Data3: -1501476975
-      Data4: -1295253445
-    Path: event:/SpawnFlamingButter
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   ContinuallyBurn:
     Guid:
       Data1: -1562163627
