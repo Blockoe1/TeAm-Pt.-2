@@ -81,23 +81,24 @@ public class UIControls : MonoBehaviour
         _mainCanvas.SetActive(true);
     }
 
-    public void LevelOne()
-    {
-        SceneManager.LoadScene("VSMixingBowl");
-    }
+    
     public void TobyToggle()
     {
         PlayerPrefs.SetString("toby", tobyToggle.isOn ? "T" : "F");
     }
+    public void LevelOne()
+    {
+        TransitionManager.ZoomTransition("VSMixingBowl");
+    }
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene("VSFryingPan");
+        TransitionManager.ZoomTransition("VSFryingPan");
     }
 
     public void LevelThree()
     {
-        SceneManager.LoadScene("VSEggCooker");
+        TransitionManager.ZoomTransition("VSEggCooker");
     }
 
 
