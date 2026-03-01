@@ -91,7 +91,7 @@ public class BossMovement : MonoBehaviour
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
     }
 
-    public void SnapToTarget()
+    public void SnapRotation()
     {
         if (trackingTarget != null)
         {

@@ -40,9 +40,16 @@ public class ProjectileShooter : MonoBehaviour
             Projectile projectile = GetProjectile();
             projectile.transform.position = spawnLocation;
             projectile.transform.eulerAngles = new Vector3(0, 0, angle);
+
+            TrailRenderer rend = projectile.GetComponentInChildren<TrailRenderer>();
+            if (rend != null)
+            {
+                rend.Clear();
+            }
+
             projectile.gameObject.SetActive(true);
 
-            projectile.SetDespawnAction(ReturnProjectile);
+            projectile.OnDespawn += ReturnProjectile;
             projectile.Launch(launchVector.normalized * power);
         } 
     }
@@ -64,6 +71,7 @@ public class ProjectileShooter : MonoBehaviour
     private void ReturnProjectile(Projectile toReturn)
     {
         projectilePool.Enqueue(toReturn);
+        toReturn.OnDespawn -= ReturnProjectile;
         toReturn.gameObject.SetActive(false);
     }
     #endregion

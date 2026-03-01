@@ -494,116 +494,52 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 914515621}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612016458891414]'
+      propertyPath: 'managedReferences[6612019444187314]'
       value: Assembly-CSharp EC_Charge
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612018635735120]'
+      propertyPath: 'managedReferences[6612019444187319]'
       value: Assembly-CSharp EC_Charge
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612018635735139]'
-      value: Assembly-CSharp EC_Charge
+      propertyPath: phases.Array.data[2].actions.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612018635735141]'
-      value: Assembly-CSharp EC_Charge
+      propertyPath: 'phases.Array.data[2].actions.Array.data[1]'
+      value: 6612019444187319
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'managedReferences[6612018635735142]'
-      value: Assembly-CSharp EC_Follow
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: 'phases.Array.data[1].actions.Array.data[2]'
-      value: 6612018635735141
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612016458891414].dashPower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612016458891422].dashPower
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735120].dashPower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735139].dashPower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735141].dashPower
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612019444187212].dashPower
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735142].followTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612016458891414].chargeDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735120].chargeDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735139].chargeDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735141].chargeDelay
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735142].followSpeed
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612016458891414].chargeNumber
+      propertyPath: managedReferences[6612019444187314].chargeTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735120].chargeNumber
+      propertyPath: managedReferences[6612019444187319].chargeTime
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735139].chargeNumber
+      propertyPath: managedReferences[6612019444187314].chargeDelay
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735141].chargeNumber
+      propertyPath: managedReferences[6612019444187314].chargeSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612019444187319].chargeDelay
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612016458891414].postChargeWait
-      value: 0.5
+      propertyPath: managedReferences[6612019444187319].chargeSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735120].postChargeWait
-      value: 0.5
+      propertyPath: managedReferences[6612019444187314].chargeNumber
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735139].postChargeWait
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: managedReferences[6612018635735141].postChargeWait
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: maxSpeed
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
-      propertyPath: acceleration
-      value: 30
+      propertyPath: managedReferences[6612019444187319].chargeNumber
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: trackingTarget
