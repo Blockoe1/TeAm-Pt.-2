@@ -365,6 +365,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8450870279433645435, guid: e80b6393780e90746b6f4bc35347f16b, type: 3}
+      propertyPath: _poof
+      value: 
+      objectReference: {fileID: 7697638236005491234, guid: 713592cb3e6172848ae6c06f97eb6d72, type: 3}
+    - target: {fileID: 8450870279433645435, guid: e80b6393780e90746b6f4bc35347f16b, type: 3}
       propertyPath: _bossDeathTime
       value: 0.25
       objectReference: {fileID: 0}
@@ -416,6 +420,34 @@ PrefabInstance:
     - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
       propertyPath: _speakers.Array.data[7].Name
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[1].Title
+      value: Eggy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[2].Title
+      value: Mixing Bowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[3].Title
+      value: Frying Pan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[4].Title
+      value: Frying Pan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[5].Title
+      value: Egg Cooker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[6].Title
+      value: Egg Cooker
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[7].Title
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6634654748674774351, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
       propertyPath: m_LocalPosition.x

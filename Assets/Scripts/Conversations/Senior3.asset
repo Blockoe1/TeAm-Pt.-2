@@ -25,18 +25,6 @@ MonoBehaviour:
     Swish: 0
     SwishWaitInterval: 0
     SwishAmplitude: 0
-  - OneMeaslyLine: The pan deals more damage than the egg.
-    Speaker: 7
-    PauseTime: 0
-    EnterVertically: 1
-    Direction: 1
-    VerticalTime: 0.3
-    Spin: 0
-    SpinCount: 0
-    SpinTime: 0
-    Swish: 0
-    SwishWaitInterval: 0
-    SwishAmplitude: 0
   - OneMeaslyLine: If you take damage, it will crack your egg!
     Speaker: 7
     PauseTime: 0

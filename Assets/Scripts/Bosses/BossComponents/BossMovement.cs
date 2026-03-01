@@ -167,4 +167,14 @@ public class BossMovement : MonoBehaviour
         }
     }
 
+    public void StopSounds()
+    {
+        ambience.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        if (sillySolution != null)
+        {
+            StopCoroutine(sillySolution);
+            sillySolution = null;
+        }
+    }
+
 }

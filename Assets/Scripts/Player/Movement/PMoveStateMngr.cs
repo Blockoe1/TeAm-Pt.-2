@@ -169,6 +169,11 @@ public class PMoveStateMngr : MonoBehaviour
         forceUpward = toggle;
     }
 
+    public void ForceEndMovement()
+    {
+        currentSt.ExitState();
+    }
+
     private void OnDestroy()
     {
         currentSt.ExitState();

@@ -306,7 +306,7 @@ PrefabInstance:
       objectReference: {fileID: 8040226761266116167, guid: 0b349322566398f43b0bbd58a7b0ab18, type: 3}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -317,6 +317,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
@@ -325,11 +329,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 750547945122653629}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1258219713276137774}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
@@ -341,12 +353,20 @@ PrefabInstance:
       value: BossIsDead
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ToggleLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.CircleCollider2D, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: ScenarioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: BossTelegrapher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
@@ -358,6 +378,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3611957602819733869, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
@@ -506,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564004].shotPower
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564005].shotCount
@@ -526,11 +550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564006].shotDelay
-      value: 0.25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564006].shotPower
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564007].shotCount
@@ -546,11 +570,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564008].shotPower
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564009].shotPower
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564034].shotCount
@@ -770,6 +794,17 @@ CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 3611957602819733869, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
   m_PrefabInstance: {fileID: 4056119477320293584}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1258219713276137774 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2971288358926405118, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+  m_PrefabInstance: {fileID: 4056119477320293584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740766963778650098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6b21f690fb8a243846f6a0c3f20cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossTelegrapher
 --- !u!1 &4740766963778650098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}

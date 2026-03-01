@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 3644219330384794804, guid: f39b2b9e5c83fda41b0566c0ae1a5e09, type: 3}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -195,11 +195,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 7463783893799900012}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
@@ -211,12 +223,20 @@ PrefabInstance:
       value: BossIsDead
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: ToggleLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.CapsuleCollider2D, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: ScenarioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: BossTelegrapher, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
@@ -228,6 +248,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811144708668751151, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3611957602819733869, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
@@ -641,3 +665,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe86eab55b8c85246ad0bc1f658caf02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAnimator
+--- !u!114 &7463783893799900012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2971288358926405118, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+  m_PrefabInstance: {fileID: 5667935080601247378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974463703232855472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6b21f690fb8a243846f6a0c3f20cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossTelegrapher
