@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private float _deathDelay;
     [SerializeField] private UnityEvent OnTakeDamage;
+    [SerializeField] private UnityEvent OnDie;
 
     private Rigidbody2D rb;
 
@@ -72,6 +73,7 @@ public class PlayerHealth : MonoBehaviour
                 
                 form = eggform.yolk;
                 PMoveStateMngr.Inst.SwitchState(PMoveStateMngr.Inst.YolkState);
+                ParticleMngr.Inst.Play("EGG_EXPLODE_UP", transform.position, transform.rotation);
                 break;
             case 0:
                 if (AudioManager.instance != null)
@@ -104,6 +106,7 @@ public class PlayerHealth : MonoBehaviour
     {
         InputSystem.actions.Disable();
         ParticleMngr.Inst.Play("P_DIE", transform.position, Quaternion.identity);
+        OnDie?.Invoke();
         yield return new WaitForSeconds(_deathDelay);
         InputSystem.actions.Enable();
         SceneManager.LoadScene("DeathScene");
