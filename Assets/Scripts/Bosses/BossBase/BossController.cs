@@ -113,6 +113,11 @@ public class BossController : MonoBehaviour
         if (currentPhase >= 0 && currentPhase < phases.Length)
         {
             phases[currentPhase]?.OnPhaseEnter(action);
-        }  
+        }
+
+        if(name == "EggCooker" && currentPhase >= 2)
+        {
+            AudioManager.instance.SetPhase3();
+        }
     }
 }

@@ -46,11 +46,11 @@ public class AudioManager : MonoBehaviour
     {
         masterBus = RuntimeManager.GetBus("bus:/");
         //sfxBus = RuntimeManager.GetBus("bus:/SFX");
-       // musicBus = RuntimeManager.GetBus("bus:/BGM");
+        //musicBus = RuntimeManager.GetBus("bus:/BGM");
 
         UpdateVolume();
-        //backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
-        //backgroundMusic.start();
+        backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
+        backgroundMusic.start();
     }
 
     /// <summary>
@@ -101,5 +101,10 @@ public class AudioManager : MonoBehaviour
     private void OnDestroy()
     {
         backgroundMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
+    public void SetPhase3()
+    {
+        backgroundMusic.setParameterByName("Phase3", 1);
     }
 }
