@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5084610988582052397, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
       propertyPath: orthographic size
-      value: 7.977575
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5487354776359243312, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
       propertyPath: m_Name
@@ -345,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: MainMenu
+      value: VSFryingPan
       objectReference: {fileID: 0}
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
