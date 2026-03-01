@@ -1248,7 +1248,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 3cf0da9b10402c64faedaec369bfba7d, type: 2}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'managedReferences[-2]'
@@ -1340,7 +1340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[2].actions.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[0].actions.Array.data[0]'
@@ -1352,19 +1352,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[1].actions.Array.data[0]'
-      value: 9057224384271089740
+      value: 9057224384271089737
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[1].actions.Array.data[1]'
-      value: 9057224384271089742
+      value: 9057224384271089739
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[0]'
-      value: 6612011821564042
+      value: 9057224384271089740
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[1]'
-      value: 6612011821564006
+      value: 9057224384271089742
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[2].actions.Array.data[2]'
@@ -1707,8 +1707,12 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: phases.Array.data[0].<healthThreshold>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[1].<healthThreshold>k__BackingField
-      value: 34
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[2].<healthThreshold>k__BackingField
