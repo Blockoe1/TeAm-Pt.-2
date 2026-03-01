@@ -32,7 +32,7 @@ public class ScenarioManager : MonoBehaviour
         var boss = FindAnyObjectByType<BossController>();
 
         // Disable spin script
-        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = false;
+        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<PanMovement>().enabled = false;
 
         // Dialogue before boss appears
         if (_beforeBossAppears != null)
@@ -48,7 +48,7 @@ public class ScenarioManager : MonoBehaviour
         yield return WaitForCameraSwitch();
         InputSystem.actions.Enable();
         boss.Startup();
-        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = true;
+        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<PanMovement>().enabled = true;
 
         // Boss fight happens
         yield return new WaitUntil(() => bossIsDead);
@@ -64,7 +64,7 @@ public class ScenarioManager : MonoBehaviour
             {
                 Destroy(bossObject.transform.parent.GetChild(i).gameObject);
             }
-            FindAnyObjectByType<Spin>().enabled = false;
+            FindAnyObjectByType<PanMovement>().enabled = false;
         }
         else
         {

@@ -125,4 +125,9 @@ public class BossMovement : MonoBehaviour
     {
         OnCollide?.Invoke(collision);
     }
+
+    private void OnDestroy()
+    {
+        rb.linearVelocity = Vector2.zero;
+    }
 }
