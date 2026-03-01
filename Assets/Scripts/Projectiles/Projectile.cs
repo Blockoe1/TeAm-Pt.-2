@@ -32,6 +32,7 @@ public class Projectile : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.SpawnButter);
             await Task.Delay(1500);
             lifetimeSound = RuntimeManager.CreateInstance(FMODEvents.instance.ContinuallyBurn);
+            lifetimeSound.start();
         }
 
         if(projectileType == ProjectileType.EggRoll && AudioManager.instance != null)
@@ -66,10 +67,19 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        lifetimeSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         // On collision with anything, destroy the projectile.
+        if (FindFirstObjectByType<AudioManager>() != null && projectileType != ProjectileType.EggRoll)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.CarrotHits);
+        }
         if (despawnOnCollision)
         {
             Despawn();

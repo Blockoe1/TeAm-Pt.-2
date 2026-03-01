@@ -134,7 +134,7 @@ MonoBehaviour:
       Data2: 1234762106
       Data3: 1616821911
       Data4: -591193910
-    Path: event:/UIClick
+    Path: event:/UIClicks
   BossLaunchProjectile:
     Guid:
       Data1: 874415446
