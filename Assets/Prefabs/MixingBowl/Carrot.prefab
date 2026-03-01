@@ -89,7 +89,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2684514658113457701, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3809801675559233191, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
@@ -123,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   despawnOnCollision: 1
+  projectileType: 0
   <rb>k__BackingField: {fileID: 8775054012940183322}
 --- !u!70 &8630078103017210329
 CapsuleCollider2D:
