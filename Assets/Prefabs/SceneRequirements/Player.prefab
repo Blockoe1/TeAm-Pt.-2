@@ -680,7 +680,7 @@ MonoBehaviour:
   _eggMoveSpeed: 7
   _accelerationSpeed: 1.5
   _deccelerationSpeed: 0.5
-  _eggDashSpeed: 30
+  _eggDashSpeed: 35
   _eggDashFrames: 0.15
   _eggDashCooldown: 0.35
   _wholeAnimOCs:
@@ -693,7 +693,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: e763dae2f5142ad4784ff1215f2476f4, type: 2}
   _yolkMoveSpeed: 10
   _yolkDashSpeed: 20
-  _yolkDashDuration: 0.25
+  _yolkDashDuration: 0.28
   _yolkDashCooldown: 0.35
   _yolkAnimOCs:
   - {fileID: 22100000, guid: 61625cab7e93e0e469842b48ad91d80f, type: 2}
