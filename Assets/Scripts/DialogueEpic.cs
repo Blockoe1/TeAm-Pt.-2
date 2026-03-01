@@ -150,11 +150,6 @@ public class DialogueEpic : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        print(Time.deltaTime);
-    }
-
     public void Continue()
     {
         continueTime = true;

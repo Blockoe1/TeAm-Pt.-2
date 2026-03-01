@@ -44,7 +44,10 @@ public class BossController : MonoBehaviour
 
     private void Start()
     {
-        Startup();
+        if (FindAnyObjectByType<ScenarioManager>() == null)
+        {
+            Startup();
+        }
     }
 
     public void Startup()
