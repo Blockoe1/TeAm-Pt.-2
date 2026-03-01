@@ -45,5 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioManager
   _scenario: 1
-  _conversations:
-  - {fileID: 11400000, guid: 41a0fb9a8e12771419932d989512bcd2, type: 2}
+  _eggyDialoguePos: {x: 0, y: 0}
+  _bossDialoguePos: {x: 0, y: 0}
+  _beforeBossAppears: {fileID: 0}
+  _beforeFightBegins: {fileID: 0}
+  _afterFightEnds: {fileID: 0}
+  _afterBossDies: {fileID: 0}
+  _nextScene: MainMenu
