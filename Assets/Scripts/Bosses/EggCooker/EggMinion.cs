@@ -8,6 +8,7 @@ public class EggMinion : Projectile
 
     private float travelSpeed;
     private float angleVelocity;
+    private float angle;
     private Transform trackingTarget;
     private BossHealth health;
 
@@ -36,11 +37,11 @@ public class EggMinion : Projectile
             Vector2 trackTargetTo = (Vector2)trackingTarget.position - rb.position;
             // Make the boss point towards the tracked target.
             float targetAngle = Mathf.Atan2(trackTargetTo.y, trackTargetTo.x) * Mathf.Rad2Deg;
-            rb.rotation = Mathf.SmoothDampAngle(rb.rotation, targetAngle, ref angleVelocity, angleSmoothTime, angleMaxSpeed);
+            angle = Mathf.SmoothDampAngle(angle, targetAngle, ref angleVelocity, angleSmoothTime, angleMaxSpeed);
         }
 
         Vector2 targetVelocity;
-        targetVelocity = Quaternion.Euler(0, 0, rb.rotation) * Vector2.right * travelSpeed;
+        targetVelocity = Quaternion.Euler(0, 0, angle) * Vector2.right * travelSpeed;
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
     }
 
