@@ -5188,6 +5188,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Path
+      value: event:/EggCooker
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data1
+      value: 883038803
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data2
+      value: 1292514807
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data3
+      value: 1397558957
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data4
+      value: -1342069969
+      objectReference: {fileID: 0}
     - target: {fileID: 3849256959037089862, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

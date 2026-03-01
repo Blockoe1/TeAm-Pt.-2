@@ -9,7 +9,7 @@ using FMODUnity;
 public class FMODEvents : MonoBehaviour
 {
     [Header("Music")]
-    //[SerializeField] public EventReference GameBGM;
+    [SerializeField] public EventReference GameBGM;
 
     [Header("SFX")]
     [SerializeField] public EventReference PlayerCrack;
