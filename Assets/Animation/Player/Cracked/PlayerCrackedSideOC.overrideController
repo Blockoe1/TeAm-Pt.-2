@@ -6,10 +6,10 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerYolkSideOC
+  m_Name: PlayerCrackedSideOC
   m_Controller: {fileID: 9100000, guid: 408498bd77ea6f04eb5fdda108dcf29a, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: f1f8b0486b9a0c44ab41388e56bca047, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 52af3c369b8325d408a2caecacfa7e7e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 67c5cc0bb0b298c46b42af5bb69e73f8, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: fb996cb35261b5c49b23da1cefae5441, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 0c7e1e88ccfa7b54a90aa0a6b413ffe3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e5fc53f5d8cfa1a44b592e85440a12f8, type: 2}

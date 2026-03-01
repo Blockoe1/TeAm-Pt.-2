@@ -1,10 +1,13 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PMoveYolkState : PMoveBaseSt
 {
     private PMoveStateMngr m;
+
+    private bool waitingForSound;
 
     public PMoveYolkState(PMoveStateMngr m)
     {
@@ -14,7 +17,7 @@ public class PMoveYolkState : PMoveBaseSt
     {
         m.Dash.performed += Dash_performed;
 
-        m.Anim.runtimeAnimatorController = m.YolkAnimOCs[0];
+        m.CurOC = m.YolkAnimOCs;
     }
 
     public override void ExitState()
@@ -28,8 +31,6 @@ public class PMoveYolkState : PMoveBaseSt
             Move();
         else
             Dash();
-
-        m.Anim.runtimeAnimatorController = m.YolkAnimOCs[m.DetermineAnimationDirection()];
     }
 
     private void Move()
@@ -39,6 +40,26 @@ public class PMoveYolkState : PMoveBaseSt
 
         //Animimation
         m.Anim.SetBool("IS_MOVING", m.IsMoving());
+
+        CheckForSound(m.IsMoving());
+    }
+
+    private async void CheckForSound(bool moving)
+    {
+        if ( !moving || waitingForSound)
+        {
+            return;
+        }
+
+        waitingForSound = true;
+        await Task.Delay((int)Random.Range(10, 150));
+
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerMovesAsYolk);
+
+        await Task.Delay(60);
+
+        waitingForSound = false;
+        
     }
 
     private void Dash_performed(InputAction.CallbackContext obj)

@@ -118,12 +118,12 @@ TextureImporter:
       name: PlayerYolk_RunSide_0
       rect:
         serializedVersion: 2
-        x: 136
-        y: 2066
-        width: 194
-        height: 306
+        x: 0
+        y: 2000
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -140,12 +140,12 @@ TextureImporter:
       name: PlayerYolk_RunSide_1
       rect:
         serializedVersion: 2
-        x: 493
-        y: 2069
-        width: 190
-        height: 311
+        x: 400
+        y: 2000
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: PlayerYolk_RunSide_2
       rect:
         serializedVersion: 2
-        x: 889
-        y: 2069
-        width: 190
-        height: 317
+        x: 800
+        y: 2000
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: PlayerYolk_RunSide_3
       rect:
         serializedVersion: 2
-        x: 116
-        y: 1671
-        width: 198
-        height: 306
+        x: 0
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,12 +206,12 @@ TextureImporter:
       name: PlayerYolk_RunSide_4
       rect:
         serializedVersion: 2
-        x: 501
-        y: 1668
-        width: 190
-        height: 311
+        x: 400
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,12 +228,12 @@ TextureImporter:
       name: PlayerYolk_RunSide_5
       rect:
         serializedVersion: 2
-        x: 914
-        y: 1671
-        width: 190
-        height: 318
+        x: 800
+        y: 1600
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 82b351495228bcb438a6377a76d28800
     internalID: 0
     vertices: []
     indices: 
@@ -258,7 +258,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":7.0},"gridSpriteSize":{"x":400.0,"y":400.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       PlayerYolk_RunSide_0: -7633303175117088987
       PlayerYolk_RunSide_1: -1153919724361699385

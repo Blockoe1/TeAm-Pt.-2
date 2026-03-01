@@ -21,7 +21,10 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _accelerationSpeed;
     [SerializeField][MinValue(0)] private float _deccelerationSpeed;
     [SerializeField][MinValue(0)] private float _eggDashSpeed;
-    [SerializeField] private AnimatorOverrideController _eggAnimOC;
+    [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
+    [SerializeField] private AnimatorOverrideController[] _wholeAnimOCs;
+    [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
+    [SerializeField] private AnimatorOverrideController[] _crackedAnimOCs;
 
     [Header("Yolk State")]
     [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
@@ -34,8 +37,11 @@ public class PMoveStateMngr : MonoBehaviour
     private SpriteRenderer spriteRen;
     private Animator anim;
 
+    private AnimatorOverrideController[] curOC;
+
     private PMoveEggState eggState;
     private PMoveYolkState yolkState;
+    protected
 
     private PMoveBaseSt currentSt;
 
@@ -54,11 +60,13 @@ public class PMoveStateMngr : MonoBehaviour
     public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
     public Animator Anim { get => anim; set => anim = value; }
     public InputAction Move { get => move; set => move = value; }
-    public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
     public bool IsDashing { get => isDashing; set => isDashing = value; }
     public Vector2 FaceDirection { get => faceDirection; set => faceDirection = value; }
     public AnimatorOverrideController[] YolkAnimOCs { get => _yolkAnimOCs; set => _yolkAnimOCs = value; }
     public SpriteRenderer SpriteRen { get => spriteRen; set => spriteRen = value; }
+    public AnimatorOverrideController[] WholeAnimOCs { get => _wholeAnimOCs; set => _wholeAnimOCs = value; }
+    public AnimatorOverrideController[] CrackedAnimOCs { get => _crackedAnimOCs; set => _crackedAnimOCs = value; }
+    public AnimatorOverrideController[] CurOC { get => curOC; set => curOC = value; }
     #endregion
 
     private void Awake()
@@ -88,6 +96,8 @@ public class PMoveStateMngr : MonoBehaviour
             faceDirection = moveDirection;
 
         currentSt.FixedUpdateState();
+
+        anim.runtimeAnimatorController = curOC[DetermineAnimationDirection()];
     }
 
     [HideInInspector]
@@ -114,11 +124,11 @@ public class PMoveStateMngr : MonoBehaviour
     [HideInInspector]
     public int DetermineAnimationDirection()
     {
-        if (Mathf.Abs(moveDirection.x) < Mathf.Abs(moveDirection.y)) //Front/Back
-            return (moveDirection.y > 0) ? 2 : 0;
+        if (Mathf.Abs(faceDirection.x) < Mathf.Abs(faceDirection.y)) //Front/Back
+            return (faceDirection.y > 0) ? 2 : 0;
         else //Side
         {
-            spriteRen.flipX = (moveDirection.x > 0) ? true : false;
+            spriteRen.flipX = (faceDirection.x > 0) ? true : false;
             return 1;
         }
     }
