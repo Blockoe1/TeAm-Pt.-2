@@ -73,6 +73,7 @@ public class PlayerHealth : MonoBehaviour
                 
                 form = eggform.yolk;
                 PMoveStateMngr.Inst.SwitchState(PMoveStateMngr.Inst.YolkState);
+                ParticleMngr.Inst.Play("EGG_EXPLODE_UP", transform.position, transform.rotation);
                 break;
             case 0:
                 if (AudioManager.instance != null)
