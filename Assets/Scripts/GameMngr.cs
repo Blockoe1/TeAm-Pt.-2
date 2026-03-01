@@ -38,7 +38,10 @@ public class GameMngr : MonoBehaviour
 
     private void OnDestroy()
     {
-        escAction.performed -= EscAction_performed;
+        if (escAction != null)
+        {
+            escAction.performed -= EscAction_performed;
+        }
     }
     private void EscAction_performed(InputAction.CallbackContext obj)
     {
