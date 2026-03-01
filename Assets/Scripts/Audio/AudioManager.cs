@@ -6,6 +6,9 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -49,8 +52,34 @@ public class AudioManager : MonoBehaviour
         musicBus = RuntimeManager.GetBus("bus:/Music Bus");
 
         UpdateVolume();
-        backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
+        backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.MainMenu);
         backgroundMusic.start();
+
+        SceneManager.activeSceneChanged += SceneManagerActiveSceneChanged;
+    }
+
+    /// <summary>
+    /// Run when active scene is changed
+    /// </summary>
+    /// <param name="unused">Unused?</param>
+    /// <param name="nextScene">Appears to be the scene that is changed to</param>
+    private void SceneManagerActiveSceneChanged(Scene unused, Scene nextScene)
+    {
+        switch (nextScene.name)
+        {
+            case "MainMenu":
+                ChangeBackgroundMusic(0);
+                break;
+            case "VSMixingBowl":
+                ChangeBackgroundMusic(1);
+                break;
+            case "VSFryingPan":
+                ChangeBackgroundMusic(2);
+                break;
+            case "VSEggCooker":
+                ChangeBackgroundMusic(3);
+                break;
+        }
     }
 
     /// <summary>
@@ -107,5 +136,28 @@ public class AudioManager : MonoBehaviour
     public void SetPhase3()
     {
         backgroundMusic.setParameterByName("Phase3", 1);
+    }
+
+    public void ChangeBackgroundMusic(int level)
+    {
+        backgroundMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+        switch (level)
+        {
+            case 0:
+                backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.MainMenu);
+                break;
+            case 1:
+                backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.Boss1);
+                break;
+            case 2:
+                backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.Boss2);
+                break;
+            case 3:
+                backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.Boss3);
+                break;
+        }
+
+        backgroundMusic.start();
     }
 }
