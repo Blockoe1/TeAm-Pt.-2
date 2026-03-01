@@ -9,6 +9,7 @@ public class PMoveEggState : PMoveBaseSt
 {
     PMoveStateMngr m;
     private bool butter;
+    private bool dashCooldown;
 
     private float accelAmount, deccelAmount;
 
@@ -77,13 +78,23 @@ public class PMoveEggState : PMoveBaseSt
 
     private void Dash_performed(InputAction.CallbackContext obj)
     {
+        if (dashCooldown)
+        {
+            return;
+        }
         //Move
         m.Rb2d.AddForce(m.EggDashSpeed * m.FaceDirection, ForceMode2D.Impulse);
 
         //Animation
         m.Anim.SetTrigger("DASH");
         m.Health.IFrames(m.EggDashFrames);
+        m.StartCoroutine(DashCooldown(m.EggDashCooldown));
     }
 
-
+    private IEnumerator DashCooldown(float time)
+    {
+        dashCooldown = true;
+        yield return new WaitForSeconds(time);
+        dashCooldown = false;
+    }
 }

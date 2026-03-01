@@ -22,6 +22,7 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _deccelerationSpeed;
     [SerializeField][MinValue(0)] private float _eggDashSpeed;
     [SerializeField][MinValue(0)] private float _eggDashFrames;
+    [SerializeField][MinValue(0)] private float _eggDashCooldown;
     [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
     [SerializeField] private AnimatorOverrideController[] _wholeAnimOCs;
     [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
@@ -31,6 +32,7 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashSpeed;
     [SerializeField][MinValue(0)] private float _yolkDashDuration;
+    [SerializeField][MinValue(0)] private float _yolkDashCooldown;
     [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
     [SerializeField] private AnimatorOverrideController[] _yolkAnimOCs;
 
@@ -56,9 +58,11 @@ public class PMoveStateMngr : MonoBehaviour
     public InputAction Dash { get => dash; set => dash = value; }
     public float EggDashSpeed { get => _eggDashSpeed; set => _eggDashSpeed = value; }
     public float EggDashFrames { get => _eggDashFrames; set => _eggDashFrames = value; }
+    public float EggDashCooldown { get => _eggDashCooldown; set => _eggDashCooldown = value; }
     public float YolkMoveSpeed { get => _yolkMoveSpeed; set => _yolkMoveSpeed = value; }
     public float YolkDashSpeed { get => _yolkDashSpeed; set => _yolkDashSpeed = value; }
     public float YolkDashDuration { get => _yolkDashDuration; set => _yolkDashDuration = value; }
+    public float YolkDashCooldown { get => _yolkDashCooldown; set => _yolkDashCooldown = value; }
     public static PMoveStateMngr Inst { get => inst; set => inst = value; }
     public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
     public Animator Anim { get => anim; set => anim = value; }
