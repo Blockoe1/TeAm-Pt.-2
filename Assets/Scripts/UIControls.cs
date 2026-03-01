@@ -107,6 +107,18 @@ public class UIControls : MonoBehaviour
 
     }
 
+    public void StartGame()
+    {
+        if (PlayerPrefs.GetString("hardBoiled", "egg") == "T")
+        {
+            TransitionManager.ZoomTransition("VSMixingBowlHard");
+        }
+        else
+        {
+            TransitionManager.ZoomTransition("Monologue");
+        }
+    }
+
     public void LevelOne()
     {
         if (PlayerPrefs.GetString("hardBoiled", "egg") == "T")
