@@ -13,8 +13,6 @@ public class PMoveYolkState : PMoveBaseSt
     public override void EnterState()
     {
         m.Dash.performed += Dash_performed;
-
-        m.Anim.runtimeAnimatorController = m.YolkAnimOCs[0];
     }
 
     public override void ExitState()

@@ -23,6 +23,8 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _eggDashSpeed;
     [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
     [SerializeField] private AnimatorOverrideController[] _wholeAnimOCs;
+    [Tooltip("0 = FRONT\n1 = SIDE\n2 = BACK")]
+    [SerializeField] private AnimatorOverrideController[] _crackedAnimOCs;
 
     [Header("Yolk State")]
     [SerializeField][MinValue(0)] private float _yolkMoveSpeed;
@@ -34,6 +36,8 @@ public class PMoveStateMngr : MonoBehaviour
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRen;
     private Animator anim;
+
+    private AnimatorOverrideController[] curOC;
 
     private PMoveEggState eggState;
     private PMoveYolkState yolkState;
@@ -60,6 +64,8 @@ public class PMoveStateMngr : MonoBehaviour
     public AnimatorOverrideController[] YolkAnimOCs { get => _yolkAnimOCs; set => _yolkAnimOCs = value; }
     public SpriteRenderer SpriteRen { get => spriteRen; set => spriteRen = value; }
     public AnimatorOverrideController[] WholeAnimOCs { get => _wholeAnimOCs; set => _wholeAnimOCs = value; }
+    public AnimatorOverrideController[] CrackedAnimOCs { get => _crackedAnimOCs; set => _crackedAnimOCs = value; }
+    public AnimatorOverrideController[] CurOC { get => curOC; set => curOC = value; }
     #endregion
 
     private void Awake()
@@ -115,11 +121,11 @@ public class PMoveStateMngr : MonoBehaviour
     [HideInInspector]
     public int DetermineAnimationDirection()
     {
-        if (Mathf.Abs(moveDirection.x) < Mathf.Abs(moveDirection.y)) //Front/Back
-            return (moveDirection.y > 0) ? 2 : 0;
+        if (Mathf.Abs(faceDirection.x) < Mathf.Abs(faceDirection.y)) //Front/Back
+            return (faceDirection.y > 0) ? 2 : 0;
         else //Side
         {
-            spriteRen.flipX = (moveDirection.x > 0) ? true : false;
+            spriteRen.flipX = (faceDirection.x > 0) ? true : false;
             return 1;
         }
     }
