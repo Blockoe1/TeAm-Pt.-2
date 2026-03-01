@@ -5790,6 +5790,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4183798228102024166, guid: 530997b691072a447838e583fd733981, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7266862655810507945, guid: 530997b691072a447838e583fd733981, type: 3}
       propertyPath: m_Name
       value: Background
