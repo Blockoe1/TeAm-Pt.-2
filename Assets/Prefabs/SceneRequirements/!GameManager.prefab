@@ -53,6 +53,8 @@ MonoBehaviour:
     _particle: {fileID: 635916613037525268, guid: 5367d1b6250c726438e0ba4d337cb8c7, type: 3}
   - _name: EGG_EXPLODE
     _particle: {fileID: 6645376069818878384, guid: cbdea48d6d4a874459310cc8b96c8755, type: 3}
+  - _name: BOSS3_DIE
+    _particle: {fileID: 3275277568670017554, guid: 1c40c3f82c11be54dabfc2757ae3d4d5, type: 3}
 --- !u!114 &7604696952619352108
 MonoBehaviour:
   m_ObjectHideFlags: 0
