@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class ScenarioManager : MonoBehaviour
 {
-    public enum Scenario { Undefined, MixingBowl, FryingPan }
+    public enum Scenario { Undefined, MixingBowl, FryingPan, EggCooker }
 
     [SerializeField] private Scenario _scenario;
     [SerializeField] private Vector2 _eggyDialoguePos;
@@ -48,7 +48,7 @@ public class ScenarioManager : MonoBehaviour
         yield return WaitForCameraSwitch();
         InputSystem.actions.Enable();
         boss.Startup();
-        FindAnyObjectByType<Spin>().enabled = true;
+        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = true;
 
         // Boss fight happens
         yield return new WaitUntil(() => bossIsDead);
