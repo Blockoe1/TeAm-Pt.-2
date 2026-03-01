@@ -364,7 +364,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 8
+    OrthographicSize: 9
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -578,6 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PDamage
   _damage: 2
+  _pan: 0
 --- !u!1 &6250251091182340963
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +684,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 61625cab7e93e0e469842b48ad91d80f, type: 2}
   - {fileID: 22100000, guid: 9547aa0fce2ebb54a9a3c517fa4dd174, type: 2}
   - {fileID: 22100000, guid: 942685f4240a041449d6c0e8f8e21003, type: 2}
+  rs: {fileID: 0}
 --- !u!212 &3908358512389764485
 SpriteRenderer:
   serializedVersion: 2
@@ -811,6 +813,8 @@ MonoBehaviour:
   _shootPower: 20
   _shotCount: 3
   _shotAngle: 15
+  DoNotInit: 0
+  PlayerHasSwung: 0
 --- !u!114 &1798331360701621538
 MonoBehaviour:
   m_ObjectHideFlags: 0
