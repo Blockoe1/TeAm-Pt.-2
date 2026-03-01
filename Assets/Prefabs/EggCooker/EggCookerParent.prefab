@@ -32,6 +32,52 @@ Transform:
   - {fileID: 1434579719520147409}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1990715207100686874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7271753594395958498}
+  - component: {fileID: 8690591590959068858}
+  m_Layer: 6
+  m_Name: EggBombShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7271753594395958498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990715207100686874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1434579719520147409}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8690591590959068858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990715207100686874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
+  projectilePrefab: {fileID: 5720764239388197450, guid: 8efbe534c6a09d34995e0478b21c9060, type: 3}
+  projectileParent: {fileID: 1316662386211845387}
 --- !u!1 &3593394012689488599
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,12 +157,20 @@ PrefabInstance:
       value: Assembly-CSharp EC_Shoot
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'managedReferences[6612019444187318]'
+      value: Assembly-CSharp EC_Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[0].actions.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.data[1].actions.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: phases.Array.data[2].actions.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: 'phases.Array.data[0].actions.Array.data[0]'
@@ -139,24 +193,68 @@ PrefabInstance:
       value: 6612019444187213
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: 'phases.Array.data[2].actions.Array.data[0]'
+      value: 6612019444187318
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].shooter
       value: 
       objectReference: {fileID: 5698471095320717580}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187213].shooter
       value: 
+      objectReference: {fileID: 8690591590959068858}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187318].shooter
+      value: 
+      objectReference: {fileID: 5698471095320717580}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612018635735128].preDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187213].preDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187318].preDelay
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].dashPower
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612018635735128].postDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187212].dashPower
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187213].postDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187318].postDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891421].followTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612016458891422].chargeTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612018635735128].shootAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612018635735128].shootCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].shootDelay
@@ -164,7 +262,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612018635735128].shootPower
-      value: 12
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187212].chargeTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187213].shootAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187213].shootCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187213].shootDelay
@@ -172,7 +282,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187213].shootPower
-      value: 12
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187318].shootAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187318].shootCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187318].shootPower
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891421].followSpeed
@@ -180,15 +302,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].chargeDelay
-      value: 0.5
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612016458891422].chargeSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187212].chargeDelay
-      value: 0.5
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[6612019444187212].chargeSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612016458891422].chargeNumber
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612019444187212].chargeNumber
@@ -254,6 +384,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: acceleration
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: m_Name
       value: EggCooker
@@ -264,6 +398,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6719417143345809731, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3055345108620823539}
+    - targetCorrespondingSourceObject: {fileID: 6719417143345809731, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7271753594395958498}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
 --- !u!4 &1434579719520147409 stripped
