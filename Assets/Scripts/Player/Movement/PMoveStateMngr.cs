@@ -95,6 +95,8 @@ public class PMoveStateMngr : MonoBehaviour
             faceDirection = moveDirection;
 
         currentSt.FixedUpdateState();
+
+        anim.runtimeAnimatorController = curOC[DetermineAnimationDirection()];
     }
 
     [HideInInspector]

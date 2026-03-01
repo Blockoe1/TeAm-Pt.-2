@@ -13,6 +13,8 @@ public class PMoveYolkState : PMoveBaseSt
     public override void EnterState()
     {
         m.Dash.performed += Dash_performed;
+
+        m.CurOC = m.YolkAnimOCs;
     }
 
     public override void ExitState()
@@ -26,8 +28,6 @@ public class PMoveYolkState : PMoveBaseSt
             Move();
         else
             Dash();
-
-        m.Anim.runtimeAnimatorController = m.YolkAnimOCs[m.DetermineAnimationDirection()];
     }
 
     private void Move()
