@@ -27,10 +27,11 @@ public class AudioManager : MonoBehaviour
 
     private EventInstance backgroundMusic;
 
+
     /// <summary>
-    /// Called on the game's start
+    /// Gets a reference to busses
     /// </summary>
-    private void Awake()
+    private void Start()
     {
         if (instance != null)
         {
@@ -40,13 +41,6 @@ public class AudioManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-    }
-
-    /// <summary>
-    /// Gets a reference to busses
-    /// </summary>
-    private void Start()
-    {
         masterBus = RuntimeManager.GetBus("bus:/");
         sfxBus = RuntimeManager.GetBus("bus:/SFX Bus");
         musicBus = RuntimeManager.GetBus("bus:/Music Bus");

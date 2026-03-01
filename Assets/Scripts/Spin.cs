@@ -32,8 +32,9 @@ public class Spin : MonoBehaviour
             if (AudioManager.instance != null)
             {
                 AudioManager.instance.PlayOneShot(MovementSound);
-                yield return new WaitForSeconds(.3f);
             }
+
+            yield return new WaitForSeconds(.3f);
         }
 
 
