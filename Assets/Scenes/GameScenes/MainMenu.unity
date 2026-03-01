@@ -755,7 +755,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 41622138025187297, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_Name
+<<<<<<< Updated upstream
       value: TobyToggle
+=======
+      value: HardBoiledToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 321576316078827743, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_text
+      value: Hard Boiled Mode <size=-3>(skips intro + tutorial, more challenging
+        patterns)
+      objectReference: {fileID: 0}
+    - target: {fileID: 321576316078827743, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 0
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_Pivot.x
