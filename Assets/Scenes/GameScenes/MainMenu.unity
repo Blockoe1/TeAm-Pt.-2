@@ -216,14 +216,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b><u>TeAm</b></u>
 
-    
+
 
     <b><u>Produc<gradient="EggGradient">egg</gradient>r</b></u>
 
     <gradient="EggGradient">Egg</gradient>van
     Daly
 
-    
+
 
     <b><u>Programm<gradient="EggGradient">egg</gradient>rs</b></u>
 
@@ -739,7 +739,7 @@ Transform:
   m_GameObject: {fileID: 186168951}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1266,7 +1266,7 @@ MonoBehaviour:
     <gradient="EggGradient">Egg</gradient>van
     Daly
 
-    
+
 
     <b><u>Artists</b></u>
 
@@ -1275,7 +1275,7 @@ MonoBehaviour:
     Av<gradient="EggGradient">egg</gradient>ry
     Schupbach
 
-    
+
 
     <b><u>Audio</u></b>
 
