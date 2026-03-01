@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3849256959037089862}
   - component: {fileID: 1337014042158744295}
+  - component: {fileID: 1092457570323572203}
   m_Layer: 0
   m_Name: '!GameManager'
   m_TagString: Untagged
@@ -61,3 +62,15 @@ MonoBehaviour:
     _particle: {fileID: 675395969849893925, guid: 68b66ce15f14a904b97ca23da0a36cef, type: 3}
   - _name: BOSS3_DIE
     _particle: {fileID: 3275277568670017554, guid: 1c40c3f82c11be54dabfc2757ae3d4d5, type: 3}
+--- !u!114 &1092457570323572203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6314942894249903579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd222f531e47c540971ddc400ea7617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
