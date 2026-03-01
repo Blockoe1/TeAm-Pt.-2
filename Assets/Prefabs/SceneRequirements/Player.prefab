@@ -595,7 +595,7 @@ MonoBehaviour:
   _bufferInputTime: 10
   _projectileShooter: {fileID: 1798331360701621538}
   _panPivotTransform: {fileID: 1842842761341056977}
-  _shootPower: 5
+  _shootPower: 20
 --- !u!114 &1798331360701621538
 MonoBehaviour:
   m_ObjectHideFlags: 0
