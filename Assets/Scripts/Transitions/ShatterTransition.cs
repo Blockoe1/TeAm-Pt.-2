@@ -22,6 +22,10 @@ public class ShatterTransition : MonoBehaviour
     [Button]
     public void Shatter()
     {
+        if (FindFirstObjectByType<AudioManager>())
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.EggExplodes);
+        }
         foreach(var rb in shardRigidbodies)
         {
             rb.isKinematic = false;
