@@ -26,7 +26,7 @@ public class PMoveEggState : PMoveBaseSt
     {
         m.Dash.performed += Dash_performed;
 
-        m.Anim.runtimeAnimatorController = m.EggAnimOC;
+        m.CurOC = m.WholeAnimOCs;
     }
 
     public override void ExitState()
