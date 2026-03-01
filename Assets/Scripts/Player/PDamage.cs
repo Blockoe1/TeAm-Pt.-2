@@ -14,7 +14,16 @@ public class PDamage : MonoBehaviour
             if(_pan)
                 ParticleMngr.Inst.Play("PAN_HIT", transform.position, transform.rotation);
 
-            if (AudioManager.instance != null)
+            print("Form: " + FindAnyObjectByType<PlayerHealth>().form);
+            if (FindAnyObjectByType<PlayerHealth>().form == PlayerHealth.eggform.yolk)
+            {
+                boss.Damage(_damage * 2);
+            }
+            else
+            {
+                boss.Damage(_damage);
+            }
+            if (AudioManager.instance != null && !gameObject.name.Contains("Projectile"))
             {
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerMeleeAttack);
             }

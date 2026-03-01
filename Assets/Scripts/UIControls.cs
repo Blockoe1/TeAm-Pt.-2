@@ -5,12 +5,21 @@
  * */
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIControls : MonoBehaviour
 {
     [SerializeField] private GameObject _mainCanvas;
     [SerializeField] private GameObject _credits;
     [SerializeField] private GameObject _options;
+    [SerializeField] private GameObject _levelSelect;
+
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider musicSlider;
+
+    [SerializeField] private Toggle tobyToggle;
 
 
     private void Awake()
@@ -33,29 +42,85 @@ public class UIControls : MonoBehaviour
         _mainCanvas.SetActive(true);
         _credits.SetActive(false);
         _options.SetActive(false);
+
+        if (!PlayerPrefs.HasKey("toby")) PlayerPrefs.SetString("toby", "F");
+        tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
+
+        masterSlider.value = AudioManager.instance.MasterVolume;
+        sfxSlider.value = AudioManager.instance.SfxVolume;
+        musicSlider.value = AudioManager.instance.MusicVolume;
     }
 
     public void CreditClick()
     {
+        ClickAnything();
         _credits.SetActive(true);
+        _mainCanvas.SetActive(false);
+    }
+
+    public void LevelSelect()
+    {
+        ClickAnything();
+        _levelSelect.SetActive(true);
         _mainCanvas.SetActive(false);
     }
 
     public void OptionsClick()
     {
+        ClickAnything();
         _options.SetActive(true);
         _mainCanvas.SetActive(false);
     }
 
     public void Back()
     {
+        ClickAnything();
         _credits.SetActive(false);
         _options.SetActive(false);
+        _levelSelect.SetActive(false);
         _mainCanvas.SetActive(true);
+    }
+
+    public void LevelOne()
+    {
+        SceneManager.LoadScene("VSMixingBowl");
+    }
+    public void TobyToggle()
+    {
+        PlayerPrefs.SetString("toby", tobyToggle.isOn ? "T" : "F");
+    }
+
+    public void LevelTwo()
+    {
+        SceneManager.LoadScene("VSFryingPan");
+    }
+
+    public void LevelThree()
+    {
+        SceneManager.LoadScene("VSEggCooker");
+    }
+
+
+    private void ClickAnything()
+    {
+        if(FindFirstObjectByType<AudioManager>()!=null)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+        }
+    }
+
+
+    public void UpdateAudio()
+    {
+        AudioManager.instance.MasterVolume = masterSlider.value;
+        AudioManager.instance.MusicVolume = sfxSlider.value;
+        AudioManager.instance.SfxVolume = musicSlider.value;
+        AudioManager.instance.UpdateVolume();
     }
 
     public void Quit()
     {
+        ClickAnything();
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #endif

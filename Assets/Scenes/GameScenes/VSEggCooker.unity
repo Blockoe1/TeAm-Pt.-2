@@ -5029,10 +5029,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 442398866493600187, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.31
-      objectReference: {fileID: 0}
     - target: {fileID: 1064354264675246784, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5324,19 +5320,19 @@ PrefabInstance:
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _afterBossDies
       value: 
-      objectReference: {fileID: 11400000, guid: e1fdbfc0c1907b3419969799236e9683, type: 2}
+      objectReference: {fileID: 11400000, guid: d88734bd5b5393847a6a6b45c9b0252f, type: 2}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _afterFightEnds
       value: 
-      objectReference: {fileID: 11400000, guid: 1e18ce6adf6b387449c212fad72be160, type: 2}
+      objectReference: {fileID: 11400000, guid: 5c4eb61d292236446aa44b7ce8e5dfc6, type: 2}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _beforeBossAppears
       value: 
-      objectReference: {fileID: 11400000, guid: ae08641c52a7fcb46b6e2fedebd0e309, type: 2}
+      objectReference: {fileID: 11400000, guid: bff9bc2bdf86f984baa2abb05e979c6f, type: 2}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _beforeFightBegins
       value: 
-      objectReference: {fileID: 11400000, guid: 41a0fb9a8e12771419932d989512bcd2, type: 2}
+      objectReference: {fileID: 11400000, guid: 1521f51cf44009d48b234274a7c57c4d, type: 2}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _bossDialoguePos.y
       value: 4
@@ -5457,6 +5453,10 @@ PrefabInstance:
       propertyPath: trackingTarget
       value: 
       objectReference: {fileID: 914515621}
+    - target: {fileID: 7614388342982779837, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: maxHealth
+      value: 102
+      objectReference: {fileID: 0}
     - target: {fileID: 7614388342982779837, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 4

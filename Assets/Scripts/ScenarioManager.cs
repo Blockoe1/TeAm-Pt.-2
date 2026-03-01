@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class ScenarioManager : MonoBehaviour
 {
-    public enum Scenario { Undefined, MixingBowl = 1, FryingPan = 2, EggCooker  = 3}
+    public enum Scenario { Undefined, MixingBowl = 1, FryingPan = 2, EggCooker = 3, Intro }
 
     [SerializeField] private Scenario _scenario;
     [SerializeField] private Vector2 _eggyDialoguePos;
@@ -16,6 +16,8 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private Conversation _beforeFightBegins;
     [SerializeField] private Conversation _afterFightEnds;
     [SerializeField] private Conversation _afterBossDies;
+    [SerializeField] private Conversation _alternateBossDialogue;
+    [SerializeField] private int _oddsOutOf100;
     [SerializeField] private SpriteRenderer _bossDeathFlash;
     [SerializeField] private float _bossDeathTime;
     [SerializeField, Scene] private string _nextScene;
@@ -29,12 +31,34 @@ public class ScenarioManager : MonoBehaviour
 
     private IEnumerator SceneLogic()
     {
+        if (_scenario == Scenario.Intro)
+        {
+            yield return IntroScene();
+        }
+        else
+        {
+            yield return BossScene();
+        }
+    }
+
+    private IEnumerator IntroScene()
+    {
+        yield return new WaitForSeconds(1);
+        yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        TransitionManager.ZoomTransition(_nextScene);
+    }
+
+    private IEnumerator BossScene()
+    {
         InputSystem.actions.Disable();
         var player = FindAnyObjectByType<PlayerHealth>();
         var boss = FindAnyObjectByType<BossController>();
 
+        // Face upward
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
+
         // Disable spin script
-        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<PanMovement>().enabled = false;
+        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = false;
 
         // Dialogue before boss appears
         if (_beforeBossAppears != null)
@@ -50,12 +74,21 @@ public class ScenarioManager : MonoBehaviour
         }
 
         // Initial exchange with boss
-        yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        if ((_alternateBossDialogue != null) && ((Random.Range(0, 100) < _oddsOutOf100) ||
+            (PlayerPrefs.HasKey("toby") && (PlayerPrefs.GetString("toby") == "T") && (_scenario == Scenario.FryingPan))))
+        {
+            yield return DialogueManager.Instance.RunDialogue(_alternateBossDialogue);
+        }
+        else
+        {
+            yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        }
         DialogueManager.Instance.DisableDialogueCamera();
         yield return WaitForCameraSwitch();
         InputSystem.actions.Enable();
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(false);
         boss.Startup();
-        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<PanMovement>().enabled = true;
+        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = true;
 
         // Boss fight happens
         yield return new WaitUntil(() => bossIsDead);
@@ -72,7 +105,7 @@ public class ScenarioManager : MonoBehaviour
             {
                 Destroy(bossObject.transform.parent.GetChild(i).gameObject);
             }
-            FindAnyObjectByType<PanMovement>().enabled = false;
+            FindAnyObjectByType<Spin>().enabled = false;
         }
         else
         {
@@ -103,6 +136,7 @@ public class ScenarioManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         DialogueManager.Instance.EnableDialogueCamera();
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
 
         // Move characters back
         t = 0;
