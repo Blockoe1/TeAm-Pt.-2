@@ -147,6 +147,7 @@ public class BossMovement : MonoBehaviour
     private IEnumerator BossNoise()
     {
         ambience = RuntimeManager.CreateInstance(Ambience);
+        yield return new WaitForSeconds(10f);
         while(true)
         {
             ambience.start();
