@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: <gradient="EggGradient">Egg</gradient>xit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16ffd678c79af9645b36860ae8b5715c, type: 2}
   m_sharedMaterial: {fileID: -5415420487265446332, guid: 16ffd678c79af9645b36860ae8b5715c, type: 2}
@@ -1480,14 +1480,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9137332671904912689}
         m_TargetAssemblyTypeName: UIControls, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
+        m_MethodName: TransitionToScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &4792356077437440029
@@ -3122,6 +3122,7 @@ MonoBehaviour:
   sfxSlider: {fileID: 4361561412422094661}
   musicSlider: {fileID: 8541618194048244182}
   tobyToggle: {fileID: 0}
+  hardBoiled: {fileID: 0}
 --- !u!1 &8716422529643302432
 GameObject:
   m_ObjectHideFlags: 0
