@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     {
         public SpeakerName Name;
         public TMP_FontAsset Font;
+        public bool Bold;
     }
 
     void Awake()

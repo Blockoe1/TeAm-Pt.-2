@@ -297,6 +297,10 @@ PrefabInstance:
       propertyPath: _dialogueCamera
       value: 
       objectReference: {fileID: 7851497436784278000}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[1].Bold
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6634654748674774351, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.77357

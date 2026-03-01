@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 144462602870444454}
   - component: {fileID: 9025536368665167311}
   - component: {fileID: 215365710842050273}
-  - component: {fileID: 4992074102973843181}
   - component: {fileID: 8044321963305323727}
+  - component: {fileID: 4193513161212555778}
   m_Layer: 6
   m_Name: FallingButter
   m_TagString: Damage
@@ -139,8 +139,21 @@ MonoBehaviour:
   despawnTime: 10
   projectileType: 0
   <rb>k__BackingField: {fileID: 9025536368665167311}
---- !u!61 &4992074102973843181
-BoxCollider2D:
+--- !u!114 &8044321963305323727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578336254390027715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d45368ec80c32947a3f959c4b565856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossDamage
+  _isProjectile: 1
+--- !u!58 &4193513161212555778
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -173,31 +186,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.2, y: 2.31}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &8044321963305323727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578336254390027715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d45368ec80c32947a3f959c4b565856, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BossDamage
-  _isProjectile: 1
+  m_Offset: {x: 0, y: -0.7193306}
+  m_Radius: 0.43566936
 --- !u!1001 &7616674880063602378
 PrefabInstance:
   m_ObjectHideFlags: 0

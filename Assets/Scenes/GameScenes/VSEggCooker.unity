@@ -5122,6 +5122,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5084610988582052397, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5487354776359243312, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
       propertyPath: m_Name
       value: MasterCamera
