@@ -753,6 +753,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5369876191461633460}
+    - targetCorrespondingSourceObject: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7293966213186147270}
   m_SourcePrefab: {fileID: 100100000, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
 --- !u!58 &750547945122653629 stripped
 CircleCollider2D:
@@ -781,6 +784,18 @@ MonoBehaviour:
   - {fileID: 3833386729010749634}
   - {fileID: 3215673702225403031}
   - {fileID: 7684435944623415648}
+--- !u!114 &7293966213186147270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4740766963778650098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe86eab55b8c85246ad0bc1f658caf02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossAnimator
 --- !u!4 &7280650880921376147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6719417143345809731, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
