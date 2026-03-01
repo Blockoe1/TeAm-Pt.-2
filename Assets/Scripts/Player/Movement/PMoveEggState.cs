@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PMoveEggState : PMoveBaseSt
@@ -6,6 +7,9 @@ public class PMoveEggState : PMoveBaseSt
     private bool butter;
 
     private float accelAmount, deccelAmount;
+
+    private EventInstance moveEggRoll;
+    private bool playingSound;
 
     public PMoveEggState(PMoveStateMngr m)
     {
@@ -31,6 +35,7 @@ public class PMoveEggState : PMoveBaseSt
     }
     private void Move()
     {
+
         //Move
         Vector2 targetSpeed = m.MoveDirection * m.EggMoveSpeed;
         targetSpeed = new Vector2(Mathf.Lerp(m.Rb2d.linearVelocity.x, targetSpeed.x, 1), Mathf.Lerp(m.Rb2d.linearVelocity.y, targetSpeed.y, 1));

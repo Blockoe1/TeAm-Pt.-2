@@ -15,6 +15,9 @@ public class FMODEvents : MonoBehaviour
     [SerializeField] public EventReference PlayerCrack;
     [SerializeField] public EventReference PlayerBecomesYolk;
     [SerializeField] public EventReference PlayerMeleeAttack;
+    [SerializeField] public EventReference PlayerRollsAsEgg;
+    [SerializeField] public EventReference PlayerMovesAsYolk;
+    [SerializeField] public EventReference EggRoll;
     [SerializeField] public EventReference EggExplodes;
     [SerializeField] public EventReference IgniteOnFire;
     [SerializeField] public EventReference ContinuallyBurn;
