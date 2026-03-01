@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   despawnOnCollision: 1
   despawnTime: 10
-  projectileType: 2
+  projectileType: 3
   <rb>k__BackingField: {fileID: 2727987739293412352}
 --- !u!58 &6853434427881579385
 CircleCollider2D:
@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PDamage
   _damage: 1
+  _pan: 0
 --- !u!58 &7308985250500298607
 CircleCollider2D:
   m_ObjectHideFlags: 0
