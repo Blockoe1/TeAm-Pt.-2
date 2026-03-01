@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class GameMngr : MonoBehaviour
 {
+    private static GameMngr inst;
+
     public static string prevScene = "VSMixingBowl";
 
     [SerializeField] private bool _retryScene;
@@ -13,6 +15,17 @@ public class GameMngr : MonoBehaviour
     public bool GamePaused = false;
     [SerializeField] private GameObject canvas;
 
+    [SerializeField] private SpriteRenderer _bgObject;
+    [SerializeField] private Sprite[] _bgPhaseSprites;
+
+    #region GS
+    public static GameMngr Inst { get => inst; set => inst = value; }
+    #endregion
+
+    private void Awake()
+    {
+        inst = this;
+    }
     private void Start()
     {
         escAction = InputSystem.actions.FindAction("ESCAPE");
@@ -34,5 +47,12 @@ public class GameMngr : MonoBehaviour
             Time.timeScale = 1f;
         }
             canvas.SetActive(GamePaused);
+    }
+
+    [HideInInspector]
+    public void SetPhaseBG(int phase)
+    {
+        if (phase < 0) return;
+        _bgObject.sprite = _bgPhaseSprites[phase];
     }
 }
