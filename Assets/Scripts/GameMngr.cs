@@ -29,7 +29,7 @@ public class GameMngr : MonoBehaviour
     [HideInInspector]
     public void SetPhaseBG(int phase)
     {
-        Debug.Log(phase);
+        if (phase < 0) return;
         _bgObject.sprite = _bgPhaseSprites[phase];
     }
 }
