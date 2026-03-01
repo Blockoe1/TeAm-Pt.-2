@@ -4,10 +4,11 @@ using NaughtyAttributes;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ScenarioManager : MonoBehaviour
 {
-    public enum Scenario { Undefined, MixingBowl = 1, FryingPan = 2, EggCooker = 3, Intro }
+    public enum Scenario { Undefined, MixingBowl = 1, FryingPan = 2, EggCooker = 3, Intro, Tutorial }
 
     [SerializeField] private Scenario _scenario;
     [SerializeField] private Vector2 _eggyDialoguePos;
@@ -35,6 +36,10 @@ public class ScenarioManager : MonoBehaviour
         {
             yield return IntroScene();
         }
+        else if (_scenario == Scenario.Tutorial)
+        {
+            yield return TutorialScene();
+        }
         else
         {
             yield return BossScene();
@@ -45,6 +50,47 @@ public class ScenarioManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        TransitionManager.ZoomTransition(_nextScene);
+    }
+
+    private IEnumerator TutorialScene()
+    {
+        InputSystem.actions.Disable();
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
+
+        yield return new WaitForSeconds(1);
+        yield return DialogueManager.Instance.RunDialogue(_beforeBossAppears);
+
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(false);
+        InputSystem.actions.Enable();
+
+        StartCoroutine(DialogueManager.Instance.RunDialogue(_beforeFightBegins));
+        var contin = FindAnyObjectByType<DialogueEpic>().Continue1;
+        contin.interactable = false;
+        var msm = FindAnyObjectByType<PMoveStateMngr>();
+        yield return new WaitForSeconds(3);
+        contin.interactable = true;
+        var epic = FindAnyObjectByType<DialogueEpic>();
+        yield return new WaitUntil(() => epic == null);
+
+        StartCoroutine(DialogueManager.Instance.RunDialogue(_afterFightEnds));
+        contin = FindAnyObjectByType<DialogueEpic>().Continue1;
+        contin.interactable = false;
+        yield return new WaitUntil(() => msm.EggState.PlayerHasDashed);
+        contin.interactable = true;
+        epic = FindAnyObjectByType<DialogueEpic>();
+        yield return new WaitUntil(() => epic == null);
+
+        StartCoroutine(DialogueManager.Instance.RunDialogue(_afterBossDies));
+        contin = FindAnyObjectByType<DialogueEpic>().Continue1;
+        contin.interactable = false;
+        var sns = msm.GetComponent<PSwingNShoot>();
+        sns.Init();
+        yield return new WaitUntil(() => sns.PlayerHasSwung);
+        contin.interactable = true;
+        epic = FindAnyObjectByType<DialogueEpic>();
+        yield return new WaitUntil(() => epic == null);
+
         TransitionManager.ZoomTransition(_nextScene);
     }
 

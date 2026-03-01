@@ -51,6 +51,8 @@ public class PMoveStateMngr : MonoBehaviour
 
     private bool forceUpward;
 
+    //public bool PlayerHasMoved;
+
     #region GS
     public Rigidbody2D Rb2d { get => rb2d; set => rb2d = value; }
     public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
@@ -77,6 +79,7 @@ public class PMoveStateMngr : MonoBehaviour
     public AnimatorOverrideController[] WholeAnimOCs { get => _wholeAnimOCs; set => _wholeAnimOCs = value; }
     public AnimatorOverrideController[] CrackedAnimOCs { get => _crackedAnimOCs; set => _crackedAnimOCs = value; }
     public AnimatorOverrideController[] CurOC { get => curOC; set => curOC = value; }
+    public PMoveEggState EggState { get => eggState; set => eggState = value; }
     #endregion
 
     private void Awake()
@@ -104,7 +107,10 @@ public class PMoveStateMngr : MonoBehaviour
     {
         moveDirection = move.ReadValue<Vector2>();
         if (Mathf.Abs(moveDirection.x) > 0.5f || Mathf.Abs(moveDirection.y) > 0.5f)
+        {
             faceDirection = moveDirection;
+            //PlayerHasMoved = true;
+        }
 
         currentSt.FixedUpdateState();
 

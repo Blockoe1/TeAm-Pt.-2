@@ -280,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _nextScene
-      value: VSMixingBowl
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _beforeFightBegins
