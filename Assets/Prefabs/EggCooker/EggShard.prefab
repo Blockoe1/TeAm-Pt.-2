@@ -151,5 +151,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   despawnOnCollision: 1
   despawnTime: 10
-  projectileType: 0
+  projectileType: 2
   <rb>k__BackingField: {fileID: 2843136165612429999}
