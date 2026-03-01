@@ -17,6 +17,8 @@ public class UIControls : MonoBehaviour
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;
 
+    [SerializeField] private Toggle tobyToggle;
+
 
     private void Awake()
     {
@@ -39,11 +41,12 @@ public class UIControls : MonoBehaviour
         _credits.SetActive(false);
         _options.SetActive(false);
 
+        if (!PlayerPrefs.HasKey("toby")) PlayerPrefs.SetString("toby", "F");
+        tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
+
         masterSlider.value = AudioManager.instance.MasterVolume;
         sfxSlider.value = AudioManager.instance.SfxVolume;
         musicSlider.value = AudioManager.instance.MusicVolume;
-
-
     }
 
     public void CreditClick()
@@ -68,6 +71,10 @@ public class UIControls : MonoBehaviour
         _mainCanvas.SetActive(true);
     }
 
+    public void TobyToggle()
+    {
+        PlayerPrefs.SetString("toby", tobyToggle.isOn ? "T" : "F");
+    }
 
     private void ClickAnything()
     {
