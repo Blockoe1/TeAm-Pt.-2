@@ -16,6 +16,8 @@ public class PMoveStateMngr : MonoBehaviour
     private InputAction dash;
     private bool isDashing;
 
+    [SerializeField] private TrailRenderer _dashTrail;
+
     [Header("Egg State")]
     [SerializeField][MinValue(0)] private float _eggMoveSpeed;
     [SerializeField][MinValue(0)] private float _accelerationSpeed;
@@ -83,6 +85,7 @@ public class PMoveStateMngr : MonoBehaviour
 
     private GameMngr gm;
     public PMoveEggState EggState { get => eggState; set => eggState = value; }
+    public TrailRenderer DashTrail { get => _dashTrail; set => _dashTrail = value; }
     #endregion
 
     private void Awake()
