@@ -58,6 +58,7 @@ public class ProjectileShooter : MonoBehaviour
         Projectile projectile = GetProjectile();
         projectile.transform.position = new Vector2(UnityEngine.Random.Range(minValues.x,maxValues.x),UnityEngine.Random.Range(minValues.y,maxValues.y));
         projectile.gameObject.SetActive(true);
+        projectile.OnDespawn += ReturnProjectile;
     }
 
     #region Object Pooling
