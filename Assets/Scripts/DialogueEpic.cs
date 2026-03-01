@@ -159,4 +159,9 @@ public class DialogueEpic : MonoBehaviour
     {
         continueTime = true;
     }
+
+    public void Skip()
+    {
+        Destroy(gameObject);
+    }
 }

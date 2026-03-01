@@ -25,7 +25,7 @@ MonoBehaviour:
     Swish: 0
     SwishWaitInterval: 0
     SwishAmplitude: 0
-  - OneMeaslyLine: This won't be as easy as I thought...
+  - OneMeaslyLine: This won't be as over-easy as I thought...
     Speaker: 1
     PauseTime: 0.2
     EnterVertically: 1
