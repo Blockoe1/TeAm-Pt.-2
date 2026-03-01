@@ -80,7 +80,9 @@ public class PMoveStateMngr : MonoBehaviour
     {
         moveDirection = move.ReadValue<Vector2>();
         if (Mathf.Abs(moveDirection.x) > 0.5f || Mathf.Abs(moveDirection.y) > 0.5f)
-            faceDirection = moveDirection;  
+            faceDirection = moveDirection;
+
+        DetermineAnimation();
 
         currentSt.FixedUpdateState();
     }
@@ -97,5 +99,10 @@ public class PMoveStateMngr : MonoBehaviour
     {
         AccelerationSpeed *= .5f;
         DeccelerationSpeed *= .5f;
+    }
+
+    private void DetermineAnimation()
+    {
+
     }
 }
