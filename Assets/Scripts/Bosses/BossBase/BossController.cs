@@ -1,10 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BossController : MonoBehaviour
 {
     [field: SerializeField] public Transform playerTransform { get; private set; }
     [SerializeField] private float startupDelay;
+    [SerializeField] private UnityEvent<int> OnPhaseTransition;
     [SerializeField] private BossPhase[] phases;
 
 
@@ -113,6 +115,10 @@ public class BossController : MonoBehaviour
         if (currentPhase >= 0 && currentPhase < phases.Length)
         {
             phases[currentPhase]?.OnPhaseEnter(action);
+            if (currentPhase > 0)
+            {
+                OnPhaseTransition?.Invoke(currentPhase);
+            }
         }
 
         if(name == "EggCooker" && currentPhase >= 2)
