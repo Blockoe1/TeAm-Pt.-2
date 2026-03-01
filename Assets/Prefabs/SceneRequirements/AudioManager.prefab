@@ -76,11 +76,11 @@ MonoBehaviour:
     Path: event:/EggCooker
   Boss2:
     Guid:
-      Data1: 883038803
-      Data2: 1292514807
-      Data3: 1397558957
-      Data4: -1342069969
-    Path: event:/EggCooker
+      Data1: -1376975361
+      Data2: 1163180833
+      Data3: 1872561819
+      Data4: -842027339
+    Path: event:/FryingPan
   Boss3:
     Guid:
       Data1: 883038803
