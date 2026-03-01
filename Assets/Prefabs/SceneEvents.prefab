@@ -410,6 +410,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
+      propertyPath: _speakers.Array.data[6].Bold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045779720702630387, guid: ebca3dd6e587ba24e877ee045480934f, type: 3}
       propertyPath: _speakers.Array.data[7].Bold
       value: 1
       objectReference: {fileID: 0}

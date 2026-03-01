@@ -22,6 +22,7 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private SpriteRenderer _bossDeathFlash;
     [SerializeField] private float _bossDeathTime;
     [SerializeField] private GameObject _poof;
+    [SerializeField] private Sprite _eggCookerHappy;
     [SerializeField, Scene] private string _nextScene;
 
     private bool bossIsDead;
@@ -206,6 +207,17 @@ public class ScenarioManager : MonoBehaviour
             player.transform.position = Vector2.Lerp(playerPos, _eggyDialoguePos, t);
             bossObject.transform.position = Vector2.Lerp(bossPos, _bossDialoguePos, t);
             yield return null;
+        }
+
+        // Become happy
+        if (_scenario == Scenario.EggCooker)
+        {
+            yield return new WaitForSeconds(0.5f);
+            var p = Instantiate(_poof, bossObject.transform.position, Quaternion.identity);
+            yield return new WaitUntil(() => p == null);
+            bossObject.GetComponent<Animator>().enabled = false;
+            bossObject.GetComponent<SpriteRenderer>().sprite = _eggCookerHappy;
+            yield return new WaitForSeconds(0.5f);
         }
 
         // Post-fight dialogue
