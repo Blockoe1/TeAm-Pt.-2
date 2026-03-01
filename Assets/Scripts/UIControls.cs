@@ -40,15 +40,20 @@ public class UIControls : MonoBehaviour
     private void Start()
     {
         _mainCanvas.SetActive(true);
-        _credits.SetActive(false);
+        if(_credits!=null)
+            _credits.SetActive(false);
         _options.SetActive(false);
 
-        if (!PlayerPrefs.HasKey("toby")) PlayerPrefs.SetString("toby", "F");
-        tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
+        if (tobyToggle != null)
+        {
+            if (!PlayerPrefs.HasKey("toby")) PlayerPrefs.SetString("toby", "F");
+            tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
+        }
 
         masterSlider.value = AudioManager.instance.MasterVolume;
         sfxSlider.value = AudioManager.instance.SfxVolume;
         musicSlider.value = AudioManager.instance.MusicVolume;
+        Resume();
     }
 
     public void CreditClick()
@@ -67,6 +72,7 @@ public class UIControls : MonoBehaviour
 
     public void OptionsClick()
     {
+        Debug.Log("t");
         ClickAnything();
         _options.SetActive(true);
         _mainCanvas.SetActive(false);
@@ -75,9 +81,11 @@ public class UIControls : MonoBehaviour
     public void Back()
     {
         ClickAnything();
-        _credits.SetActive(false);
+        if(_credits!=null)
+            _credits.SetActive(false);
         _options.SetActive(false);
-        _levelSelect.SetActive(false);
+        if(_levelSelect!=null)
+            _levelSelect.SetActive(false);
         _mainCanvas.SetActive(true);
     }
 
@@ -108,6 +116,18 @@ public class UIControls : MonoBehaviour
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         }
+    }
+
+    public void Resume()
+    {
+        ClickAnything();
+        FindFirstObjectByType<GameMngr>().GamePaused = false;
+        _credits.SetActive(false);
+    }
+
+    public void Pause()
+    {
+        _mainCanvas.SetActive(true);
     }
 
 

@@ -82,7 +82,6 @@ public class AudioManager : MonoBehaviour
     /// <param name="sound"></param>
     public void PlayOneShot(EventReference sound)
     {
-        Debug.Log("Called");
         RuntimeManager.PlayOneShot(sound);
     }
 

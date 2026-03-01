@@ -12,6 +12,8 @@ public class EggMinion : Projectile
     private Transform trackingTarget;
     private BossHealth health;
 
+    private GameMngr gm;
+
     private void Awake()
     {
         health = GetComponent<BossHealth>();
@@ -21,6 +23,11 @@ public class EggMinion : Projectile
             trackingTarget = player.transform;
         }
         
+    }
+
+    private void Start()
+    {
+        gm = FindFirstObjectByType<GameMngr>();
     }
 
     public override void Launch(Vector2 launchVector)
@@ -33,6 +40,10 @@ public class EggMinion : Projectile
 
     private void FixedUpdate()
     {
+        if(gm.GamePaused)
+        {
+            return;
+        }
         if (trackingTarget != null)
         {
             Vector2 trackTargetTo = (Vector2)trackingTarget.position - rb.position;

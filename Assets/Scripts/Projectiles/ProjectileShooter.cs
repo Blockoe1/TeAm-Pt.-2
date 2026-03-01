@@ -7,9 +7,15 @@ public class ProjectileShooter : MonoBehaviour
 {
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private Transform projectileParent;
+    private GameMngr gm;
 
     private readonly Queue<Projectile> projectilePool = new();
 
+
+    private void Start()
+    {
+        gm = FindFirstObjectByType<GameMngr>();
+    }
     public void Shoot(Vector2 direction, float power, int shotAmount = 1, float spreadAngle = 0)
     {
         Shoot(direction, power, transform.position, shotAmount, spreadAngle);
@@ -28,7 +34,11 @@ public class ProjectileShooter : MonoBehaviour
 
     public void Shoot(float startingAngle, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
     {
-        if(FindFirstObjectByType<AudioManager>()!=null && (projectilePrefab.name.Contains("Shard") || projectilePrefab.name.Contains("Minion")))
+        if (gm.GamePaused)
+        {
+            return;
+        }
+        if (FindFirstObjectByType<AudioManager>()!=null && (projectilePrefab.name.Contains("Shard") || projectilePrefab.name.Contains("Minion")))
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.EggExplodes);
         }

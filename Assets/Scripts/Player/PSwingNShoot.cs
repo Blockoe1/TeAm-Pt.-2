@@ -21,6 +21,7 @@ public class PSwingNShoot : MonoBehaviour
     [SerializeField] private float _shootPower = 5;
     [SerializeField] private int _shotCount = 1;
     [SerializeField] private float _shotAngle = 0;
+    private GameMngr gm;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class PSwingNShoot : MonoBehaviour
 
         swingAction.started += SwingAction_started;
         swingAction.canceled += SwingAction_canceled;
+        gm = FindFirstObjectByType<GameMngr>();
     }
 
     private void SwingAction_canceled(InputAction.CallbackContext obj)
@@ -41,7 +43,7 @@ public class PSwingNShoot : MonoBehaviour
 
     private void SwingAction_started(InputAction.CallbackContext obj)
     {
-        if(bufferCoroutine != null)
+        if(bufferCoroutine != null || gm.GamePaused)
         {
             return;
         }
