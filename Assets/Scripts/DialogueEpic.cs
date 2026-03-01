@@ -62,7 +62,7 @@ public class DialogueEpic : MonoBehaviour
                 new Vector2(0, _text.GetComponent<RectTransform>().sizeDelta.x / 2)) *
                 (line.Direction == Conversation.Direction.Top ? 1 : -1);
             Vector2 startPos = _text.GetComponent<RectTransform>().anchoredPosition;
-            Vector2 endPos = _mask.GetComponent<RectTransform>().anchoredPosition;
+            Vector2 endPos = Vector3.zero;
 
             float t = 0;
             while (t < 1)

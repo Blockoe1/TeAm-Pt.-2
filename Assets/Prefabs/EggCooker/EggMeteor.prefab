@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: hitCollider
       value: 
       objectReference: {fileID: 3579605281682911833}
+    - target: {fileID: 1438696153400446870, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
+      propertyPath: despawnOnLand
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2385190372123722486, guid: c4faf1e2e467b834eb9ca1ae64162f74, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

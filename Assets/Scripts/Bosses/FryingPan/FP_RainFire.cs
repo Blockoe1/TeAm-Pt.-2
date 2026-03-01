@@ -14,13 +14,14 @@ public class FP_RainFire : BossAction
     [SerializeField] protected int shotAmount;
     [SerializeField, ShowIf("ShowShotDelay"), AllowNesting] private float shotDelay;
     [SerializeField] private float postShotWait;
+    [SerializeField] protected float butterFallHeight;
     private bool ShowShotDelay => shotAmount > 1;
 
     public override IEnumerator ActionRoutine()
     {
         for (int i = 0; i < shotAmount; i++)
         {
-            shooter.RainingDown(rainingLimitsMin, rainingLimitsMax);
+            shooter.RainingDown(rainingLimitsMin, rainingLimitsMax, butterFallHeight);
             yield return new WaitForSeconds(shotDelay);
         }
 
