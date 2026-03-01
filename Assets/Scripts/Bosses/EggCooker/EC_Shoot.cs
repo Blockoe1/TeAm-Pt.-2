@@ -14,7 +14,7 @@ public class EC_Shoot : BossAction
     public override IEnumerator ActionRoutine()
     {
         yield return new WaitForSeconds(preDelay);
-        shooter.Shoot(Boss.ToPlayer, shootPower, shootCount, shootAngle);
+        shooter.Shoot(Boss.ToPlayerN, shootPower, shootCount, shootAngle);
         yield return new WaitForSeconds(postDelay);
         Phase.NextAction();
     }

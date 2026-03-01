@@ -17,7 +17,7 @@ public class MB_CarrotShot : BossAction
     {
         for(int i = 0; i < shotCount; i++)
         {
-            shooter.Shoot(Boss.ToPlayer, shotPower);
+            shooter.Shoot(Boss.ToPlayerN, shotPower);
             yield return new WaitForSeconds(shotDelay);
         }
 
