@@ -286,7 +286,7 @@ MonoBehaviour:
   _mask: {fileID: 3264837922816713570}
   _text: {fileID: 4284957632325037146}
   _continue: {fileID: 2246517700920086095}
-  _runOnStart: 1
+  _runOnStart: 0
 --- !u!1 &2291482458940085627
 GameObject:
   m_ObjectHideFlags: 0
