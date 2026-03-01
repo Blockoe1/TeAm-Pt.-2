@@ -178,7 +178,7 @@ MonoBehaviour:
   rb: {fileID: 3576006937062624310}
   shooter: {fileID: -2587690564968622746}
   proj: {fileID: 5720764239388197450}
-  shotForce: 9
+  shotForce: 6
   shotCount: 8
   shotAngle: 360
   explodeDelay: 0.5
