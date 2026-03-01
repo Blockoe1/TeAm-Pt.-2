@@ -75,6 +75,15 @@ public class AudioManager : MonoBehaviour
             case "VSEggCooker":
                 ChangeBackgroundMusic(3);
                 break;
+            case "VSMixingBowlHard":
+                ChangeBackgroundMusic(1);
+                break;
+            case "VSFryingPanHard":
+                ChangeBackgroundMusic(2);
+                break;
+            case "VSEggCookerHard":
+                ChangeBackgroundMusic(3);
+                break;
         }
     }
 
