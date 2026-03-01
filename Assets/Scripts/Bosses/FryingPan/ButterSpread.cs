@@ -11,6 +11,10 @@ public class ButterSpread : MonoBehaviour
 
     private void Update()
     {
+        if (FindFirstObjectByType<GameMngr>().GamePaused)
+        {
+            return;
+        }
         if (FindAnyObjectByType<BossHealth>() == null) return; 
         if (FindAnyObjectByType<BossHealth>().health < FindAnyObjectByType<BossHealth>().maxHealth * 2 / 3)
         {
