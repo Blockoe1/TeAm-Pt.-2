@@ -16,6 +16,8 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private Conversation _beforeFightBegins;
     [SerializeField] private Conversation _afterFightEnds;
     [SerializeField] private Conversation _afterBossDies;
+    [SerializeField] private Conversation _alternateBossDialogue;
+    [SerializeField] private int _oddsOutOf100;
     [SerializeField] private SpriteRenderer _bossDeathFlash;
     [SerializeField] private float _bossDeathTime;
     [SerializeField, Scene] private string _nextScene;
@@ -72,7 +74,14 @@ public class ScenarioManager : MonoBehaviour
         }
 
         // Initial exchange with boss
-        yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        if ((_alternateBossDialogue != null) && (Random.Range(0, 100) < _oddsOutOf100))
+        {
+            yield return DialogueManager.Instance.RunDialogue(_alternateBossDialogue);
+        }
+        else
+        {
+            yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        }
         DialogueManager.Instance.DisableDialogueCamera();
         yield return WaitForCameraSwitch();
         InputSystem.actions.Enable();
