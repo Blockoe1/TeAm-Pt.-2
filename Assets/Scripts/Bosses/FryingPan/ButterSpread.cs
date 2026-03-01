@@ -6,6 +6,7 @@ public class ButterSpread : MonoBehaviour
 
     private void Update()
     {
+        if (FindAnyObjectByType<BossHealth>() == null) return; 
         if (FindAnyObjectByType<BossHealth>().health < FindAnyObjectByType<BossHealth>().maxHealth * 2 / 3)
         {
             FindAnyObjectByType<PMoveStateMngr>().Buttered();
