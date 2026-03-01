@@ -145,10 +145,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 536
-        width: 101
-        height: 169
+        x: 0
+        y: 531
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,10 +167,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_1
       rect:
         serializedVersion: 2
-        x: 115
-        y: 536
-        width: 105
-        height: 172
+        x: 112
+        y: 531
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_2
       rect:
         serializedVersion: 2
-        x: 231
-        y: 536
-        width: 101
-        height: 171
+        x: 224
+        y: 531
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_3
       rect:
         serializedVersion: 2
-        x: 335
-        y: 536
-        width: 109
-        height: 168
+        x: 336
+        y: 531
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,9 +234,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 359
-        width: 108
-        height: 151
+        y: 354
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_5
       rect:
         serializedVersion: 2
-        x: 111
-        y: 359
-        width: 109
-        height: 148
+        x: 112
+        y: 354
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +277,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_6
       rect:
         serializedVersion: 2
-        x: 231
-        y: 359
-        width: 101
-        height: 156
+        x: 224
+        y: 354
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +299,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_7
       rect:
         serializedVersion: 2
-        x: 343
-        y: 359
-        width: 101
-        height: 157
+        x: 336
+        y: 354
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,10 +321,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_8
       rect:
         serializedVersion: 2
-        x: 7
-        y: 182
-        width: 102
-        height: 147
+        x: 0
+        y: 177
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,10 +343,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_9
       rect:
         serializedVersion: 2
-        x: 119
-        y: 182
-        width: 106
-        height: 146
+        x: 112
+        y: 177
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,10 +365,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_10
       rect:
         serializedVersion: 2
-        x: 231
-        y: 182
-        width: 101
-        height: 165
+        x: 224
+        y: 177
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,10 +387,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_11
       rect:
         serializedVersion: 2
-        x: 343
-        y: 182
-        width: 105
-        height: 158
+        x: 336
+        y: 177
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,10 +409,10 @@ TextureImporter:
       name: Bomb_Fuse_Anim_12
       rect:
         serializedVersion: 2
-        x: 7
-        y: 5
-        width: 108
-        height: 149
+        x: 0
+        y: 0
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,23 +428,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bomb_Fuse_Anim_14
+      name: Bomb_Fuse_Anim_13
       rect:
         serializedVersion: 2
-        x: 119
-        y: 5
-        width: 101
-        height: 107
+        x: 112
+        y: 0
+        width: 112
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 590af917076f68cb0800000000000000
-      internalID: -4861927784896814955
+      spriteID: b97d0648199b1654883071a2f52f2a2e
+      internalID: 7757073937936230624
       vertices: []
       indices: 
       edges: []
@@ -461,7 +461,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":112.0,"y":177.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Bomb_Fuse_Anim_0: 3784307865735257347
       Bomb_Fuse_Anim_1: 4761231424239197028
@@ -469,7 +471,6 @@ TextureImporter:
       Bomb_Fuse_Anim_11: 2026642601095004895
       Bomb_Fuse_Anim_12: 7920406270334985238
       Bomb_Fuse_Anim_13: 7757073937936230624
-      Bomb_Fuse_Anim_14: -4861927784896814955
       Bomb_Fuse_Anim_2: -7374691677130066276
       Bomb_Fuse_Anim_3: -2561310095359274644
       Bomb_Fuse_Anim_4: -1482289394367439205

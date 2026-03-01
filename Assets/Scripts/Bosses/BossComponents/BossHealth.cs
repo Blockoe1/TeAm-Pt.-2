@@ -26,8 +26,8 @@ public class BossHealth : MonoBehaviour
 
     public void Damage(int damage)
     {
-        Debug.Log($"{name} took {damage} damage;");
-        iFrames = true;
+        if (iFrames) { return; }
+        Debug.Log("Damage");
         health -= damage;
         OnDamage?.Invoke(health);
         IFrames(hitIFrames);
@@ -40,7 +40,7 @@ public class BossHealth : MonoBehaviour
 
     public void IFrames(float time)
     {
-        if (iFrames) { return; }
+        if (iFrames || !gameObject.activeInHierarchy) { return; }
         StartCoroutine(IFramesRoutine(time));
     }
 
@@ -48,6 +48,11 @@ public class BossHealth : MonoBehaviour
     {
         iFrames = true;
         yield return new WaitForSeconds(time);
+        iFrames = false;
+    }
+
+    private void OnDisable()
+    {
         iFrames = false;
     }
 

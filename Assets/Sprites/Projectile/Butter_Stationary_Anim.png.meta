@@ -115,12 +115,12 @@ TextureImporter:
       name: Butter_Stationary_Anim_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 19
-        width: 220
-        height: 231
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 250
+        y: 0
+        width: 250
+        height: 250
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,23 +134,23 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Butter_Stationary_Anim_3
+      name: Butter_Stationary_Anim_0
       rect:
         serializedVersion: 2
-        x: 269
-        y: 19
-        width: 211
-        height: 215
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 0
+        width: 250
+        height: 250
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 371f45ae801575d90800000000000000
-      internalID: -7109124388048014989
+      spriteID: 95565e1cac288d141881bd2fe7aee349
+      internalID: -7493913757341396380
       vertices: []
       indices: 
       edges: []
@@ -167,13 +167,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":250.0,"y":250.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Butter_Stationary_Anim_0: -7493913757341396380
       Butter_Stationary_Anim_1: 6239430305262360057
-      Butter_Stationary_Anim_2: -2040418174172448644
-      Butter_Stationary_Anim_3: -7109124388048014989
-      Butter_Stationary_Anim_4: 1975477347245363509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
