@@ -111,5 +111,15 @@ public class PMoveStateMngr : MonoBehaviour
         DeccelerationSpeed *= .5f;
     }
 
-
+    [HideInInspector]
+    public int DetermineAnimationDirection()
+    {
+        if (Mathf.Abs(moveDirection.x) < Mathf.Abs(moveDirection.y)) //Front/Back
+            return (moveDirection.y > 0) ? 2 : 0;
+        else //Side
+        {
+            spriteRen.flipX = (moveDirection.x > 0) ? true : false;
+            return 1;
+        }
+    }
 }

@@ -43,7 +43,7 @@ public class PMoveEggState : PMoveBaseSt
         m.Rb2d.AddForce(movement, ForceMode2D.Force);
 
         //Animimation
-        m.Anim.SetBool("IS_MOVING", m.IsMoving());//(Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.25f) ? true : false);
+        m.Anim.SetBool("IS_MOVING", m.IsMoving());
     }
 
     private void Dash_performed(InputAction.CallbackContext obj)
