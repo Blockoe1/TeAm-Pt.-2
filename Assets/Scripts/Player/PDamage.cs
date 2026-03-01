@@ -17,7 +17,7 @@ public class PDamage : MonoBehaviour
             {
                 boss.Damage(_damage);
             }
-            if (AudioManager.instance != null)
+            if (AudioManager.instance != null && !gameObject.name.Contains("Projectile"))
             {
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerMeleeAttack);
             }

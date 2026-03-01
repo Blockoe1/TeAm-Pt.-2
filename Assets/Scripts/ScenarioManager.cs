@@ -74,7 +74,8 @@ public class ScenarioManager : MonoBehaviour
         }
 
         // Initial exchange with boss
-        if ((_alternateBossDialogue != null) && (Random.Range(0, 100) < _oddsOutOf100))
+        if ((_alternateBossDialogue != null) && ((Random.Range(0, 100) < _oddsOutOf100) ||
+            (PlayerPrefs.HasKey("toby") && (PlayerPrefs.GetString("toby") == "T") && (_scenario == Scenario.FryingPan))))
         {
             yield return DialogueManager.Instance.RunDialogue(_alternateBossDialogue);
         }
