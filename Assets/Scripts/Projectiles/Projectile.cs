@@ -1,24 +1,23 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] protected bool despawnOnCollision;
+    [SerializeField] protected float despawnTime = 10f;
     protected enum ProjectileType
     {
         FlamingButter, Other
     }
 
     [SerializeField] private ProjectileType projectileType;
-    #region CONST
-    private const float DESPAWN_TIME = 10f;
-    #endregion
     [field: SerializeField] protected Rigidbody2D rb { get; private set; }
 
-    private Coroutine lifetimeRoutine;
+    protected Coroutine lifetimeRoutine;
 
-    public Action<Projectile> despawnAction;
+    public event Action<Projectile> OnDespawn;
 
     private void Awake()
     {
@@ -29,26 +28,22 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void SetDespawnAction(Action<Projectile> despawnAction)
-    {
-        this.despawnAction = despawnAction;
-    }
-
     public virtual void Launch(Vector2 launchVector)
     {
         rb.AddForce(launchVector, ForceMode2D.Impulse);
+        transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(launchVector.y, launchVector.x) * Mathf.Rad2Deg);
         lifetimeRoutine = StartCoroutine(Lifetime());
     }
 
-    private IEnumerator Lifetime()
+    protected virtual IEnumerator Lifetime()
     {
-        yield return new WaitForSeconds(DESPAWN_TIME);
+        yield return new WaitForSeconds(despawnTime);
         Despawn();
     }
 
     public void Despawn()
     {
-        despawnAction?.Invoke(this);
+        OnDespawn?.Invoke(this);
         if (lifetimeRoutine != null)
         {
             StopCoroutine(lifetimeRoutine);

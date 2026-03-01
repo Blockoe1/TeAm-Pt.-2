@@ -23,7 +23,7 @@ public class ProjectileShooter : MonoBehaviour
     public void Shoot(Vector2 direction, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
     {
         float startingAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Shoot(startingAngle, power, transform.position, shotAmount, spreadAngle);
+        Shoot(startingAngle, power, spawnLocation, shotAmount, spreadAngle);
     }
 
     public void Shoot(float startingAngle, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
@@ -39,10 +39,16 @@ public class ProjectileShooter : MonoBehaviour
 
             Projectile projectile = GetProjectile();
             projectile.transform.position = spawnLocation;
-            projectile.transform.eulerAngles = new Vector3(0, 0, angle);
+
+            TrailRenderer rend = projectile.GetComponentInChildren<TrailRenderer>();
+            if (rend != null)
+            {
+                rend.Clear();
+            }
+
             projectile.gameObject.SetActive(true);
 
-            projectile.SetDespawnAction(ReturnProjectile);
+            projectile.OnDespawn += ReturnProjectile;
             projectile.Launch(launchVector.normalized * power);
         } 
     }
@@ -64,6 +70,7 @@ public class ProjectileShooter : MonoBehaviour
     private void ReturnProjectile(Projectile toReturn)
     {
         projectilePool.Enqueue(toReturn);
+        toReturn.OnDespawn -= ReturnProjectile;
         toReturn.gameObject.SetActive(false);
     }
     #endregion

@@ -83,7 +83,6 @@ public class TransitionManager : MonoBehaviour
         yield return new WaitUntil(() => loadOp.isDone);
         yield return new WaitForSecondsRealtime(baseShatterDelay);
 
-        Debug.Log("SHattering");
         // Shatter the screen.
         transition.Shatter();
         transition.HideBackground();

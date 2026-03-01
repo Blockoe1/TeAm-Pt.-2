@@ -19,7 +19,7 @@ public class FP_FireButter : BossAction
     {
         for (int i = 0; i < shotCount; i++)
         {
-            shooter.Shoot(Boss.ToPlayer, shotPower, shotAmount, spread);
+            shooter.Shoot(Boss.ToPlayerN, shotPower, shotAmount, spread);
             yield return new WaitForSeconds(shotDelay);
         }
 

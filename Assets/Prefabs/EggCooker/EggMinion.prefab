@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2727987739293412352, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3809801675559233191, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_Name
       value: EggMinion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +67,18 @@ PrefabInstance:
     - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185233179972473101, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8459119
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185233179972473101, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9214453
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185233179972473101, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -129,10 +157,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EggMinion
   despawnOnCollision: 1
+  despawnTime: 10
+  projectileType: 0
   <rb>k__BackingField: {fileID: 3043816155583901497}
-  acceleration: 30
-  angleSmoothTime: 0.2
-  angleMaxSpeed: 200
+  acceleration: 35
+  angleSmoothTime: 0.15
+  angleMaxSpeed: 220
 --- !u!114 &334014979689327212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ef57dcad4865245a13b66489a778a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
-  maxHealth: 10
+  maxHealth: 5
   OnDamage:
     m_PersistentCalls:
       m_Calls:
