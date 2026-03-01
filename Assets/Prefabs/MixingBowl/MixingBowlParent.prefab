@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4338536548232454940, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 648de088274b3b54cb4cc32b56099914, type: 2}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: phases.Array.size
       value: 3
