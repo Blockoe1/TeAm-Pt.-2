@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   despawnOnCollision: 0
   despawnTime: 10
-  projectileType: 0
+  projectileType: 1
   <rb>k__BackingField: {fileID: 3463708393730240702}
 --- !u!50 &3463708393730240702 stripped
 Rigidbody2D:
