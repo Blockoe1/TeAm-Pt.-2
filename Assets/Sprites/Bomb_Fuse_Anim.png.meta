@@ -1,0 +1,485 @@
+fileFormatVersion: 2
+guid: 013124bc6f89dc346831af9df9e651ad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3784307865735257347
+    second: Bomb_Fuse_Anim_0
+  - first:
+      213: 4761231424239197028
+    second: Bomb_Fuse_Anim_1
+  - first:
+      213: -7374691677130066276
+    second: Bomb_Fuse_Anim_2
+  - first:
+      213: -2561310095359274644
+    second: Bomb_Fuse_Anim_3
+  - first:
+      213: -1482289394367439205
+    second: Bomb_Fuse_Anim_4
+  - first:
+      213: 7397132327898192212
+    second: Bomb_Fuse_Anim_5
+  - first:
+      213: 7015477785031681276
+    second: Bomb_Fuse_Anim_6
+  - first:
+      213: 2379747780706537058
+    second: Bomb_Fuse_Anim_7
+  - first:
+      213: 1897731299649232823
+    second: Bomb_Fuse_Anim_8
+  - first:
+      213: 1706169083123231954
+    second: Bomb_Fuse_Anim_9
+  - first:
+      213: 6013625267976991529
+    second: Bomb_Fuse_Anim_10
+  - first:
+      213: 2026642601095004895
+    second: Bomb_Fuse_Anim_11
+  - first:
+      213: 7920406270334985238
+    second: Bomb_Fuse_Anim_12
+  - first:
+      213: 7757073937936230624
+    second: Bomb_Fuse_Anim_13
+  - first:
+      213: -4861927784896814955
+    second: Bomb_Fuse_Anim_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 536
+        width: 101
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dddd924ff848430800000000000000
+      internalID: 3784307865735257347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 536
+        width: 105
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b543711ca431240800000000000000
+      internalID: 4761231424239197028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 536
+        width: 101
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96f1a01ef4d7a990800000000000000
+      internalID: -7374691677130066276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_3
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 536
+        width: 109
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c611d76e906647cd0800000000000000
+      internalID: -2561310095359274644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 359
+        width: 108
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e566a36a9dd6be0800000000000000
+      internalID: -1482289394367439205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 359
+        width: 109
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4591ee819a4e7a660800000000000000
+      internalID: 7397132327898192212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_6
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 359
+        width: 101
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4257a30ebfb5160800000000000000
+      internalID: 7015477785031681276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 359
+        width: 101
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e89048fff860120800000000000000
+      internalID: 2379747780706537058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 182
+        width: 102
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf9bbaff88165a10800000000000000
+      internalID: 1897731299649232823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 182
+        width: 106
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc605ecdb78da710800000000000000
+      internalID: 1706169083123231954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_10
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 182
+        width: 101
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923f416d150b47350800000000000000
+      internalID: 6013625267976991529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_11
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 182
+        width: 105
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd201f445b4102c10800000000000000
+      internalID: 2026642601095004895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 5
+        width: 108
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614e71ce98feaed60800000000000000
+      internalID: 7920406270334985238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_Fuse_Anim_14
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 5
+        width: 101
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590af917076f68cb0800000000000000
+      internalID: -4861927784896814955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 40620c01b2b0ae44ca8f9b5d4adfe5ed
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bomb_Fuse_Anim_0: 3784307865735257347
+      Bomb_Fuse_Anim_1: 4761231424239197028
+      Bomb_Fuse_Anim_10: 6013625267976991529
+      Bomb_Fuse_Anim_11: 2026642601095004895
+      Bomb_Fuse_Anim_12: 7920406270334985238
+      Bomb_Fuse_Anim_13: 7757073937936230624
+      Bomb_Fuse_Anim_14: -4861927784896814955
+      Bomb_Fuse_Anim_2: -7374691677130066276
+      Bomb_Fuse_Anim_3: -2561310095359274644
+      Bomb_Fuse_Anim_4: -1482289394367439205
+      Bomb_Fuse_Anim_5: 7397132327898192212
+      Bomb_Fuse_Anim_6: 7015477785031681276
+      Bomb_Fuse_Anim_7: 2379747780706537058
+      Bomb_Fuse_Anim_8: 1897731299649232823
+      Bomb_Fuse_Anim_9: 1706169083123231954
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class ScenarioManager : MonoBehaviour
 {
-    public enum Scenario { Undefined, MixingBowl = 1}
+    public enum Scenario { Undefined, MixingBowl, FryingPan, EggCooker }
 
     [SerializeField] private Scenario _scenario;
     [SerializeField] private Vector2 _eggyDialoguePos;
@@ -31,6 +31,9 @@ public class ScenarioManager : MonoBehaviour
         var player = FindAnyObjectByType<PlayerHealth>();
         var boss = FindAnyObjectByType<BossController>();
 
+        // Disable spin script
+        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = false;
+
         // Dialogue before boss appears
         if (_beforeBossAppears != null)
         {
@@ -45,6 +48,7 @@ public class ScenarioManager : MonoBehaviour
         yield return WaitForCameraSwitch();
         InputSystem.actions.Enable();
         boss.Startup();
+        if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = true;
 
         // Boss fight happens
         yield return new WaitUntil(() => bossIsDead);
@@ -54,15 +58,28 @@ public class ScenarioManager : MonoBehaviour
         InputSystem.actions.Disable();
         var bossObject = boss.gameObject;
         Destroy(boss);
-        for (int i = 0; i < bossObject.transform.childCount; i++)
+        if (_scenario == Scenario.FryingPan)
         {
-            Destroy(bossObject.transform.GetChild(i).gameObject);
+            for (int i = 1; i < bossObject.transform.parent.childCount; i++)
+            {
+                Destroy(bossObject.transform.parent.GetChild(i).gameObject);
+            }
+            FindAnyObjectByType<Spin>().enabled = false;
+        }
+        else
+        {
+            for (int i = 0; i < bossObject.transform.childCount; i++)
+            {
+                Destroy(bossObject.transform.GetChild(i).gameObject);
+            }
         }
 
         // Move characters back
         float t = 0;
         var playerPos = player.transform.position;
-        var bossPos = bossObject.transform.position;
+        Vector3 bossPos;
+        if (_scenario == Scenario.FryingPan) bossPos = bossObject.transform.parent.position;
+        else bossPos = bossObject.transform.position;
         while (t < 1)
         {
             t += Time.deltaTime;
@@ -76,7 +93,6 @@ public class ScenarioManager : MonoBehaviour
         yield return DialogueManager.Instance.RunDialogue(_afterFightEnds);
 
         // Boss dies
-        ParticleMngr.Inst.Play("BOSS" + (int)_scenario + "_DIE", bossObject.transform.position, Quaternion.identity);
         bossObject.SetActive(false);
         yield return DialogueManager.Instance.RunDialogue(_afterBossDies);
 

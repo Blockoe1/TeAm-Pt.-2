@@ -130,10 +130,10 @@ MonoBehaviour:
     Path: event:/Eggroll
   EggExplodes:
     Guid:
-      Data1: -1907803886
-      Data2: 1095720611
-      Data3: 799706782
-      Data4: 875955498
+      Data1: 896107729
+      Data2: 1223202740
+      Data3: 761350290
+      Data4: 2138178402
     Path: event:/Eggsplosion
   IgniteOnFire:
     Guid:
@@ -144,15 +144,15 @@ MonoBehaviour:
     Path: event:/SpawnFlamingButter
   ContinuallyBurn:
     Guid:
-      Data1: 2012371999
-      Data2: 1122818076
-      Data3: 1061269639
-      Data4: 2077206021
-    Path: event:/FlamingButter
+      Data1: -1562163627
+      Data2: 1095078561
+      Data3: 111270295
+      Data4: -1027408197
+    Path: event:/ContinualFire
   EvansRequest:
     Guid:
-      Data1: -549846557
-      Data2: 1291940232
-      Data3: -712461121
-      Data4: -589862477
-    Path: event:/Evan
+      Data1: -2026716414
+      Data2: 1086294551
+      Data3: -1619678847
+      Data4: -622971584
+    Path: event:/Eggvan
