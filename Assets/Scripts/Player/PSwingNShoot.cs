@@ -22,7 +22,15 @@ public class PSwingNShoot : MonoBehaviour
     [SerializeField] private int _shotCount = 1;
     [SerializeField] private float _shotAngle = 0;
 
+    public bool DoNotInit;
+    [HideInInspector] public bool PlayerHasSwung;
+
     private void Start()
+    {
+        if (!DoNotInit) Init();
+    }
+
+    public void Init()
     {
         swingAction = InputSystem.actions.FindAction("CLICK");
 
@@ -41,6 +49,7 @@ public class PSwingNShoot : MonoBehaviour
 
     private void SwingAction_started(InputAction.CallbackContext obj)
     {
+        PlayerHasSwung = true;
         if(bufferCoroutine != null)
         {
             return;
