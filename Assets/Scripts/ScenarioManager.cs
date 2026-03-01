@@ -16,6 +16,8 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private Conversation _beforeFightBegins;
     [SerializeField] private Conversation _afterFightEnds;
     [SerializeField] private Conversation _afterBossDies;
+    [SerializeField] private SpriteRenderer _bossDeathFlash;
+    [SerializeField] private float _bossDeathTime;
     [SerializeField, Scene] private string _nextScene;
 
     private bool bossIsDead;
@@ -57,7 +59,6 @@ public class ScenarioManager : MonoBehaviour
 
         // Boss fight happens
         yield return new WaitUntil(() => bossIsDead);
-        DialogueManager.Instance.EnableDialogueCamera();
 
         // Cripple the characters
         InputSystem.actions.Disable();
@@ -81,8 +82,30 @@ public class ScenarioManager : MonoBehaviour
             }
         }
 
-        // Move characters back
+        // Boss death flash
+        _bossDeathFlash.gameObject.SetActive(true);
         float t = 0;
+        while (t < 1)
+        {
+            t += Time.deltaTime / (_bossDeathTime / 2);
+            _bossDeathFlash.color = Color.Lerp(new Color(1, 1, 1, 0), Color.white, t);
+            yield return null;
+        }
+        t = 0;
+        while (t < 1)
+        {
+            t += Time.deltaTime / (_bossDeathTime / 2);
+            _bossDeathFlash.color = Color.Lerp(Color.white, new Color(1, 1, 1, 0), t);
+            yield return null;
+        }
+        _bossDeathFlash.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(0.5f);
+
+        DialogueManager.Instance.EnableDialogueCamera();
+
+        // Move characters back
+        t = 0;
         var playerPos = player.transform.position;
         Vector3 bossPos;
         if (_scenario == Scenario.FryingPan) bossPos = bossObject.transform.parent.position;
