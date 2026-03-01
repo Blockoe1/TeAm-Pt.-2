@@ -85,18 +85,6 @@ MonoBehaviour:
     Swish: 1
     SwishWaitInterval: 0.05
     SwishAmplitude: 1
-  - OneMeaslyLine: He will get reggt!
-    Speaker: 2
-    PauseTime: 0.2
-    EnterVertically: 1
-    Direction: 0
-    VerticalTime: 0.3
-    Spin: 1
-    SpinCount: 1
-    SpinTime: 0.25
-    Swish: 1
-    SwishWaitInterval: 0
-    SwishAmplitude: 2
   - OneMeaslyLine: He will get mixed in with the rest!
     Speaker: 2
     PauseTime: 0.2
