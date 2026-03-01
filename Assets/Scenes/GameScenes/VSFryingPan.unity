@@ -411,6 +411,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1597753074988330921, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: _bgObject
+      value: 
+      objectReference: {fileID: 1047151606}
+    - target: {fileID: 1597753074988330921, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
       propertyPath: _retryScene
       value: 1
       objectReference: {fileID: 0}
@@ -6239,6 +6243,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 530997b691072a447838e583fd733981, type: 3}
+--- !u!212 &1047151606 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4183798228102024166, guid: 530997b691072a447838e583fd733981, type: 3}
+  m_PrefabInstance: {fileID: 1047151605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1064076922
 GameObject:
   m_ObjectHideFlags: 0

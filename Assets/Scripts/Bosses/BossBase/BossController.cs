@@ -119,5 +119,7 @@ public class BossController : MonoBehaviour
         {
             AudioManager.instance.SetPhase3();
         }
+
+        GameMngr.Inst.SetPhaseBG(currentPhase);
     }
 }
