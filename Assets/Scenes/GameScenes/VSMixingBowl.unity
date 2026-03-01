@@ -290,10 +290,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -379,11 +375,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3215673702225403031, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.61
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 3833386729010749634, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.1
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 5379765093776842150, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_Name
@@ -391,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5515356501995417870, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.72
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7280650880921376147, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_LocalPosition.y
@@ -439,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7684435944623415648, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.88
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7715834978549272013, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: <playerTransform>k__BackingField
