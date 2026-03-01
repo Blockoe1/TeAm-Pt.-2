@@ -85,7 +85,6 @@ public class PSwingNShoot : MonoBehaviour
 
     public void SwingStop()
     {
-        _panPivotTransform.gameObject.SetActive(false);
         animator.ResetTrigger("ATTACK");
         StartCoroutine(AttackDelayRoutine());
     }
@@ -93,6 +92,7 @@ public class PSwingNShoot : MonoBehaviour
     private IEnumerator AttackDelayRoutine()
     {
         yield return new WaitForSeconds(_attackDelay);
+        _panPivotTransform.gameObject.SetActive(false);
         swinging = false;
     }
 
