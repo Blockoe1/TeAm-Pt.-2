@@ -153,11 +153,19 @@ public class DialogueEpic : MonoBehaviour
 
     public void Continue()
     {
+        if(AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+        }
         continueTime = true;
     }
 
     public void Skip()
     {
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+        }
         Destroy(gameObject);
     }
 }

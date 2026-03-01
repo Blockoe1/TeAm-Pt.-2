@@ -54,6 +54,10 @@ public class FallingProjectile : Projectile
         }
 
         hitCollider.enabled = true ;
+        if(AudioManager.instance!=null)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ButterLands);
+        }
         telegraphSpot.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.1f);
         if (despawnOnLand)

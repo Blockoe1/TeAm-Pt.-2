@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using FMODUnity;
 using System.Collections;
+using FMOD.Studio;
 [RequireComponent (typeof(Rigidbody2D))]
 public class BossMovement : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class BossMovement : MonoBehaviour
     private Coroutine sillySolution;
 
     [SerializeField] public EventReference MovementSound;
+    [SerializeField] public EventReference Ambience;
+    private EventInstance ambience;
 
     private Vector2 moveTarget;
     public Vector2 TargetVelocity { get; set; }
@@ -29,6 +32,8 @@ public class BossMovement : MonoBehaviour
     public event Action<Vector2> OnReachPoint;
 
     public event Action<Collision2D> OnCollide;
+
+    private Coroutine sounds;
 
     #region Properties
     public Rigidbody2D Rb => rb;
@@ -42,6 +47,10 @@ public class BossMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (sounds == null)
+        {
+            sounds = StartCoroutine(BossNoise());
+        }
     }
 
     public void SetMoveTarget(Vector2 pos)
@@ -73,21 +82,21 @@ public class BossMovement : MonoBehaviour
                 isMovingToPos = false;
                 
             }
-
-            if (sillySolution != null)
+            if (sillySolution == null)
             {
-                StopCoroutine(sillySolution);
-                sillySolution = null;
+                sillySolution = StartCoroutine(PlaySound());
             }
+
         }
         else
         {
 
             targetVelocity = Quaternion.Euler(0, 0, rb.rotation) * TargetVelocity;
 
-            if (sillySolution == null)
+            if (sillySolution != null)
             {
-                sillySolution = StartCoroutine(PlaySound());
+                StopCoroutine(sillySolution);
+                sillySolution = null;
             }
         }
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
@@ -108,15 +117,15 @@ public class BossMovement : MonoBehaviour
     /// <returns></returns>
     private IEnumerator PlaySound()
     {
-        if (AudioManager.instance != null)
+        while (true)
         {
-            AudioManager.instance.PlayOneShot(MovementSound);
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayOneShot(MovementSound);
+                yield return new WaitForSeconds(.1f);
+            }
         }
 
-        while(true)
-        {
-            yield return null;
-        }
 
 
     }
@@ -129,5 +138,21 @@ public class BossMovement : MonoBehaviour
     private void OnDestroy()
     {
         rb.linearVelocity = Vector2.zero;
+        StopCoroutine(sounds);
+        ambience.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
+
+
+    private IEnumerator BossNoise()
+    {
+        ambience = RuntimeManager.CreateInstance(Ambience);
+        while(true)
+        {
+            ambience.start();
+            yield return new WaitForSeconds(UnityEngine.Random.Range(.3f, 10f));
+            ambience.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            yield return new WaitForSeconds(UnityEngine.Random.Range(.3f, 10f));
+        }
+    }
+
 }

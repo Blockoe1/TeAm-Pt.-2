@@ -773,12 +773,32 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Path
+      value: event:/PanAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: trackingTarget
       value: 
       objectReference: {fileID: 1503580704847801186}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Path
       value: event:/PanMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data1
+      value: -1357708251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data2
+      value: 1337424502
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data3
+      value: 1954564482
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data4
+      value: 2100695237
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data1
