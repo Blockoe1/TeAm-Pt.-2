@@ -25,7 +25,8 @@ public class EggMinion : Projectile
 
     public override void Launch(Vector2 launchVector)
     {
-        base.Launch(launchVector);
+        rb.AddForce(launchVector, ForceMode2D.Impulse);
+        lifetimeRoutine = StartCoroutine(Lifetime());
         travelSpeed = launchVector.magnitude;
         health.ResetHealth();
     }

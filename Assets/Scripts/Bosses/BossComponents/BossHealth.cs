@@ -40,7 +40,7 @@ public class BossHealth : MonoBehaviour
 
     public void IFrames(float time)
     {
-        if (iFrames) { return; }
+        if (iFrames || !gameObject.activeInHierarchy) { return; }
         StartCoroutine(IFramesRoutine(time));
     }
 
@@ -48,6 +48,11 @@ public class BossHealth : MonoBehaviour
     {
         iFrames = true;
         yield return new WaitForSeconds(time);
+        iFrames = false;
+    }
+
+    private void OnDisable()
+    {
         iFrames = false;
     }
 
