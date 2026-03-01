@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
             Debug.Log("h");
             Debug.Log("There is more than one AudioManager in the scene");
             Destroy(gameObject);
+            return;
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
@@ -72,6 +73,15 @@ public class AudioManager : MonoBehaviour
                 ChangeBackgroundMusic(2);
                 break;
             case "VSEggCooker":
+                ChangeBackgroundMusic(3);
+                break;
+            case "VSMixingBowlHard":
+                ChangeBackgroundMusic(1);
+                break;
+            case "VSFryingPanHard":
+                ChangeBackgroundMusic(2);
+                break;
+            case "VSEggCookerHard":
                 ChangeBackgroundMusic(3);
                 break;
         }

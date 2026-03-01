@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScenes/Tutorial.unity
     guid: 2f780b569d08e1049a50b67e2990f636
   - enabled: 1
-    path: Assets/Scenes/GameScenes/VSMixingBowlHard.unity
+    path: Assets/Scenes/GameScenes/VSMixingBowl.unity
     guid: d1452dd9d75d9f04784520bfde61e1fe
   - enabled: 1
     path: Assets/Scenes/GameScenes/VSFryingPan.unity
@@ -27,8 +27,14 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScenes/DeathScene.unity
     guid: 515f7bde5d153d74892a6244405bb184
   - enabled: 1
-    path: Assets/Scenes/GameScenes/WinScreen.unity
-    guid: 791b8727ef6fa5242a766739e8364117
+    path: Assets/Scenes/GameScenes/VSMixingBowlHard.unity
+    guid: 0e7e451e885183740982baaed530bc85
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/VSFryingPanHard.unity
+    guid: cd4f83337d08f8843b3dfd109273e235
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/VSEggCookerHard.unity
+    guid: a95906c138ac4354c8a5f6a82e93eaf2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: d4fb9f05df035a44a8a431199bb94ddf, type: 3}
   m_UseUCBPForAssetBundles: 0
