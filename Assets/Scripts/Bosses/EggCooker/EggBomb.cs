@@ -15,8 +15,6 @@ public class EggBomb : MonoBehaviour
     [SerializeField] private float shotAngle;
     [SerializeField] private float explodeDelay;
 
-    private bool isExploded;
-
     private void OnEnable()
     {
         proj.OnDespawn += Explode;
@@ -24,22 +22,6 @@ public class EggBomb : MonoBehaviour
     private void OnDisable()
     {
         proj.OnDespawn -= Explode;
-    }
-
-    private void FixedUpdate()
-    {
-        Debug.Log(rb.linearVelocity.magnitude);
-        if (rb.linearVelocity.magnitude < EXPLODE_THRESHOLD && !isExploded)
-        {
-            StartCoroutine(ExplodeDelayRoutine());
-            isExploded = true;
-        }
-    }
-
-    private IEnumerator ExplodeDelayRoutine()
-    {
-        yield return new WaitForSeconds(explodeDelay);
-        proj.Despawn();
     }
 
     private void Explode(Projectile proj)

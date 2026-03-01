@@ -5,15 +5,13 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] protected bool despawnOnCollision;
+    [SerializeField] private float despawnTime = 10f;
     protected enum ProjectileType
     {
         FlamingButter, Other
     }
 
     [SerializeField] private ProjectileType projectileType;
-    #region CONST
-    private const float DESPAWN_TIME = 10f;
-    #endregion
     [field: SerializeField] protected Rigidbody2D rb { get; private set; }
 
     private Coroutine lifetimeRoutine;
@@ -37,7 +35,7 @@ public class Projectile : MonoBehaviour
 
     private IEnumerator Lifetime()
     {
-        yield return new WaitForSeconds(DESPAWN_TIME);
+        yield return new WaitForSeconds(despawnTime);
         Despawn();
     }
 
