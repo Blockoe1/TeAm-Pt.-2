@@ -581,7 +581,7 @@ MonoBehaviour:
   _eggMoveSpeed: 7
   _accelerationSpeed: 1.5
   _deccelerationSpeed: 0.5
-  _eggDashSpeed: 16
+  _eggDashSpeed: 30
   _eggDashFrames: 0.15
   _wholeAnimOCs:
   - {fileID: 22100000, guid: 5770410581b0aa54ca5fa846318b8f1b, type: 2}
