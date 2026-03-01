@@ -86,6 +86,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5761db3d5006361478021659f40b6318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  GameBGM:
+    Guid:
+      Data1: 883038803
+      Data2: 1292514807
+      Data3: 1397558957
+      Data4: -1342069969
+    Path: event:/EggCooker
   PlayerCrack:
     Guid:
       Data1: 571481404
@@ -121,6 +128,41 @@ MonoBehaviour:
       Data3: 1965494711
       Data4: -132204900
     Path: event:/PlayerYolkMove
+  UIClick:
+    Guid:
+      Data1: -2079338886
+      Data2: 1234762106
+      Data3: 1616821911
+      Data4: -591193910
+    Path: event:/UIClick
+  BossLaunchProjectile:
+    Guid:
+      Data1: 874415446
+      Data2: 1251104243
+      Data3: -1502404431
+      Data4: 153181389
+    Path: event:/BossLaunchProjectile
+  CarrotHits:
+    Guid:
+      Data1: -169307396
+      Data2: 1195310860
+      Data3: 1962783630
+      Data4: 106901139
+    Path: event:/ProjectileHit
+  ButterLands:
+    Guid:
+      Data1: 1789045531
+      Data2: 1180699726
+      Data3: 633568651
+      Data4: 823467581
+    Path: event:/ButterLands
+  SpawnEggMinions:
+    Guid:
+      Data1: -1075490903
+      Data2: 1327163536
+      Data3: 491006908
+      Data4: 1601754590
+    Path: event:/SpawnEggMinions
   EggRoll:
     Guid:
       Data1: -1043075513
@@ -135,7 +177,7 @@ MonoBehaviour:
       Data3: 761350290
       Data4: 2138178402
     Path: event:/Eggsplosion
-  IgniteOnFire:
+  SpawnButter:
     Guid:
       Data1: -486236501
       Data2: 1321888086
