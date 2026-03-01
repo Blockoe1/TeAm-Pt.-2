@@ -15,8 +15,8 @@ MonoBehaviour:
   _theWords:
   - OneMeaslyLine: 'Right click or Shift to "egg roll"!
 
-      It will protect you
-      from harm!'
+      You can''t be harmed
+      in an egg roll.'
     Speaker: 7
     PauseTime: 0
     EnterVertically: 1
