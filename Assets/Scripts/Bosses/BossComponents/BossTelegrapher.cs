@@ -5,6 +5,7 @@ public class BossTelegrapher : MonoBehaviour
     [SerializeField] private float telegraphDistance;
     [SerializeField] private LineRenderer line;
 
+
     public Vector2 Direction { get; set; }
     public Transform TrackingTarget { get; set; }
 
