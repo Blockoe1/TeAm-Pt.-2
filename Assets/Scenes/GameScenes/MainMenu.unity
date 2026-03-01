@@ -216,27 +216,32 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b><u>TeAm</b></u>
 
+    
 
-    <b><u>Produceggr</b></u>
+    <b><u>Produc<gradient="EggGradient">egg</gradient>r</b></u>
 
-    Eggvan Daly
+    <gradient="EggGradient">Egg</gradient>van
+    Daly
 
+    
 
-    <b><u>Programmeggrs</b></u>
+    <b><u>Programm<gradient="EggGradient">egg</gradient>rs</b></u>
 
-    Sophiegg
+    Sophi<gradient="EggGradient">egg</gradient>
     Blumhardt
 
-    Eggli Koeggdeggritz
+    <gradient="EggGradient">Egg</gradient>li Ko<gradient="EggGradient">egg</gradient>d<gradient="EggGradient">egg</gradient>ritz
 
-    Eggvan Daly
+    <gradient="EggGradient">Egg</gradient>van
+    Daly
 
-    Marlow Greggeggan
+    Marlow Gr<gradient="EggGradient">egg</gradient><gradient="EggGradient">egg</gradient>an
 
     Lucas
-    Fegghlbeggrg
+    F<gradient="EggGradient">egg</gradient>hlb<gradient="EggGradient">egg</gradient>rg
 
-    Cadegg Naylor
+    Cad<gradient="EggGradient">egg</gradient>
+    Naylor
 
 '
   m_isRightToLeft: 0
@@ -256,7 +261,7 @@ MonoBehaviour:
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 618d61df199c9474e9f095d3c01440eb, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -1253,29 +1258,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b><u>Deggsigneggrs</b></u>
+  m_text: '<b><u>D<gradient="EggGradient">egg</gradient>sign<gradient="EggGradient">egg</gradient>rs</b></u>
 
-    Sam Hookeggr
+    Sam
+    Hook<gradient="EggGradient">egg</gradient>r
 
-    Eggvan Daly
+    <gradient="EggGradient">Egg</gradient>van
+    Daly
 
+    
 
     <b><u>Artists</b></u>
 
-    Sophia
-    Harpeggr
+    Sophia Harp<gradient="EggGradient">egg</gradient>r
 
-    Aveggry Schupbach
+    Av<gradient="EggGradient">egg</gradient>ry
+    Schupbach
 
+    
 
     <b><u>Audio</u></b>
 
-    Lucas Fegghlbeggrg
+    Lucas F<gradient="EggGradient">egg</gradient>hlb<gradient="EggGradient">egg</gradient>rg
 
-    Cadegg
+    Cad<gradient="EggGradient">egg</gradient>
     Naylor
 
-    Isabeggl Martineggz
+    Isab<gradient="EggGradient">egg</gradient>l Martin<gradient="EggGradient">egg</gradient>z
 
 '
   m_isRightToLeft: 0
