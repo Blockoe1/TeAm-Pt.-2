@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
 
     private Coroutine lifetimeRoutine;
 
-    public Action<Projectile> despawnAction;
+    public event Action<Projectile> OnDespawn;
 
     private void Awake()
     {
@@ -27,11 +27,6 @@ public class Projectile : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.IgniteOnFire);
         }
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    public void SetDespawnAction(Action<Projectile> despawnAction)
-    {
-        this.despawnAction = despawnAction;
     }
 
     public virtual void Launch(Vector2 launchVector)
@@ -48,7 +43,7 @@ public class Projectile : MonoBehaviour
 
     public void Despawn()
     {
-        despawnAction?.Invoke(this);
+        OnDespawn?.Invoke(this);
         if (lifetimeRoutine != null)
         {
             StopCoroutine(lifetimeRoutine);
