@@ -5447,6 +5447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneEvents
       objectReference: {fileID: 0}
+    - target: {fileID: 4892752353743931466, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+      propertyPath: _dialoguePrefab
+      value: 
+      objectReference: {fileID: 8718475956207236843, guid: c8b79ff30807f724f9fa44cd71593632, type: 3}
     - target: {fileID: 7432490224033983753, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
