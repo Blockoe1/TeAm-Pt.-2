@@ -121,7 +121,8 @@ public class UIControls : MonoBehaviour
     public void Resume()
     {
         ClickAnything();
-        FindFirstObjectByType<GameMngr>().GamePaused = false;
+        FindAnyObjectByType<GameMngr>().GamePaused = false;
+        Time.timeScale = 1f;
         _credits.SetActive(false);
     }
 
