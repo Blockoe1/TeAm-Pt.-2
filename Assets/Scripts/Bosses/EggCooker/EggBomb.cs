@@ -4,7 +4,7 @@ using UnityEngine;
 public class EggBomb : MonoBehaviour
 {
     #region CONSTS
-    private const float EXPLODE_THRESHOLD = 0.5f;
+    private const float EXPLODE_THRESHOLD = 1f;
     #endregion
 
     [SerializeField] private Rigidbody2D rb;

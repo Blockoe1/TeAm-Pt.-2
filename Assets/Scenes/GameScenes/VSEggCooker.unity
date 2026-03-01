@@ -489,6 +489,30 @@ PrefabInstance:
       propertyPath: <playerTransform>k__BackingField
       value: 
       objectReference: {fileID: 914515621}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: 'phases.Array.data[0].actions.Array.data[0]'
+      value: 6612019444187212
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: 'phases.Array.data[0].actions.Array.data[1]'
+      value: 6612019444187213
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: 'phases.Array.data[1].actions.Array.data[0]'
+      value: 6612016458891422
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: 'phases.Array.data[1].actions.Array.data[1]'
+      value: 6612018635735128
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: phases.Array.data[0].<healthThreshold>k__BackingField
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: phases.Array.data[1].<healthThreshold>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3013899506758266241, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: trackingTarget
       value: 

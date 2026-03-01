@@ -44,7 +44,6 @@ public class ProjectileShooter : MonoBehaviour
             TrailRenderer rend = projectile.GetComponentInChildren<TrailRenderer>();
             if (rend != null)
             {
-                Debug.Log(rend);
                 rend.Clear();
             }
 

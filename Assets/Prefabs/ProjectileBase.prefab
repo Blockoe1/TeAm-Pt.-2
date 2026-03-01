@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6659736232948820102}
   - component: {fileID: 7185233179972473101}
   - component: {fileID: 2727987739293412352}
+  - component: {fileID: 5423483134848842872}
   m_Layer: 6
   m_Name: ProjectileBase
   m_TagString: Damage
@@ -119,3 +120,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5423483134848842872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3809801675559233191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d45368ec80c32947a3f959c4b565856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossDamage
+  _isProjectile: 1
