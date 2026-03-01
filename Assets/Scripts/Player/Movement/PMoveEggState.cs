@@ -83,18 +83,23 @@ public class PMoveEggState : PMoveBaseSt
     private void Dash_performed(InputAction.CallbackContext obj)
     {
         PlayerHasDashed = true;
-        if (dashCooldown)
-        {
-            return;
-        }
+        if (dashCooldown) return;
         m.rs.PlayerIsRolling = true;
         //Move
         m.Rb2d.AddForce(m.EggDashSpeed * m.FaceDirection, ForceMode2D.Impulse);
+        m.StartCoroutine(DashTrail());
 
         //Animation
         m.Anim.SetTrigger("DASH");
         m.Health.IFrames(m.EggDashFrames);
         m.StartCoroutine(DashCooldown(m.EggDashCooldown));
+    }
+    
+    private IEnumerator DashTrail()
+    {
+        m.DashTrail.enabled = true;
+        yield return new WaitForSeconds(m.EggDashCooldown);
+        m.DashTrail.enabled = false;
     }
 
     private IEnumerator DashCooldown(float time)
