@@ -5357,6 +5357,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c286672a860c3d43b841688dbb3027c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioManager
+--- !u!1001 &2107592059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 698637084194847956, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.64441
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.04691
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781371583858243688, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 727e2f3802a63cd41b6b43e96e455388, type: 3}
 --- !u!1001 &3546848235373694001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5410,6 +5467,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1434579719520147409, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434579719520147409, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434579719520147409, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434579719520147409, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4
       objectReference: {fileID: 0}
@@ -5453,6 +5522,10 @@ PrefabInstance:
       propertyPath: trackingTarget
       value: 
       objectReference: {fileID: 914515621}
+    - target: {fileID: 4968266991843818340, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3644219330384794804, guid: f39b2b9e5c83fda41b0566c0ae1a5e09, type: 3}
     - target: {fileID: 7614388342982779837, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: maxHealth
       value: 102
@@ -5517,6 +5590,10 @@ PrefabInstance:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8973647247298340863, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5532,3 +5609,4 @@ SceneRoots:
   - {fileID: 1866967849}
   - {fileID: 68594453}
   - {fileID: 1932289874}
+  - {fileID: 2107592059}
