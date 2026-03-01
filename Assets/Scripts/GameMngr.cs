@@ -35,6 +35,11 @@ public class GameMngr : MonoBehaviour
         escAction.performed += EscAction_performed;
     }
 
+
+    private void OnDestroy()
+    {
+        escAction.performed -= EscAction_performed;
+    }
     private void EscAction_performed(InputAction.CallbackContext obj)
     {
         GamePaused = !GamePaused;

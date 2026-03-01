@@ -216,14 +216,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<b><u>TeAm</b></u>
 
-    
+
 
     <b><u>Produc<gradient="EggGradient">egg</gradient>r</b></u>
 
     <gradient="EggGradient">Egg</gradient>van
     Daly
 
-    
+
 
     <b><u>Programm<gradient="EggGradient">egg</gradient>rs</b></u>
 
@@ -1266,7 +1266,7 @@ MonoBehaviour:
     <gradient="EggGradient">Egg</gradient>van
     Daly
 
-    
+
 
     <b><u>Artists</b></u>
 
@@ -1275,7 +1275,7 @@ MonoBehaviour:
     Av<gradient="EggGradient">egg</gradient>ry
     Schupbach
 
-    
+
 
     <b><u>Audio</u></b>
 
@@ -5238,7 +5238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: S<gradient="EggGradient">egg</gradient>ttings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16ffd678c79af9645b36860ae8b5715c, type: 2}
   m_sharedMaterial: {fileID: -5415420487265446332, guid: 16ffd678c79af9645b36860ae8b5715c, type: 2}
