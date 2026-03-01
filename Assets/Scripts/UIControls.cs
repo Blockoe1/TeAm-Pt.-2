@@ -5,6 +5,7 @@
  * */
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIControls : MonoBehaviour
@@ -12,6 +13,7 @@ public class UIControls : MonoBehaviour
     [SerializeField] private GameObject _mainCanvas;
     [SerializeField] private GameObject _credits;
     [SerializeField] private GameObject _options;
+    [SerializeField] private GameObject _levelSelect;
 
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider sfxSlider;
@@ -42,14 +44,19 @@ public class UIControls : MonoBehaviour
         masterSlider.value = AudioManager.instance.MasterVolume;
         sfxSlider.value = AudioManager.instance.SfxVolume;
         musicSlider.value = AudioManager.instance.MusicVolume;
-
-
     }
 
     public void CreditClick()
     {
         ClickAnything();
         _credits.SetActive(true);
+        _mainCanvas.SetActive(false);
+    }
+
+    public void LevelSelect()
+    {
+        ClickAnything();
+        _levelSelect.SetActive(true);
         _mainCanvas.SetActive(false);
     }
 
@@ -65,7 +72,23 @@ public class UIControls : MonoBehaviour
         ClickAnything();
         _credits.SetActive(false);
         _options.SetActive(false);
+        _levelSelect.SetActive(false);
         _mainCanvas.SetActive(true);
+    }
+
+    public void LevelOne()
+    {
+        SceneManager.LoadScene("VSMixingBowl");
+    }
+
+    public void LevelTwo()
+    {
+        SceneManager.LoadScene("VSFryingPan");
+    }
+
+    public void LevelThree()
+    {
+        SceneManager.LoadScene("VSEggCooker");
     }
 
 
