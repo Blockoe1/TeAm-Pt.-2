@@ -26,6 +26,7 @@ public class EggBomb : MonoBehaviour
 
     private void Explode(Projectile proj)
     {
+        ParticleMngr.Inst.Play("EGG_EXPLODE_FLAT", transform.position, transform.rotation);
         shooter.Shoot(0, shotForce, shotCount, shotAngle);
     }
 }
