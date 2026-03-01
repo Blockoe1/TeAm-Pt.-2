@@ -289,6 +289,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6283126229716240909, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
   m_PrefabInstance: {fileID: 1550205260}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &914515622 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6983069433932899291, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+  m_PrefabInstance: {fileID: 1550205260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1334561678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 914515622}
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -355,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.CircleCollider2D, UnityEngine
+      value: UnityEngine.CapsuleCollider2D, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName

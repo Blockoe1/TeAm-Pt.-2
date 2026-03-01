@@ -5529,6 +5529,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+--- !u!70 &1550205261 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6983069433932899291, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
+  m_PrefabInstance: {fileID: 1550205260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1550205269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6283126229716240909, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
@@ -5545,11 +5550,19 @@ PrefabInstance:
     - target: {fileID: 408007055626757810, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1550205261}
     - target: {fileID: 408007055626757810, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 787517722}
+    - target: {fileID: 408007055626757810, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 408007055626757810, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.CapsuleCollider2D, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1759622135355145032, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
