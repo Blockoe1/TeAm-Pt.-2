@@ -8,6 +8,7 @@ public class FallingProjectile : Projectile
     [SerializeField] private AnimationCurve telegraphCurve;
     [SerializeField] private float offsetAmplitude;
     [SerializeField] private AnimationCurve offsetCurve;
+    [SerializeField] private bool despawnOnLand;
 
     private Color baseColor;
 
@@ -26,6 +27,7 @@ public class FallingProjectile : Projectile
 
     private IEnumerator LaunchTime(Vector2 launchVector)
     {
+        telegraphSpot.gameObject.SetActive(true);
         telegraphSpot.color = Color.clear;
         telegraphSpot.transform.localScale = Vector3.zero;
 
@@ -52,7 +54,11 @@ public class FallingProjectile : Projectile
         }
 
         hitCollider.enabled = true ;
+        telegraphSpot.gameObject.SetActive(false);
         yield return new WaitForSeconds(0.1f);
-        Despawn();
+        if (despawnOnLand)
+        {
+            Despawn();
+        }
     }
 }

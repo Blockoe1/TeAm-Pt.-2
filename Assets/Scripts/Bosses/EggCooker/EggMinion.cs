@@ -45,7 +45,7 @@ public class EggMinion : Projectile
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTriggerEnter2D(Collider2D collision)
     {
         if (despawnOnCollision && collision.CompareTag("Player"))
         {

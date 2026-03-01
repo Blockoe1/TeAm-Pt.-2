@@ -53,11 +53,12 @@ public class ProjectileShooter : MonoBehaviour
         } 
     }
 
-    public void RainingDown(Vector2 minValues, Vector2 maxValues)
+    public void RainingDown(Vector2 minValues, Vector2 maxValues, float projectileHeight)
     {
         Projectile projectile = GetProjectile();
-        projectile.transform.position = new Vector2(UnityEngine.Random.Range(minValues.x,maxValues.x),UnityEngine.Random.Range(minValues.y,maxValues.y));
+        projectile.transform.position = new Vector2(UnityEngine.Random.Range(minValues.x,maxValues.x),UnityEngine.Random.Range(minValues.y,maxValues.y)) + Vector2.up * projectileHeight;
         projectile.gameObject.SetActive(true);
+        projectile.Launch(Vector2.down * projectileHeight);
         projectile.OnDespawn += ReturnProjectile;
     }
 

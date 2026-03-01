@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e908d45b5d16ea84ea7a89d328611e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileShooter
-  projectilePrefab: {fileID: 215365710842050273, guid: 081bc1077b78d3f40be54f78dfffa716, type: 3}
+  projectilePrefab: {fileID: 8201833211155381782, guid: 1728dc609bfe7b0429a133a75e4965bf, type: 3}
   projectileParent: {fileID: 0}
 --- !u!1 &6745538516848122827
 GameObject:
@@ -691,6 +691,14 @@ PrefabInstance:
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[6612011821564009].eggRollStartOffset
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[9057224384271089739].butterFallHeight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: managedReferences[9057224384271089742].butterFallHeight
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6007269897221869853, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: managedReferences[9057224384271089739].rainingLimitsMax.x
