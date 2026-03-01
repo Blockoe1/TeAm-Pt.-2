@@ -487,8 +487,28 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Path
+      value: event:/EggCookerAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Path
       value: event:/EggCookerMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data1
+      value: 780496055
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data2
+      value: 1192535501
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data3
+      value: -2076281208
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: Ambience.Guid.Data4
+      value: -699082395
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data1

@@ -31,8 +31,8 @@ public class Projectile : MonoBehaviour
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.SpawnButter);
             await Task.Delay(1500);
-            lifetimeSound = RuntimeManager.CreateInstance(FMODEvents.instance.ContinuallyBurn);
-            lifetimeSound.start();
+            //lifetimeSound = RuntimeManager.CreateInstance(FMODEvents.instance.ContinuallyBurn);
+            //lifetimeSound.start();
         }
 
         if(projectileType == ProjectileType.EggRoll && AudioManager.instance != null)
