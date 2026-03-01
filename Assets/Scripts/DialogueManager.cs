@@ -85,6 +85,14 @@ public class DialogueManager : MonoBehaviour
                 i += 30;
             }
         }
+        for (int i = 0; i < s.Length - 9; i++)
+        {
+            if ((s.Substring(i, 9).ToLower() == "scrambled"))
+            {
+                s = s.Substring(0, i) + "<gradient=\"EggGradient\">" + s.Substring(i, 9) + "</gradient>" + s.Substring(i + 9);
+                i += 30;
+            }
+        }
         return s;
     }
 

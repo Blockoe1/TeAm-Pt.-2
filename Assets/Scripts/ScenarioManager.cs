@@ -22,6 +22,7 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private SpriteRenderer _bossDeathFlash;
     [SerializeField] private float _bossDeathTime;
     [SerializeField] private GameObject _poof;
+    [SerializeField] private Sprite _eggCookerHappy;
     [SerializeField, Scene] private string _nextScene;
 
     private bool bossIsDead;
@@ -207,6 +208,38 @@ public class ScenarioManager : MonoBehaviour
             player.transform.position = Vector2.Lerp(playerPos, _eggyDialoguePos, t);
             bossObject.transform.position = Vector2.Lerp(bossPos, _bossDialoguePos, t);
             yield return null;
+        }
+
+        // Become happy
+        if (_scenario == Scenario.FryingPan)
+        {
+            yield return new WaitForSeconds(0.5f);
+            var p = Instantiate(_poof, bossObject.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.33f);
+            t = 0;
+            while (t < 1)
+            {
+                t += Time.deltaTime * 4;
+                bossObject.transform.localScale = Vector3.Lerp(new Vector3(0.25f, 0.25f, 1), new Vector3(0.0625f, 0.0625f, 1), t);
+                yield return null;
+            }
+            t = 0;
+            while (t < 1)
+            {
+                t += Time.deltaTime * 4;
+                bossObject.transform.position = Vector2.Lerp(_bossDialoguePos, new Vector3(0, 4, 0), t);
+                yield return null;
+            }
+            yield return new WaitForSeconds(0.25f);
+        }
+        if (_scenario == Scenario.EggCooker)
+        {
+            yield return new WaitForSeconds(0.5f);
+            var p = Instantiate(_poof, bossObject.transform.position, Quaternion.identity);
+            yield return new WaitUntil(() => p == null);
+            bossObject.GetComponent<Animator>().enabled = false;
+            bossObject.GetComponent<SpriteRenderer>().sprite = _eggCookerHappy;
+            yield return new WaitForSeconds(0.5f);
         }
 
         // Post-fight dialogue
