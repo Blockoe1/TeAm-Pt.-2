@@ -125,6 +125,7 @@ public class ScenarioManager : MonoBehaviour
         // Boss dies
         ParticleMngr.Inst.Play("BOSS" + (int)_scenario + "_DIE", bossObject.transform.position, Quaternion.identity);
         bossObject.SetActive(false);
+        yield return new WaitForSeconds(2);
         yield return DialogueManager.Instance.RunDialogue(_afterBossDies);
 
         TransitionManager.ShatterTransition(_nextScene);
