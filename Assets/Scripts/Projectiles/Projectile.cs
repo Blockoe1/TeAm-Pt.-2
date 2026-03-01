@@ -8,6 +8,7 @@ using UnityEngine.ProBuilder;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private bool rotateInShootDirection;
     [SerializeField] protected bool despawnOnCollision;
     [SerializeField] protected float despawnTime = 10f;
     protected enum ProjectileType
@@ -46,7 +47,10 @@ public class Projectile : MonoBehaviour
     public virtual void Launch(Vector2 launchVector)
     {
         rb.AddForce(launchVector, ForceMode2D.Impulse);
-        transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(launchVector.y, launchVector.x) * Mathf.Rad2Deg);
+        if (rotateInShootDirection)
+        {
+            transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(launchVector.y, launchVector.x) * Mathf.Rad2Deg);
+        }
         lifetimeRoutine = StartCoroutine(Lifetime());
     }
 
