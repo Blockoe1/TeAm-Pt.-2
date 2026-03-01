@@ -15,4 +15,9 @@ public class PanMovement : MonoBehaviour
         movement.SnapRotation();
         movement.TargetVelocity = Vector2.up * moveSpeed;
     }
+
+    private void OnDisable()
+    {
+        movement.TargetVelocity = Vector2.zero;
+    }
 }
