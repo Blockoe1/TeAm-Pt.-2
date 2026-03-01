@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
