@@ -21,6 +21,7 @@ public class PMoveStateMngr : MonoBehaviour
     [SerializeField][MinValue(0)] private float _accelerationSpeed;
     [SerializeField][MinValue(0)] private float _deccelerationSpeed;
     [SerializeField][MinValue(0)] private float _eggDashSpeed;
+    [SerializeField][MinValue(0)] private float _eggDashFrames;
     [SerializeField] private AnimatorOverrideController _eggAnimOC;
 
     [Header("Yolk State")]
@@ -33,6 +34,7 @@ public class PMoveStateMngr : MonoBehaviour
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRen;
     private Animator anim;
+    private PlayerHealth health;
 
     private PMoveEggState eggState;
     private PMoveYolkState yolkState;
@@ -47,12 +49,14 @@ public class PMoveStateMngr : MonoBehaviour
     public float DeccelerationSpeed { get => _deccelerationSpeed; set => _deccelerationSpeed = value; }
     public InputAction Dash { get => dash; set => dash = value; }
     public float EggDashSpeed { get => _eggDashSpeed; set => _eggDashSpeed = value; }
+    public float EggDashFrames { get => _eggDashFrames; set => _eggDashFrames = value; }
     public float YolkMoveSpeed { get => _yolkMoveSpeed; set => _yolkMoveSpeed = value; }
     public float YolkDashSpeed { get => _yolkDashSpeed; set => _yolkDashSpeed = value; }
     public float YolkDashDuration { get => _yolkDashDuration; set => _yolkDashDuration = value; }
     public static PMoveStateMngr Inst { get => inst; set => inst = value; }
     public PMoveYolkState YolkState { get => yolkState; set => yolkState = value; }
     public Animator Anim { get => anim; set => anim = value; }
+    public PlayerHealth Health => health;
     public InputAction Move { get => move; set => move = value; }
     public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
     public bool IsDashing { get => isDashing; set => isDashing = value; }
@@ -70,6 +74,7 @@ public class PMoveStateMngr : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         spriteRen = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        health = GetComponent<PlayerHealth>();
 
         move = InputSystem.actions.FindAction("MOVE");
         dash = InputSystem.actions.FindAction("DASH");

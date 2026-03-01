@@ -34,16 +34,15 @@ public class PlayerHealth : MonoBehaviour
     {
         if (iFrames == false)
         {
-            StartCoroutine(Damaged());
+            Damaged();
 
             //Debug.Log(collision.ClosestPoint(transform.position));
             ParticleMngr.Inst.Play("P_HIT", transform.position, transform.rotation);
         }
     }
 
-    IEnumerator Damaged()
+    void Damaged()
     {
-        iFrames = true;
         health -= 1;
 
         switch(health)
@@ -72,9 +71,20 @@ public class PlayerHealth : MonoBehaviour
                 StartCoroutine(DeathDelay());
                 break;
         }
-        yield return new WaitForSeconds(iFramesTime);
+        IFrames(iFramesTime);
+    }
+
+    public void IFrames(float time)
+    {
+        if (iFrames) { return; }
+        StartCoroutine(IFramesRoutine(time));
+    }
+
+    private IEnumerator IFramesRoutine(float time)
+    {
+        iFrames = true;
+        yield return new WaitForSeconds(time);
         iFrames = false;
-       
     }
 
     private IEnumerator DeathDelay()

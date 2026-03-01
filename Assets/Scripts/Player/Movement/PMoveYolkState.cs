@@ -45,6 +45,7 @@ public class PMoveYolkState : PMoveBaseSt
     {
         m.StartCoroutine(DashCooldown());
         m.Anim.SetTrigger("DASH");
+        m.Health.IFrames(m.YolkDashDuration);
     }
     private void Dash()
     {

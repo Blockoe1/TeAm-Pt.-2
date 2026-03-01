@@ -225,10 +225,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -259,10 +255,6 @@ PrefabInstance:
     - target: {fileID: 2254344200769462783, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721603388474449330, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
-      propertyPath: m_Constraints
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3215673702225403031, guid: 34e8d83313d1063479e34e0c54b7b8ff, type: 3}
       propertyPath: m_LocalPosition.y

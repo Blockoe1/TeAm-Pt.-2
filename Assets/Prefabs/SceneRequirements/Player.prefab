@@ -397,7 +397,8 @@ MonoBehaviour:
   _eggMoveSpeed: 8
   _accelerationSpeed: 2
   _deccelerationSpeed: 0.5
-  _eggDashSpeed: 12
+  _eggDashSpeed: 25
+  _eggDashFrames: 0.2
   _eggAnimOC: {fileID: 22100000, guid: 5060fccd7dc76914eab1d77ac3af2094, type: 2}
   _yolkMoveSpeed: 10
   _yolkDashSpeed: 20
@@ -567,6 +568,8 @@ MonoBehaviour:
   _projectileShooter: {fileID: 1798331360701621538}
   _panPivotTransform: {fileID: 1842842761341056977}
   _shootPower: 20
+  _shotCount: 3
+  _shotAngle: 15
 --- !u!114 &1798331360701621538
 MonoBehaviour:
   m_ObjectHideFlags: 0

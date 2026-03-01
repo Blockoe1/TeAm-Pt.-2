@@ -53,5 +53,6 @@ public class PMoveEggState : PMoveBaseSt
 
         //Animation
         m.Anim.SetTrigger("DASH");
+        m.Health.IFrames(m.EggDashFrames);
     }
 }

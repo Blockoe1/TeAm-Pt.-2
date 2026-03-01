@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
   maxHealth: 102
+  hitIFrames: 0.25
   OnDamage:
     m_PersistentCalls:
       m_Calls:

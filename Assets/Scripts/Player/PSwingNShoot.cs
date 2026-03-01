@@ -18,6 +18,8 @@ public class PSwingNShoot : MonoBehaviour
     [SerializeField] private Transform _panPivotTransform;
 
     [SerializeField] private float _shootPower = 5;
+    [SerializeField] private int _shotCount = 1;
+    [SerializeField] private float _shotAngle = 0;
 
     private void Start()
     {
@@ -90,6 +92,6 @@ public class PSwingNShoot : MonoBehaviour
     public void ShootEgg()
     {
         Vector2 direction = _panPivotTransform.transform.up;
-        _projectileShooter.Shoot(direction, _shootPower);
+        _projectileShooter.Shoot(direction, _shootPower, _shotCount, _shotAngle);
     }
 }
