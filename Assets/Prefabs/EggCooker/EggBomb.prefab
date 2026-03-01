@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6659736232948820102, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,7 +71,7 @@ PrefabInstance:
     - target: {fileID: 7185233179972473101, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+      objectReference: {fileID: 3784307865735257347, guid: 013124bc6f89dc346831af9df9e651ad, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -128,8 +128,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -0.3}
+  m_Radius: 0.4
 --- !u!114 &5720764239388197450
 MonoBehaviour:
   m_ObjectHideFlags: 0
