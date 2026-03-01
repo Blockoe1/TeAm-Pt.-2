@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4369054737338357113, guid: d9540d1e420edb0458eb9732c3e286fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -192,6 +192,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  despawnOnLand: 0
 --- !u!1001 &4103016406049485223
 PrefabInstance:
   m_ObjectHideFlags: 0

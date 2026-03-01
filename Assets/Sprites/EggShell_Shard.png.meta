@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 4284d96111801a5449b73a77f576d26c
+guid: ed17844b8082434479156ff0e6635e27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7493913757341396380
-    second: Butter_Stationary_Anim_0
-  - first:
-      213: 6239430305262360057
-    second: Butter_Stationary_Anim_1
-  - first:
-      213: -2040418174172448644
-    second: Butter_Stationary_Anim_2
-  - first:
-      213: -7109124388048014989
-    second: Butter_Stationary_Anim_3
-  - first:
-      213: 1975477347245363509
-    second: Butter_Stationary_Anim_4
+      213: -6256178065393871043
+    second: EggShell_Shard_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Butter_Stationary_Anim_1
+      name: EggShell_Shard_0
       rect:
         serializedVersion: 2
-        x: 250
-        y: 0
-        width: 250
-        height: 250
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        x: 26
+        y: 21
+        width: 224
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f558f10ec8e69650800000000000000
-      internalID: 6239430305262360057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Butter_Stationary_Anim_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 250
-        height: 250
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95565e1cac288d141881bd2fe7aee349
-      internalID: -7493913757341396380
+      spriteID: d379b9832379d29a0800000000000000
+      internalID: -6256178065393871043
       vertices: []
       indices: 
       edges: []
@@ -159,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e5114b25fe5f4fd449d3c7e06dda2a49
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -167,12 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":250.0,"y":250.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Butter_Stationary_Anim_0: -7493913757341396380
-      Butter_Stationary_Anim_1: 6239430305262360057
+      EggShell_Shard_0: -6256178065393871043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -67,7 +67,7 @@ public class Projectile : MonoBehaviour
     }
 
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         // On collision with anything, destroy the projectile.
         if (despawnOnCollision)

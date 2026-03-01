@@ -25,7 +25,8 @@ public class EggMinion : Projectile
 
     public override void Launch(Vector2 launchVector)
     {
-        base.Launch(launchVector);
+        rb.AddForce(launchVector, ForceMode2D.Impulse);
+        lifetimeRoutine = StartCoroutine(Lifetime());
         travelSpeed = launchVector.magnitude;
         health.ResetHealth();
     }
@@ -45,7 +46,7 @@ public class EggMinion : Projectile
         rb.linearVelocity = Vector2.MoveTowards(rb.linearVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
     }
 
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTriggerEnter2D(Collider2D collision)
     {
         if (despawnOnCollision && collision.CompareTag("Player"))
         {
