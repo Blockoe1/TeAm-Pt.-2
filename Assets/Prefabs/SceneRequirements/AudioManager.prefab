@@ -60,7 +60,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5761db3d5006361478021659f40b6318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
-  GameBGM:
+  MainMenu:
+    Guid:
+      Data1: 123841811
+      Data2: 1202970843
+      Data3: -1073562448
+      Data4: 1049923715
+    Path: event:/Eggsanity
+  Boss1:
+    Guid:
+      Data1: 883038803
+      Data2: 1292514807
+      Data3: 1397558957
+      Data4: -1342069969
+    Path: event:/EggCooker
+  Boss2:
+    Guid:
+      Data1: 883038803
+      Data2: 1292514807
+      Data3: 1397558957
+      Data4: -1342069969
+    Path: event:/EggCooker
+  Boss3:
     Guid:
       Data1: 883038803
       Data2: 1292514807
