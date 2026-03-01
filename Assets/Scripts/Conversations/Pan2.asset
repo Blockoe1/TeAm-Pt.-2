@@ -25,3 +25,63 @@ MonoBehaviour:
     Swish: 1
     SwishWaitInterval: 0
     SwishAmplitude: 3
+  - OneMeaslyLine: ...
+    Speaker: 3
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 0
+    SwishWaitInterval: 0
+    SwishAmplitude: 3
+  - OneMeaslyLine: Hey. The heat is not so bad anymore.
+    Speaker: 4
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0.1
+    SwishAmplitude: 1
+  - OneMeaslyLine: Hey man, we should hang out sometime. You're chill.
+    Speaker: 4
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0.1
+    SwishAmplitude: 1
+  - OneMeaslyLine: What? Oh. Y-Yeah, I'd like that.
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 0
+    SwishWaitInterval: 0.1
+    SwishAmplitude: 1
+  - OneMeaslyLine: Eggsquisite...
+    Speaker: 4
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0.05
+    SwishAmplitude: 2
