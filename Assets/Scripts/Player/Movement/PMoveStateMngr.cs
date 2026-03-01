@@ -112,7 +112,7 @@ public class PMoveStateMngr : MonoBehaviour
     [HideInInspector]
     public void SwitchState(PMoveBaseSt state)
     {
-        state.ExitState();
+        currentSt.ExitState();
         currentSt = state;
         currentSt.EnterState();
     }

@@ -26,6 +26,8 @@ public class BossHealth : MonoBehaviour
 
     public void Damage(int damage)
     {
+        Debug.Log($"{name} took {damage} damage;");
+        iFrames = true;
         health -= damage;
         OnDamage?.Invoke(health);
         IFrames(hitIFrames);

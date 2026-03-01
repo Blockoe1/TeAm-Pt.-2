@@ -5122,6 +5122,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5084610988582052397, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5487354776359243312, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
       propertyPath: m_Name
       value: MasterCamera
@@ -5132,7 +5136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8940013419336293185, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8940013419336293185, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5171,11 +5175,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8391b1fb58816bd4abe08476fa03b102, type: 3}
---- !u!58 &1854289926 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 8967634857840509938, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
-  m_PrefabInstance: {fileID: 1550205260}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1866967849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5184,6 +5183,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Path
+      value: event:/EggCooker
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data1
+      value: 883038803
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data2
+      value: 1292514807
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data3
+      value: 1397558957
+      objectReference: {fileID: 0}
+    - target: {fileID: -6475559588866347202, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
+      propertyPath: GameBGM.Guid.Data4
+      value: -1342069969
+      objectReference: {fileID: 0}
     - target: {fileID: 3849256959037089862, guid: 47ba8c81b18ca9649be6baf94e5db67c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5241,6 +5260,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2685194340668166531, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3366741188070950492, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: m_Name
       value: SceneEvents
@@ -5444,7 +5467,7 @@ PrefabInstance:
     - target: {fileID: 7614388342982779837, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1854289926}
+      objectReference: {fileID: 0}
     - target: {fileID: 7614388342982779837, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
