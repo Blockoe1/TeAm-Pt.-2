@@ -462,5 +462,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6b21f690fb8a243846f6a0c3f20cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossTelegrapher
-  telegraphDistance: 3
+  telegraphDistance: 5
   line: {fileID: 6330106009029970631}

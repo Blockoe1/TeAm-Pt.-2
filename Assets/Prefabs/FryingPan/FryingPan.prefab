@@ -853,8 +853,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6719417143345809731, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6965719387239869707}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7697918188936913760}
   m_SourcePrefab: {fileID: 100100000, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+--- !u!1 &6569085227539495103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+  m_PrefabInstance: {fileID: 2498012862137965469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7697918188936913760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569085227539495103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf82e976faf9be418b888b2214e15fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spin
+  spinAmount: -50
+  anim: {fileID: 0}
+  isBoss: 0
+  MovementSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &9217341477483123422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6719417143345809731, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
