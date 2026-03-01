@@ -38,8 +38,13 @@ public class ScenarioManager : MonoBehaviour
         if (_beforeBossAppears != null)
         {
             boss.gameObject.SetActive(false);
+            yield return new WaitForSeconds(1);
             yield return DialogueManager.Instance.RunDialogue(_beforeBossAppears);
             boss.gameObject.SetActive(true);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1);
         }
 
         // Initial exchange with boss
@@ -57,6 +62,8 @@ public class ScenarioManager : MonoBehaviour
         // Cripple the characters
         InputSystem.actions.Disable();
         var bossObject = boss.gameObject;
+        Destroy(boss.GetComponent<BossMovement>());
+        boss.GetComponent<Rigidbody2D>().linearVelocity = Vector3.zero;
         Destroy(boss);
         if (_scenario == Scenario.FryingPan)
         {
