@@ -5570,6 +5570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneEvents
       objectReference: {fileID: 0}
+    - target: {fileID: 4892752353743931466, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+      propertyPath: _dialoguePrefab
+      value: 
+      objectReference: {fileID: 4745659152321902749, guid: 67dd49ef52d8ceb4ab6be430df771c89, type: 3}
     - target: {fileID: 7432490224033983753, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7463,7 +7467,7 @@ PrefabInstance:
     - target: {fileID: 3908358512389764485, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6166398019205245820, guid: 1d32ec65b68b1d349838c487ff072d1e, type: 3}
+      objectReference: {fileID: 5252372569631786026, guid: fdd8346055c2c1e4885c1d5dd8b72c09, type: 3}
     - target: {fileID: 5679352953428768708, guid: 83085632e04f62447b3cdae637b76b98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
