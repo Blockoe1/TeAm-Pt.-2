@@ -9,6 +9,7 @@ public class Conversation : ScriptableObject
     public struct Line
     {
         [TextArea] public string OneMeaslyLine;
+        public DialogueManager.SpeakerName Speaker;
         public float PauseTime;
 
         public bool EnterVertically;

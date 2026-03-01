@@ -45,7 +45,8 @@ public class DialogueEpic : MonoBehaviour
         continueTime = false;
         _continue.gameObject.SetActive(false);
 
-        _text.text = line.OneMeaslyLine;
+        _text.text = DialogueManager.Instance.Eggify(line.OneMeaslyLine);
+        _text.font = DialogueManager.Instance.GetSpeaker(line.Speaker).Font;
 
         if (line.EnterVertically)
         {
@@ -122,6 +123,18 @@ public class DialogueEpic : MonoBehaviour
             int offsetIndex = initialOffsetIndex;
             while (index < original.Length)
             {
+                if (original[index] == '<')
+                {
+                    do
+                    {
+                        current += original[index];
+                        index++;
+                    }
+                    while (original[index] != '>');
+                    current += original[index];
+                    index++;
+                }
+
                 current += "<voffset=" + (Mathf.Sin(textOffsets[offsetIndex] * 2 * Mathf.PI * Mathf.Deg2Rad) * line.SwishAmplitude) + "em>" + original[index];
                 index++;
                 offsetIndex = (offsetIndex + 1) % textOffsets.Length;
@@ -145,5 +158,10 @@ public class DialogueEpic : MonoBehaviour
     public void Continue()
     {
         continueTime = true;
+    }
+
+    public void Skip()
+    {
+        Destroy(gameObject);
     }
 }

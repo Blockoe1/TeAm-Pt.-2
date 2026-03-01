@@ -45,3 +45,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   _dialoguePrefab: {fileID: 1933284805135915389, guid: 34e73b45b9aeab34c9f743bbdb14ed66, type: 3}
+  _speakers:
+  - Name: 0
+    Font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - Name: 1
+    Font: {fileID: 11400000, guid: 313033e5b6f7ee749b16950239538a50, type: 2}
+  - Name: 2
+    Font: {fileID: 11400000, guid: 94696493a79eb9d46a47711ba38d124a, type: 2}
+  - Name: 3
+    Font: {fileID: 11400000, guid: f6d8e25ffb414c34f848842fa3204ece, type: 2}
+  - Name: 4
+    Font: {fileID: 11400000, guid: 5a1393d8436586d4aaf359d09605bc00, type: 2}
+  - Name: 5
+    Font: {fileID: 11400000, guid: 73e4709db6dc05d4eaf0b181822dd5e4, type: 2}
+  - Name: 6
+    Font: {fileID: 11400000, guid: 16ffd678c79af9645b36860ae8b5715c, type: 2}
