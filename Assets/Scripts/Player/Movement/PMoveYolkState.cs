@@ -14,7 +14,7 @@ public class PMoveYolkState : PMoveBaseSt
     {
         m.Dash.performed += Dash_performed;
 
-        m.Anim.runtimeAnimatorController = m.YolkAnimOC;
+        m.Anim.runtimeAnimatorController = m.YolkAnimOCs[0];
     }
 
     public override void ExitState()
@@ -28,6 +28,8 @@ public class PMoveYolkState : PMoveBaseSt
             Move();
         else
             Dash();
+
+        DetermineAnimationDirection();
     }
 
     private void Move()
@@ -36,7 +38,7 @@ public class PMoveYolkState : PMoveBaseSt
         m.Rb2d.linearVelocity = (m.MoveDirection * m.YolkMoveSpeed);
 
         //Animimation
-        m.Anim.SetBool("IS_MOVING", (Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.25f) ? true : false);
+        m.Anim.SetBool("IS_MOVING", m.IsMoving());//(Mathf.Abs(m.Rb2d.linearVelocity.x) > 0.25f || Mathf.Abs(m.Rb2d.linearVelocity.y) > 0.25f) ? true : false);
     }
 
     private void Dash_performed(InputAction.CallbackContext obj)
@@ -54,5 +56,16 @@ public class PMoveYolkState : PMoveBaseSt
         m.IsDashing = true;
         yield return new WaitForSeconds(m.YolkDashDuration);
         m.IsDashing = false;
+    }
+
+    private void DetermineAnimationDirection()
+    {
+        if (Mathf.Abs(m.MoveDirection.x) < Mathf.Abs(m.MoveDirection.y)) //Front/Back
+            m.Anim.runtimeAnimatorController = m.YolkAnimOCs[(m.MoveDirection.y > 0) ? 2 : 0];
+        else //Side
+        {
+            m.Anim.runtimeAnimatorController = m.YolkAnimOCs[1];
+            m.SpriteRen.flipX = (m.MoveDirection.x > 0) ? true : false;
+        }
     }
 }
