@@ -11,6 +11,7 @@ public class UIControls : MonoBehaviour
     [SerializeField] private GameObject _mainCanvas;
     [SerializeField] private GameObject _credits;
     [SerializeField] private GameObject _options;
+    [SerializeField] private GameObject _levelSelect;
 
 
     private void Awake()
@@ -47,10 +48,17 @@ public class UIControls : MonoBehaviour
         _mainCanvas.SetActive(false);
     }
 
+    public void LevelSelectClick()
+    {
+        _levelSelect.SetActive(true);
+        _mainCanvas.SetActive(false);
+    }
+
     public void Back()
     {
         _credits.SetActive(false);
         _options.SetActive(false);
+        _levelSelect.SetActive(false);
         _mainCanvas.SetActive(true);
     }
 
@@ -60,6 +68,5 @@ public class UIControls : MonoBehaviour
         EditorApplication.isPlaying = false;
 #endif
         Application.Quit();
-
     }
 }
