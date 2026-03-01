@@ -5499,8 +5499,40 @@ PrefabInstance:
       value: 6612019444187213
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612016458891422].chargeTime
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612018635735128].shootPower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612019444187212].chargeTime
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612019444187213].shootPower
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187314].chargeTime
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612016458891422].chargeDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612016458891422].chargeSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612019444187212].chargeDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612019444187212].chargeSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187314].chargeDelay
@@ -5513,6 +5545,10 @@ PrefabInstance:
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187321].chargeSpeed
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
+      propertyPath: managedReferences[6612019444187379].bounceSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2159072267638198159, guid: 377e3bb62781ce240864577de9adbe49, type: 3}
       propertyPath: managedReferences[6612019444187314].chargeNumber

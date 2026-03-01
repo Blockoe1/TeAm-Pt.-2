@@ -7179,7 +7179,7 @@ Transform:
   m_GameObject: {fileID: 1446302286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59995, y: -0.3938, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8042,11 +8042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1759622135355145032, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.59995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1759622135355145032, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3938
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1759622135355145032, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8092,6 +8092,22 @@ PrefabInstance:
       propertyPath: <playerTransform>k__BackingField
       value: 
       objectReference: {fileID: 1550205269}
+    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+      propertyPath: managedReferences[9057224384271089737].spread
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+      propertyPath: managedReferences[9057224384271089737].shotPower
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+      propertyPath: managedReferences[9057224384271089740].shotPower
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+      propertyPath: managedReferences[9057224384271089742].shotDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9217341477483123422, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
