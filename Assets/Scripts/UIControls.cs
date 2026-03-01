@@ -76,6 +76,16 @@ public class UIControls : MonoBehaviour
             AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         }
     }
+
+
+    public void UpdateAudio()
+    {
+        AudioManager.instance.MasterVolume = masterSlider.value;
+        AudioManager.instance.MusicVolume = sfxSlider.value;
+        AudioManager.instance.SfxVolume = musicSlider.value;
+        AudioManager.instance.UpdateVolume();
+    }
+
     public void Quit()
     {
         ClickAnything();

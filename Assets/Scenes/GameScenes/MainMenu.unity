@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 152278319}
   - component: {fileID: 152278320}
   m_Layer: 5
-  m_Name: MasterSlifer
+  m_Name: MusicSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,10 +536,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1933866352}
+        m_TargetAssemblyTypeName: UIControls, Assembly-CSharp
+        m_MethodName: UpdateAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &173993496
 GameObject:
   m_ObjectHideFlags: 0
@@ -3446,10 +3458,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1933866352}
+        m_TargetAssemblyTypeName: UIControls, Assembly-CSharp
+        m_MethodName: UpdateAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1714476298
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,7 +4146,7 @@ GameObject:
   - component: {fileID: 1920710225}
   - component: {fileID: 1920710226}
   m_Layer: 5
-  m_Name: MasterSlifer
+  m_Name: SFXSLider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4197,10 +4221,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1933866352}
+        m_TargetAssemblyTypeName: UIControls, Assembly-CSharp
+        m_MethodName: UpdateAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1933866347
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,6 +4357,9 @@ MonoBehaviour:
   _mainCanvas: {fileID: 1973352707}
   _credits: {fileID: 2064570879}
   _options: {fileID: 21963839}
+  masterSlider: {fileID: 1700069763}
+  sfxSlider: {fileID: 152278320}
+  musicSlider: {fileID: 1920710226}
 --- !u!1 &1956304940
 GameObject:
   m_ObjectHideFlags: 0
