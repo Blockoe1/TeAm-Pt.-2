@@ -20,7 +20,7 @@ public class UIControls : MonoBehaviour
     [SerializeField] private Slider musicSlider;
 
     [SerializeField] private Toggle tobyToggle;
-
+    [SerializeField] private Toggle hardBoiled;
 
     private void Awake()
     {
@@ -48,6 +48,12 @@ public class UIControls : MonoBehaviour
         {
             if (!PlayerPrefs.HasKey("toby")) PlayerPrefs.SetString("toby", "F");
             tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
+        }
+
+        if (hardBoiled != null)
+        {
+            if (!PlayerPrefs.HasKey("hardBoiled")) PlayerPrefs.SetString("hardBoiled", "F");
+            hardBoiled.isOn = PlayerPrefs.GetString("hardBoiled") == "T";
         }
 
         masterSlider.value = AudioManager.instance.MasterVolume;
@@ -94,19 +100,59 @@ public class UIControls : MonoBehaviour
     {
         PlayerPrefs.SetString("toby", tobyToggle.isOn ? "T" : "F");
     }
+
+    public void HardBoiledToggle()
+    {
+        PlayerPrefs.SetString("hardBoiled", hardBoiled.isOn ? "T" : "F");
+
+    }
+
+    public void StartGame()
+    {
+        if (PlayerPrefs.GetString("hardBoiled", "egg") == "T")
+        {
+            TransitionManager.ZoomTransition("VSMixingBowlHard");
+        }
+        else
+        {
+            TransitionManager.ZoomTransition("Monologue");
+        }
+    }
+
     public void LevelOne()
     {
-        TransitionManager.ZoomTransition("VSMixingBowl");
+        if (PlayerPrefs.GetString("hardBoiled", "egg") == "T")
+        {
+            TransitionManager.ZoomTransition("VSMixingBowlHard");
+        }
+        else
+        {
+            TransitionManager.ZoomTransition("VSMixingBowl");
+        }
     }
 
     public void LevelTwo()
     {
-        TransitionManager.ZoomTransition("VSFryingPan");
+        if (PlayerPrefs.GetString("hardBoiled", "egg") == "T")
+        {
+            TransitionManager.ZoomTransition("VSFryingPanHard");
+        }
+        else
+        {
+            TransitionManager.ZoomTransition("VSFryingPan");
+        }
     }
 
     public void LevelThree()
     {
-        TransitionManager.ZoomTransition("VSEggCooker");
+        if (PlayerPrefs.GetString("hardBoiled", "egg") == "T")
+        {
+            TransitionManager.ZoomTransition("VSEggCookerHard");
+        }
+        else
+        {
+            TransitionManager.ZoomTransition("VSEggCooker");
+        }
     }
 
 

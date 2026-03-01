@@ -408,8 +408,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1933866352}
         m_TargetAssemblyTypeName: UIControls, Assembly-CSharp
-        m_MethodName: TransitionToScene
-        m_Mode: 5
+        m_MethodName: StartGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -755,24 +755,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 41622138025187297, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_Name
-<<<<<<< Updated upstream
-      value: TobyToggle
-=======
       value: HardBoiledToggle
       objectReference: {fileID: 0}
     - target: {fileID: 321576316078827743, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_text
-      value: Hard Boiled Mode <size=-3>(skips intro + tutorial, more challenging
-        patterns)
-      objectReference: {fileID: 0}
-    - target: {fileID: 321576316078827743, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
-      propertyPath: m_TextWrappingMode
-      value: 0
->>>>>>> Stashed changes
+      value: Hard Boiled Mode
       objectReference: {fileID: 0}
     - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_Pivot.y
@@ -796,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_SizeDelta.y
@@ -836,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -536.25
+      value: -447
       objectReference: {fileID: 0}
     - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -868,7 +859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TobyToggle
+      value: HardBoiledToggle
       objectReference: {fileID: 0}
     - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -934,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -78.75}
+  m_AnchoredPosition: {x: 100, y: -66}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &364938326
@@ -2034,7 +2025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -236.25}
+  m_AnchoredPosition: {x: 100, y: -198}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865847078
@@ -2212,6 +2203,136 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966877612}
   m_CullTransparentMesh: 1
+--- !u!1001 &1002764744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1221493022}
+    m_Modifications:
+    - target: {fileID: 41622138025187297, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_Name
+      value: TobyToggle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -549
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1933866352}
+    - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TobyToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+--- !u!224 &1002764745 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2356175292463919496, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+  m_PrefabInstance: {fileID: 1002764744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1022196649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,6 +2868,7 @@ RectTransform:
   - {fileID: 865847077}
   - {fileID: 2131802532}
   - {fileID: 301923739}
+  - {fileID: 1002764745}
   m_Father: {fileID: 21963840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4776,6 +4898,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649566058}
   m_CullTransparentMesh: 1
+--- !u!114 &1655656008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8730352505029170690, guid: deb18b8126041ff4c9516dfc12692893, type: 3}
+  m_PrefabInstance: {fileID: 1002764744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Toggle
 --- !u!1 &1666960340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,7 +6107,8 @@ MonoBehaviour:
   masterSlider: {fileID: 1700069763}
   sfxSlider: {fileID: 152278320}
   musicSlider: {fileID: 1920710226}
-  tobyToggle: {fileID: 301923738}
+  tobyToggle: {fileID: 1655656008}
+  hardBoiled: {fileID: 301923738}
 --- !u!1 &1956304940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6506,7 +6640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -393.75}
+  m_AnchoredPosition: {x: 100, y: -330}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2131802533

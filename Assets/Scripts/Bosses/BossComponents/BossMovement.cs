@@ -149,7 +149,10 @@ public class BossMovement : MonoBehaviour
     private void OnDestroy()
     {
         rb.linearVelocity = Vector2.zero;
-        StopCoroutine(sounds);
+        if(sounds != null)
+        {
+            StopCoroutine(sounds);
+        }
         ambience.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
