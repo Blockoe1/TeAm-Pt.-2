@@ -430,6 +430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3779689273971390662, guid: 66656ea10d799a245a80e9c48ca543e1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6873811712842765669, guid: 66656ea10d799a245a80e9c48ca543e1, type: 3}
       propertyPath: m_Name
       value: Grid(DontApplySceneChanges)
