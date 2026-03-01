@@ -5155,6 +5155,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 02a77e909a1c9c94d8be4db040dad335, type: 2}
     - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+      propertyPath: _bossDeathFlash
+      value: 
+      objectReference: {fileID: 787517723}
+    - target: {fileID: 7806965975446356910, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
       propertyPath: _beforeBossAppears
       value: 
       objectReference: {fileID: 11400000, guid: ae08641c52a7fcb46b6e2fedebd0e309, type: 2}
@@ -5186,6 +5190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c286672a860c3d43b841688dbb3027c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScenarioManager
+--- !u!212 &787517723 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4325028715689553979, guid: c9c128a08a420f14fa38a342b36a084e, type: 3}
+  m_PrefabInstance: {fileID: 787517721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &806654989
 PrefabInstance:
   m_ObjectHideFlags: 0
