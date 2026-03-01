@@ -19,6 +19,8 @@ public class UIControls : MonoBehaviour
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;
 
+    [SerializeField] private Toggle tobyToggle;
+
 
     private void Awake()
     {
@@ -40,6 +42,9 @@ public class UIControls : MonoBehaviour
         _mainCanvas.SetActive(true);
         _credits.SetActive(false);
         _options.SetActive(false);
+
+        if (!PlayerPrefs.HasKey("toby")) PlayerPrefs.SetString("toby", "F");
+        tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
 
         masterSlider.value = AudioManager.instance.MasterVolume;
         sfxSlider.value = AudioManager.instance.SfxVolume;
@@ -79,6 +84,10 @@ public class UIControls : MonoBehaviour
     public void LevelOne()
     {
         SceneManager.LoadScene("VSMixingBowl");
+    }
+    public void TobyToggle()
+    {
+        PlayerPrefs.SetString("toby", tobyToggle.isOn ? "T" : "F");
     }
 
     public void LevelTwo()
