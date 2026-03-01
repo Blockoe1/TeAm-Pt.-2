@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &178643040 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2206532333814085761, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+  m_PrefabInstance: {fileID: 4499565986699254190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &225051669
 GameObject:
   m_ObjectHideFlags: 0
@@ -7162,6 +7167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
   spinAmount: 50
+  anim: {fileID: 178643040}
   isBoss: 1
   MovementSound:
     Guid:
@@ -8020,26 +8026,6 @@ PrefabInstance:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 787517722}
-    - target: {fileID: 408007055626757810, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 408007055626757810, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.CapsuleCollider2D, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1192039083455570672, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_Radius
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1192039083455570672, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_Offset.x
-      value: -1.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 1192039083455570672, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_Offset.y
-      value: -3.1
-      objectReference: {fileID: 0}
     - target: {fileID: 1759622135355145032, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8080,10 +8066,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2950105257763896939, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2473286095348921375, guid: 9126036a457ac454bb5a77549fbd2898, type: 3}
     - target: {fileID: 6745538516848122827, guid: 3057e50146246014dbdad8327e77e404, type: 3}
       propertyPath: m_Name
       value: FryingPan
@@ -8092,44 +8074,11 @@ PrefabInstance:
       propertyPath: <playerTransform>k__BackingField
       value: 
       objectReference: {fileID: 1550205269}
-    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: managedReferences[9057224384271089737].spread
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: managedReferences[9057224384271089737].shotPower
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: managedReferences[9057224384271089740].shotPower
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8211369793448151680, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: managedReferences[9057224384271089742].shotDelay
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9217341477483123422, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
+      propertyPath: m_LocalPosition.y
+      value: 4.5
       objectReference: {fileID: 0}
-    - target: {fileID: 9217341477483123422, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 9217341477483123422, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9217341477483123422, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9217341477483123422, guid: 3057e50146246014dbdad8327e77e404, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8374326512363546861, guid: 3057e50146246014dbdad8327e77e404, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
