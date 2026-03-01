@@ -95,6 +95,7 @@ public class PMoveEggState : PMoveBaseSt
     private IEnumerator DashCooldown(float time)
     {
         dashCooldown = true;
+
         yield return new WaitForSeconds(time);
         dashCooldown = false;
         m.rs.PlayerIsRolling = false;
