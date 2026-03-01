@@ -7162,6 +7162,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spin
   spinAmount: 50
+  isBoss: 1
+  MovementSound:
+    Guid:
+      Data1: -355662775
+      Data2: 1255877371
+      Data3: 17195666
+      Data4: 269390623
+    Path: event:/PanMove
 --- !u!4 &1446302288
 Transform:
   m_ObjectHideFlags: 0
