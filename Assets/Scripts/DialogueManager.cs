@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private List<Speaker> _speakers;
     private Dictionary<SpeakerName, Speaker> nameToSpeaker;
 
-    public enum SpeakerName { Undefined, Eggy, MixingBowl, FryingPan, HappyPan, EggCooker, HappyCooker }
+    public enum SpeakerName { Undefined, Eggy, MixingBowl, FryingPan, HappyPan, EggCooker, HappyCooker, SeniorEgg }
 
     [Serializable]
     public class Speaker

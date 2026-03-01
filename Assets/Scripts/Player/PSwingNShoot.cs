@@ -23,7 +23,15 @@ public class PSwingNShoot : MonoBehaviour
     [SerializeField] private float _shotAngle = 0;
     private GameMngr gm;
 
+    public bool DoNotInit;
+    [HideInInspector] public bool PlayerHasSwung;
+
     private void Start()
+    {
+        if (!DoNotInit) Init();
+    }
+
+    public void Init()
     {
         swingAction = InputSystem.actions.FindAction("CLICK");
 
@@ -43,11 +51,13 @@ public class PSwingNShoot : MonoBehaviour
 
     private void SwingAction_started(InputAction.CallbackContext obj)
     {
+
         if(bufferCoroutine != null || gm.GamePaused)
+
         {
             return;
         }
-
+        PlayerHasSwung = true;
         bufferCoroutine = StartCoroutine(BufferAction());
     }
 

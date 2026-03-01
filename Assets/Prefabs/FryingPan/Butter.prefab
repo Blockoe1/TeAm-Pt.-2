@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2489582101730092845, guid: ee5184210207d5a45927611a2c44c106, type: 3}
   m_Color: {r: 1, g: 0.96973646, b: 0, a: 1}
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossDamage
   _isProjectile: 1
+  isSolidButter: 0
 --- !u!58 &7840232365758072318
 CircleCollider2D:
   m_ObjectHideFlags: 0
