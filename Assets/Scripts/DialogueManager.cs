@@ -53,7 +53,8 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator RunDialogue(Conversation c)
     {
-        var epic = Instantiate(_dialoguePrefab, new Vector3(0, 0, 0), Quaternion.identity, Camera.main.transform).GetComponent<DialogueEpic>();
+        var epic = Instantiate(_dialoguePrefab, Camera.main.transform).GetComponent<DialogueEpic>();
+        epic.transform.localPosition = new Vector3(0, 0, 10);
         epic.StartCoroutine(epic.SayWords(c));
         yield return new WaitUntil(() => epic == null);
     }
