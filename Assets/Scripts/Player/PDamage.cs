@@ -9,6 +9,10 @@ public class PDamage : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out BossHealth boss))
         {
             boss.Damage(_damage);
+            if (AudioManager.instance != null)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerMeleeAttack);
+            }
         }
     }
 }

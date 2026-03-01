@@ -10,8 +10,10 @@ public class PMoveStateMngr : MonoBehaviour
 
     private InputAction move;
     private Vector2 moveDirection;
+    private Vector2 faceDirection = Vector2.right;
 
     private InputAction dash;
+    private bool isDashing;
 
     [Header("Egg State")]
     [SerializeField][MinValue(0)] private float _eggMoveSpeed;
@@ -39,7 +41,6 @@ public class PMoveStateMngr : MonoBehaviour
     public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
     public float EggMoveSpeed { get => _eggMoveSpeed; set => _eggMoveSpeed = value; }
     public float AccelerationSpeed { get => _accelerationSpeed; set => _accelerationSpeed = value; }
-    public float AccelerationSpeed1 { get => _accelerationSpeed; set => _accelerationSpeed = value; }
     public float DeccelerationSpeed { get => _deccelerationSpeed; set => _deccelerationSpeed = value; }
     public InputAction Dash { get => dash; set => dash = value; }
     public float EggDashSpeed { get => _eggDashSpeed; set => _eggDashSpeed = value; }
@@ -52,6 +53,8 @@ public class PMoveStateMngr : MonoBehaviour
     public InputAction Move { get => move; set => move = value; }
     public AnimatorOverrideController YolkAnimOC { get => _yolkAnimOC; set => _yolkAnimOC = value; }
     public AnimatorOverrideController EggAnimOC { get => _eggAnimOC; set => _eggAnimOC = value; }
+    public bool IsDashing { get => isDashing; set => isDashing = value; }
+    public Vector2 FaceDirection { get => faceDirection; set => faceDirection = value; }
     #endregion
 
     private void Awake()
@@ -76,6 +79,8 @@ public class PMoveStateMngr : MonoBehaviour
     private void FixedUpdate()
     {
         moveDirection = move.ReadValue<Vector2>();
+        if (Mathf.Abs(moveDirection.x) > 0.5f || Mathf.Abs(moveDirection.y) > 0.5f)
+            faceDirection = moveDirection;  
 
         currentSt.FixedUpdateState();
     }

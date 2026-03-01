@@ -98,6 +98,15 @@ TrailRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.21010087
+        inSlope: -2.1518707
+        outSlope: -2.1518707
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.12016797
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -131,14 +140,14 @@ TrailRenderer:
       m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 3
-    numCornerVertices: 0
+    numCornerVertices: 2
     numCapVertices: 0
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0
+  m_MinVertexDistance: 1
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1

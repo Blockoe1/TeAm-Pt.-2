@@ -13,6 +13,21 @@ public class UIControls : MonoBehaviour
     [SerializeField] private GameObject _options;
 
 
+    private void Awake()
+    {
+        GetComponent<Canvas>().worldCamera = Camera.main;
+    }
+
+    /// <summary>
+    /// Sets initial canvas states
+    /// </summary>
+
+    public void TransitionToScene(string scene)
+    {
+        TransitionManager.ZoomTransition(scene);
+    }
+
+
     private void Start()
     {
         _mainCanvas.SetActive(true);

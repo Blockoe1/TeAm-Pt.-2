@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MixingBowlScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/GameScenes/MainMenu.unity
+    guid: bf4854266131a5b4c89f806b92447451
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/VSMixingBowl.unity
+    guid: d1452dd9d75d9f04784520bfde61e1fe
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/VSFryingPan.unity
+    guid: bb9a1a7e11af88542a5b6815d2005443
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/VSEggCooker.unity
+    guid: 82e58c2093af46c4abaac79dd6a38c3a
+  - enabled: 1
+    path: Assets/Scenes/GameScenes/DeathScene.unity
+    guid: 515f7bde5d153d74892a6244405bb184
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: d4fb9f05df035a44a8a431199bb94ddf, type: 3}
   m_UseUCBPForAssetBundles: 0

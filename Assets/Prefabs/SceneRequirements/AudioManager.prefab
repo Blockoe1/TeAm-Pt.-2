@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &698637084194847956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7781371583858243688}
+  - component: {fileID: 8678002388791347572}
+  - component: {fileID: 4861461656710324896}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7781371583858243688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698637084194847956}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8678002388791347572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698637084194847956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407d8344aab5b4649ad7f050314cefb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  MasterVolume: 1
+  SfxVolume: 1
+  MusicVolume: 1
+--- !u!114 &4861461656710324896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698637084194847956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5761db3d5006361478021659f40b6318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  PlayerCrack:
+    Guid:
+      Data1: 571481404
+      Data2: 1284088343
+      Data3: 2014785674
+      Data4: -45151753
+    Path: event:/PlayerDamage
+  PlayerBecomesYolk:
+    Guid:
+      Data1: 425607354
+      Data2: 1311361734
+      Data3: -1089122929
+      Data4: 151835080
+    Path: event:/BecomeYolk
+  PlayerMeleeAttack:
+    Guid:
+      Data1: -357096805
+      Data2: 1314474763
+      Data3: -877604440
+      Data4: 1132145424
+    Path: event:/PlayerMelee
+  EggExplodes:
+    Guid:
+      Data1: -1907803886
+      Data2: 1095720611
+      Data3: 799706782
+      Data4: 875955498
+    Path: event:/Eggsplosion
+  IgniteOnFire:
+    Guid:
+      Data1: -486236501
+      Data2: 1321888086
+      Data3: -1501476975
+      Data4: -1295253445
+    Path: event:/SpawnFlamingButter
+  ContinuallyBurn:
+    Guid:
+      Data1: 2012371999
+      Data2: 1122818076
+      Data3: 1061269639
+      Data4: 2077206021
+    Path: event:/FlamingButter
+  EvansRequest:
+    Guid:
+      Data1: -549846557
+      Data2: 1291940232
+      Data3: -712461121
+      Data4: -589862477
+    Path: event:/Evan

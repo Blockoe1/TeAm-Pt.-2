@@ -30,20 +30,26 @@ public class ProjectileShooter : MonoBehaviour
     {
         float stepAngle = shotAmount > 1 ? spreadAngle / (shotAmount - 1) : 0;
         
-        Debug.Log(startingAngle);
+        //Debug.Log(startingAngle);
 
         for (int i = 0; i < shotAmount; i++)
         {
             float angle = startingAngle - (spreadAngle / 2) + (stepAngle * i);
-            Debug.Log(angle);
             Vector2 launchVector = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
 
             Projectile projectile = GetProjectile();
             projectile.transform.position = spawnLocation;
             projectile.transform.eulerAngles = new Vector3(0, 0, angle);
+
+            TrailRenderer rend = projectile.GetComponentInChildren<TrailRenderer>();
+            if (rend != null)
+            {
+                rend.Clear();
+            }
+
             projectile.gameObject.SetActive(true);
 
-            projectile.SetDespawnAction(ReturnProjectile);
+            projectile.OnDespawn += ReturnProjectile;
             projectile.Launch(launchVector.normalized * power);
         } 
     }
@@ -65,6 +71,7 @@ public class ProjectileShooter : MonoBehaviour
     private void ReturnProjectile(Projectile toReturn)
     {
         projectilePool.Enqueue(toReturn);
+        toReturn.OnDespawn -= ReturnProjectile;
         toReturn.gameObject.SetActive(false);
     }
     #endregion

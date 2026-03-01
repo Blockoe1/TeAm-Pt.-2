@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   <playerTransform>k__BackingField: {fileID: 0}
+  startupDelay: 2
   phases: []
   references:
     version: 2
@@ -141,7 +142,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3611957602819733869
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -191,8 +192,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossMovement
   trackingTarget: {fileID: 0}
-  maxSpeed: 8
+  toTargetSpeed: 8
   acceleration: 20
+  angleSmoothTime: 0.2
+  angleMaxSpeed: 200
+  MovementSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &2811144708668751151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +270,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  health: 0
 --- !u!114 &1039781300634517154
 MonoBehaviour:
   m_ObjectHideFlags: 0

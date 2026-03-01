@@ -16,8 +16,14 @@ public class HitFlash : MonoBehaviour
         baseColor = rend.color;
     }
 
+    private void OnDisable()
+    {
+        rend.color = baseColor;
+    }
+
     public void Flash(float flashTime)
     {
+        if (!gameObject.activeInHierarchy) { return;  }
         if (flashRoutine != null)
         {
             StopCoroutine(flashRoutine);
@@ -40,5 +46,6 @@ public class HitFlash : MonoBehaviour
             timer -= Time.deltaTime;
             yield return null;
         }
+        rend.color = baseColor;
     }
 }

@@ -12,6 +12,11 @@ public class BossHealth : MonoBehaviour
 
     private void Awake()
     {
+        ResetHealth();
+    }
+
+    public void ResetHealth()
+    {
         health = maxHealth;
     }
 

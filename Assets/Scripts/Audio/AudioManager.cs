@@ -16,11 +16,11 @@ public class AudioManager : MonoBehaviour
     private Bus musicBus;
 
     [Range(0, 1)]
-    public float masterVolume;
+    public float MasterVolume;
     [Range(0, 1)]
-    public float sfxVolume;
+    public float SfxVolume;
     [Range(0, 1)]
-    public float musicVolume;
+    public float MusicVolume;
 
     private EventInstance backgroundMusic;
 
@@ -49,8 +49,8 @@ public class AudioManager : MonoBehaviour
        // musicBus = RuntimeManager.GetBus("bus:/BGM");
 
         UpdateVolume();
-        backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
-        backgroundMusic.start();
+        //backgroundMusic = RuntimeManager.CreateInstance(FMODEvents.instance.GameBGM);
+        //backgroundMusic.start();
     }
 
     /// <summary>
@@ -59,6 +59,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="sound"></param>
     public void PlayOneShot(EventReference sound)
     {
+        Debug.Log("Called");
         RuntimeManager.PlayOneShot(sound);
     }
 
@@ -89,7 +90,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void UpdateVolume()
     {
-        masterBus.setVolume(masterVolume);
+        masterBus.setVolume(MasterVolume);
         //sfxBus.setVolume(sfxVolume);
         //musicBus.setVolume(musicVolume);
     }
