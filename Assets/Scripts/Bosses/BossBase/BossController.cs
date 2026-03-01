@@ -123,6 +123,7 @@ public class BossController : MonoBehaviour
 
         if(name == "EggCooker" && currentPhase >= 2)
         {
+            Debug.Log("");
             AudioManager.instance.SetPhase3();
         }
 
