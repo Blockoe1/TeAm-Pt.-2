@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class ScenarioManager : MonoBehaviour
 {
-    public enum Scenario { Undefined, MixingBowl = 1, FryingPan = 2, EggCooker  = 3}
+    public enum Scenario { Undefined, MixingBowl = 1, FryingPan = 2, EggCooker = 3, Intro }
 
     [SerializeField] private Scenario _scenario;
     [SerializeField] private Vector2 _eggyDialoguePos;
@@ -28,6 +28,25 @@ public class ScenarioManager : MonoBehaviour
     }
 
     private IEnumerator SceneLogic()
+    {
+        if (_scenario == Scenario.Intro)
+        {
+            yield return IntroScene();
+        }
+        else
+        {
+            yield return BossScene();
+        }
+    }
+
+    private IEnumerator IntroScene()
+    {
+        yield return new WaitForSeconds(1);
+        yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        TransitionManager.ZoomTransition(_nextScene);
+    }
+
+    private IEnumerator BossScene()
     {
         InputSystem.actions.Disable();
         var player = FindAnyObjectByType<PlayerHealth>();

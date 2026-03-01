@@ -486,6 +486,26 @@ PrefabInstance:
       propertyPath: acceleration
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: MovementSound.Path
+      value: event:/EggCookerMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: MovementSound.Guid.Data1
+      value: 912706995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: MovementSound.Guid.Data2
+      value: 1286390762
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: MovementSound.Guid.Data3
+      value: 1886802822
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
+      propertyPath: MovementSound.Guid.Data4
+      value: 1188846798
+      objectReference: {fileID: 0}
     - target: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: m_Name
       value: EggCooker

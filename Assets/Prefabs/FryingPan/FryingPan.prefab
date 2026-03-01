@@ -778,23 +778,23 @@ PrefabInstance:
       objectReference: {fileID: 1503580704847801186}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Path
-      value: event:/BowlMove
+      value: event:/PanMove
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data1
-      value: -921176296
+      value: -355662775
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data2
-      value: 1270219458
+      value: 1255877371
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data3
-      value: -553070431
+      value: 17195666
       objectReference: {fileID: 0}
     - target: {fileID: 7456563843221386003, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: MovementSound.Guid.Data4
-      value: -1103600680
+      value: 269390623
       objectReference: {fileID: 0}
     - target: {fileID: 8755188179735601954, guid: 28627d0828f6bb046a80d92681b50459, type: 3}
       propertyPath: m_Name
