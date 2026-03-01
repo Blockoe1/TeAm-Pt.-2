@@ -19,6 +19,8 @@ public class UIControls : MonoBehaviour
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;
 
+    [SerializeField] private Toggle tobyToggle;
+
 
     private void Awake()
     {
@@ -40,6 +42,9 @@ public class UIControls : MonoBehaviour
         _mainCanvas.SetActive(true);
         _credits.SetActive(false);
         _options.SetActive(false);
+
+        if (!PlayerPrefs.HasKey("toby")) PlayerPrefs.SetString("toby", "F");
+        tobyToggle.isOn = PlayerPrefs.GetString("toby") == "T";
 
         masterSlider.value = AudioManager.instance.MasterVolume;
         sfxSlider.value = AudioManager.instance.SfxVolume;
@@ -76,19 +81,24 @@ public class UIControls : MonoBehaviour
         _mainCanvas.SetActive(true);
     }
 
+    
+    public void TobyToggle()
+    {
+        PlayerPrefs.SetString("toby", tobyToggle.isOn ? "T" : "F");
+    }
     public void LevelOne()
     {
-        SceneManager.LoadScene("VSMixingBowl");
+        TransitionManager.ZoomTransition("VSMixingBowl");
     }
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene("VSFryingPan");
+        TransitionManager.ZoomTransition("VSFryingPan");
     }
 
     public void LevelThree()
     {
-        SceneManager.LoadScene("VSEggCooker");
+        TransitionManager.ZoomTransition("VSEggCooker");
     }
 
 

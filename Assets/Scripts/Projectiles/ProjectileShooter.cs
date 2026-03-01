@@ -28,7 +28,7 @@ public class ProjectileShooter : MonoBehaviour
 
     public void Shoot(float startingAngle, float power, Vector2 spawnLocation, int shotAmount = 1, float spreadAngle = 0)
     {
-        if(FindFirstObjectByType<AudioManager>()!=null)
+        if(FindFirstObjectByType<AudioManager>()!=null && (projectilePrefab.name.Contains("Shard") || projectilePrefab.name.Contains("Minion")))
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.EggExplodes);
         }
