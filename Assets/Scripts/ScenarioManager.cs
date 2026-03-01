@@ -52,6 +52,9 @@ public class ScenarioManager : MonoBehaviour
         var player = FindAnyObjectByType<PlayerHealth>();
         var boss = FindAnyObjectByType<BossController>();
 
+        // Face upward
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
+
         // Disable spin script
         if (_scenario == Scenario.FryingPan) FindAnyObjectByType<PanMovement>().enabled = false;
 
@@ -73,6 +76,7 @@ public class ScenarioManager : MonoBehaviour
         DialogueManager.Instance.DisableDialogueCamera();
         yield return WaitForCameraSwitch();
         InputSystem.actions.Enable();
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(false);
         boss.Startup();
         if (_scenario == Scenario.FryingPan) FindAnyObjectByType<PanMovement>().enabled = true;
 
@@ -122,6 +126,7 @@ public class ScenarioManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         DialogueManager.Instance.EnableDialogueCamera();
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
 
         // Move characters back
         t = 0;

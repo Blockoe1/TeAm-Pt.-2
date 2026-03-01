@@ -49,6 +49,8 @@ public class PMoveStateMngr : MonoBehaviour
 
     private PMoveBaseSt currentSt;
 
+    private bool forceUpward;
+
     #region GS
     public Rigidbody2D Rb2d { get => rb2d; set => rb2d = value; }
     public Vector2 MoveDirection { get => moveDirection; set => moveDirection = value; }
@@ -133,6 +135,7 @@ public class PMoveStateMngr : MonoBehaviour
     [HideInInspector]
     public int DetermineAnimationDirection()
     {
+        if (forceUpward) return 2;
         if (Mathf.Abs(faceDirection.x) < Mathf.Abs(faceDirection.y)) //Front/Back
             return (faceDirection.y > 0) ? 2 : 0;
         else //Side
@@ -140,6 +143,11 @@ public class PMoveStateMngr : MonoBehaviour
             spriteRen.flipX = (faceDirection.x > 0) ? true : false;
             return 1;
         }
+    }
+
+    public void ForceUpwardFace(bool toggle)
+    {
+        forceUpward = toggle;
     }
 
     private void OnDestroy()
