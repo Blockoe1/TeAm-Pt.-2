@@ -51,6 +51,8 @@ MonoBehaviour:
     _particle: {fileID: 902521241345931749, guid: b6c594ea54b14bd4e9a382f32cc1d68f, type: 3}
   - _name: P_DIE
     _particle: {fileID: 635916613037525268, guid: 5367d1b6250c726438e0ba4d337cb8c7, type: 3}
+  - _name: PAN_HIT
+    _particle: {fileID: 3586338557240626430, guid: c9cd3442f7b925344ba4b0b90067a85c, type: 3}
   - _name: EGG_EXPLODE
     _particle: {fileID: 6645376069818878384, guid: cbdea48d6d4a874459310cc8b96c8755, type: 3}
   - _name: BOSS1_DIE
@@ -86,6 +88,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5761db3d5006361478021659f40b6318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  GameBGM:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   PlayerCrack:
     Guid:
       Data1: 571481404
