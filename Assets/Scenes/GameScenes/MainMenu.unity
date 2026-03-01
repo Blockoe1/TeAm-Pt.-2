@@ -5378,7 +5378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: S<gradient="EggGradient">egg</gradient>ttings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16ffd678c79af9645b36860ae8b5715c, type: 2}
   m_sharedMaterial: {fileID: -5415420487265446332, guid: 16ffd678c79af9645b36860ae8b5715c, type: 2}
