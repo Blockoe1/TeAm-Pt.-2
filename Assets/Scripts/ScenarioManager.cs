@@ -16,6 +16,8 @@ public class ScenarioManager : MonoBehaviour
     [SerializeField] private Conversation _beforeFightBegins;
     [SerializeField] private Conversation _afterFightEnds;
     [SerializeField] private Conversation _afterBossDies;
+    [SerializeField] private Conversation _alternateBossDialogue;
+    [SerializeField] private int _oddsOutOf100;
     [SerializeField] private SpriteRenderer _bossDeathFlash;
     [SerializeField] private float _bossDeathTime;
     [SerializeField, Scene] private string _nextScene;
@@ -52,6 +54,9 @@ public class ScenarioManager : MonoBehaviour
         var player = FindAnyObjectByType<PlayerHealth>();
         var boss = FindAnyObjectByType<BossController>();
 
+        // Face upward
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
+
         // Disable spin script
         if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = false;
 
@@ -69,10 +74,18 @@ public class ScenarioManager : MonoBehaviour
         }
 
         // Initial exchange with boss
-        yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        if ((_alternateBossDialogue != null) && (Random.Range(0, 100) < _oddsOutOf100))
+        {
+            yield return DialogueManager.Instance.RunDialogue(_alternateBossDialogue);
+        }
+        else
+        {
+            yield return DialogueManager.Instance.RunDialogue(_beforeFightBegins);
+        }
         DialogueManager.Instance.DisableDialogueCamera();
         yield return WaitForCameraSwitch();
         InputSystem.actions.Enable();
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(false);
         boss.Startup();
         if (_scenario == Scenario.FryingPan) FindAnyObjectByType<Spin>().enabled = true;
 
@@ -122,6 +135,7 @@ public class ScenarioManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         DialogueManager.Instance.EnableDialogueCamera();
+        FindAnyObjectByType<PMoveStateMngr>().ForceUpwardFace(true);
 
         // Move characters back
         t = 0;

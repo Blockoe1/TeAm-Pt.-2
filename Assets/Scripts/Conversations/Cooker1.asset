@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882c9a45eada8184b9b454ae40600a45, type: 3}
+  m_Name: Cooker1
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  _theWords:
+  - OneMeaslyLine: Ohh... W-What *are* you?
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 2
+  - OneMeaslyLine: I'm evilllll!!
+    Speaker: 5
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 7
+    SpinTime: 1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 5
+  - OneMeaslyLine: I'm the deviled egg! I'm sending you to SHELL!
+    Speaker: 5
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 1
+    SpinTime: 0.25
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1.5
+  - OneMeaslyLine: That's a bit eggcessive...
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0.05
+    SwishAmplitude: 1
+  - OneMeaslyLine: This is no time for yolks, little man!!
+    Speaker: 5
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1.5
+  - OneMeaslyLine: You're getting scrambled!!
+    Speaker: 5
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 1
+    SpinTime: 0.25
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 2

@@ -76,6 +76,14 @@ public class DialogueManager : MonoBehaviour
                 i += 30;
             }
         }
+        for (int i = 0; i < s.Length - 3; i++)
+        {
+            if ((s.Substring(i, 4).ToLower() == "yolk"))
+            {
+                s = s.Substring(0, i) + "<gradient=\"EggGradient\">" + s.Substring(i, 4) + "</gradient>" + s.Substring(i + 4);
+                i += 30;
+            }
+        }
         return s;
     }
 

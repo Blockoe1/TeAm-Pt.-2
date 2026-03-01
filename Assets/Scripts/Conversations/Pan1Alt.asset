@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882c9a45eada8184b9b454ae40600a45, type: 3}
+  m_Name: Pan1Alt
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  _theWords:
+  - OneMeaslyLine: I need to defeat you too to escape...?
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 0
+    SwishWaitInterval: 0
+    SwishAmplitude: 0
+  - OneMeaslyLine: Hey, are you okay?
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 0
+    SwishWaitInterval: 0
+    SwishAmplitude: 0
+  - OneMeaslyLine: RAHHHHH!!
+    Speaker: 3
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 7
+    SpinTime: 1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 5
+  - OneMeaslyLine: I'M SO HOT!! I'M BURNING!!
+    Speaker: 3
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 1
+    SpinTime: 0.25
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 2
+  - OneMeaslyLine: This fight will be OVER-EASY!!
+    Speaker: 3
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 1
+    SpinTime: 0.25
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1
+  - OneMeaslyLine: Hey, I already used that line!
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0.025
+    SwishAmplitude: 2
+  - OneMeaslyLine: I *will* get past you, you bad egg!
+    Speaker: 1
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 1
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 0
+    SpinTime: 0.1
+    Swish: 1
+    SwishWaitInterval: 0.025
+    SwishAmplitude: 2
+  - OneMeaslyLine: You're about to SLIP A LOT TOO!
+    Speaker: 3
+    PauseTime: 0.2
+    EnterVertically: 1
+    Direction: 0
+    VerticalTime: 0.3
+    Spin: 1
+    SpinCount: 7
+    SpinTime: 1
+    Swish: 1
+    SwishWaitInterval: 0
+    SwishAmplitude: 1.5
