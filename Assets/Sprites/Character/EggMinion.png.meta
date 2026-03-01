@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: 9d266fc80f3e98a4f97466192966a747
+guid: 0a8a07d75c0fbc842879386e6c281e6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3308864845037076468
-    second: EggRoll_0
+      213: 736428228881145258
+    second: EggMinion_0
   - first:
-      213: 3011703781698614741
-    second: EggRoll_1
-  - first:
-      213: -3119944901505780650
-    second: EggRoll_2
-  - first:
-      213: -793808281867515460
-    second: EggRoll_3
-  - first:
-      213: -6593867483326510273
-    second: EggRoll_4
-  - first:
-      213: 3842596678078217605
-    second: EggRoll_5
+      213: 2028913332060208418
+    second: EggMinion_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,45 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EggRoll_0
+      name: EggMinion_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2000
-        width: 400
-        height: 400
+        x: 86
+        y: 57
+        width: 235
+        height: 287
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0089cd54fc8412d0800000000000000
-      internalID: -3308864845037076468
+      spriteID: aadd7098291583a00800000000000000
+      internalID: 736428228881145258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EggRoll_1
+      name: EggMinion_1
       rect:
         serializedVersion: 2
-        x: 400
-        y: 2000
-        width: 400
-        height: 400
+        x: 498
+        y: 53
+        width: 213
+        height: 291
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d5b8dcf1a8bbc920800000000000000
-      internalID: 3011703781698614741
+      spriteID: 22db0850de5282c10800000000000000
+      internalID: 2028913332060208418
       vertices: []
       indices: 
       edges: []
@@ -162,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8a18cf4a14f680c418a89373fdf2ddd7
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -170,12 +158,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":7.0},"gridSpriteSize":{"x":400.0,"y":400.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      EggRoll_0: -3308864845037076468
-      EggRoll_1: 3011703781698614741
+      EggMinion_0: 736428228881145258
+      EggMinion_1: 2028913332060208418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

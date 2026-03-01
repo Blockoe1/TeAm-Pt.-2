@@ -53,6 +53,12 @@ MonoBehaviour:
     _particle: {fileID: 635916613037525268, guid: 5367d1b6250c726438e0ba4d337cb8c7, type: 3}
   - _name: EGG_EXPLODE
     _particle: {fileID: 6645376069818878384, guid: cbdea48d6d4a874459310cc8b96c8755, type: 3}
+  - _name: BOSS1_DIE
+    _particle: {fileID: 6878484023343483553, guid: 56bc09703bb931648a09bdd5a6371638, type: 3}
+  - _name: BOSS2_DIE
+    _particle: {fileID: 675395969849893925, guid: 68b66ce15f14a904b97ca23da0a36cef, type: 3}
+  - _name: BOSS3_DIE
+    _particle: {fileID: 3275277568670017554, guid: 1c40c3f82c11be54dabfc2757ae3d4d5, type: 3}
 --- !u!114 &7604696952619352108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,10 +130,10 @@ MonoBehaviour:
     Path: event:/Eggroll
   EggExplodes:
     Guid:
-      Data1: -1907803886
-      Data2: 1095720611
-      Data3: 799706782
-      Data4: 875955498
+      Data1: 896107729
+      Data2: 1223202740
+      Data3: 761350290
+      Data4: 2138178402
     Path: event:/Eggsplosion
   IgniteOnFire:
     Guid:
@@ -138,15 +144,15 @@ MonoBehaviour:
     Path: event:/SpawnFlamingButter
   ContinuallyBurn:
     Guid:
-      Data1: 2012371999
-      Data2: 1122818076
-      Data3: 1061269639
-      Data4: 2077206021
-    Path: event:/FlamingButter
+      Data1: -1562163627
+      Data2: 1095078561
+      Data3: 111270295
+      Data4: -1027408197
+    Path: event:/ContinualFire
   EvansRequest:
     Guid:
-      Data1: -549846557
-      Data2: 1291940232
-      Data3: -712461121
-      Data4: -589862477
-    Path: event:/Evan
+      Data1: -2026716414
+      Data2: 1086294551
+      Data3: -1619678847
+      Data4: -622971584
+    Path: event:/Eggvan

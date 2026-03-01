@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2727987739293412352, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2727987739293412352, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
@@ -68,6 +72,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7185233179972473101, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185233179972473101, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 736428228881145258, guid: 0a8a07d75c0fbc842879386e6c281e6a, type: 3}
     - target: {fileID: 7185233179972473101, guid: 1145c6f7af217bf49bfdb8b0256a1e2b, type: 3}
       propertyPath: m_Color.b
       value: 0.8459119
@@ -176,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHealth
   maxHealth: 5
+  hitIFrames: 0
   OnDamage:
     m_PersistentCalls:
       m_Calls:
