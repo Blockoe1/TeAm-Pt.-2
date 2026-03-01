@@ -81,7 +81,7 @@ public class UIControls : MonoBehaviour
     public void Back()
     {
         ClickAnything();
-        if(_credits!=null)
+        if(_credits!=null && !FindAnyObjectByType<GameMngr>().GamePaused)
             _credits.SetActive(false);
         _options.SetActive(false);
         if(_levelSelect!=null)

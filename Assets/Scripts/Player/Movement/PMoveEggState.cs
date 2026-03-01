@@ -36,6 +36,7 @@ public class PMoveEggState : PMoveBaseSt
     public override void ExitState()
     {
         m.Dash.performed -= Dash_performed;
+        moveEggRoll.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public override void FixedUpdateState()

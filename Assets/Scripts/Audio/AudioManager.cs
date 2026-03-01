@@ -35,8 +35,9 @@ public class AudioManager : MonoBehaviour
     {
         if (instance != null)
         {
+            Debug.Log("h");
             Debug.Log("There is more than one AudioManager in the scene");
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
