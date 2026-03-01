@@ -210,6 +210,27 @@ public class ScenarioManager : MonoBehaviour
         }
 
         // Become happy
+        if (_scenario == Scenario.FryingPan)
+        {
+            yield return new WaitForSeconds(0.5f);
+            var p = Instantiate(_poof, bossObject.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.33f);
+            t = 0;
+            while (t < 1)
+            {
+                t += Time.deltaTime * 4;
+                bossObject.transform.localScale = Vector3.Lerp(new Vector3(0.25f, 0.25f, 1), new Vector3(0.0625f, 0.0625f, 1), t);
+                yield return null;
+            }
+            t = 0;
+            while (t < 1)
+            {
+                t += Time.deltaTime * 4;
+                bossObject.transform.position = Vector2.Lerp(_bossDialoguePos, new Vector3(0, 4, 0), t);
+                yield return null;
+            }
+            yield return new WaitForSeconds(0.25f);
+        }
         if (_scenario == Scenario.EggCooker)
         {
             yield return new WaitForSeconds(0.5f);
